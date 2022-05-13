@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contenedor{
+    width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+   
+	grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "icon icon"
+                            "header header"
+						 "cup cup "
+						 "footer footer";
+
+}
+nav{
+    width: 100%;
+
+}
+.titulito{
+    text-align: center;
+}
+
+.contenedor >div,
+.contenedor .icon,
+.contenedor .header,
+.contenedor .cup,
+.contenedor .footer {
+	
+	padding: 0px;
+	border-radius: 4px;
+}
+.contenedor .icon{
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    display: block;
+    grid-area: icon;
+}
+.contenedor .header {
+	text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+	color: #4e635a;
+	grid-area: header;
+}
+.contenedor .cup{
+
+    height: 300px;
+    grid-area: cup;
+}
+.contenedor .footer {
+	
+	text-align: center;
+    display: flex;
+    align-items: center;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 12px;
+    bottom: 0;
+	grid-area: footer;
+
+}
+.cup{
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    display: block;
+    
+}
+.ingBot{
+    text-decoration: none;
+    background-color: #0d9256;
+    border: solid #808280 0.5px;
+    border-radius: 10px 0 10px 0;
+    padding: 1.5%;
+    color: #fff;
+}
+
