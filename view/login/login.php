@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" type="tect/css" href="https://smiep.herokuapp.com/public/css/login.css">
+    <link rel="stylesheet" type="tect/css" href="public/css/login.css">
 </head>
 
 <body>
