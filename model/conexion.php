@@ -11,7 +11,7 @@ class Conexion
         {
 
             // Conexión
-            $con = new PDO('mysql:host=localhost; dbname=smiep', 'root', '');
+            $con = new PDO('mysql:host=us-cdbr-east-05.cleardb.net; dbname=heroku_619553700a45b98', 'bcc4441154c3a9', 'b4a4c01d');
 
             // Errores
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
