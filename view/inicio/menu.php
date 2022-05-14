@@ -9,12 +9,12 @@ session_start();
     <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>SMIEP</title>
     <link rel="icon" type="image/png" href="../home/img/favicon.png" sizes="any">
-    <link rel="stylesheet" href="../home/css/stylesIndex.css">
-    <link rel="stylesheet" href="../home/css/estilos.css">
-    <link rel="stylesheet" href="../home/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/stylesIndex.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../home/js/main.js"></script>
+    <script type="text/js" src="../../public/js/main.js"></script>
     
 </head>
 <body>

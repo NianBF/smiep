@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" href="view/home/css/stylesIndex.css">
+    <link rel="stylesheet" type="text/css" href="public/css/stylesIndex.css">
 </head>
 <body>
     <div class="contenedor">

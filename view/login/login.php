@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" href="../home/css/styleslogin.css">
+    <link rel="stylesheet" type="tect/css" href="../../public/css/login.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
         <p>© S.M.I.E.P | 2022 <a href="#">Acerca de S.M.I.E.P</a></p>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="home/js/login.js"></script>
+    <script type="text/js" src="../../public/js/login.js"></script>
 </body>
 
 </html>
