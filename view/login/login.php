@@ -46,7 +46,7 @@
         <p>© S.M.I.E.P | 2022 <a href="#">Acerca de S.M.I.E.P</a></p>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/js" src="../../public/js/login.js"></script>
+    <script type="text/js" src="https://smiep.herokuapp.com/public/js/login.js"></script>
 </body>
 
 </html>
