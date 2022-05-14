@@ -6,7 +6,6 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <link rel="icon" type="image/png" href="img/favicon.png" sizes="any">
     <link rel="stylesheet" type="text/css" href="public/css/stylesIndex.css">
-    <link rel="stylesheet" type="text/css" href="public/css/login.css">
     <title>SMIEP</title>
 </head>
 <body>
