@@ -11,7 +11,7 @@
 <body>
     <div class="contenedor">
         <span class="icon"><figure class=""><img src="img/favicon.png" alt="Logo SMIEP" width="200px"></figure></span>
-        HOla
+        
         <header class="header">
             <section>
                 <h1 class="title">S.M.I.E.P</h1>
