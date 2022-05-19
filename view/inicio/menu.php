@@ -32,14 +32,14 @@ session_start();
         <nav>
             <ul>
                 <li><a href="../producto/mostrar.php"><span class="icon-truck"></span>Productos</a></li>
-                <li><a href="../categoria/vista/mostrar.php"><span class="icon-briefcase"></span>Categoria</a></li>
-                <li><a href="../tienda/vista/mostrar.php"><span class="icon-cart"></span>Tienda</a></li>
+                <li><a href="../categoria/mostrar.php"><span class="icon-briefcase"></span>Categoria</a></li>
+                <li><a href="../tienda/mostrar.php"><span class="icon-cart"></span>Tienda</a></li>
                 <li class="submenu">
                     <a href="#"><span class="icon-user"></span>Personas<span class="caret icon-arrow-down2"></span></a>
                     <ul class="children">
-                        <li><a href="../usuario/vista/mostrar.php">Usuarios<span class="icon-user-tie"></span></a></li>
-                        <li><a href="../cliente/vista/mostrar.php">Clientes<span class="icon-user-tie"></span></a></li>
-                        <li><a href="../proveedor/vista/mostrar.php">Proveedor<span class="icon-user-tie"></span></a></li>
+                        <li><a href="../usuario/mostrar.php">Usuarios<span class="icon-user-tie"></span></a></li>
+                        <li><a href="../cliente/mostrar.php">Clientes<span class="icon-user-tie"></span></a></li>
+                        <li><a href="../proveedor/mostrar.php">Proveedor<span class="icon-user-tie"></span></a></li>
                     </ul>
                 </li>
                 <li><a href="#"><span class="icon-earth"></span>Acerca de</a></li>
