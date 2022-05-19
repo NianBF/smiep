@@ -59,20 +59,20 @@ $listaProducto=$crud->mostrar();
         <?php foreach ($listaProducto as $Producto) {?>
         <tr>
 
-            <td>
+            <td class="id">
                 <?php echo $Producto->getId_prod() ?>
             </td>
-            <td>
+            <td class="codigo-bar">
                 <?php echo $Producto->getCodBar() ?>
             </td>
-            <td>
+            <td class="nomb_prod">
                 <?php echo $Producto->getNombreProd() ?>
             </td>
-            <td>
+            <td class="precio">
                 <?php echo $Producto->getPrecio() ?>
             </td>
 
-            <td>
+            <td class="cantidad">
                 <?php echo $Producto->getCantidadDisp() ?>
             </td>
             <td><a class="editar" id="btnActualizar" name="btnActualizar"
