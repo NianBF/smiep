@@ -73,6 +73,7 @@ Cambia los datos de la tienda
 	
 </form>
 </div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/tienda/actualizarTienda.js"></script>	
 </body>
 </html>

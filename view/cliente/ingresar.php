@@ -85,6 +85,7 @@ Ingresa los datos del cliente
 	</div>
 </form>
 </div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/cliente/ingresarCliente.js"></script>
 
 

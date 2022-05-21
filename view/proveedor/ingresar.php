@@ -120,7 +120,7 @@ Ingresa los datos del Proveedor
 	</div>
 </form>
 </div>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/proveedor/ingresarProveedor.js"></script>
  </body>
 </html>

@@ -44,6 +44,7 @@ Ingresa los datos de categoria
 </form>
 </div>
 </div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/categoria/ingresarCategoria.js"></script>
 
  </body>

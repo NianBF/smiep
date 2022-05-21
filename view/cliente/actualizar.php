@@ -98,6 +98,7 @@ Cambia los datos del Producto
 </form>
 </div>
 </div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/ingresar.js"></script>	
 </body>
 </html>
