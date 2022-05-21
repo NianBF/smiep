@@ -9,8 +9,8 @@
 
 <?php
 
-require_once('../modelo/crud_Categoria.php');
-require_once('../modelo/Categoria.php');
+require_once('../model/categoriaCrud_Mdl.php');
+require_once('../model/CategoriaMdl.php');
  
 $crud= new CrudCategoria();
 $Categoria= new Categoria();
