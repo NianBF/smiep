@@ -26,11 +26,11 @@
             <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma">
                 <div class="elemento">
                     <label for="usuario">Email</label>
-                    <input type="txt" id="email" name="email" required />
+                    <input type="email" id="email" name="email" required />
                 </div>
                 <div class="elemento">
                     <label for="userName">Nombre de Usuario</label>
-                    <input type="txt" id="userName" name="userName" required />
+                    <input type="text" id="userName" name="userName" required />
                 </div>
                 <div class="elemento">
                     <label for="password">Password</label>
