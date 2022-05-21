@@ -85,7 +85,7 @@ Ingresa los datos del cliente
 	</div>
 </form>
 </div>
-<script src="js/ingresar.js"></script>
+<script src="../../public/js/cliente/ingresarCliente.js"></script>
 
 
 

@@ -116,7 +116,7 @@ Cambia los datos del Proveedor
 	
 </form>
 </div>
-<script src="js/actualizar.js"></script>	
+<script src="../../public/js/proveedor/actualizarProveedor.js"></script>	
 
 
 

@@ -121,6 +121,6 @@ Ingresa los datos del Proveedor
 </form>
 </div>
 
-<script src="js/ingresar.js"></script>
+<script src="../../public/js/proveedor/ingresarProveedor.js"></script>
  </body>
 </html>

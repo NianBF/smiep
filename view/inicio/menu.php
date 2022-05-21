@@ -87,5 +87,6 @@ session_start();
         <footer class="footer">
         <p>© S.M.I.E.P | 2022 <a href="#">Acerca de S.M.I.E.P</a></p>
     </footer>
+    <script src="../../public/js/main.js"></script>
 </body>
 </html>

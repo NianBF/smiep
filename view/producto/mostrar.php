@@ -85,7 +85,7 @@ $listaProducto=$crud->mostrar();
         <?php }?>
 
     </table>
-
+            <script src="../../public/js/producto/main.js"></script>
 </body>
 
 </html>
