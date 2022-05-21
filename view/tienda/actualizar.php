@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-	require_once('../modelo/tiendaCrud_Mdl.php');
-	require_once('../modelo/tiendaMdl.php');
+require_once('../../model/tiendaCrud_Mdl.php');
+require_once('../../model/tiendaMdl.php');
 	$crud= new CrudTienda();
 	$Tienda=new Tienda();
 	//busca el libro utilizando el id, que es enviado por GET desde la vista mostrar.php
@@ -19,16 +19,16 @@ session_start();
 <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../home/img/favicon.png" sizes="any">
+	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     
 	<title>Actualizar tienda</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="css/actualizar.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/actualizar.css">
 
 </head>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../home/img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
+	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
 <header class="header">
 Cambia los datos de la tienda
 </header>

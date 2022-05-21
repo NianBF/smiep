@@ -7,16 +7,16 @@ session_start();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../home/img/favicon.png" sizes="any">
+	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     
 	<title> Ingresar tienda</title>
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/ingresar1.css">
+	<link rel="stylesheet" href="../../public/css/ingresar.css">
 </head>
 <body>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../home/img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
+	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
 <header class="header">
 Ingresa los datos del Producto
 </header>
