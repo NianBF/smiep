@@ -25,7 +25,7 @@ $listaCategoria=$crud->mostrar();
 <body>
 <table>
 	<div>
-    <a href="../../sesiones/salir.php"><button class="boton"><span>salir</span></button></a>
+    <a href="../../controller/salirCtrl.php"><button class="boton"><span>salir</span></button></a>
     </div>
     <header>
         <a href="../../index.php"><span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure></a>
@@ -52,7 +52,8 @@ $listaCategoria=$crud->mostrar();
 	
 				<td><?php echo $Categoria->getid_Cat() ?></td>
 				<td><?php echo $Categoria->getnCategoria() ?></td>
-				<td><a class="eliminar" type="submit"  href="../controlador/administrar_Categoria.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e" >Eliminar</a></td>	
+				<td><a class="eliminar" type="submit"  
+                href="../../controller/categoriaCtrl.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e" >Eliminar</a></td>	
 			</tr>
 			<?php }?>
 	</table>

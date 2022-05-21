@@ -26,10 +26,10 @@ $listaTienda=$crud->mostrar();
 
 <table>
 	<div>
-	<a href="../../sesiones/salir.php"><button class="boton"><span>salir</span></button></a>
+	<a href="../../controller/salirCtrl.php"><button class="boton"><span>salir</span></button></a>
     </div>
     <header>
-	<a href="../inicio/menu.php"><span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure>
+	<a href="../../index.php"><span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure>
     </a>    
 	<h1 class="titulo">S.M.I.E.P</h1>
         <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
@@ -61,8 +61,8 @@ $listaTienda=$crud->mostrar();
 				<td><?php echo $Tienda->getDireccionTi() ?></td>
 				<td><?php echo $Tienda->getTelTi() ?></td>
 				<td><?php echo $Tienda->getEmailTi() ?></td>
-				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="../vista/actualizar.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=a">Actualizar</a> </td>
-				<td><a type="submit" class="eliminar" id="btnEliminar" name="btnEliminar" href="../controlador/administrar_tienda.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=e" >Eliminar</a></td>	
+				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=a">Actualizar</a> </td>
+				<td><a type="submit" class="eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/tiendaCtrl.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=e" >Eliminar</a></td>	
 			</tr>
 			<?php }?>
 		
