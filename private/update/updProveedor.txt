@@ -1,0 +1,6 @@
+**************************
+***|Fallo en proveedor|***
+**************************
+
+Modificación en «~/model/proveedorCrud_Mdl.php» en los nombres de las columnas de la DB, pues al estar mal nombrados
+generaban errores que impedían el funcionamiento del CRUD.

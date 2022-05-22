@@ -1,0 +1,6 @@
+****************************************************
+***|Se registra cada archivo o carpeta eliminada|***
+****************************************************
+
+(21/05/2022 20:23)NianBF: Se elimina «smiep(1).sql» para dar paso al archivo DB «smiep2.5.sql»,
+    actual query para DB de SMIEP.

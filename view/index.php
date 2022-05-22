@@ -24,7 +24,7 @@
                 <a class="ingBot" href="view/login/login.php"><strong>Ingresar</strong></a>
         </main>
         <footer class="footer">
-            <h4>© S.M.I.E.P | 2022 <a href="#">Acerca de S.M.I.E.P</a></h4>
+            <h4>© S.M.I.E.P | 2022 <a href="view/about/about.html">Acerca de S.M.I.E.P</a></h4>
     </footer>
     </div>
 </body>
