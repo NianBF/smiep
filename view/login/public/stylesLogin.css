@@ -69,7 +69,7 @@ body {
     margin: 0 0 30px;
     padding: 0;
     font-size: 30px;
-    color: #d4d4d4;
+    color: #ffffff;
     text-align: center;
 }
 .contenedor .elemento label{
@@ -149,13 +149,16 @@ body {
 }
 .contenedor .elemento input[type="submit"]:hover{
     font-weight: bold;
-    background-color: #044226;
+    background-color: #00a8f7;
     border:none;
     letter-spacing: 5px;
     text-transform: uppercase;
     cursor: pointer;
     padding: 15px;
     margin-top: 20px;
+}
+.contenedor .elemento input[type="submit"]:active{
+    background-color: #808280;
 }
 .footer{
     text-align: center;
