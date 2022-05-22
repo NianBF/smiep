@@ -4,6 +4,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contenedor{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
     width: 90%;
 	max-width: 1000px;
 	margin: 20px auto;
@@ -48,7 +52,7 @@
 }
 .contenedor .cup{
 
-    height: 300px;
+    height: 200px;
     grid-area: cup;
 }
 .contenedor .footer {
@@ -79,4 +83,9 @@
     padding: 1.5%;
     color: #fff;
 }
-
+.ingBot:hover{
+    background-color: #00a8f7;
+}
+.ingBot:active{
+    background-color: #808280;
+}

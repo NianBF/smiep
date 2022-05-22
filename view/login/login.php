@@ -22,7 +22,7 @@
     </div>
     <div class="contenedor">
         <div class="login">
-            <h2>Login</h2>
+            <h2>ingresar</h2>
             <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma">
                 <div class="elemento">
                     <label for="usuario">Email</label>
