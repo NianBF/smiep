@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="contenedor">
-        <span class="icon"><figure class=""><img src="img/favicon.png" alt="Logo SMIEP" width=""></figure></span>
+        <span class="icon"><figure class=""><img src="img/favicon.png" alt="Logo SMIEP" width="230px"></figure></span>
         
         <header class="header">
             <section>
