@@ -5,9 +5,7 @@ require_once('conexion1.php');
 class CrudProducto
 {
 	// constructor de la clase
-	public function __construct()
-	{
-	}
+	public function __construct(){}
 
 	public function insertar($Producto)
 	{

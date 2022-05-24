@@ -9,8 +9,8 @@
 
 <?php
 
-require_once('../../model/clienteCrud_Mdl.php');
-require_once('../../model/clienteMdl.php');
+require_once('../model/clienteCrud_Mdl.php');
+require_once('../model/clienteMdl.php');
  
 $crud= new CrudCliente();
 $Cliente= new Cliente();
@@ -29,7 +29,7 @@ $Cliente= new Cliente();
 		
 		//llama a la función insertar definida en el crud
 		$crud->insertar($Cliente);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/cliente/mostrar.php');
 		
 
 
@@ -46,7 +46,7 @@ $Cliente= new Cliente();
 		$Cliente->setFechaNac($_POST['fechaNac']);
 		
 		$crud->actualizar($Cliente);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/cliente/mostrar.php');
 
 					
 	// si la variable accion enviada por GET es == 'e' llama al crud y envia el mensaje si la respuesta es acepto se envia a eliminar y elimina el cliente
@@ -70,15 +70,15 @@ $Cliente= new Cliente();
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controlador/administrar_Cliente.php?id_cliDoc=".$idDelete."&accion=eliminar',
+				 url: '../controller/clienteCtrl.php?id_cliDoc=".$idDelete."&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../vista/mostrar.php';					
+					window.location.href = '../view/cliente/mostrar.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../vista/mostrar.php';
+			window.location.href = '../view/cliente/mostrar.php';
 		   }
 		 })
 		 </script>";
@@ -87,7 +87,7 @@ $Cliente= new Cliente();
 */
 	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	}elseif($_GET['accion']=='a'){
-		header('Location: ../vistas/actualizar.php');
+		header('Location: ../view/cliente/actualizar.php');
 	}
 	elseif($_GET['accion']=='eliminar'){
 		$crud->eliminar($_GET['id_cliDoc']);

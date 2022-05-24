@@ -22,7 +22,7 @@ $Categoria= new Categoria();
 		
 		
 		$crud->insertar($Categoria);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/categoria/mostrar.php');
 		
 	}elseif ($_GET['accion']=='e') {
 		
@@ -43,15 +43,15 @@ $Categoria= new Categoria();
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controlador/administrar_Categoria.php?id_Cat=".$idDelete."&accion=eliminar',
+				 url: '../controller/categoriaCtrl.php?id_Cat=".$idDelete."&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../vista/mostrar.php';					
+					window.location.href = '../view/categoria/mostrar.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../vista/mostrar.php';
+			window.location.href = '../view/categoria/mostrar.php';
 		   }
 		 })
 		 </script>";
@@ -59,7 +59,7 @@ $Categoria= new Categoria();
 	/*	
 */
 	}elseif($_GET['accion']=='a'){
-		header('Location: ../vistas/actualizar.php');
+		header('Location: ../view/categoria/actualizar.php');
 	}
 	elseif($_GET['accion']=='eliminar'){
 		$crud->eliminar($_GET['id_Cat']);

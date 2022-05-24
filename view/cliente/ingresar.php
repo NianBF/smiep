@@ -16,12 +16,12 @@ session_start();
 </head>
 <body>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../home/img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
+	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
 <header class="header">
 Ingresa los datos del cliente
 </header>
 <div class="tabla">
-<form action='../controlador/administrar_Cliente.php' name="formulario" method='post'>
+<form action='../../controller/clienteCtrl.php' name="formulario" method='post'>
 	<table>
 	<tr>
 		<td class="text">documento</td>

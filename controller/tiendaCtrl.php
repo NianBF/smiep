@@ -9,8 +9,8 @@
 
 <?php
 
-require_once('../modelo/crud_Tienda.php');
-require_once('../modelo/Tienda.php');
+require_once('../model/tiendaCrud_Mdl.php');
+require_once('../model/tiendaMdl.php');
  
 $crud= new CrudTienda();
 $Tienda= new Tienda();
@@ -24,7 +24,7 @@ $Tienda= new Tienda();
 		
 		
 		$crud->insertar($Tienda);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/tienda/mostrar.php');
 		
 	}elseif(isset($_POST['actualizar'])){
 		$Tienda->setId_ti($_POST['id_ti']);
@@ -34,7 +34,7 @@ $Tienda= new Tienda();
 		$Tienda->setEmailTi($_POST['emailTi']);
 		
 		$crud->actualizar($Tienda);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/tienda/mostrar.php');
 
 					
 	}elseif ($_GET['accion']=='e') {
@@ -57,15 +57,15 @@ $Tienda= new Tienda();
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controlador/administrar_tienda.php?id_ti=".$idDelete."&accion=eliminar',
+				 url: '../controller/tiendaCtrl.php?id_ti=".$idDelete."&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../vista/mostrar.php';					
+					window.location.href = '../view/tienda/mostrar.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../vista/mostrar.php';
+			window.location.href = '../view/tienda/mostrar.php';
 		   }
 		 })
 		 </script>";
@@ -74,7 +74,7 @@ $Tienda= new Tienda();
 */
 	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	}elseif($_GET['accion']=='a'){
-		header('Location: ../vistas/actualizar.php');
+		header('Location: ../view/tienda/actualizar.php');
 	}
 	elseif($_GET['accion']=='eliminar'){
 		$crud->eliminar($_GET['id_ti']);

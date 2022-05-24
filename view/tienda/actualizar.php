@@ -33,7 +33,7 @@ Cambia los datos de la tienda
 </header>
 <body>
 	<div class="tabla">
-	<form action='../../controller/productoCtrl.php' name="formulario" method='post'>
+	<form action='../../controller/tiendaCtrl.php' name="formulario" method='post'>
 	
 	<table>
 		<tr>

@@ -1,8 +1,8 @@
 
 <?php
 
-require_once('../../model/proveedorCrud_Mdl.php');
-require_once('../../model/proveedorMdl.php');
+require_once('../model/proveedorCrud_Mdl.php');
+require_once('../model/proveedorMdl.php');
  
 $crud= new crudProveedor();
 $Proveedor = new Proveedor();
@@ -26,7 +26,7 @@ $Proveedor = new Proveedor();
 
 		//llama a la función insertar definida en el crud
 		$crud->insertar($Proveedor);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/proveedor/mostrar.php');
 		
 	// si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
 	}elseif(isset($_POST['actualizar'])){
@@ -47,7 +47,7 @@ $Proveedor = new Proveedor();
 		//$Proveedor->setCreadoEn($_POST['creadoEn']);
 		
 		$crud->actualizar($Proveedor);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/proveedor/mostrar.php');
 
 					
 	// si la variable accion enviada por GET es == 'e' llama al crud y elimina
@@ -71,15 +71,15 @@ $Proveedor = new Proveedor();
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controlador/administrar_Proveedor.php?id_DocProv=".$idDelete."&accion=eliminar',
+				 url: '../controller/proveedorCtrl.php?id_DocProv=".$idDelete."&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../vista/mostrar.php';					
+					window.location.href = '../view/proveedor/mostrar.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../vista/mostrar.php';
+			window.location.href = '../view/proveedor/mostrar.php';
 		   }
 		 })
 		 </script>";
@@ -88,7 +88,7 @@ $Proveedor = new Proveedor();
 */
 	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	}elseif($_GET['accion']=='a'){
-		header('Location: ../vistas/actualizar.php');
+		header('Location: ../view/proveedor/actualizar.php');
 	}
 	elseif($_GET['accion']=='eliminar'){
 		$crud->eliminar($_GET['id_DocProv']);
