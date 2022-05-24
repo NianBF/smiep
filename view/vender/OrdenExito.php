@@ -6,7 +6,7 @@ if(!isset($_REQUEST['id_venta'])){
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>SMIEP</title>
     <meta charset="utf-8">
     <style>
