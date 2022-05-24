@@ -10,9 +10,9 @@ require_once('conexion1.php');
 			$db=Db::conectar();
 			
 			$insert=$db->prepare('INSERT INTO usuario (id_doc,nombre1,nombre2,apellido1,
-			apellido2,userName,email,pass,rol,id_estado,id_ti) 
+			apellido2,userName,email,password,rol,id_estado,id_ti) 
 			values(:id_doc,:nombre1,:nombre2,:apellido1,:apellido2,:userName,:email
-			,md5(:pass),:rol,:id_estado,:id_ti)');
+			,md5(:password),:rol,:id_estado,:id_ti)');
 			$insert->bindValue('id_doc',$Usuario->getId_doc());
 			$insert->bindValue('nombre1',$Usuario->getNombre1());
 			$insert->bindValue('nombre2',$Usuario->getNombre2());
@@ -20,7 +20,7 @@ require_once('conexion1.php');
 			$insert->bindValue('apellido2',$Usuario->getApellido2());
 			$insert->bindValue('userName',$Usuario->getUserName());
 			$insert->bindValue('email',$Usuario->getEmail());
-			$insert->bindValue('pass',$Usuario->getPass());
+			$insert->bindValue('password',$Usuario->getPass());
 			$insert->bindValue('rol',$Usuario->getRol());
 			$insert->bindValue('id_estado',$Usuario->getId_estado());
 			$insert->bindValue('id_ti',$Usuario->getId_ti());
@@ -47,7 +47,7 @@ require_once('conexion1.php');
 				$myUsuario->setApellido2($Usuario['apellido2']);
 				$myUsuario->setUserName($Usuario['userName']);
 				$myUsuario->setEmail($Usuario['email']);
-				$myUsuario->setPass($Usuario['pass']);
+				$myUsuario->setPass($Usuario['password']);
 				$myUsuario->setRol($Usuario['rol']);
 				$myUsuario->setId_estado($Usuario['id_estado']);
 				$myUsuario->setId_ti($Usuario['id_ti']);
@@ -79,7 +79,7 @@ require_once('conexion1.php');
 			$myUsuario->setApellido2($Usuario['apellido2']);
 			$myUsuario->setUserName($Usuario['userName']);
 			$myUsuario->setEmail($Usuario['email']);
-			$myUsuario->setPass($Usuario['pass']);
+			$myUsuario->setPass($Usuario['password']);
 			$myUsuario->setRol($Usuario['rol']);
 			$myUsuario->setId_estado($Usuario['id_estado']);
 			$myUsuario->setId_ti($Usuario['id_ti']);	
@@ -91,7 +91,7 @@ require_once('conexion1.php');
 			$db=Db::conectar();
 			$actualizar=$db->prepare('UPDATE usuario
 			SET  nombre1=:nombre1, nombre2=:nombre2, apellido1=:apellido1, apellido2=:apellido2,
-			userName=:userName, email=:email, pass=MD5(:pass),rol=:rol,
+			userName=:userName, email=:email, password=MD5(:password),rol=:rol,
 			id_estado=:id_estado, id_ti=:id_ti  WHERE id_doc=:id_doc' );
 			
 			$actualizar->bindValue('id_doc',$Usuario->getId_doc());
@@ -101,7 +101,7 @@ require_once('conexion1.php');
 			$actualizar->bindValue('apellido2',$Usuario->getApellido2());
 			$actualizar->bindValue('userName',$Usuario->getUserName());
 			$actualizar->bindValue('email',$Usuario->getEmail());
-			$actualizar->bindValue('pass',$Usuario->getPass());
+			$actualizar->bindValue('password',$Usuario->getPass());
 			$actualizar->bindValue('rol',$Usuario->getRol());
 			$actualizar->bindValue('id_estado',$Usuario->getId_estado());
 			$actualizar->bindValue('id_ti',$Usuario->getId_ti());

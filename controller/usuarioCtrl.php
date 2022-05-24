@@ -9,8 +9,8 @@
 
 <?php
 //incluye la clase usuario y Crudusuario
-require_once('../../model/usuarioCrud_Mdl.php');
-require_once('../../model/usuarioMdl.php');
+require_once('../model/usuarioCrud_Mdl.php');
+require_once('../model/usuarioMdl.php');
  
 $crud= new CrudUsuario();
 $Usuario= new Usuario();
@@ -31,7 +31,7 @@ $Usuario= new Usuario();
 		
 		//llama a la función insertar definida en el crud
 		$crud->insertar($Usuario);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/usuario/mostrar.php');
 		
 	// si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
 	}elseif(isset($_POST['actualizar'])){
@@ -48,7 +48,7 @@ $Usuario= new Usuario();
 		$Usuario->setId_ti($_POST['id_ti']);
 		
 		$crud->actualizar($Usuario);
-		header('Location: ../vista/mostrar.php');
+		header('Location: ../view/usuario/mostrar.php');
 
 					
 	// si la variable accion enviada por GET es == 'e' llama al crud y elimina
@@ -72,15 +72,15 @@ $Usuario= new Usuario();
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controlador/administrar_Usuario.php?id_doc=".$idDelete."&accion=eliminar',
+				 url: '../controller/usuarioCtrl.php?id_doc=".$idDelete."&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../vista/mostrar.php';					
+					window.location.href = '../view/usuario/mostrar.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../vista/mostrar.php';
+			window.location.href = '../view/usuario/mostrar.php';
 		   }
 		 })
 		 </script>";
@@ -89,7 +89,7 @@ $Usuario= new Usuario();
 */
 	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	}elseif($_GET['accion']=='a'){
-		header('Location: ../vistas/actualizar.php');
+		header('Location: ../view/usuario/actualizar.php');
 	}
 	elseif($_GET['accion']=='eliminar'){
 		$crud->eliminar($_GET['id_doc']);

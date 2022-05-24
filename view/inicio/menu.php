@@ -51,24 +51,12 @@ session_start();
 
     <section class="main">
             <article>
-                <h2 class="titulo">Lorem ipsum dolor, sit amet</h2>
+                <h2 class="titulo">Otras opciones</h2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia accusantium nisi,
-                     obcaecati ducimus ullam modi blanditiis? Magni officiis, recusandae assumenda voluptas
-                     harum nemo eligendi quaerat, dicta laborum eaque nobis deserunt.
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum magnam velit repellat
-                     odit pariatur repellendus mollitia commodi rem, autem, soluta saepe culpa in nam blanditiis eaque perferendis aliquam nesciunt?
+                    ir a <a href="../vender/index.php" target="_self" rel="noopener noreferrer">Vender</a>
                 </p>
-            </article>
-
-            <article>
-                <h2 class="titulo">Lorem ipsum dolor, sit amet</h2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia accusantium nisi,
-                     obcaecati ducimus ullam modi blanditiis? Magni officiis, recusandae assumenda voluptas
-                     harum nemo eligendi quaerat, dicta laborum eaque nobis deserunt.
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum magnam velit repellat
-                     odit pariatur repellendus mollitia commodi rem, autem, soluta saepe culpa in nam blanditiis eaque perferendis aliquam nesciunt?
+                    ir a <a href="#" target="_self" rel="noopener noreferrer">Reportes</a>
                 </p>
             </article> 
         </section>
