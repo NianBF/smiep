@@ -24,11 +24,12 @@ include 'Configuracion.php';
   <li role="presentation" class="active"><a href="index.php">Inicio</a></li>
   <li role="presentation"><a href="VerCarta.php">Ver Carta</a></li>
   <li role="presentation"><a href="Pagos.php">Pagos</a></li>
+  <li role="presentation"><a href="../../index.php">Volver</a></li>
 </ul>
 </div>
 
 <div class="panel-body">
-    <h1>Mis Productos</h1>
+    <h1>Productos</h1>
     <a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
     <div id="products" class="row list-group">
         <?php

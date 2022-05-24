@@ -52,7 +52,7 @@ $custRow = $query->fetch_assoc();
     <thead>
         <tr>
             <th>Producto</th>
-            <th>Pricio</th>
+            <th>Precio</th>
             <th>Cantidad</th>
             <th>Sub total</th>
         </tr>

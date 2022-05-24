@@ -16,7 +16,7 @@ $cart = new Cart;
     input[type="number"]{width: 20%;}
     </style>
     <script>
-    function updateCartItem(obj,id){
+    function updateCartItem(obj,id_prod){
         $.get("AccionCarta.php", {action:"updateCartItem", id_prod:id_prod, qty:obj.value}, function(data){
             if(data == 'ok'){
                 location.reload();
@@ -67,16 +67,16 @@ $cart = new Cart;
             <td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
             <td><?php echo '$'.$item["subtotal"].' COP'; ?></td>
             <td>
-                <a href="AccionCarta.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>" class="btn btn-danger" onclick="return confirm('Confirma eliminar?')"><i class="glyphicon glyphicon-trash"></i></a>
+                <a href="AccionCarta.php?action=removeCartItem&id_prod=<?php echo $item["rowid"]; ?>" class="btn btn-danger" onclick="return confirm('¿Seguro que quiere eliminar?')"><i class="glyphicon glyphicon-trash"></i></a>
             </td>
         </tr>
         <?php } }else{ ?>
-        <tr><td colspan="5"><p>Tu carta esta vacia.....</p></td>
+        <tr><td colspan="5"><p>Tu carrito está vacia.....</p></td>
         <?php } ?>
     </tbody>
     <tfoot>
         <tr>
-            <td><a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Continue Comprando</a></td>
+            <td><a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i>Continuar Comprando</a></td>
             <td colspan="2"></td>
             <?php if($cart->total_items() > 0){ ?>
             <td class="text-center"><strong>Total <?php echo '$'.$cart->total().' COP'; ?></strong></td>
