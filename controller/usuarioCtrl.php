@@ -83,7 +83,7 @@ $Usuario= new Usuario();
 			window.location.href = '../view/usuario/mostrar.php';
 		   }
 		 })
-		 </script>";
+		</script>";
 
 	/*	
 */
