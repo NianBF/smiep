@@ -19,7 +19,6 @@ $listaCliente=$crud->mostrar();
     <title>Mostrar cliente</title>
 	
 	<link rel="stylesheet" type="text/css" href="../../public/css/catalogo.css">
-    <script src="js/eliminar.js"></script>
 </head>
 <body>
 <table>

@@ -14,7 +14,6 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/js" src="../../public/js/main.js"></script>
     
 </head>
 <body>
