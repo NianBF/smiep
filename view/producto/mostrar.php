@@ -45,6 +45,10 @@ $listaProducto=$crud->mostrar();
         <br>
         <br>
 
+        <label for="filtrar-tabla"></label>
+		<input type="text" name="filtro" id="filtrar-tabla" placeholder="producto">
+        
+
         <tr>
             <th>ID</th>
             <th>Codigo</th>
@@ -57,7 +61,7 @@ $listaProducto=$crud->mostrar();
         </tr>
 
         <?php foreach ($listaProducto as $Producto) {?>
-        <tr>
+        <tr class="producto">
 
             <td class="id">
                 <?php echo $Producto->getId_prod() ?>
@@ -85,7 +89,7 @@ $listaProducto=$crud->mostrar();
         <?php }?>
 
     </table>
-            <script src="../../public/js/producto/main.js"></script>
+            <script src="../../public/js/filtrar.js"></script>
 </body>
 
 </html>
