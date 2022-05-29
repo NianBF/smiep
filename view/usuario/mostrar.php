@@ -42,6 +42,8 @@ $listaUsuario=$crud->mostrar();
         <br>
         <br>
 
+		<label for="filtrar-tabla"></label>
+		<input type="text" name="filtro" id="filtrar-tabla" placeholder="usuario">
 
 		<tr>
 
@@ -57,13 +59,13 @@ $listaUsuario=$crud->mostrar();
 
 		
 			<?php foreach ($listaUsuario as $Usuario) {?>
-			<tr>
+			<tr class="usuario">
 	
-				<td><?php echo $Usuario->getId_doc() ?></td>
-				<td><?php echo $Usuario->getNombre1()." ".$Usuario->getNombre2()." ".$Usuario->getApellido1()." ".$Usuario->getapellido2() ?></td>
-				<td><?php echo $Usuario->getUserName() ?></td>
-				<td><?php echo $Usuario->getEmail() ?></td>
-				<td><?php echo $Usuario->getRol() ?></td>
+				<td class="idUsua"><?php echo $Usuario->getId_doc() ?></td>
+				<td class="nombUsua"><?php echo $Usuario->getNombre1()." ".$Usuario->getNombre2()." ".$Usuario->getApellido1()." ".$Usuario->getapellido2() ?></td>
+				<td class="nickUsua"><?php echo $Usuario->getUserName() ?></td>
+				<td class="emailUsua"><?php echo $Usuario->getEmail() ?></td>
+				<td class="rolUsua"><?php echo $Usuario->getRol() ?></td>
 
 				<td><a class="btn btn-outline-light editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=a">Actualizar</a> </td>
 				<td><a type="submit" class="btn btn-outline-light eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/usuarioCtrl.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=e" >Eliminar</a></td>	
@@ -76,7 +78,7 @@ $listaUsuario=$crud->mostrar();
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	
-	
+	<script src="../../public/js/usuario/filtrarUsuarios.js"></script>
 	
 </body>
 </html>

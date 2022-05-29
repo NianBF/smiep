@@ -40,6 +40,10 @@ $listaProveedor=$crud->mostrar();
 		<a href="ingresar.php" class="agregar">Agregar</a>
 		<br>
 		<br>
+
+		<label for="filtrar-tabla"></label>
+		<input type="text" name="filtro" id="filtrar-tabla" placeholder="proveedor">
+
 			<tr>
 			<th>ID PROVEEDOR</th>
 			<th>NOMBRE</th>
@@ -52,14 +56,14 @@ $listaProveedor=$crud->mostrar();
            </tr>
 		
 			<?php foreach ($listaProveedor as $Proveedor) {?>
-			<tr>
+			<tr class="proveedor">
 	
-				<td><?php echo $Proveedor->getId_DocProv() ?></td>
-				<td><?php echo $Proveedor->getNombProv1()." ".$Proveedor->getNombProv2()." ".$Proveedor->getApeProv1()." ".$Proveedor->getApeProv2() ?></td>
-				<td><?php echo $Proveedor->getEmpresa() ?></td>
-				<td><?php echo $Proveedor->getDireccion1()." ".$Proveedor->getDireccion2() ?></td>
-				<td><?php echo $Proveedor->getNumTel1() ?></td>
-				<td><?php echo $Proveedor->getEmail1() ?></td>
+				<td class="idProv"><?php echo $Proveedor->getId_DocProv() ?></td>
+				<td class="nombreProv"><?php echo $Proveedor->getNombProv1()." ".$Proveedor->getNombProv2()." ".$Proveedor->getApeProv1()." ".$Proveedor->getApeProv2() ?></td>
+				<td class="empresa"><?php echo $Proveedor->getEmpresa() ?></td>
+				<td class="direccion"><?php echo $Proveedor->getDireccion1()." ".$Proveedor->getDireccion2() ?></td>
+				<td class="numProv"><?php echo $Proveedor->getNumTel1() ?></td>
+				<td class="email"><?php echo $Proveedor->getEmail1() ?></td>
 				
 				
 				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=a">Actualizar</a> </td>
@@ -69,7 +73,7 @@ $listaProveedor=$crud->mostrar();
 		
 	</table>
 	
-	
+	<script src="../../public/js/proveedor/filtrarProveedor.js"></script>
 	
 </body>
 </html>

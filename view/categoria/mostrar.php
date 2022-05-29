@@ -41,6 +41,9 @@ $listaCategoria=$crud->mostrar();
         <br>
         <br>
 
+        <label for="filtrar-tabla"></label>
+		<input type="text" name="filtro" id="filtrar-tabla" placeholder="categoria">
+
 		<tr>
     <th>ID CATEGORIA</th>
     <th>CATEGORIA</th>
@@ -48,10 +51,10 @@ $listaCategoria=$crud->mostrar();
 
     </tr>
 		<?php foreach ($listaCategoria as $Categoria) {?>
-		<tr>
+		<tr class="categoria">
 	
-				<td><?php echo $Categoria->getid_Cat() ?></td>
-				<td><?php echo $Categoria->getnCategoria() ?></td>
+				<td class="idCat"><?php echo $Categoria->getid_Cat() ?></td>
+				<td class="nombCat"><?php echo $Categoria->getnCategoria() ?></td>
 				<td><a class="eliminar" type="submit"  
                 href="../../controller/categoriaCtrl.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e" >Eliminar</a></td>	
 			</tr>
@@ -59,6 +62,7 @@ $listaCategoria=$crud->mostrar();
 	</table>
 
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../public/js/categoria/filtrarCategoria.js"></script>
 	
 	
 	

@@ -43,6 +43,9 @@ $listaTienda=$crud->mostrar();
 		<br>
 		<br>
 		
+		<label for="filtrar-tabla"></label>
+		<input type="text" name="filtro" id="filtrar-tabla" placeholder="tienda">
+
 			<tr>
 			<th>ID</th>
 			<th>NOMBRE</th>
@@ -54,13 +57,13 @@ $listaTienda=$crud->mostrar();
 			</tr>
 		
 			<?php foreach ($listaTienda as $Tienda) {?>
-			<tr>
+			<tr class="tienda">
 	
-				<td><?php echo $Tienda->getId_ti() ?></td>
-				<td><?php echo $Tienda->getNombreTienda() ?></td>
-				<td><?php echo $Tienda->getDireccionTi() ?></td>
-				<td><?php echo $Tienda->getTelTi() ?></td>
-				<td><?php echo $Tienda->getEmailTi() ?></td>
+				<td class="idTienda"><?php echo $Tienda->getId_ti() ?></td>
+				<td class="nombTienda"><?php echo $Tienda->getNombreTienda() ?></td>
+				<td class="direccion"><?php echo $Tienda->getDireccionTi() ?></td>
+				<td class="numTienda"><?php echo $Tienda->getTelTi() ?></td>
+				<td class="emailTienda"><?php echo $Tienda->getEmailTi() ?></td>
 				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=a">Actualizar</a> </td>
 				<td><a type="submit" class="eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/tiendaCtrl.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=e" >Eliminar</a></td>	
 			</tr>
@@ -69,6 +72,7 @@ $listaTienda=$crud->mostrar();
 	</table>
 
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="../../public/js/tienda/filtrarTienda.js"></script>
 	
 	
 	

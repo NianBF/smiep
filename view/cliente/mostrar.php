@@ -42,6 +42,9 @@ $listaCliente=$crud->mostrar();
         <br>
         <br>
 
+        <label for="filtrar-tabla"></label>
+		<input type="text" name="filtro" id="filtrar-tabla" placeholder="cliente">
+
 		<tr>
 
     <th>DOCUMENTO</th>
@@ -54,13 +57,13 @@ $listaCliente=$crud->mostrar();
 
     </tr>
 <?php foreach ($listaCliente as $Cliente) {?>
-			<tr>
+			<tr class="cliente">
 	
-				<td><?php echo $Cliente->getId_CliDoc() ?></td>	
-				<td > <?php echo $Cliente->getNombreCli1()." ".$Cliente->getNombreCli2()." ".$Cliente->getApellidoCli1()." ".$Cliente->getApellidoCli2() ?></td>
-				<td><?php echo $Cliente->getTelCli() ?></td>
-				<td><?php echo $Cliente->getEmailCli() ?></td>
-				<td><?php echo $Cliente->getFechaNac() ?></td>
+				<td class="idCli"><?php echo $Cliente->getId_CliDoc() ?></td>	
+				<td class="nombCli"> <?php echo $Cliente->getNombreCli1()." ".$Cliente->getNombreCli2()." ".$Cliente->getApellidoCli1()." ".$Cliente->getApellidoCli2() ?></td>
+				<td class="numbCli"><?php echo $Cliente->getTelCli() ?></td>
+				<td class="emailCli"><?php echo $Cliente->getEmailCli() ?></td>
+				<td class="fechNacCli"><?php echo $Cliente->getFechaNac() ?></td>
 				
 		
 				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc()?>&accion=a">Actualizar</a> </td>
@@ -69,6 +72,6 @@ $listaCliente=$crud->mostrar();
 			<?php }?>
 			
 </table>
-	
+	<script src="../../public/js/cliente/filtrarCliente.js"></script>
 </body>
 </html>
