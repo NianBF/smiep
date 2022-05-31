@@ -1,5 +1,7 @@
 <?php
+include_once('../../controller/loginCtrl.php');
 session_start();
+
 require_once('../../model/clienteCrud_Mdl.php');
 require_once('../../model/clienteMdl.php');
 $crud=new CrudCliente();
@@ -22,7 +24,7 @@ $listaCliente=$crud->mostrar();
 </head>
 <body>
     <header>
-        <a href="../../index.php"><span class="icon">
+        <a href="../inicio/menu.php"><span class="icon">
             <figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure>
         </a>
 

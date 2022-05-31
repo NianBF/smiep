@@ -35,7 +35,7 @@ session_start();
 				</p>
 
 				<p>
-					<label>Codigo de Barras</label>
+					<label>Cod de Barras</label>
 					<input type='text' placeholder="Codigo de Barras" id="codBar" name='codBar'>
 				</p>
 
@@ -81,7 +81,7 @@ session_start();
 
 				<p>
 					<label>ID Categoria</label>
-					<input type='text' placeholder="ID Categoria" id="id_docUsu" name='id_docUsu'>
+					<input type='text' placeholder="ID Categoria" id="id_cat" name='id_cat'>
 				</p>
 
 				<p class="block">

@@ -29,7 +29,7 @@ $listaTienda=$crud->mostrar();
 	<a href="../../controller/salirCtrl.php"><button class="boton"><span>salir</span></button></a>
     </div>
     <header>
-	<a href="../../index.php"><span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure>
+	<a href="../inicio/menu.php"><span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure>
     </a>    
 	<h1 class="titulo">S.M.I.E.P</h1>
         <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
