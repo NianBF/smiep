@@ -14,118 +14,94 @@ session_start();
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 
 	<title> Ingresar Producto</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/ingresar.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
 </head>
 <div class="contenedor">
-	<span class="icon">
-		<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure>
-	</span>
-	<header class="header">
-		Ingresa los datos del Producto
-	</header>
-	<div class="tabla">
-		<form action='../../controller/productoCtrl.php' name="formulario" method='POST'>
-			<table class="tabla">
-				<tr>
-					<td class="text">ID PRODUCTO</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="ID PRODUCTO" id="id_prod" name='id_prod'></td>
-				</tr>
+<span class="icon">
+			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
+		</span>
+	<div class="contact-wrapper animated bounceInUp">
+	<div class="contact-form">
+		<h3>Agregar Productos</h3>
+		<form action="../../controller/productoCtrl.php" name="formulario" method="POST">
+				<p>
+					<label>ID Producto</label>
+					<input type="text" placeholder="ID Producto" id="id_prod" name="id_prod">
+				</P>
 
-				<tr>
-					<td class="text">IMAGEN</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="IMAGEN" id="img" name='imgProd'></td>
-				</tr>
+				<p>
+					<label>Imagen</label>
+					<input type='text' placeholder="Imagen" id="img" name='imgProd'>
+				</p>
 
-				<tr>
-					<td class="text">CODBAR</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="CODIGO DE BARRAS" id="codBar" name='codBar'></td>
-				</tr>
+				<p>
+					<label>Codigo de Barras</label>
+					<input type='text' placeholder="Codigo de Barras" id="codBar" name='codBar'>
+				</p>
 
-				<tr>
-					<td class="text">PRODUCTO</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="PRODUCTO" id="producto" name='nombreProd'></td>
-				</tr>
+				<p>
+					<label>Producto</label>
+					<input type='text' placeholder="Producto" id="producto" name='nombreProd'>
+				</p>
 
-				<tr>
-					<td class="text">DESCRIPCIÓN</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="DESCRIPCIÓN" value="Sin detalles" id="descripcion" name='descripcion'></td>
-				</tr>
+				<p>
+					<label>Descripción</label>
+					<input type='text' placeholder="Descripción" value="Sin detalles" id="descripcion" name='descripcion'>
+				</p>
 
-				<tr>
-					<td class="text">PRECIO</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="PRECIO" id="precio" name='precio'></td>
-				</tr>
+				<p>
+					<label>Precio</label>
+					<input type='text' placeholder="Precio" id="precio" name='precio'>
+				</p>
 
-				<tr>
-					<td class="text">CANT MINIMA</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="CANTIDAD MINIMA" id="cantMin" name='cantidadMin'></td>
-				</tr>
+				<p>
+					<label>Cant Minima</label>
+					<input type='text' placeholder="Cantidad Minima" id="cantMin" name='cantidadMin'>
+				</p>
 
-				<tr>
-					<td class="text">CANT DISPONIBLE</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="CANTIDAD DISPONIBLE" id="cantDisp" name='cantidadDisp'></td>
-				</tr>
+				<p>
+					<label>Cant Disponible</label>
+					<input type='text' placeholder="Cantidad Disponible" id="cantDisp" name='cantidadDisp'>
+				</p>
 
-				<tr>
-					<td class="text">PRESENTACION</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="TIPO PRESENTACION" id="tipoPresentacion"
-							name='tipoPresentacion'></td>
-				</tr>
+				<p>
+					<label>Presentacion</label>
+					<input type='text' placeholder="Tipo Presentacion" id="tipoPresentacion" name='tipoPresentacion'>
+				</p>
 
-				<tr>
-					<td class="text">CREADO EN</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="Creado en" value="00000000" id="creadoEn" name='creadoEn'></td>
-				</tr>
+				<p>
+					<label>Creado en</label>
+					<input type='text' placeholder="Creado en" value="00000000" id="creadoEn" name='creadoEn'>
+				</p>
 
-				<tr>
-					<td class="text">ID USUARIO</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="ID USUARIO" id="id_docUsu" name='id_docUsu'></td>
-				</tr>
+				<p>
+					<label>ID Usuario</label>
+					<input type='text' placeholder="ID Usuario" id="id_docUsu" name='id_docUsu'>
+				</p>
 
-				<tr>
-					<td class="text">ID CATEGORIA</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="ID CATEGORIA" id="id_cat" name='id_cat'></td>
-				</tr>
+				<p>
+					<label>ID Categoria</label>
+					<input type='text' placeholder="ID Categoria" id="id_docUsu" name='id_docUsu'>
+				</p>
 
-				<tr>
-					<td class="text">ID ESTADO</td>
-				</tr>
-				<tr>
-					<td> <input type='text' placeholder="ID ESTADO" id="id_estado" name='id_estado'></td>
-				</tr>
+				<p class="block">
+					<label>ID Estado</label>
+					<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'>
+				</p>
 
 				<input type='hidden' name='insertar' value='insertar'>
-			</table>
-			<div class="boton">
-				<input type='submit' class="btn btn-outline-light" id="btn" name="btn" value='Guardar'>
-				<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-			</div>
+
+				<p class='block'>
+					<button type='submit' id="btn" name="btn" value='Guardar'>
+						Guardar
+					</button>
+				</p>
+				<p class='block'>
+					<a href='mostrar.php'><button type="button">Volver</button></a>
+				</p>
 		</form>
 	</div>
+</div>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script type="text/js" src="../../public/js/producto/ingresar.js"></script>
 	</body>

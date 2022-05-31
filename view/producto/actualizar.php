@@ -24,7 +24,7 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 	<link rel="icon" type="image/png" href="../../home/img/favicon.png" sizes="any">
 
 	<title>Actualizar Producto</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/actualizar.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
 
 </head>
 
@@ -33,106 +33,83 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 		<span class="icon">
 			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure>
 		</span>
-		<header class="header">
-			Cambia los datos del Producto
-		</header>
-
-		<div class="tabla">
+		<div class="contact-wrapper animated bounceInUp">
+			<div class="contact-form">
+			<h3>Cambia los datos del Producto</h3>
 			<form action='../../controller/productoCtrl.php' name="formulario" method='post'>
+				<p>
+					<label>ID Producto</label>
+					<input type='text' placeholder="ID Producto" id="id_prod" name='id_prod'
+								value='<?php echo $Producto->getId_prod()?>'>
+				</p>
 
-				<table>
-					<tr>
-						<td class="text">ID PRODUCTO</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="ID PRODUCTO" id="id_prod" name='id_prod'
-								value='<?php echo $Producto->getId_prod()?>'></td>
-					</tr>
+				<p>
+					<label>Imagen</label>
+					<input type='text' placeholder="Imagen" id="img" name='imgProd'
+								value='<?php echo $Producto->getImgProd()?>'>
+				</p>
 
-					<tr>
-						<td class="text">IMAGEN</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="IMAGEN" id="img" name='imgProd'
-								value='<?php echo $Producto->getImgProd()?>'></td>
-					</tr>
+				<p>
+					<label>Producto</label>
+					<input type='text' placeholder="Producto" id="producto" name='nombreProd'
+								value='<?php echo $Producto->getNombreProd()?>'>
+				</p>
 
-					<tr>
-						<td class="text">PRODUCTO</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="PRODUCTO" id="producto" name='nombreProd'
-								value='<?php echo $Producto->getNombreProd()?>'></td>
-					</tr>
+				<p>
+					<label>Descripción</label>
+					<input type='text' placeholder="Descripción" value="Sin detalles" id="descripcion"
+								name='descripcion' value='<?php echo $Producto->getNombreProd()?>'>
+				</p>
 
-					<tr>
-						<td class="text">DESCRIPCIÓN</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="DESCRIPCIÓN" value="Sin detalles" id="descripcion"
-								name='descripcion' value='<?php echo $Producto->getNombreProd()?>'></td>
-					</tr>
+				<p>
+					<label>Precio</label>
+					<input type='text' placeholder="PRESIO" id="precio" name='precio'
+								value='<?php echo $Producto->getPrecio()?>'>
+				</p>
 
-					<tr>
-						<td class="text">PRECIO</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="PRESIO" id="precio" name='precio'
-								value='<?php echo $Producto->getPrecio()?>'></td>
-					</tr>
+				<p>
+					<label>Cant Minima</label>
+					<input type='text' placeholder="Cantidad Minima" value="1" disabled readonly id="cantMin"
+								name='cantidadMin' value='<?php echo $Producto->getCantidadMin()?>'>
+				</p>
 
-					<tr>
-						<td class="text">CANT MINIMA</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="CANTIDAD MINIMA" value="1" disabled readonly id="cantMin"
-								name='cantidadMin' value='<?php echo $Producto->getCantidadMin()?>'></td>
-					</tr>
+				<p>
+					<label>Cant Disponible</label>
+					<input type='text' placeholder="Cantidad Disponible" id="cantDisp" name='cantidadDisp'
+								value='<?php echo $Producto->getCantidadDisp()?>'>
+				</p>
 
-					<tr>
-						<td class="text">CANT DISPONIBLE</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="CANTIDAD DISPONIBLE" id="cantDisp" name='cantidadDisp'
-								value='<?php echo $Producto->getCantidadDisp()?>'></td>
-					</tr>
+				<p>
+					<label>Tipo Presentación</label>
+					<input type='text' placeholder="Tipo Presentación" id="tipoPresentacion"
+								name='tipoPresentacion' value='<?php echo $Producto->getTipoPresentacion()?>'>
+				</p>
 
-					<tr>
-						<td class="text">TIPO PRESENTACION</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="TIPO PRESENTACION" id="tipoPresentacion"
-								name='tipoPresentacion' value='<?php echo $Producto->getTipoPresentacion()?>'></td>
-					</tr>
+				<p>
+					<label>ID Categoria</label>
+					<input type='text' placeholder="ID Categoria" id="id_cat" name='id_cat'
+								value='<?php echo $Producto->getId_cat()?>'>
+				</p>
 
-					<tr>
-						<td class="text">ID CATEGORIA</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="ID CATEGORIA" id="id_cat" name='id_cat'
-								value='<?php echo $Producto->getId_cat()?>'></td>
-					</tr>
-
-					<tr>
-						<td class="text">ID ESTADO</td>
-					</tr>
-					<tr>
-						<td> <input type='text' placeholder="ID ESTADO" id="id_estado" name='id_estado'
-								value='<?php echo $Producto->getId_estado()?>'></td>
-					</tr>
-
-
+				<p>
+					<label>ID Estado</label>
+					<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'
+								value='<?php echo $Producto->getId_estado()?>'>
+				</p>
 					<input type='hidden' name='actualizar' value'actualizar'>
-				</table>
-				<div class="boton">
-					<input class="btn btn-outline-light" id="btn" name="btn" type='submit' value='Guardar'>
-					<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-				</div>
 
+					<p class='block'>
+					<button type='submit' id="btn" name="btn" value='Guardar'>
+						Guardar
+					</button>
+				</p>
+				<p class='block'>
+				<a href="mostrar.php"><button type="button">Volver</button></a>
+				</p>
 			</form>
-		</div>
+			</div>
+	</div>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script type="text/js" src="../../public/js/producto/actualizar.js"></script>
 </body>
-
 </html>
