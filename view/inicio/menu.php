@@ -26,7 +26,7 @@ session_start();
             </section>
         </div>
         <div class="menu_bar">
-            <a href="#" class="bt-menu"><span class="icon-menu"></span><img src="../home/img/favicon.png" alt="Logo SMIEP" width="80px"></a>
+            <a href="#" class="bt-menu"><span class="icon-menu"></span><img src="../../img/favicon.png" alt="Logo SMIEP" width="80px"></a>
         </div>
         <nav>
             <ul>
