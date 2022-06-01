@@ -116,7 +116,7 @@ Cambia los datos del Proveedor
 	
 </form>
 </div>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/proveedor/actualizarProveedor.js"></script>	
 
 
