@@ -24,12 +24,9 @@ $listaProducto=$crud->mostrar();
 
 <body>
     <table>
-        <div>
-            <a href="../../controller/salirCtrl.php"><button class="boton"><span>salir</span></button></a>
-        </div>
         <header>
             <a href="../inicio/menu.php"><span class="icon">
-                    <figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="120px"></figure>
+                    <figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="180rem"></figure>
             </a>
             <h1 class="titulo">S.M.I.E.P</h1>
             <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
@@ -40,14 +37,13 @@ $listaProducto=$crud->mostrar();
         <hr>
         <br>
         <h4>Productos</h4>
-        <h5>Productos de Grano</h5>
         <a href="agregarProducto.php" class="agregar">Agregar</a>
         <br>
         <br>
-
+        <div class="buscar">
         <label for="filtrar-tabla"></label>
-		<input type="text" name="filtro" id="filtrar-tabla" placeholder="producto">
-        
+		<input type="text" name="filtro" id="filtrar-tabla" placeholder="Productos" class="buscar1">
+        </div>
 
         <tr>
             <th>ID</th>
@@ -55,7 +51,7 @@ $listaProducto=$crud->mostrar();
             <th>Nombre</th>
             <th>Precio</th>
             <th>Stock</th>
-            <th>Editar</th>
+            <th>Actualizar</th>
             <th>Eliminar</th>
 
         </tr>
