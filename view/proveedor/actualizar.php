@@ -111,7 +111,7 @@ Cambia los datos del Proveedor
 			<td><input type='email' placeholder="(OPCIONAL)" name='email2' value='<?php echo $Proveedor->getEmail2()?>'></td>
 		</tr>
 	
-		<input type='hidden' name='actualizar' value'actualizar'>
+		<input type='hidden' name='actualizar' value='Actualizar'>
 	</table>
 	<div class="boton">
 	<input id="btn" name="btn"  type='submit' value='Guardar'>
