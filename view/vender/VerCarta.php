@@ -1,4 +1,9 @@
 <?php
+session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 // initializ shopping cart class
 include 'La-carta.php';
 $cart = new Cart;
@@ -93,3 +98,4 @@ $cart = new Cart;
 </div>
 </body>
 </html>
+<?php } ?>

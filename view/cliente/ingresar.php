@@ -1,5 +1,8 @@
-<?php
-session_start();
+<?phpsession_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 ?>
 
 <!DOCTYPE html>
@@ -87,8 +90,6 @@ Ingresa los datos del cliente
 </div>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/cliente/ingresarCliente.js"></script>
-
-
-
  </body>
 </html>
+<?php } ?>

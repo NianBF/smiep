@@ -8,8 +8,8 @@ $db=Db::conectar();
 $fechaI = $_POST["fecha-i"];
 $fechaAct = $_POST["fechaAct"];
 
-$sql = "SELECT nombreProd,precio,cantidadDisp FROM producto where creadoEn >= '$fechaI' and creadoEn <= '$fechaAct'"; 
-//$resultset = mysqli_query($db, $sql) or die("database error:".  mysqli_error($db)); 
+$sql = "SELECT nombreProd,precio,cantidadDisp FROM producto"; //where creadoEn >= '$fechaI' and creadoEn <= '$fechaAct'"; 
+$resultset = mysqli_query($db, $sql) or die("database error:".  mysqli_error($db)); 
 require('../../fpdf/fpdf.php'); 
 $pdf = new FPDF(); 
 $pdf->AddPage(); 

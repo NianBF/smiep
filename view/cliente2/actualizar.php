@@ -1,5 +1,9 @@
 <?php
 session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 require_once('../../model/clienteCrud_Mdl.php');
 require_once('../../model/clienteMdl.php');
 	$crud= new CrudCliente();
@@ -102,3 +106,4 @@ Cambia los datos del Producto
 <script src="js/ingresar.js"></script>	
 </body>
 </html>
+<?php } ?>

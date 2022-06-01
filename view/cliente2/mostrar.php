@@ -1,7 +1,10 @@
 <?php
-include_once('../../controller/loginCtrl.php');
 session_start();
-
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
+include_once('../../controller/loginCtrl.php');
 require_once('../../model/clienteCrud_Mdl.php');
 require_once('../../model/clienteMdl.php');
 $crud=new CrudCliente();
@@ -72,3 +75,4 @@ $listaCliente=$crud->mostrar();
 	
 </body>
 </html>
+<?php } ?>
