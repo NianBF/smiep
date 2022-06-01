@@ -1,5 +1,9 @@
 <?php
 session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 require_once('../../model/proveedorCrud_Mdl.php');
 require_once('../../model/proveedorMdl.php');
 $crud=new CrudProveedor();
@@ -77,3 +81,4 @@ $listaProveedor=$crud->mostrar();
 	
 </body>
 </html>
+<?php } ?>

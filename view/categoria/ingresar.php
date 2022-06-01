@@ -1,5 +1,9 @@
 <?php
 session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,4 +53,4 @@ Ingresa los datos de categoria
 
  </body>
 </html>
-
+<?php } ?>

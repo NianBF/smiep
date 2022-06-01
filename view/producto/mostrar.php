@@ -1,5 +1,9 @@
 <?php
 session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 require_once('../../model/productoCRUD_Mdl.php');
 require_once('../../model/productoMdl.php');
 $crud=new CrudProducto();
@@ -89,3 +93,4 @@ $listaProducto=$crud->mostrar();
 </body>
 
 </html>
+<?php } ?>

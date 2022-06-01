@@ -1,6 +1,9 @@
 <?php
-
 session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 require_once('../../model/tiendaCrud_Mdl.php');
 require_once('../../model/tiendaMdl.php');
 	$crud= new CrudTienda();
@@ -77,3 +80,4 @@ Cambia los datos de la tienda
 <script src="../../public/js/tienda/actualizarTienda.js"></script>	
 </body>
 </html>
+<?php } ?>

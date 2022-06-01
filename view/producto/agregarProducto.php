@@ -1,7 +1,9 @@
 <?php
-
 session_start();
-
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 ?>
 
 <!DOCTYPE html>
@@ -107,3 +109,4 @@ session_start();
 	</body>
 
 </html>
+<?php } ?>

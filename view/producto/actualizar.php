@@ -1,5 +1,9 @@
 <?php
 session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 
 require_once('../../model/productoCRUD_Mdl.php');
 require_once('../../model/productoMdl.php');
@@ -113,3 +117,4 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 		<script type="text/js" src="../../public/js/producto/actualizar.js"></script>
 </body>
 </html>
+<?php } ?>

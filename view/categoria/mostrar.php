@@ -1,5 +1,9 @@
 <?php
 session_start();
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 require_once('../../model/categoriaCrud_Mdl.php');
 require_once('../../model/categoriaMdl.php');
 $crud=new CrudCategoria();
@@ -63,8 +67,6 @@ $listaCategoria=$crud->mostrar();
 
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/categoria/filtrarCategoria.js"></script>
-	
-	
-	
 </body>
 </html>
+<?php } ?>

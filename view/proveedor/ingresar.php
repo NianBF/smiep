@@ -1,7 +1,9 @@
 <?php
-
 session_start();
-
+if($_SESSION['email'] == null or $_SESSION["userName"]== null or
+$_SESSION["pass"] == null ){
+    header("location:../../index.php");
+}else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,3 +126,4 @@ Ingresa los datos del Proveedor
 <script src="../../public/js/proveedor/ingresarProveedor.js"></script>
  </body>
 </html>
+<?php } ?>
