@@ -154,3 +154,28 @@ h5{
 .invisible{
 	display: none;
 }
+/*.buscar{
+    position: absolute;
+    top: 322px;
+    left: 1150px;
+}*/
+.buscar1{
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    width: 0%;
+    /*position: relative;*/
+    padding: 9px 10px 9px 32px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 15px;
+    color: #444;
+    border: 1px solid #000;
+    background: #fff url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") 
+        no-repeat 9px center;   
+
+}
+.buscar1:hover{
+    width: 5%;
+}
