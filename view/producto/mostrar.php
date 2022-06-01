@@ -42,7 +42,7 @@ $listaProducto=$crud->mostrar();
         <br>
         <div class="buscar">
         <label for="filtrar-tabla"></label>
-		<input type="text" name="filtro" id="filtrar-tabla" placeholder="Productos" class="buscar1">
+		<input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Productos" class="buscar1">
         </div>
 
         <tr>
