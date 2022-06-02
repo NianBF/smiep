@@ -114,7 +114,7 @@ CREATE TABLE `compra` (
   `id_compra` int(100) NOT NULL,
   `cantidadCP` double(16,4) NOT NULL,
   `descripcionVT` text,
-  `creadoEn` datetime NOT NULL,
+  `creadoEn` date,
   `id_doc` int(100) NOT NULL,
   `id_docPov` int(100) NOT NULL,
   PRIMARY KEY (`id_compra`),
@@ -142,7 +142,7 @@ DROP TABLE IF EXISTS `estado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `estado` (
-  `id_estado` int(100) NOT NULL,
+  `id_estado` int(100) NOT NULL AUTO_INCREMENT,
   `tEstado` varchar(20) NOT NULL,
   PRIMARY KEY (`id_estado`),
   UNIQUE KEY `tEstado` (`tEstado`)
@@ -205,7 +205,7 @@ CREATE TABLE `producto` (
   `catidadMin` int(11) NOT NULL DEFAULT '1',
   `cantidadDisp` int(11) NOT NULL DEFAULT '1',
   `tipoPresentacion` varchar(50) NOT NULL,
-  `creadoEn` datetime NOT NULL,
+  `creadoEn` date,
   `id_docUsu` int(100) NOT NULL,
   `id_cat` int(100) NOT NULL,
   `id_estado` int(100) NOT NULL,
@@ -280,7 +280,7 @@ CREATE TABLE `proveedor` (
   `numTel2` int(20) DEFAULT NULL,
   `email1` varchar(100) NOT NULL,
   `email2` varchar(100) DEFAULT NULL,
-  `creadoEn` datetime NOT NULL,
+  `creadoEn` date,
   PRIMARY KEY (`id_docPov`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -340,7 +340,7 @@ CREATE TABLE `usuario` (
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `rol` varchar(20) NOT NULL,
-  `creadoEn` datetime NOT NULL,
+  `creadoEn` date,
   `id_ti` int(100) NOT NULL,
   `id_estado` int(100) NOT NULL,
   PRIMARY KEY (`id_doc`),
@@ -373,7 +373,7 @@ CREATE TABLE `venta` (
   `id_venta` int(100) NOT NULL,
   `cantidadVT` double(16,4) NOT NULL,
   `descripcionVT` text,
-  `creadoEn` datetime NOT NULL,
+  `creadoEn` datetime,
   `id_caja` int(100) NOT NULL,
   `id_cliDoc` int(100) NOT NULL,
   `id_doc` int(100) NOT NULL,
