@@ -1,0 +1,11 @@
+**************************************************************************
+***|Documentación específica de cambios y/o actualizaciones realizadas|***
+**************************************************************************
+
+Modificación en «~/model/proveedorCrud_Mdl.php» en los nombres de las columnas de la DB, pues al estar mal nombrados
+generaban errores que impedían el funcionamiento del CRUD.
+
+(01/06/2022)Jeison: Se modifican las vistas haciendo la validación de que se haya iniciado sesión, al igual que se modifica el archivo «~/controller/salirCtrl.php» 
+donde se elimina la sesión de: email, usuario & contraseña.
+
+(01/06/2022 21:10)NB: Se actualiza campos de fechas en «smiep2.8.sql» para evitar que sean campos obligatorios.

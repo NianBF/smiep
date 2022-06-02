@@ -1,0 +1,8 @@
+************************************************************
+***|Documentación específica archivos o carpetas creadas|***
+************************************************************
+
+(01/06/2022 21:23)NB: Se crea archivo de versión 2.8.6 para base de datos.
+    Se crea el archivo para la configuración de PHPMYADMIN, el cual permite acceder a DB Heroku desde Local.
+        [~/smiep/config/config.inc.php]-Este archivo debe ser copiado en la carpeta C:/xampp/phpmyadmin/
+        para reemplazar el que contiene la conf. original.
