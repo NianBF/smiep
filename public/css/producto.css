@@ -1,0 +1,124 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    text-align: center;
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    text-shadow: 3px 2px 0 #ffffff81, 2px 2px 2px rgba(206,206,206,0);
+}
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3rem;
+    right: 36px;
+    top: 30px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding: 0;
+    margin-left: 45%;
+    padding-bottom: 0;
+    font-size: 170%;
+    color: #4e635a;
+}
+.subtitulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    right: 67px;
+    top: 70px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-bottom: 0;
+    font-size: 100%;
+    color: #4e635a;
+}
+.logo{
+    padding-left: 2%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    align-self: start;
+}
+/*#main-container{
+    margin: 1% auto;
+    width: 150px;
+}*/
+table{
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    border-collapse: collapse;
+    text-align: left;
+    width: 85%;
+    top: 1%;
+    
+}
+th, td{
+    padding: 1%;
+}
+/*
+thead{
+    background-color: #75aba0;
+    border-bottom: solid 5px #0f362d;
+    color: #fff;
+}*/
+tr:nth-child(even){
+    background-color: rgba(229, 229, 229, 0.877);
+}
+button{
+    width: 45px;
+    height: 45px;
+    background: rgb(116, 206, 75);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#eliminar{
+    width: 45px;
+    height: 45px;
+    background: rgb(206, 75, 75);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#agregar{
+    width: 150px;
+    height: 42px;
+    background: #0d9df6;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+#volver{
+    width: 90px;
+    height: 42px;
+    background: #897212;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+#lis{
+    background-color: #0df6d7d5;
+    padding: 1%;
+}
+.buscar1{
+    padding: 9px 10px 9px 32px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 15px;
+    color: #444;
+    border: 1px solid #000;
+    background: #fff url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") 
+        no-repeat 9px center;   
+
+}
