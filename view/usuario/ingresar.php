@@ -14,90 +14,77 @@ $_SESSION["pass"] == null ){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
    
-	<title> Ingresar categoria</title>
+	<title> Ingresar Usuario</title>
 	
-	<link rel="stylesheet" href="../../public/css/ingresar.css">
+	<link rel="stylesheet" href="../../public/css/agregarpru.css">
 </head>
 <body>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
-<header class="header">
-Ingresa los datos del Producto
-</header>
-<div class="tabla">
+<span class="icon">
+			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
+		</span>
+	<div class="contact-wrapper animated bounceInUp">
+	<div class="contact-form">
+		<h3>Agregar Usuario</h3>
 <form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
-	<table>
-		<tr>
-			<td class="text">ID DOC:</td>
-			</tr><tr>
-			<td> <input type='text' name='id_doc' id="doc" placeholder="DOCUMENTO IDENTIFICACION"></td>
-		</tr>
-		
-		<tr>
-			<td class="text">PRIMER NOMBRE:</td>
-			</tr><tr>
-			<td><input type='text' name='nombre1' id="nomb1" placeholder="PRIMER NOMBRE"></td>
-		</tr>
+		<p>
+			<label>ID Doc</label>
+			<input type='text' name='id_doc' id="doc" placeholder="Documento">
+		</p>
+		<p>
+			<label>Primer Nombre</label>
+			<input type='text' name='nombre1' id="nomb1" placeholder="Primer Nombre">
+		</p>
+		<p>
+			<label>Segundo Nombre</label>
+			<input type='text' name='nombre2' placeholder="Segundo Nombre">
+		</p>
+		<p>
+			<label>Primer Apellido</label>
+			<input type='text' name='apellido1' id="ape1" placeholder="Primer Apellido">
+		</p>
+		<p>
+			<label>Segundo Nombre</label>
+			<input type='text' name='apellido2' placeholder="SEGUNDO APELLIDO">
+		</p>
+		<p>
+			<label>Usuario</label>
+			<input type='text' name='userName' id="nick" placeholder="Nombre Usuario">
+		</p>
+		<p>
+			<label>Correo</label>
+			<input type='text' name='email' id="email" placeholder="ejemplo@smiep.com.co">
+		</p>
+		<p>
+			<label>Contraseña</label>
+			<input type='password' name='pass' id="pass" placeholder="**********">
+		</p>
+		<p>
+			<label>Rol</label>
+			<input type='text' name='rol' id="rol" placeholder="Rol">
+		</p>
+		<p>
+			<label>ID Estado</label>
+			<input type='text' name='id_estado' id="estado" placeholder="ID Estado">
+		</p>
+		<p class='block'>
+			<label>ID Tienda</label>
+			<input type='text' name='id_ti' id="ti" placeholder="ID Tienda">
+		</p>
 
-		<tr>
-			<td class="text">SEGUNDO NOMBRE:</td>
-			</tr><tr>
-			<td> <input type='text' name='nombre2' placeholder="SEGUNDO NOMBRE"></td>
-		</tr>
-
-		<tr>
-			<td class="text">PRIMER APELLIDO:</td>
-			</tr><tr>
-			<td><input type='text' name='apellido1' id="ape1" placeholder="PRIMER APELLIDO"></td>
-		</tr>
-
-		<tr>
-			<td class="text">SEGUNDO APELLIDO:</td>
-			</tr><tr>
-			<td> <input type='text' name='apellido2' placeholder="SEGUNDO APELLIDO"></td>
-		</tr>
-
-		<tr>
-			<td class="text">USERNAME:</td>
-			</tr><tr>
-			<td><input type='text' name='userName' id="nick" placeholder="NUMBRE DE USUARIO"></td>
-		</tr>
-		<tr>
-			<td class="text">CORREO:</td>
-			</tr><tr>
-			<td><input type='text' name='email' id="email" placeholder="EXAMPLE@EMAIL.COM"></td>
-		</tr>
-		<tr>
-			<td class="text">CONTRASEÑA:</td>
-			</tr><tr>
-			<td><input type='password' name='pass' id="pass" placeholder="**********"></td>
-		</tr>
-		<tr>
-			<td class="text">ROL:</td>
-			</tr><tr>
-			<td><input type='text' name='rol' id="rol" placeholder="ROL"></td>
-		</tr>
-		<tr>
-			<td class="text">ID ESTADO:</td>
-			</tr><tr>
-			<td><input type='text' name='id_estado' id="estado" placeholder="ID ESTADO"></td>
-		</tr>
-		<tr>
-			<td class="text">ID TIENDA:</td>
-			</tr><tr>
-			<td><input type='text' name='id_ti' id="ti" placeholder="ID TIENDA"></td>
-		</tr>
-		
-	
 		<input type='hidden' name='insertar' value='insertar'>
-	</table>
-	<div class="boton">
-	<input type='submit' class="btn btn-outline-light"  id="btn" name="btn" value='Guardar'>
-	<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-	</div>
+
+		<p class='block'>
+			<button type='submit' id="btn" name="btn" value='Guardar'>
+			Guardar
+			</button>
+		</p>
+		<p class='block'>
+			<a href='mostrar.php'><button type="button">Volver</button></a>
+		</p>
 </form>
-</div>
-</div>
+	</div>
+	</div>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/usuario/ingresarUsuario.js"></script>

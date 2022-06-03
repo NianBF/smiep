@@ -13,114 +13,83 @@ $_SESSION["pass"] == null ){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     
-	<title> Ingresar Proveedor</title>
+	<title>Ingresar Proveedor</title>
 	
-	<link rel="stylesheet" href="../../public/css/ingresar.css">
+	<link rel="stylesheet" href="../../public/css/agregarpru.css">
 </head>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
-<header class="header">
-Ingresa los datos del Proveedor
-</header>
-<div class="tabla">
+<span class="icon">
+			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
+		</span>
+	<div class="contact-wrapper animated bounceInUp">
+	<div class="contact-form">
+		<h3>Agregar Proveedor</h3>
 <form action='../../controller/ProveedorCtrl.php' name="formulario" method='post'>
-	<table class="tabla">
-		<tr>
-			<td  class="text">ID PROVEEDOR</td>
-		</tr>
-		<tr>
-			<td> <input type='text' name='id_DocProv' id="id_Prov" placeholder="ID PROVEEDOR"></td>
-		</tr>
-		<tr>
-			<td class="text">EMPRESA</td>
-		</tr>
-		<tr>
-			<td> <input type='text' name='empresa' id="empresa" placeholder="EMPRESA"></td>
-		</tr>
-		<tr>
-			<td class="text">IMAGEN EMPRESA</td>
-		</tr>
-		<tr>
-			<td><input type='file' name='imgEmpresa'></td>
-		</tr>
-
-		<tr>	
-		<td class="text">PRIMER NOMBRE</td>
-		</tr>
-		<tr>
-		<td><input type='text' placeholder="PRIMER NOMBRE" id="nombProv1" name='nombProv1' ></td>
-		</tr>
-
-		<tr>	
-		<td class="text">SEGUNDO NOMBRE</td>
-		</tr>
-		<tr>
-		<td><input type='text' placeholder="SEGUNDO NOMBRE" id="nombProv2" name='nombProv2' ></td>
-		</tr>
-
-		<tr>	
-		<td class="text">PRIMER APELLIDO</td>
-		</tr>
-		<tr>
-		<td><input type='text' placeholder="PRIMER APELLIDO" id="apeProv1" name='apeProv1' ></td>
-		</tr>
-
-		<tr>	
-		<td class="text">SEGUNDO APELLIDO</td>
-		</tr>
-		<tr>
-		<td><input type='text' placeholder="SEGUNDO APELLIDO" id="apeProv2" name='apeProv2' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">DIRECCION</td>
-		</tr>
-		<tr>
-			<td><input type='text' placeholder="DIRECCION" id="direc" name='direccion1' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">DIRECCION</td>
-		</tr>
-		<tr>
-			<td><input type='text' placeholder="(OPCIONAL) " name='direccion2' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">TELEFONO</td>
-		</tr>
-		<tr>
-			<td><input type='tel' placeholder="TELEFONO" id="tel" name='numTel1' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">TELEFONO</td>
-		</tr>
-		<tr>
-			<td><input type='tel' placeholder="(OPCIONAL)" name='numTel2' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">CORREO</td>
-		</tr>
-		<tr>
-			<td><input type='email' placeholder="ejemplo@email.co" id="email" name='email1' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">CORREO</td>
-		</tr>
-		<tr>
-			<td><input type='email' placeholder="(OPCIONAL)" name='email2' ></td>
-		</tr>
+		<p>
+			<label>ID Proveedor</label>
+			<input type='text' name='id_DocProv' id="id_Prov" placeholder="ID Proveedor">
+		</p>
+		<p>
+			<label>Empresa</label>
+			<input type='text' name='empresa' id="empresa" placeholder="Empresa">
+		</p>
+		<p>
+			<label>IMG Empresa</label>
+			<input type='file' name='IMG Empresa'>
+		</p>
+		<p>
+			<label>Primer Nombre</label>
+			<input type='text' placeholder="Primer Nombre" id="nombProv1" name='nombProv1'>
+		</p>
+		<p>
+			<label>Segundo Nombre</label>
+			<input type='text' placeholder="Segundo Nombre" id="nombProv2" name='nombProv2'>
+		</p>
+		<p>
+			<label>Primer Apellido</label>
+			<input type='text' placeholder="Primer Apellido" id="apeProv1" name='apeProv1'>
+		</p>
+		<p>
+			<label>Segundo Nombre</label>
+			<input type='text' placeholder="Segundo Apellido" id="apeProv2" name='apeProv2' >
+		</p>
+		<p>
+			<label>Dirección</label>
+			<input type='text' placeholder="Dirección" id="direc" name='direccion1'>
+		</p>
+		<p>
+			<label>Dirección Opc</label>
+			<input type='text' placeholder="(Opcional)" name='direccion2'>
+		</p>
+		<p>
+			<label>Telefono</label>
+			<input type='tel' placeholder="Telefono" id="tel" name='numTel1'>
+		</p>
+		<p>
+			<label>Telefono Opc</label>
+			<input type='tel' placeholder="(Opcional)" name='numTel2'>
+		</p>
+		<p>
+			<label>Correo</label>
+			<input type='email' placeholder="ejemplo@smiep.com.co" id="email" name='email1'>
+		</p>
+		<p class='block'>
+			<label>Correo Opc</label>
+			<input type='email' placeholder="(Opcional)" name='email2'>
+		</p>
 	
 		<input type='hidden' name='insertar' value='insertar'>
-	</table>
-	<div class="boton">
-	<input type='submit' class="btn btn-outline-light"  id="btn" name="btn" value='Guardar'>
-	<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-	</div>
+
+		<p class='block'>
+			<button type='submit' id="btn" name="btn" value='Guardar'>
+			Guardar
+			</button>
+		</p>
+		<p class='block'>
+			<a href='mostrar.php'><button type="button">Volver</button></a>
+		</p>
 </form>
+</div>
 </div>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/proveedor/ingresarProveedor.js"></script>

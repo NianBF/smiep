@@ -14,8 +14,6 @@ require_once('../../model/tiendaMdl.php');
     	  
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,58 +24,51 @@ require_once('../../model/tiendaMdl.php');
     
 	<title>Actualizar tienda</title>
 	
-	<link rel="stylesheet" type="text/css" href="../../public/css/actualizar.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
 
 </head>
-<div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
-<header class="header">
-Cambia los datos de la tienda
-</header>
+
 <body>
-	<div class="tabla">
+	<div class="contenedor">
+		<span class="icon">
+			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
+		</span>
+	<div class="contact-wrapper animated bounceInUp">
+	<div class="contact-form">
+	<h3>Cambia los datos de la Tienda</h3>
 	<form action='../../controller/tiendaCtrl.php' name="formulario" method='post'>
-	
-	<table>
-		<tr>
+		<p>
+			<label>Nombre</label>
 			<input type='hidden' name='id_ti' value='<?php echo $Tienda->getId_ti()?>'>
-			<td class="text">NOMBRE</td>
-		</tr>
-		<tr>
-			<td> <input type='text' placeholder="NOMBRE TIENDA" id="nomTienda" name='nombreTienda' value='<?php echo $Tienda->getNombreTienda()?>'></td>
-		</tr>
-		<tr>
-			<td class="text">DIRECCION</td>
-		</tr>
-		<tr>
-			<td><input type='text' placeholder="DIRECCION" name='direccionTi' value='<?php echo $Tienda->getDireccionTi()?>' ></td>
-		</tr>
-	
-		<tr>
-			<td class="text">TELEFONO</td>
-		</tr>
-		<tr>
-			<td><input type='text' placeholder="NUMERO DE CONTACTO" name='telTi' value='<?php echo $Tienda->getTelTi()?>' ></td>
-		</tr>
+			<td> <input type='text' placeholder="Nombre Tienda" id="nomTienda" name='nombreTienda' value='<?php echo $Tienda->getNombreTienda()?>'>
+		</p>
+		<p>
+			<label>Dirección</label>
+			<input type='text' placeholder="Dirección" name='direccionTi' value='<?php echo $Tienda->getDireccionTi()?>' >
+		</p>
+		<p>
+			<label>Telefono</label>
+			<input type='text' placeholder="Numero Telefono" name='telTi' value='<?php echo $Tienda->getTelTi()?>' >
+		</p>
+		<p>
+			<label>Correo</label>
+			<input type='text' placeholder="ejemplo@smiep.com.co" name='emailTi' value='<?php echo $Tienda->getEmailTi()?>' >
+		</p>
 
-		<tr>
-			<td class="text">CORREO</td>
-		</tr>
-		<tr>
-			<td><input type='text' placeholder="example@email.co" name='emailTi' value='<?php echo $Tienda->getEmailTi()?>' ></td>
-		</tr>
-
-		<input type='hidden' name='actualizar' value'actualizar'>
-	</table>
-	<div class="boton">
-	<input class="btn btn-outline-light" id="btn" name="btn"  type='submit' value='Guardar'>
-	<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-	</div>
-	
-</form>
+		<input type='hidden' name='actualizar' value='actualizar'>
+		<p class='block'>
+			<button type='submit' id="btn" name="btn" value='Guardar'>
+			Guardar
+			</button>
+		</p>
+		<p class='block'>
+			<a href="mostrar.php"><button type="button">Volver</button></a>
+        </p>
+	</form>
 </div>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../../public/js/tienda/actualizarTienda.js"></script>	
+</div>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="../../public/js/tienda/actualizarTienda.js"></script>	
 </body>
 </html>
 <?php } ?>

@@ -14,81 +14,71 @@ $_SESSION["pass"] == null ){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     
-	<title> Ingresar cliente</title>
+	<title> Ingresar Cliente</title>
 	
-	<link rel="stylesheet" href="../../public/css/ingresar.css">
+	<link rel="stylesheet" href="../../public/css/agregarpru.css">
 </head>
 <body>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
-<header class="header">
-Ingresa los datos del cliente
-</header>
-<div class="tabla">
+	<span class="icon">
+		<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
+	</span>
+	<div class="contact-wrapper animated bounceInUp">
+	<div class="contact-form">
+		<h3>Agregar Cliente</h3>
 <form action='../../controller/clienteCtrl.php' name="formulario" method='post'>
-	<table>
-	<tr>
-		<td class="text">documento</td>
-		</tr><tr>
-		<td><input type='text' id="doc" placeholder="documento" name='id_cliDoc'></td>
-		</tr>
+		<p>
+			<label>Documento</label>
+			<input type='text' id="doc" placeholder="Documento" name='id_cliDoc'>
+		</p>
+		<p>
+			<label>Primer Nombre</label>
+			<input type='text' placeholder="Primer Nombre" id="nombreCli1" name='nombreCli1'>
+		</p>
+		<p>
+			<label>Segundo Nombre</label>
+			<input type='text' placeholder="Segundo Nombre"  name='nombreCli2' >
+		</p>
+		<p>
+			<label>Primero Apellido</label>
+			<input type='text' placeholder="Primer Apellido" id="apellidoCli1" name='apellidoCli1'>
+		</p>
+		<p>
+			<label>Segundo Apellido</label>
+			<input type='text' placeholder="Segundo Apellido" name='apellidoCli2'>
+		</p>
+		<p>
+			<label>Dirección</label>
+			<input type='text' placeholder="Dirección" id="direc" name='direccionCli'>
+		</p>
+		<p>
+			<label>Telefono</label>
+			<input type='text' id="tel" placeholder="Telefono" name='telCli'>
+		</p>
+		<p>
+			<label>Correo</label>
+			<input type='email' id="email" placeholder="ejemplo@smiep.com.co" name='emailCli'>
+		</p>
 
-		<tr>	
-		<td class="text">primer nombre</td>
-		</tr><tr>
-		<td><input type='text' placeholder="primer nombre" id="nombreCli1" name='nombreCli1' ></td>
-		</tr>
-
-		<tr>	
-		<td class="text">segundo nombre</td>
-		</tr><tr>
-		<td><input type='text' placeholder="segundo nombre"  name='nombreCli2' ></td>
-		</tr>
-
-		<tr>	
-		<td class="text">primer apellido</td>
-		</tr><tr>
-		<td><input type='text' placeholder="primer apellido" id="apellidoCli1" name='apellidoCli1' ></td>
-		</tr>
-
-		<tr>	
-		<td class="text">segundo apellido</td>
-		</tr><tr>
-		<td><input type='text' placeholder="segundo apellido" name='apellidoCli2' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">direccion</td>
-			</tr><tr>
-			<td><input type='text' placeholder="direccion" id="direc" name='direccionCli' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">telefono</td>
-			</tr><tr>
-			<td><input type='text' id="tel" placeholder="telefono" name='telCli' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">correo</td>
-			</tr><tr>
-			<td><input type='email' id="email" placeholder="ejemplo@email.co" name='emailCli' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">fecha nacimiento</td>
-			</tr><tr>
-			<td><input type='date' id="FecNac" name='fechaNac' ></td>
-		</tr>
+		<p class='block'>
+			<label>Fecha de Nacimiento</label>
+			<input type='date' id="FecNac" name='fechaNac'>
+		</p>
 	
 		<input type='hidden' name='insertar' value='insertar'>
-	</table>
-	<div class="boton">
-	<input type='submit' class="btn btn-outline-light"  id="btn" name="btn" value='Guardar'>
-	<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-	</div>
+
+		<p class='block'>
+			<button type='submit' id="btn" name="btn" value='Guardar'>
+			Guardar
+			</button>
+		</p>
+		<p class='block'>
+			<a href='mostrar.php'><button type="button">Volver</button></a>
+		</p
+
 </form>
-</div>
+	</div>
+	</div>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/cliente/ingresarCliente.js"></script>
  </body>

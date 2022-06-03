@@ -24,87 +24,73 @@ $_SESSION["pass"] == null ){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
    
-	<title>Actualizar usuarios</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../../public/css/actualizar.css">
+	<title>Actualizar Usuario</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
 
 </head>
 <body>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
-<header class="header">
-Cambia los datos del Producto
-</header>
-
-	<div class="tabla">
+		<span class="icon">
+			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure>
+		</span>
+	<div class="contact-wrapper animated bounceInUp">
+	<div class="contact-form">
+	<h3>Cambia los datos de Usuario</h3>
 	<form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
+		<p>
+			<label>Primer Nombre</label>
+			<input type='hidden' name='id_doc' value='<?php echo $Usuario->getId_doc()?>'>
+			<input type='text' name='nombre1' placeholder="Primer Nombre" value='<?php echo $Usuario->getNombre1()?>'>
+		</p>
+		<p>
+			<label>Segundo Nombre</label>
+			<input type='text' name='nombre2' placeholder="Segundo Nombre" value='<?php echo $Usuario->getNombre2()?>'>
+		</p>
+		<p>
+			<label>Primer Apellido</label>
+			<input type='text' name='apellido1' placeholder="Primer Apellido" value='<?php echo $Usuario->getApellido1()?>'>
+		</p>
+		<p>
+			<label>Segundo Apellido</label>
+			<input type='text' name='apellido2' placeholder="Segundo Apellido" value='<?php echo $Usuario->getApellido2()?>'>
+		</p>
+		<p>
+			<label>Usuario</label>
+			<input type='text' name='userName' placeholder="NOMBRE DE USUARIO" value='<?php echo $Usuario->getUserName()?>'>
+		</p>
+		<p>
+			<label>Correo</label>
+			<input type='text' name='email' placeholder="ejemplo@smiep.com.co" value='<?php echo $Usuario->getEmail()?>'>
+		</p>
+		<p>
+			<label>Contraseña</label>
+			<input type='password' name='pass' placeholder="**********" value='<?php echo $Usuario->getPass()?>'>
+		</p>
+		<p>
+			<label>Rol</label>
+			<input type='text' name='rol' placeholder="Rol" value='<?php echo $Usuario->getRol()?>'>
+		</p>
+		<p>
+			<label>ID Estado</label>
+			<input type='text' name='id_estado' placeholder="ID Estado" value='<?php echo $Usuario->getId_estado()?>'>
+		</p>
+		<p>
+			<label>ID Tienda</label>
+			<input type='text' name='id_ti' placeholder="ID Tienda" value='<?php echo $Usuario->getId_ti()?>'>
+		</p>
 	
-	<table>
-		<tr>
-		<input type='hidden' name='id_doc' value='<?php echo $Usuario->getId_doc()?>'>
-			
-			<td class="text">PRIMER NOMBRE:</td>
-			</tr><tr>
-			<td><input type='text' name='nombre1' placeholder="PRIMER NOMBRE" value='<?php echo $Usuario->getNombre1()?>'></td>
-		</tr>
+		<input type='hidden' name='actualizar' value='actualizar'>
 
-		<tr>
-			<td class="text">SEGUNDO NOMBRE:</td>
-			</tr><tr>
-			<td> <input type='text' name='nombre2' placeholder="SEGUNDO NOMBRE" value='<?php echo $Usuario->getNombre2()?>'></td>
-		</tr>
-
-		<tr>
-			<td class="text">PRIMER APELLIDO:</td>
-			</tr><tr>
-			<td><input type='text' name='apellido1' placeholder="PRIMER APELLIDO" value='<?php echo $Usuario->getApellido1()?>'></td>
-		</tr>
-
-		<tr>
-			<td class="text">SEGUNDO APELLIDO:</td>
-			</tr><tr>
-			<td> <input type='text' name='apellido2' placeholder="SEGUNDO APELLIDO" value='<?php echo $Usuario->getApellido2()?>'></td>
-		</tr>
-
-		<tr>
-			<td class="text">USERNAME:</td>
-			</tr><tr>
-			<td><input type='text' name='userName' placeholder="NOMBRE DE USUARIO" value='<?php echo $Usuario->getUserName()?>'></td>
-		</tr>
-		<tr>
-			<td class="text">CORREO:</td>
-			</tr><tr>
-			<td><input type='text' name='email' placeholder="EXAMPLE@EMAIL.COM" value='<?php echo $Usuario->getEmail()?>'></td>
-		</tr>
-		<tr>
-			<td class="text">CONTRASEÑA:</td>
-			</tr><tr>
-			<td><input type='password' name='pass' placeholder="**********" value='<?php echo $Usuario->getPass()?>'></td>
-		</tr>
-		<tr>
-			<td class="text">ROL:</td>
-			</tr><tr>
-			<td><input type='text' name='rol' placeholder="ROL" value='<?php echo $Usuario->getRol()?>'></td>
-		</tr>
-		<tr>
-			<td class="text">ID ESTADO:</td>
-			</tr><tr>
-			<td><input type='text' name='id_estado' placeholder="ID ESTADO" value='<?php echo $Usuario->getId_estado()?>'></td>
-		</tr>
-		<tr>
-			<td class="text">ID TIENDA:</td>
-			</tr><tr>
-			<td><input type='text' name='id_ti' placeholder="ID TIENDA" value='<?php echo $Usuario->getId_ti()?>'></td>
-		</tr>
-	
-		<input type='hidden' name='actualizar' value'actualizar'>
-	</table>
-	<div class="boton">
-	<input class="btn btn-outline-light" id="btn" name="btn"  type='submit' value='Guardar'>
-	<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-	</div>
-	
+		<p class='block'>
+			<button type='submit' id="btn" name="btn" value='Guardar'>
+			Guardar
+			</button>
+		</p>
+		<p class='block'>
+			<a href="mostrar.php"><button type="button">Volver</button></a>
+		</p>
 </form>
+	</div>
 </div>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../public/js/usuario/actualizarUsuario.js"></script>	

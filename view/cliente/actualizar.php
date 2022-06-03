@@ -14,8 +14,6 @@ require_once('../../model/clienteMdl.php');
     	  
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,80 +22,66 @@ require_once('../../model/clienteMdl.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     
-	<title>Actualizar cliente</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/actualizar.css">
+	<title>Actualizar Cliente</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
 
 </head>
 <body>
 <div class="contenedor">
-	<span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure></span>
-<header class="header">
-Cambia los datos del Producto
-</header>
-	<div class="tabla">
+		<span class="icon">
+			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure>
+		</span>
+	<div class="contact-wrapper animated bounceInUp">
+	<div class="contact-form">
+		<h3>Cambia los datos del Cliente</h3>
 	<form action='../../controller/clienteCtrl.php' name="formulario" method='post'>
+			<p>
+				<label>Documento</label>
+				<input type='text' placeholder="Documento" id="doc" name='id_cliDoc' value='<?php echo $Cliente->getId_cliDoc()?>'>
+			</p>
+			<p>
+				<label>Primer Nombre</label>
+				<input type='text' placeholder="Primer Nombre" id="nombreCli1" name='nombreCli1' value='<?php echo $Cliente->getNombreCli1()?>'>
+			</p>
+			<p>
+				<label>Segundo Nombre</label>
+				<input type='text' placeholder="Segundo Nombre" id="nombreCli2" name='nombreCli2' value='<?php echo $Cliente->getNombreCli2()?>'>
+			</p>
+			<p>
+				<label>Primer Apellido</label>
+				<input type='text' placeholder="Primer Apellido" id="apellidoCli1" name='apellidoCli1' value='<?php echo $Cliente->getApellidoCli1()?>'>
+			</p>
+			<p>
+				<label>Segundo Apellido</label>
+				<input type='text' placeholder="Segundo Apellido" id="apellidoCli2" name='apellidoCli2' value='<?php echo $Cliente->getApellidoCli2()?>'>
+			</p>
+			<p>
+				<label>Dirección</label>
+				<input type='text' id="direc" placeholder="Dirección" name='direccionCli' value='<?php echo $Cliente->getDireccionCli()?>' >
+			</p>
+			<p>
+				<label>Telefono</label>
+				<input type='number' id="tel" placeholder="telefono" name='telCli' value='<?php echo $Cliente->getTelCli()?>'>
+			</p>
+			<p>
+				<label>Correo</label>
+				<input type='email' id="email" placeholder="ejemplo@smiep.com.co" name='emailCli' value='<?php echo $Cliente->getEmailCli()?>'>
+			</p>
+			<p class='block'>
+				<label>Fecha de Nacimiento</label>
+				<input type='date' id="FecNac" placeholder="fecha de nacimineto" name='fechaNac' value='<?php echo $Cliente->getFechaNac()?>' >
+			</p>
 	
-	<table>
-		<tr>
-		<td class="text">documento</td>
-		</tr><tr>
-		<td><input type='text' placeholder="documento" id="doc" name='id_cliDoc' value='<?php echo $Cliente->getId_cliDoc()?>'></td>
-		</tr>
+		<input type='hidden' name='actualizar' value='actualizar'>
 
-		<tr>	
-		<td class="text">primer nombre</td>
-		</tr><tr>
-		<td><input type='text' placeholder="primer nombre" id="nombreCli1" name='nombreCli1' value='<?php echo $Cliente->getNombreCli1()?>'></td>
-		</tr>
-
-		<tr>	
-		<td class="text">segundo nombre</td>
-		</tr><tr>
-		<td><input type='text' placeholder="segundo nombre" id="nombreCli2" name='nombreCli2' value='<?php echo $Cliente->getNombreCli2()?>'></td>
-		</tr>
-
-		<tr>	
-		<td class="text">primer apellido</td>
-		</tr><tr>
-		<td><input type='text' placeholder="primer apellido" id="apellidoCli1" name='apellidoCli1' value='<?php echo $Cliente->getApellidoCli1()?>'></td>
-		</tr>
-
-		<tr>	
-		<td class="text">segundo apellido</td>
-		</tr><tr>
-		<td><input type='text' placeholder="segundo apellido" id="apellidoCli2" name='apellidoCli2' value='<?php echo $Cliente->getApellidoCli2()?>'></td>
-		</tr>
-
-		<tr>
-			<td class="text">direccion</td>
-			</tr><tr>
-			<td><input type='text' id="direc" placeholder="direccion" name='direccionCli' value='<?php echo $Cliente->getDireccionCli()?>' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">telefono</td>
-			</tr><tr>
-			<td><input type='number' id="tel" placeholder="telefono" name='telCli' value='<?php echo $Cliente->getTelCli()?>' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">correo</td>
-			</tr><tr>
-			<td><input type='email' id="email" placeholder="ejemplo@email.co" name='emailCli' value='<?php echo $Cliente->getEmailCli()?>' ></td>
-		</tr>
-
-		<tr>
-			<td class="text">fecha nacimiento</td>
-			</tr><tr>
-			<td><input type='date' id="FecNac" placeholder="fecha de nacimineto" name='fechaNac' value='<?php echo $Cliente->getFechaNac()?>' ></td>
-		</tr>
-	
-		<input type='hidden' name='actualizar' value'actualizar'>
-	</table>
-	<div class="boton">
-	<input class="btn btn-outline-light" id="btn" name="btn"  type='submit' value='Guardar'>
-	<a class="btn btn-outline-light" href="mostrar.php">Volver</a>
-	</div>
+		<p class='block'>
+			<button type='submit' id="btn" name="btn" value='Guardar'>
+			Guardar
+			</button>
+		</p>
+		<p class='block'>
+			<a href="mostrar.php"><button type="button">Volver</button></a>
+		</p>
 	
 </form>
 </div>

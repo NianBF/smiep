@@ -160,12 +160,7 @@ h5{
     left: 1150px;
 }*/
 .buscar1{
-    position: fixed;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    width: 0%;
-    /*position: relative;*/
+    
     padding: 9px 10px 9px 32px;
     outline: none;
     font-size: 14px;
@@ -176,6 +171,6 @@ h5{
         no-repeat 9px center;   
 
 }
-.buscar1:hover{
+.buscar4:hover{
     width: 5%;
 }

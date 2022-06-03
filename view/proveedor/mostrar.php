@@ -12,7 +12,6 @@ $Proveedor= new Proveedor();
 $listaProveedor=$crud->mostrar();
 ?>
 
-
  <!DOCTYPE html>
  <html lang="en">
 <head>
@@ -20,45 +19,49 @@ $listaProveedor=$crud->mostrar();
 	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-	 <title>Mostrar proveedor</title>
-	<link rel="stylesheet" href="../../public/css/catalogo.css">	
+	 <title>Mostrar Proveedor</title>
+	<link rel="stylesheet" href="../../public/css/producto.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
 </head>
 <body>
 	<table>
-	<div>
-	<a href="../../controller/salirCtrl.php"><button class="boton"><span>salir</span></button></a>
-    </div>
     <header>
-	<a href="../inicio/menu.php"><span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure>
-    </a>    
-	<h1 class="titulo">S.M.I.E.P</h1>
-        <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
-    </header>
-		<br>
-		<br>
+        <div class="logo">
+            <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
+            <h1 class="titulo">S.M.I.E.P</h1>
+            <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+        </div>
+        </header>
 		<br>
 		<hr>
-		<h4>Proveedor</h4>
-		<br>
-		<a href="ingresar.php" class="agregar">Agregar</a>
-		<br>
-		<br>
-
-		<label for="filtrar-tabla"></label>
-		<input type="text" name="filtro" id="filtrar-tabla" placeholder="proveedor">
+		<div id="main-container">
+        <thead>
+            <tr>
+                <th colspan="7">Listado de Proveedores <a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Nuevo Proveedor</button></a>
+                <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
+            </tr>
+			<tr id="lis">
+            <th colspan="8">
+             <div class="buscar">
+                <label for="filtrar-tabla"></label>
+		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Proveedor" class="buscar1">
+             </div>
+            </th>
+            </tr>
 
 			<tr>
-			<th>ID PROVEEDOR</th>
-			<th>NOMBRE</th>
-			<th>EMPRESA</th>
-			<th>DIRECCION</th>
-			<th>NUMERO TEL</th>
-			<th>CORREO</th>
-			<th>Actualizar</th>
-			<th>Eliminar</th>
+			<th>ID Proveedor</th>
+			<th>Nombre</th>
+			<th>Empresa</th>
+			<th>Dirección</th>
+			<th>Telefono</th>
+			<th>Correo</th>
+			<th colspan="2">Opciones</th>
            </tr>
-		
+		</thead>
 			<?php foreach ($listaProveedor as $Proveedor) {?>
 			<tr class="proveedor">
 	
@@ -70,9 +73,10 @@ $listaProveedor=$crud->mostrar();
 				<td class="email"><?php echo $Proveedor->getEmail1() ?></td>
 				
 				
-				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=a">Actualizar</a> </td>
-				<td><a type="submit" class="eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/proveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=e" >Eliminar</a></td>	
+				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=a"><button type="button"><i class="fa-solid fa-pencil"></i></button></a></td>
+				<td><a type="submit" class="eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/proveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=e"><button type="button" id="eliminar"><i class="fa-solid fa-trash-can"></i></button></a></td>	
 			</tr>
+			</div>
 			<?php }?>
 		
 	</table>

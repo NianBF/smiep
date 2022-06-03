@@ -18,50 +18,49 @@ $listaUsuario=$crud->mostrar();
  <html lang="en">
 <head>
 <meta charset="UTF-8">
-	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-   
-	<title>Mostrar usuarios</title>
-	
-	<link rel="stylesheet" href="../../public/css/catalogo.css">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+	<title>Mostrar Usuarios</title>
+	<link rel="stylesheet" href="../../public/css/producto.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />	
 </head>
 <body>
 <table>
-	<div>
-	<a href="../../controller/salirCtrl.php"><button class="boton"><span>salir</span></button></a>
-    </div>
-    <header>
-	<a href="../inicio/menu.php"><span class="icon"><figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="150px"></figure>
-    </a>    
-	<h1 class="titulo">S.M.I.E.P</h1>
-        <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+	<header>
+    	<div class="logo">
+            <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
+            <h1 class="titulo">S.M.I.E.P</h1>
+            <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+        </div>
     </header>
         <br>
         <hr>
-        <br>
-        <h4>USUARIOS</h4>
-        <h5>DATOS USUARIOS</h5>
-        <a href="ingresar.php" class="agregar">Agregar</a>
-        <br>
-        <br>
-
-		<label for="filtrar-tabla"></label>
-		<input type="text" name="filtro" id="filtrar-tabla" placeholder="usuario">
-
+		<div id="main-container">
+		<thead>
 		<tr>
-
-<th>ID</th>
-<th>NOMBRE</th>
-<th>USUARIO</th>
-<th>CORREO</th>
-<th>ROL</th>
-<th>EDITAR</th>
-<th>Eliminar</th>
-
-</tr>
-
-		
+            <th colspan="7">Listado de Usuarios <a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Nuevo Usuario</button></a>
+            <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
+        </tr>
+		<tr id="lis">
+        <th colspan="7">
+            <div class="buscar">
+                <label for="filtrar-tabla"></label>
+		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Usuarios" class="buscar1">
+            </div>
+        </th>
+        </tr>
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Usuario</th>
+			<th>Correo</th>
+			<th>Rol</th>
+			<th colspan="2">Opciones</th>
+		</tr>
+		</thead>
 			<?php foreach ($listaUsuario as $Usuario) {?>
 			<tr class="usuario">
 	
@@ -71,11 +70,11 @@ $listaUsuario=$crud->mostrar();
 				<td class="emailUsua"><?php echo $Usuario->getEmail() ?></td>
 				<td class="rolUsua"><?php echo $Usuario->getRol() ?></td>
 
-				<td><a class="btn btn-outline-light editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=a">Actualizar</a> </td>
-				<td><a type="submit" class="btn btn-outline-light eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/usuarioCtrl.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=e" >Eliminar</a></td>	
+				<td><a class="btn btn-outline-light editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=a"><button type="button"><i class="fa-solid fa-pencil"></i></button></a></td>
+				<td><a type="submit" class="btn btn-outline-light eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/usuarioCtrl.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=e"><button type="button" id="eliminar"><i class="fa-solid fa-trash-can"></i></button></a></td>	
 			</tr>
 			<?php }?>
-		
+		</div>
 	</table>
 	
 

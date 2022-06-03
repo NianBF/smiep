@@ -100,7 +100,7 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 					<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'
 								value='<?php echo $Producto->getId_estado()?>'>
 				</p>
-					<input type='hidden' name='actualizar' value'actualizar'>
+					<input type='hidden' name='actualizar' value='actualizar'>
 
 					<p class='block'>
 					<button type='submit' id="btn" name="btn" value='Guardar'>

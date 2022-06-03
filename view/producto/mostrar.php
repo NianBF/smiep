@@ -21,7 +21,7 @@ $listaProducto=$crud->mostrar();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-    <title>Mostrar producto</title>
+    <title>Mostrar Producto</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/producto.css">   
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
@@ -48,12 +48,12 @@ $listaProducto=$crud->mostrar();
                 <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
             <tr id="lis">
-                <th colspan="7">
+            <th colspan="7">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Productos" class="buscar1">
              </div>
-                </th>
+            </th>
             </tr>
 
         <tr>
@@ -62,7 +62,7 @@ $listaProducto=$crud->mostrar();
             <th>Nombre</th>
             <th>Precio</th>
             <th>Stock</th>
-            <th  colspan="2">Opciones</th>
+            <th colspan="2">Opciones</th>
         </tr>
         </thead>
 
