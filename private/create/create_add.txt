@@ -6,3 +6,7 @@
     Se crea el archivo para la configuración de PHPMYADMIN, el cual permite acceder a DB Heroku desde Local.
         [~/smiep/config/config.inc.php]-Este archivo debe ser copiado en la carpeta C:/xampp/phpmyadmin/
         para reemplazar el que contiene la conf. original.
+
+(05/06/2022)NB: Se crea carpeta «modules» para agregar modulos de venta y reportes, en ventas no se hacen modificaciones,
+    sin embargo, en reportes se crea «plantilla.php» que maneja una plantilla predeterminada para generar PDF
+        adicional se crea el archivo «product.php» el cual se encarga de generar el reporte de la tabla 'producto'

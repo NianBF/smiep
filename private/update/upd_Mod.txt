@@ -13,3 +13,5 @@ donde se elimina la sesión de: email, usuario & contraseña.
 (03/06/2022)Cristian: Se hace nuevo diseño a todas las vistas de mostrar de usuarios, clientes, proveedores, producto, categoria y tienda.
 
 (04/06/2022)Cristian: Se crea nuevo menu principal responsive.
+
+(05/06/2022)NB: Se actualiza rutas del menú inicial para ir hacia reportes y vender.

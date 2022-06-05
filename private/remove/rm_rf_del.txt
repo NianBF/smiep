@@ -4,3 +4,5 @@
 
 (21/05/2022 20:23)NianBF: Se elimina «smiep(1).sql» para dar paso al archivo DB «smiep2.5.sql»,
     actual query para DB de SMIEP.
+
+(05/06/2022)NB: Se elimina código anterior del primer intento de reportes para SMIEP.
