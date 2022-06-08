@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="public/img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" type="text/css" href="public/styleslogin.css">
+    <link rel="stylesheet" type="text/css" href="public/newlogin.css">
 </head>
 
 <body>
