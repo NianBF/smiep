@@ -1,0 +1,3 @@
+# Ignorar carpeta vendor
+/vendor/
+.env
