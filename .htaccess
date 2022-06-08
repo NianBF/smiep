@@ -1,2 +1,2 @@
-Options All -Indexes
-ErrorDocument 404
+Options All
+ErrorDocument 404 /err/404/dist/404.html
