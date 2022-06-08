@@ -7,39 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="public/img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" type="text/css" href="public/stylesLogin.css">
+    <link rel="stylesheet" type="text/css" href="public/styleslogin.css">
 </head>
 
 <body>
-    <div class="headerSmiep">
-        <header>
-            <figure class="icon"><img src="public/img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
-            <section>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="../../img/favicon.png" alt="">
+            </div>
+            <div class="contenedor">
+            <section class="titulito">
                 <h1 class="title">S.M.I.E.P</h1>
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
             </section>
-        </header>
-    </div>
-    <div class="contenedor">
-        <div class="login">
-            <h2>ingresar</h2>
+</div>
+        
+        </div>
+    <div class="contenedor1">
+    <div class="content">
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                <h2>Ingresar</h2>
             <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma">
-                <div class="elemento">
-                    <label for="usuario">Email</label>
+                <p>
+                    <label>Email</label>
                     <input type="email" id="email" name="email" required />
-                </div>
-                <div class="elemento">
-                    <label for="userName">Nombre de Usuario</label>
+                </p>
+                <p>
+                    <label>Nombre Usuario</label>
                     <input type="text" id="userName" name="userName" required />
-                </div>
-                <div class="elemento">
-                    <label for="password">Password</label>
+                </p>
+                <p>
+                    <label>Password</label>
                     <input type="password" id="pass" name="pass" required />
-                </div>
-                <div class="elemento">
-                    <input name="ingresar" id="btn" type="submit" value="validar" />
-                </div>
+                </p>
+                <p>
+					<button name="ingresar" id="btn" type="submit" value="validar" />
+						Validar
+					</button>
+				</p>
             </form>
+            </div>
         </div>
     </div>
     <footer class="footer">

@@ -16,3 +16,5 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (05/06/2022 13:45)NB: Se actualiza rutas del menú inicial para ir hacia reportes y vender.
 (05/06/2022 14:06)NB: Se cambia la forma en que se abre la ventana de reportes para abrir una nueva pestaña de reportes en  el navegador y no interrumpir la navegación en SMIEP.
+
+(08/06/2022)Cristian: Se hace responsive el login.
