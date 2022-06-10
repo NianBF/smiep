@@ -44,11 +44,12 @@ $listaProducto=$crud->mostrar();
         <div id="main-container">
         <thead>
             <tr>
-                <th colspan="7">Listado de Productos <a href='agregarProducto.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Nuevo Producto</button></a>
-                <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
+                <th>Listado de Productos</th>
+                <th colspan="1" class="bot1"><a href='agregarProducto.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>Nuevo Producto</button></a></th>
+                <th class="bot1"><a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i>Volver</button></a></th>
             </tr>
             <tr id="lis">
-            <th colspan="7">
+            <th colspan="3">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Productos" class="buscar1">
@@ -58,7 +59,8 @@ $listaProducto=$crud->mostrar();
 
         <tr>
             <th>Producto</th>
-            <th colspan="2">Opciones</th>
+            <th class="opc" colspan="1">Modificar</th>
+            <th class="opc" colspan="1">Eliminar</th>
         </tr>
         </thead>
 
@@ -66,16 +68,19 @@ $listaProducto=$crud->mostrar();
         <tr class="producto">
 
             <td class="prod">
+                <p><div class="column">Imagen: </div><span class="img"><img src="<?php echo $Producto->getImgProd() ?>" alt="<?php echo $Producto->getNombreProd() ?>"></span></p>
                 <p><span class="column">ID: </span><span class="id"><?php echo $Producto->getId_prod() ?></span></p>
                 <p><span class="column">Código de barras: </span><span class="codigo_bar"><?php echo $Producto->getCodBar() ?></span></p>
                 <p><span class="column">Nombre: </span><span class="nomb_prod"><?php echo $Producto->getNombreProd() ?></span></p>
-                <p><span class="column">Precio: </span><span class="precio">$ <?php echo $Producto->getPrecio() ?> COP</span></p>
+                <p><span class="column">Nombre: </span><span class="nomb_prod"><?php echo $Producto->getDescripcion() ?></span></p>
+                <p><span class="column">Precio: </span><span class="precio">$<?php echo $Producto->getPrecio() ?> COP</span></p>
                 <p><span class="column">Disponible: </span><span class="cantidad"><?php echo $Producto->getCantidadDisp() ?></span></p>
             </td>
             <td><a id="btnActualizar" name="btnActualizar"
                     href="actualizar.php?id_prod=<?php echo $Producto->getId_prod()?>&accion=a"><button type="button"><i class="fa-solid fa-pencil"></i></button></a>
-            </td>
-            <td><a type="submit" id="btnEliminar" name="btnEliminar"
+        </td>
+        <td>
+                <a type="submit" id="btnEliminar" name="btnEliminar"
                     href="../../controller/productoCtrl.php?id_prod=<?php echo $Producto->getId_prod()?>&accion=e"><button type="button" id="eliminar"><i class="fa-solid fa-trash-can"></i></button></a>
             </td>
             

@@ -57,12 +57,19 @@ table{
     font-size: 18px;
     border-collapse: collapse;
     text-align: left;
-    width: 85%;
+    width: 80%;
     top: 1%;
     
 }
 th, td{
     padding: 1%;
+}
+th.bot1{
+    width: 10%;
+    text-align: right;
+}
+th.opc{
+    text-align: justify;
 }
 /*
 thead{
@@ -76,8 +83,15 @@ tr:nth-child(even){
 span.column{
     font-weight: bold;
 }
+div.column{
+    font-weight: bold;
+}
+span.img img{
+    width: 20%;
+    height: 20%;
+}
 button{
-    width: 45px;
+    width: 40%;
     height: 45px;
     background: rgb(116, 206, 75);
     border-radius: 5px;
@@ -85,7 +99,7 @@ button{
     cursor: pointer;
 }
 #eliminar{
-    width: 45px;
+    width: 60%;
     height: 45px;
     background: rgb(206, 75, 75);
     border-radius: 5px;
@@ -93,6 +107,7 @@ button{
     cursor: pointer;
 }
 #agregar{
+    margin-right: 1.2rem;
     width: 150px;
     height: 42px;
     background: #0d9df6;
@@ -102,6 +117,7 @@ button{
     color: #fff;
 }
 #volver{
+    margin-right: 1.2rem;
     width: 90px;
     height: 42px;
     background: #897212;
