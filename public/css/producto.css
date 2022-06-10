@@ -143,7 +143,26 @@ button{
 }
 
 @media screen and (max-width: 480px){
-    body {
-        background-color: #000;
+    span.img img{
+        width: 60%;
+        height: 50%;
+    }
+    #agregar{
+        margin-right: 1.2rem;
+        width: 7rem;
+        height: 42px;
+        background: #0d9df6;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+    button{
+    width: 50%;
+    height: 45px;
+    background: rgb(116, 206, 75);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
     }
 }

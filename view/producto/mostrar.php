@@ -45,7 +45,7 @@ $listaProducto=$crud->mostrar();
         <thead>
             <tr>
                 <th>Listado de Productos</th>
-                <th colspan="1" class="bot1"><a href='agregarProducto.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>Nuevo Producto</button></a></th>
+                <th colspan="1" class="bot1"><a href='agregarProducto.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>Agregar</button></a></th>
                 <th class="bot1"><a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i>Volver</button></a></th>
             </tr>
             <tr id="lis">
@@ -58,7 +58,7 @@ $listaProducto=$crud->mostrar();
             </tr>
 
         <tr>
-            <th>Producto</th>
+            <th class="prod">Producto</th>
             <th class="opc" colspan="1">Modificar</th>
             <th class="opc" colspan="1">Eliminar</th>
         </tr>
@@ -68,7 +68,7 @@ $listaProducto=$crud->mostrar();
         <tr class="producto">
 
             <td class="prod">
-                <p><div class="column">Imagen: </div><span class="img"><img src="<?php echo $Producto->getImgProd() ?>" alt="<?php echo $Producto->getNombreProd() ?>"></span></p>
+                <p><div class="column">Imagen: </div><br><span class="img"><img src="<?php echo $Producto->getImgProd() ?>" alt="<?php echo $Producto->getNombreProd() ?>"></span></p>
                 <p><span class="column">ID: </span><span class="id"><?php echo $Producto->getId_prod() ?></span></p>
                 <p><span class="column">Código de barras: </span><span class="codigo_bar"><?php echo $Producto->getCodBar() ?></span></p>
                 <p><span class="column">Nombre: </span><span class="nomb_prod"><?php echo $Producto->getNombreProd() ?></span></p>
