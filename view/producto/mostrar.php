@@ -57,11 +57,7 @@ $listaProducto=$crud->mostrar();
             </tr>
 
         <tr>
-            <th>ID</th>
-            <th>Codigo</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Stock</th>
+            <th>Producto</th>
             <th colspan="2">Opciones</th>
         </tr>
         </thead>
@@ -69,21 +65,12 @@ $listaProducto=$crud->mostrar();
         <?php foreach ($listaProducto as $Producto) {?>
         <tr class="producto">
 
-            <td class="id">
-                <?php echo $Producto->getId_prod() ?>
-            </td>
-            <td class="codigo-bar">
-                <?php echo $Producto->getCodBar() ?>
-            </td>
-            <td class="nomb_prod">
-                <?php echo $Producto->getNombreProd() ?>
-            </td>
-            <td class="precio">
-                <?php echo $Producto->getPrecio() ?>
-            </td>
-
-            <td class="cantidad">
-                <?php echo $Producto->getCantidadDisp() ?>
+            <td class="prod">
+                <p><span class="column">ID: </span><span class="id"><?php echo $Producto->getId_prod() ?></span></p>
+                <p><span class="column">Código de barras: </span><span class="codigo_bar"><?php echo $Producto->getCodBar() ?></span></p>
+                <p><span class="column">Nombre: </span><span class="nomb_prod"><?php echo $Producto->getNombreProd() ?></span></p>
+                <p><span class="column">Precio: </span><span class="precio">$ <?php echo $Producto->getPrecio() ?> COP</span></p>
+                <p><span class="column">Disponible: </span><span class="cantidad"><?php echo $Producto->getCantidadDisp() ?></span></p>
             </td>
             <td><a id="btnActualizar" name="btnActualizar"
                     href="actualizar.php?id_prod=<?php echo $Producto->getId_prod()?>&accion=a"><button type="button"><i class="fa-solid fa-pencil"></i></button></a>

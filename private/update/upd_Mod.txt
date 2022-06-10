@@ -18,3 +18,5 @@ donde se elimina la sesión de: email, usuario & contraseña.
 (05/06/2022 14:06)NB: Se cambia la forma en que se abre la ventana de reportes para abrir una nueva pestaña de reportes en  el navegador y no interrumpir la navegación en SMIEP.
 
 (08/06/2022)Cristian: Se hace responsive el login.
+
+(10/06/2022 14:30)NB: Se modifica estilos para tabla 'producto' y se empieza a hacer un diseño responsive para la misma.
