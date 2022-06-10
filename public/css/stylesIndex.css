@@ -1,4 +1,8 @@
 *{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     padding: 0;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -87,5 +91,53 @@
     background-color: #00a8f7;
 }
 .ingBot:active{
+    background-color: #808280;
+}
+a.mod{
+    border: 1px solid #f1eded;
+    border-radius: 2rem;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    width: 8rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+}
+a.mod:hover{
+    border: 1px solid #1f1f1f;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+a.mod:active{
+    background-color: #808280;
+}
+.oscuro{ 
+    background-color: #1f1f1f; 
+    color: #f1eded; 
+}
+.oscuro .ingBot:visited{
+    color: #fff;
+}
+.oscuro a:visited{
+    color: rgb(255, 254, 176);
+}
+.oscuro a.modi{
+    border: 1px solid #1f1f1f;
+    border-radius: 2rem;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    width: 8rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+}
+.oscuro a.modi:hover{
+    border: 1px solid #f1eded;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    cursor: pointer;
+}
+.oscuro a.modi:active{
     background-color: #808280;
 }

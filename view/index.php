@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" type="text/css" href="../public/css/styleIndex.css">
+    <link rel="stylesheet" type="text/css" href="public/css/stylesIndex.css">
 </head>
 <body>
     <div class="contenedor">
@@ -29,5 +29,14 @@
             <h4>© S.M.I.E.P | 2022 <a href="view/about/about.html">Acerca de S.M.I.E.P</a></h4>
     </footer>
     </div>
+    <a id="mod" class="mod" onclick="cambiarModo()">ON/OFF</a>
+    <script type="text/javascript"> 
+      function cambiarModo() { 
+        let cuerpoweb = document.body;
+        const linksito = document.getElementById('mod');
+        cuerpoweb.classList.toggle("oscuro"); 
+        linksito.classList.toggle("modi");
+      }
+    </script>
 </body>
 </html>
