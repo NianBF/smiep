@@ -57,7 +57,7 @@ $_SESSION["pass"] == null ){
                         <li><a href="../categoria/mostrar.php"><span class="icon-briefcase"></span>Categoria</a></li>
                         <li><a href="../tienda/mostrar.php"><span class="icon-cart"></span>Tienda</a></li>
                         <li><a href="../vender/index.php" ><span><i class="fa-solid fa-sack-dollar"></i></></span>Vender</a></li>
-                        <li><a href="../../module/reportes/product.php" target="_BLANK"><span><i class="fa-solid fa-square-poll-horizontal"></i></span>Reportes</a></li>
+                        <li><a href="../reportes/mostrar.php"><span><i class="fa-solid fa-square-poll-horizontal"></i></span>Reportes</a></li>
                         <li><a href="../about/about.html"><span class="icon-earth"></span>Acerca de</a></li>
                         <li><a href="#"><span class="icon-mail2"></span>Contacto</a></li>
                         <li><a href="../../controller/salirCtrl.php"><span class="icon-exit"></span> Salir</a></li>

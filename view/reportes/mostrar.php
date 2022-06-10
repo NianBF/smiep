@@ -53,35 +53,27 @@ $listaProducto=$crud->mostrar();
         </tr>
         </thead>
 
-        <?php foreach ($listaProducto as $Producto) {?>
-        <tr class="producto">
-
-            <td class="id">
-                <?php echo $Producto->getId_prod() ?>
-            </td>
-           <!-- <td class="codigo-bar">
-                <?php echo $Producto->getCodBar() ?>
-            </td>
-            <td class="nomb_prod">
-                <?php echo $Producto->getNombreProd() ?>
-            </td>
-            <td class="precio">
-                <?php echo $Producto->getPrecio() ?>
-            </td>
-
-            <td class="cantidad">
-                <?php echo $Producto->getCantidadDisp() ?>
-            </td>-->
-            <td><a id="btnActualizar" name="btnActualizar"
-                    href="actualizar.php?id_prod=<?php echo $Producto->getId_prod()?>&accion=a"><button type="button"><i class="fa-solid fa-eye"></i></button></a>
-            </td>
-            <td><a type="submit" id="btnEliminar" name="btnEliminar"
-                    href="../../controller/productoCtrl.php?id_prod=<?php echo $Producto->getId_prod()?>&accion=e"><button type="button" id="eliminar"><i class="fa-solid fa-circle-down"></i></button></a>
-            </td>
-            
+        <tr>
+            <td>Productos</td>
+            <td><a href='../../module/reportes/product.php' target="_BLANK"><button type="button"><i class="fa-solid fa-eye"></i></button></a></td>
+        </tr>
+        <tr>
+            <td>Categoria</td>
+            <td><a href='#' target="_BLANK"><button type="button"><i class="fa-solid fa-eye"></i></button></a></td>
+        </tr>
+        <tr>
+            <td>Usuarios</td>
+            <td><a href='#' target="_BLANK"><button type="button"><i class="fa-solid fa-eye"></i></button></a></td>
+        </tr>
+        <tr>
+            <td>Personas</td>
+            <td><a href='#' target="_BLANK"><button type="button"><i class="fa-solid fa-eye"></i></button></a></td>
+        </tr>
+        <tr>
+            <td>Proveedores</td>
+            <td><a href='#' target="_BLANK"><button type="button"><i class="fa-solid fa-eye"></i></button></a></td>
         </tr>
         </div>
-        <?php }?>
 
     </table>
         <script src="../../public/js/producto/filtrarProducto.js"></>
