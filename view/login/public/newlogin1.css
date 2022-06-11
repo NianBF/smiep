@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,15 +140,14 @@ body {
     }
     .container-form {
     width: 50%;
-    margin-top: 80%;
+    margin-top: 50%;
     }
     .formulario {
     padding: 4rem;
     border-radius: 10px;
-    margin: 5rem;
     background-color: rgb(51, 51, 51, 0.602);
     text-align: center;
-    display: block; 
+    display: block;
     }
     
     #imagen{
