@@ -133,8 +133,7 @@ body {
     color: #222;
 }
 a.mod{
-    display: none;
-    margin-top: 45%;
+    margin-top: 40%;
     border: 1px solid #f1eded;
     border-radius: 2rem;
     background-color: #1f1f1f;
@@ -212,5 +211,8 @@ a.mod:active{
         color: #4e635a;
         visibility: visible;
     }
+    a.mod{
+    display: none;
+}
 }
 
