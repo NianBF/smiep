@@ -9,6 +9,5 @@
 </head>
 <body>
     <?php require_once("controller/mainCtrl.php"); ?>
-    <script type="text/javascript" src="public/js/darkMode/darkMode.js"></script>
 </body>
 </html>

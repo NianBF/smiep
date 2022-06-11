@@ -32,6 +32,7 @@
     </footer>
     </div>
     <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
+    <script type="text/javascript" src="../public/js/darkMode/darkMode.js"></script>
     <script type="text/javascript" src="public/js/darkMode/darkMode.js"></script>
 </body>
 </html>
