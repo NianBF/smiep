@@ -23,3 +23,5 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (10/06/2022)Jeison: Se actualiza el archivo «module/reportes/plantilla.php» insertando el usuario, hora y fecha en la que se 
     crea el documento.pdf.
+
+(10/06/2022)Cristian: Se actualiza el login.

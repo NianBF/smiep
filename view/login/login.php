@@ -7,53 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="public/img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" type="text/css" href="public/newlogin.css">
+    <link rel="stylesheet" type="text/css" href="public/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-        <div class="header__superior">
-            <div class="logo">
-                <img src="../../img/favicon.png" alt="">
+    <div class="container-form sign-UP">
+        <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma" class="formulario">
+            <h2 class="create-account">Iniciar Sesion</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bx-phone'></i>
+                </div>
             </div>
-            <div class="contenedor">
-            <section class="titulito">
-                <h1 class="title">S.M.I.E.P</h1>
+            <p class="cuenta-gratis">S.M.I.E.P</p>
+            <input type="email" id="email" name="email" placeholder="Email" required />
+            <input type="text" id="userName" name="userName"  placeholder="Nombre de Usuario" required />
+            <input type="password" id="pass" name="pass" placeholder="Contraseña" required />
+            <input name="ingresar" id="btn" type="submit" value="Iniciar Sesion">
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <img src="../../img/favicon.png" id="imagen"width="400rem">
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
-                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
-            </section>
-</div>
-        
-        </div>
-    <div class="contenedor1">
-    <div class="content">
-        <div class="contact-wrapper animated bounceInUp">
-            <div class="contact-form">
-                <h2>Ingresar</h2>
-            <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma">
-                <p>
-                    <label>Email</label>
-                    <input type="email" id="email" name="email" required />
-                </p>
-                <p>
-                    <label>Nombre Usuario</label>
-                    <input type="text" id="userName" name="userName" required />
-                </p>
-                <p>
-                    <label>Password</label>
-                    <input type="password" id="pass" name="pass" required />
-                </p>
-                <p>
-					<button name="ingresar" id="btn" type="submit" value="validar" />
-						Validar
-					</button>
-				</p>
-            </form>
+
             </div>
+
         </div>
+        
     </div>
-    <footer class="footer">
-        <p>© S.M.I.E.P | 2022 <a href="#">Acerca de S.M.I.E.P</a></p>
-    </footer>
+    
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/js" src="public/js/login.js"></script>
 </body>

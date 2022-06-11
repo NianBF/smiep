@@ -13,4 +13,6 @@
 
 (10/06/2022)JEstu: Se crean archivos «provee.php»,«usuario.php»,«venta.php»,«cliente.php»,«categoria.php» correspondiente 
     a los reportes en la carpeta «modules».
+
+(10/06/2022)Cristian: Se crean nuevos estilos para el login.
     

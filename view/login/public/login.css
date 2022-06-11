@@ -19,6 +19,7 @@ body {
 
 .container-form {
     width: 90%;
+    margin-top: 3%;
     display: flex;
     justify-content: space-around;
 }
@@ -140,7 +141,7 @@ body {
     }
     .container-form {
     width: 50%;
-    margin-top: 50%;
+    margin-top: 60%;
     }
     .formulario {
     padding: 4rem;
