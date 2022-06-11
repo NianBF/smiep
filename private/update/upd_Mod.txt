@@ -20,3 +20,8 @@ donde se elimina la sesión de: email, usuario & contraseña.
 (08/06/2022)Cristian: Se hace responsive el login.
 
 (10/06/2022 14:30)NB: Se modifica estilos para tabla 'producto' y se empieza a hacer un diseño responsive para la misma.
+
+(10/06/2022)Jeison: Se actualiza el archivo «module/reportes/plantilla.php» insertando el usuario, hora y fecha en la que se 
+    crea el documento.pdf.
+
+(10/06/2022)Cristian: Se actualiza el login.
