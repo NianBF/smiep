@@ -230,6 +230,81 @@ article p{
 #check__menu{
     display: none;
 }
+nav > ul > li > a.mod{
+    margin-top: 30%;
+    height: 50%;
+}
+a.mod{
+    border: 1px solid #f1eded;
+    border-radius: 2rem;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    width: 3rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+}
+a.mod:hover{
+    border: 1px solid #1f1f1f;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+a.mod:active{
+    background-color: #808280;
+}
+.oscuro{ 
+    background-color: #1f1f1f; 
+    color: #f1eded; 
+}
+.oscuro .ingBot:visited{
+    color: #fff;
+}
+.oscuro header{
+    background-color: #1f1f1f; 
+    color: #f1eded;
+}
+.oscuro nav li ul{
+    background-color: #1f1f1f; 
+    color: #f1eded; 
+}
+.oscuro nav ul li ul li a{
+    background-color: #1f1f1f; 
+    color: #f1eded; 
+}
+.oscuro nav ul li ul li a:hover{
+    background: #0074C7;
+    color: #fff;
+    transform: scale(1.2);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.oscuro main article{
+    background-color: #1f1f1f;
+}
+.oscuro main{
+    background-color: #181818;
+}
+.oscuro a.modi{
+    border: 1px solid #1f1f1f;
+    border-radius: 2rem;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    width: 3rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+}
+.oscuro a.modi:hover{
+    border: 1px solid #f1eded;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    cursor: pointer;
+}
+.oscuro a.modi:active{
+    background-color: #808280;
+}
 
 @media screen and (max-width: 720px){
 
@@ -323,5 +398,29 @@ article p{
 
     main{
         margin-top: 210px;
+    }
+    nav > ul > li > a.mod{
+        margin-top: auto;
+        height: auto;
+    }
+    a.mod{
+        border: 1px solid #f1eded;
+        border-radius: 2rem;
+        background-color: #1f1f1f;
+        color: #f1eded;
+        width: 3.5rem;
+        text-align: center;
+        padding: 1%;
+        cursor: pointer;
+    }
+    .oscuro a.modi{
+        border: 1px solid #1f1f1f;
+        border-radius: 2rem;
+        background-color: #f1eded;
+        color: #1f1f1f;
+        width: 3.5rem;
+        text-align: center;
+        padding: 1%;
+        cursor: pointer;
     }
 }

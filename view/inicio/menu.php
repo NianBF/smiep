@@ -4,6 +4,7 @@ if($_SESSION['email'] == null or $_SESSION["userName"]== null or
 $_SESSION["pass"] == null ){
     header("location:../../index.php");
 }else{
+    $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,6 +15,7 @@ $_SESSION["pass"] == null ){
     <title>SMIEP</title>
     <link rel="icon" type="image/png" href="../home/img/favicon.png" sizes="any">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
@@ -61,6 +63,7 @@ $_SESSION["pass"] == null ){
                         <li><a href="../about/about.html"><span class="icon-earth"></span>Acerca de</a></li>
                         <li><a href="#"><span class="icon-mail2"></span>Contacto</a></li>
                         <li><a href="../../controller/salirCtrl.php"><span class="icon-exit"></span> Salir</a></li>
+                        <li><a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -75,11 +78,11 @@ $_SESSION["pass"] == null ){
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los productos, se hace en unos cuadernos y estos no permiten realizar un análisis profundo de los productos que se tienen y se deben pedir, situación que ha dado paso a pérdidas económicas, pues productos que exceden la fecha de caducidad no son contados y cambiados oportunamente. De igual forma, se observa que a falta de un buen sistema, ellos se han visto en la necesidad de hacer las cosas más esenciales a instinto y sin ninguna herramienta plausible para la tarea.</p>
         </article>
     </main>
-       
     <footer class="footer">
-        <p>© S.M.I.E.P | 2022 <a href="#">Acerca de S.M.I.E.P</a></p>
+        <p>© S.M.I.E.P | 2022</p>
     </footer>
-
+    
+    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
     <script src="../../public/js/main.js"></script>
 </body>
 </html>
