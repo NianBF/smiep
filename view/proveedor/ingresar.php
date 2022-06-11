@@ -26,56 +26,56 @@ $_SESSION["pass"] == null ){
 		<h3>Agregar Proveedor</h3>
 <form action='../../controller/ProveedorCtrl.php' name="formulario" method='post'>
 		<p>
-			<label>ID Proveedor</label>
+			<label for="id_Prov">ID Proveedor</label>
 			<input type='text' name='id_DocProv' id="id_Prov" placeholder="ID Proveedor">
 		</p>
 		<p>
-			<label>Empresa</label>
+			<label for="empresa">Empresa</label>
 			<input type='text' name='empresa' id="empresa" placeholder="Empresa">
 		</p>
 		<p>
-			<label>IMG Empresa</label>
-			<input type='file' name='IMG Empresa'>
+			<label for="imgEmpresa">IMG Empresa</label>
+			<input type='file' id="imgEmpresa" name='IMG Empresa'>
 		</p>
 		<p>
-			<label>Primer Nombre</label>
+			<label for="nombProv1">Primer Nombre</label>
 			<input type='text' placeholder="Primer Nombre" id="nombProv1" name='nombProv1'>
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
+			<label for="nombProv2">Segundo Nombre</label>
 			<input type='text' placeholder="Segundo Nombre" id="nombProv2" name='nombProv2'>
 		</p>
 		<p>
-			<label>Primer Apellido</label>
+			<label for="apeProv1">Primer Apellido</label>
 			<input type='text' placeholder="Primer Apellido" id="apeProv1" name='apeProv1'>
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
+			<label for="apeProv2">Segundo Nombre</label>
 			<input type='text' placeholder="Segundo Apellido" id="apeProv2" name='apeProv2' >
 		</p>
 		<p>
-			<label>Dirección</label>
+			<label for="direc">Dirección</label>
 			<input type='text' placeholder="Dirección" id="direc" name='direccion1'>
 		</p>
 		<p>
-			<label>Dirección Opc</label>
+			<label for="direccion2">Dirección Opc</label>
 			<input type='text' placeholder="(Opcional)" name='direccion2'>
 		</p>
 		<p>
-			<label>Telefono</label>
+			<label for="tel">Telefono</label>
 			<input type='tel' placeholder="Telefono" id="tel" name='numTel1'>
 		</p>
 		<p>
-			<label>Telefono Opc</label>
-			<input type='tel' placeholder="(Opcional)" name='numTel2'>
+			<label for="tel2">Telefono Opc</label>
+			<input type='tel'id="tel2"  placeholder="(Opcional)" name='numTel2'>
 		</p>
 		<p>
-			<label>Correo</label>
+			<label for="email">Correo</label>
 			<input type='email' placeholder="ejemplo@smiep.com.co" id="email" name='email1'>
 		</p>
 		<p class='block'>
-			<label>Correo Opc</label>
-			<input type='email' placeholder="(Opcional)" name='email2'>
+			<label for="email2">Correo Opc</label>
+			<input type='email' placeholder="(Opcional)" id="email2" name='email2'>
 		</p>
 	
 		<input type='hidden' name='insertar' value='insertar'>
@@ -91,8 +91,9 @@ $_SESSION["pass"] == null ){
 </form>
 </div>
 </div>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../../public/js/proveedor/ingresarProveedor.js"></script>
+
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="../../public/js/proveedor/ingresarProveedor.js"></script>
  </body>
 </html>
 <?php } ?>

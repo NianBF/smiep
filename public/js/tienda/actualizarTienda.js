@@ -4,46 +4,62 @@
         elementos =formulario.elements,
         boton = document.getElementById('btn');
 
-    var validarid_cat = function(e){
-        if(formulario.id_cat.value == 0){
-            swal.fire({
-                title: "completa el campo nombre",
-                toast: true,
-                position: 'top-start',
-                timer: 5000,
-	            timerProgressBar:true,
-            });
-            e.preventDefault(); 
+        var validarNomti = function(e){
+            if(formulario.nomTienda.value == 0){
+                swal.fire({
+                    title: "completa el campo nombre tienda",
+                    toast: true,
+                    position: 'top-start',
+                    timer: 5000,
+                    timerProgressBar:true,  
+                }); 
+                e.preventDefault(); 
+    
+            }
+        };
 
-        }
-    };
-
-    var validarcategoria = function(e){
-        if(formulario.ncategoria.value == 0){
-            swal.fire({
-                title: "completa el campo autor",
-                toast: true,
-                position: 'top-start',
-                timer: 5000,
-	            timerProgressBar:true,
-            });
-            e.preventDefault(); 
-
-        }
-    };
+        var validarDireccion = function(e){
+            if(formulario.direccionTi.value == 0){
+                swal.fire({
+                    title: "completa el campo direccion ",
+                    toast: true,
+                    position: 'top-start',
+                    timer: 5000,
+                    timerProgressBar:true,  
+                });
+                e.preventDefault(); 
+    
+            }
+        };
 
 
+        var validarTelefono = function(e){
+            if(formulario.telTi.value == 0){
+                swal.fire({
+                    title: "completa el campo telefono",
+                    toast: true,
+                    position: 'top-start',
+                    timer: 5000,
+                    timerProgressBar:true,  
+                });
+                e.preventDefault(); 
+    
+            }
+        };
 
-    var CamposCompletos = function(e){
-            swal.fire({
-                title: "completa todos los campos",
-                
-                timer: 5000,
-	            timerProgressBar:true,
-            });
-            e.preventDefault(); 
-
-    };
+        var validarEmail = function(e){
+            if(formulario.emailTi.value == 0){
+                swal.fire({
+                    title: "completa el campo correo",
+                    toast: true,
+                    position: 'top-start',
+                    timer: 5000,
+                    timerProgressBar:true,  
+                });
+                e.preventDefault(); 
+    
+            }
+        };
 
     var mensaje = function(){
         swal.fire({
@@ -56,9 +72,10 @@
  
 
     var validar = function(e){
-        validarid_cat(e);
-        validarcategoria(e);
-     
+        validarNomti(e);
+        validarDireccion(e);
+        validarTelefono(e);
+        validarEmail(e);
     };
     formulario.addEventListener("submit", validar)
     boton.addEventListener("click", mensaje);

@@ -25,7 +25,7 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../home/img/favicon.png" sizes="any">
+	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 
 	<title>Actualizar Producto</title>
 	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
@@ -42,61 +42,61 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 			<h3>Cambia los datos del Producto</h3>
 			<form action='../../controller/productoCtrl.php' name="formulario" method='post'>
 				<p>
-					<label>ID Producto</label>
+					<label for="id_prod">ID Producto</label>
 					<input type='text' placeholder="ID Producto" id="id_prod" name='id_prod'
 								value='<?php echo $Producto->getId_prod()?>'>
 				</p>
 
 				<p>
-					<label>Imagen</label>
+					<label for="img">Imagen</label>
 					<input type='text' placeholder="Imagen" id="img" name='imgProd'
 								value='<?php echo $Producto->getImgProd()?>'>
 				</p>
 
 				<p>
-					<label>Producto</label>
+					<label for="producto">Producto</label>
 					<input type='text' placeholder="Producto" id="producto" name='nombreProd'
 								value='<?php echo $Producto->getNombreProd()?>'>
 				</p>
 
 				<p>
-					<label>Descripción</label>
+					<label for="descripcion">Descripción</label>
 					<input type='text' placeholder="Descripción" value="Sin detalles" id="descripcion"
 								name='descripcion' value='<?php echo $Producto->getNombreProd()?>'>
 				</p>
 
 				<p>
-					<label>Precio</label>
+					<label for="precio">Precio</label>
 					<input type='text' placeholder="PRESIO" id="precio" name='precio'
 								value='<?php echo $Producto->getPrecio()?>'>
 				</p>
 
 				<p>
-					<label>Cant Minima</label>
+					<label for="cantMin">Cant Minima</label>
 					<input type='text' placeholder="Cantidad Minima" value="1" disabled readonly id="cantMin"
 								name='cantidadMin' value='<?php echo $Producto->getCantidadMin()?>'>
 				</p>
 
 				<p>
-					<label>Cant Disponible</label>
+					<label for="cantDisp">Cant Disponible</label>
 					<input type='text' placeholder="Cantidad Disponible" id="cantDisp" name='cantidadDisp'
 								value='<?php echo $Producto->getCantidadDisp()?>'>
 				</p>
 
 				<p>
-					<label>Tipo Presentación</label>
+					<label for="tipoPresentacion">Tipo Presentación</label>
 					<input type='text' placeholder="Tipo Presentación" id="tipoPresentacion"
 								name='tipoPresentacion' value='<?php echo $Producto->getTipoPresentacion()?>'>
 				</p>
 
 				<p>
-					<label>ID Categoria</label>
+					<label for="id_cat">ID Categoria</label>
 					<input type='text' placeholder="ID Categoria" id="id_cat" name='id_cat'
 								value='<?php echo $Producto->getId_cat()?>'>
 				</p>
 
 				<p>
-					<label>ID Estado</label>
+					<label for="id_estado">ID Estado</label>
 					<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'
 								value='<?php echo $Producto->getId_estado()?>'>
 				</p>
@@ -114,7 +114,7 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 			</div>
 	</div>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script type="text/js" src="../../public/js/producto/actualizar.js"></script>
+		<script src="../../public/js/producto/actualizar.js"></script>
 </body>
 </html>
 <?php } ?>

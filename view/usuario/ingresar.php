@@ -28,48 +28,48 @@ $_SESSION["pass"] == null ){
 		<h3>Agregar Usuario</h3>
 <form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
 		<p>
-			<label>ID Doc</label>
+			<label for="doc">ID Doc</label>
 			<input type='text' name='id_doc' id="doc" placeholder="Documento">
 		</p>
 		<p>
-			<label>Primer Nombre</label>
+			<label for="nomb1">Primer Nombre</label>
 			<input type='text' name='nombre1' id="nomb1" placeholder="Primer Nombre">
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
-			<input type='text' name='nombre2' placeholder="Segundo Nombre">
+			<label for="nomb2">Segundo Nombre</label>
+			<input type='text' id="nomb2" name='nombre2' placeholder="Segundo Nombre">
 		</p>
 		<p>
-			<label>Primer Apellido</label>
+			<label for="ape1">Primer Apellido</label>
 			<input type='text' name='apellido1' id="ape1" placeholder="Primer Apellido">
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
-			<input type='text' name='apellido2' placeholder="SEGUNDO APELLIDO">
+			<label for="ape2">Segundo Nombre</label>
+			<input type='text' id="ape2" name='apellido2' placeholder="SEGUNDO APELLIDO">
 		</p>
 		<p>
-			<label>Usuario</label>
+			<label for="nick">Usuario</label>
 			<input type='text' name='userName' id="nick" placeholder="Nombre Usuario">
 		</p>
 		<p>
-			<label>Correo</label>
+			<label for="email">Correo</label>
 			<input type='text' name='email' id="email" placeholder="ejemplo@smiep.com.co">
 		</p>
 		<p>
-			<label>Contraseña</label>
+			<label for="pass">Contraseña</label>
 			<input type='password' name='pass' id="pass" placeholder="**********">
 		</p>
 		<p>
-			<label>Rol</label>
+			<label for="rol">Rol</label>
 			<input type='text' name='rol' id="rol" placeholder="Rol">
 		</p>
 		<p>
-			<label>ID Estado</label>
+			<label for="estado">ID Estado</label>
 			<input type='text' name='id_estado' id="estado" placeholder="ID Estado">
 		</p>
 		<p class='block'>
-			<label>ID Tienda</label>
-			<input type='text' name='id_ti' id="ti" placeholder="ID Tienda">
+			<label for="idTi">ID Tienda</label>
+			<input type='text' name='id_ti' id="idTi" placeholder="ID Tienda">
 		</p>
 
 		<input type='hidden' name='insertar' value='insertar'>

@@ -27,67 +27,67 @@ $_SESSION["pass"] == null ){
 		<h3>Agregar Productos</h3>
 		<form action="../../controller/productoCtrl.php" name="formulario" method="POST">
 				<p>
-					<label>ID Producto</label>
+					<label for="id_prod">ID Producto</label>
 					<input type="text" placeholder="ID Producto" id="id_prod" name="id_prod">
 				</P>
 
 				<p>
-					<label>Imagen</label>
+					<label for="img">Imagen</label>
 					<input type='text' placeholder="Imagen" id="img" name='imgProd'>
 				</p>
 
 				<p>
-					<label>Cod de Barras</label>
+					<label for="codBar">Cod de Barras</label>
 					<input type='text' placeholder="Codigo de Barras" id="codBar" name='codBar'>
 				</p>
 
 				<p>
-					<label>Producto</label>
+					<label for="producto">Producto</label>
 					<input type='text' placeholder="Producto" id="producto" name='nombreProd'>
 				</p>
 
 				<p>
-					<label>Descripción</label>
+					<label for="descripcion">Descripción</label>
 					<input type='text' placeholder="Descripción" value="Sin detalles" id="descripcion" name='descripcion'>
 				</p>
 
 				<p>
-					<label>Precio</label>
+					<label for="precio">Precio</label>
 					<input type='text' placeholder="Precio" id="precio" name='precio'>
 				</p>
 
 				<p>
-					<label>Cant Minima</label>
+					<label for="cantMin">Cant Minima</label>
 					<input type='text' placeholder="Cantidad Minima" id="cantMin" name='cantidadMin'>
 				</p>
 
 				<p>
-					<label>Cant Disponible</label>
+					<label for="cantDisp">Cant Disponible</label>
 					<input type='text' placeholder="Cantidad Disponible" id="cantDisp" name='cantidadDisp'>
 				</p>
 
 				<p>
-					<label>Presentacion</label>
+					<label for="tipoPresentacion">Presentacion</label>
 					<input type='text' placeholder="Tipo Presentacion" id="tipoPresentacion" name='tipoPresentacion'>
 				</p>
 
 				<p>
-					<label>Creado en</label>
+					<label for="creadoEn">Creado en</label>
 					<input type='text' placeholder="Creado en" value="00000000" id="creadoEn" name='creadoEn'>
 				</p>
 
 				<p>
-					<label>ID Usuario</label>
+					<label for="id_docUsu">ID Usuario</label>
 					<input type='text' placeholder="ID Usuario" id="id_docUsu" name='id_docUsu'>
 				</p>
 
 				<p>
-					<label>ID Categoria</label>
+					<label for="id_cat">ID Categoria</label>
 					<input type='text' placeholder="ID Categoria" id="id_cat" name='id_cat'>
 				</p>
 
 				<p class="block">
-					<label>ID Estado</label>
+					<label for="id_estado">ID Estado</label>
 					<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'>
 				</p>
 
@@ -105,7 +105,7 @@ $_SESSION["pass"] == null ){
 	</div>
 </div>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script type="text/js" src="../../public/js/producto/ingresar.js"></script>
+	<script src="../../public/js/producto/ingresar.js"></script>
 	</body>
 
 </html>

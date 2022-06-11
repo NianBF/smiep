@@ -1,15 +1,19 @@
-let campoFiltro =document.querySelector("#filtrar-tabla");
+let campoIdCli =document.querySelector("#buscar1");
 let valores = document.querySelectorAll(".cliente");
 
 
-let filtar = function () {
+let filtar = 
+
+
+
+campoIdCli.addEventListener("input",function () {
 
     if(this.value.length> 0){
         for(var i=0; i< valores.length;i++){
             var valor=valores[i];
 
             /* en la sigiente linea indicamos el campo al que queremos realizar el filtro*/
-            var tdNombre=valor.querySelector(".nombCli");
+            var tdNombre=valor.querySelector(".idCli");
             var nombre=tdNombre.textContent;
             var expresion = new RegExp(this.value,"i");
     
@@ -30,8 +34,4 @@ let filtar = function () {
         }
     }
     
-}
-
-
-
-campoFiltro.addEventListener("input",filtar)
+})

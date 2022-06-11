@@ -26,3 +26,7 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (10/06/2022)Cristian: Se actualiza el login.
 (11/062022 00:19)NB: se completa y se hace 100% funcional el modo oscuro, además se aplica al index.php y al login.
+
+(11/06/2022)NS: actualizacion de todos los javascript para los filtros 
+
+

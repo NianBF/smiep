@@ -47,7 +47,10 @@ $listaProveedor=$crud->mostrar();
             <th colspan="8">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
-		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Proveedor" class="buscar1">
+		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Proveedor" class="buscar1 ">
+
+				<label for="filtrar-tabla"></label>
+		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="empresa" class="buscar1">
              </div>
             </th>
             </tr>

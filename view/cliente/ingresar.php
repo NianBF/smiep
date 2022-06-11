@@ -28,40 +28,40 @@ $_SESSION["pass"] == null ){
 		<h3>Agregar Cliente</h3>
 <form action='../../controller/clienteCtrl.php' name="formulario" method='post'>
 		<p>
-			<label>Documento</label>
+			<label for="doc">Documento</label>
 			<input type='text' id="doc" placeholder="Documento" name='id_cliDoc'>
 		</p>
 		<p>
-			<label>Primer Nombre</label>
+			<label for="nombreCli1">Primer Nombre</label>
 			<input type='text' placeholder="Primer Nombre" id="nombreCli1" name='nombreCli1'>
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
-			<input type='text' placeholder="Segundo Nombre"  name='nombreCli2' >
+			<label for="nombreCli2">Segundo Nombre</label>
+			<input type='text' placeholder="Segundo Nombre" id="nombreCli2"  name='nombreCli2' >
 		</p>
 		<p>
-			<label>Primero Apellido</label>
+			<label for="apellidoCli1">Primero Apellido</label>
 			<input type='text' placeholder="Primer Apellido" id="apellidoCli1" name='apellidoCli1'>
 		</p>
 		<p>
-			<label>Segundo Apellido</label>
-			<input type='text' placeholder="Segundo Apellido" name='apellidoCli2'>
+			<label for="apellidoCli2">Segundo Apellido</label>
+			<input type='text' placeholder="Segundo Apellido" id="apellidoCli2" name='apellidoCli2'>
 		</p>
 		<p>
-			<label>Dirección</label>
+			<label for="direc">Dirección</label>
 			<input type='text' placeholder="Dirección" id="direc" name='direccionCli'>
 		</p>
 		<p>
-			<label>Telefono</label>
+			<label for="tel">Telefono</label>
 			<input type='text' id="tel" placeholder="Telefono" name='telCli'>
 		</p>
 		<p>
-			<label>Correo</label>
+			<label for="email">Correo</label>
 			<input type='email' id="email" placeholder="ejemplo@smiep.com.co" name='emailCli'>
 		</p>
 
 		<p class='block'>
-			<label>Fecha de Nacimiento</label>
+			<label for="FecNac">Fecha de Nacimiento</label>
 			<input type='date' id="FecNac" name='fechaNac'>
 		</p>
 	

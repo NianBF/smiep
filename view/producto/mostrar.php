@@ -12,10 +12,8 @@ $Producto= new Producto();
 $listaProducto=$crud->mostrar();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,11 +25,10 @@ $listaProducto=$crud->mostrar();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
-
 <body>
-    <table>
+
+<table>
         <header>
             <div class="logo">
                 <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
@@ -52,7 +49,10 @@ $listaProducto=$crud->mostrar();
             <th colspan="3">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
-		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Productos" class="buscar1">
+		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Productos" class="buscar1">
+
+                <label for="filtrar-tabla"></label>
+		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Nombre Producto" class="buscar1">
              </div>
             </th>
             </tr>
@@ -71,7 +71,7 @@ $listaProducto=$crud->mostrar();
                 <p><div class="column">Imagen: </div><br><span class="img"><img src="<?php echo $Producto->getImgProd() ?>" alt="<?php echo $Producto->getNombreProd() ?>"></span></p>
                 <p><span class="column">ID: </span><span class="id"><?php echo $Producto->getId_prod() ?></span></p>
                 <p><span class="column">Código de barras: </span><span class="codigo_bar"><?php echo $Producto->getCodBar() ?></span></p>
-                <p><span class="column">Nombre: </span><span class="nomb_prod"><?php echo $Producto->getNombreProd() ?></span></p>
+                <p><span class="column">Nombre: </span><span class="nomb_prod nombProd"><?php echo $Producto->getNombreProd() ?></span></p>
                 <p><span class="column">Nombre: </span><span class="nomb_prod"><?php echo $Producto->getDescripcion() ?></span></p>
                 <p><span class="column">Precio: </span><span class="precio">$<?php echo $Producto->getPrecio() ?> COP</span></p>
                 <p><span class="column">Disponible: </span><span class="cantidad"><?php echo $Producto->getCantidadDisp() ?></span></p>
@@ -89,8 +89,8 @@ $listaProducto=$crud->mostrar();
         <?php }?>
 
     </table>
-        <script src="../../public/js/producto/filtrarProducto.js"></>
+        <script src="../../public/js/producto/filtrarProducto.js"></script>
+    
 </body>
-
 </html>
 <?php } ?>
