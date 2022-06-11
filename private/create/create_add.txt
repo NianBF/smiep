@@ -10,3 +10,7 @@
 (05/06/2022)NB: Se crea carpeta «modules» para agregar modulos de venta y reportes, en ventas no se hacen modificaciones,
     sin embargo, en reportes se crea «plantilla.php» que maneja una plantilla predeterminada para generar PDF
         adicional se crea el archivo «product.php» el cual se encarga de generar el reporte de la tabla 'producto'
+
+(10/06/2022)JEstu: Se crean archivos «provee.php»,«usuario.php»,«venta.php»,«cliente.php»,«categoria.php» correspondiente 
+    a los reportes en la carpeta «modules».
+    
