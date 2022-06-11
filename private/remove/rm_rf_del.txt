@@ -6,3 +6,4 @@
     actual query para DB de SMIEP.
 
 (05/06/2022)NB: Se elimina código anterior del primer intento de reportes para SMIEP.
+(11/06/2022 00:19)NB: Se eliminan siglas 'S.M.I.E.P' de index.php.

@@ -15,4 +15,5 @@
     a los reportes en la carpeta «modules».
 
 (10/06/2022)Cristian: Se crean nuevos estilos para el login.
+(11/06/2022 00:19)NB: Se crean archivos enlazados al modo oscuro [darkMode.js(...)].
     

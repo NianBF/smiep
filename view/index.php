@@ -18,7 +18,6 @@
         
         <header class="header">
             <section>
-                <h1 class="title">S.M.I.E.P</h1>
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
             </section>
         </header>
