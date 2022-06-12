@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../public/img/favicon.png" sizes="any">
+    <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <title>SMIEP</title>
     <link rel="stylesheet" type="text/css" href="public/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
         </form>
         <div class="welcome-back">
             <div class="message">
-                <img src="public/img/favicon.png" id="imagen"width="300rem">
+                <img src="public/img/favicon.png" id="imagen"width="350rem">
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
 
             </div>
