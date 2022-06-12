@@ -131,7 +131,7 @@ button{
     padding: 1%;
 }
 .buscar1{
-    padding: 9px 10px 9px 32px;
+    padding: 0.5rem 1.7rem;
     outline: none;
     font-size: 14px;
     border-radius: 15px;
@@ -145,7 +145,70 @@ button{
 .invisible{
     display: none;
 }
-
+a.mod{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    border: 1px solid #f1eded;
+    border-radius: 2rem;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    width: 8rem;
+    text-align: center;
+    padding: 5%;
+    cursor: pointer;
+}
+a.mod:hover{
+    border: 1px solid #1f1f1f;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+a.mod:active{
+    background-color: #808280;
+}
+.oscuro{ 
+    background-color: #1f1f1f; 
+    color: #f1eded; 
+}
+.oscuro table{
+    background-color: #1f1f1f;
+}
+.oscuro tr:nth-child(even){
+    background-color: rgba(63, 63, 63, 0.877);
+}
+.oscuro a:visited{
+    color: rgb(255, 254, 176);
+}
+.oscuro a.modi{
+    border: 1px solid #1f1f1f;
+    border-radius: 2rem;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    width: 8rem;
+    text-align: center;
+    padding: 5%;
+    cursor: pointer;
+}
+.oscuro a.modi:hover{
+    border: 1px solid #f1eded;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    cursor: pointer;
+}
+.oscuro a.modi:active{
+    background-color: #808280;
+}
+@media screen and (max-width: 720px){
+    .buscar1{
+        width: 27%;  
+    }
+    #lis{
+    background-color: #023859;
+    padding: 1%;
+}
+}
 @media screen and (max-width: 480px){
     span.img img{
         width: 60%;

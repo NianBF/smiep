@@ -22,6 +22,7 @@ $listaProducto=$crud->mostrar();
     <title>Mostrar Producto</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/producto.css">   
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -46,14 +47,20 @@ $listaProducto=$crud->mostrar();
                 <th class="bot1"><a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i>Volver</button></a></th>
             </tr>
             <tr id="lis">
-            <th colspan="3">
+            <th colspan="2">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
-		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Productos" class="buscar1">
+		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Producto" class="buscar1">
 
                 <label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Nombre Producto" class="buscar1">
+
+                
              </div>
+            </th>
+            <th colspan="2">
+                <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
+                <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
             </th>
             </tr>
 
