@@ -21,7 +21,7 @@ $_SESSION["pass"] == null ){
 <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../home/img/favicon.png" sizes="any">
+	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 	<title>Actualizar Proveedor</title>
 	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
 
@@ -37,49 +37,49 @@ $_SESSION["pass"] == null ){
 			<h3>Cambia los datos del Proveedor</h3>
 	<form action='../../controller/ProveedorCtrl.php' id="formulario" name="formulario" method='post'>
 		<p>
-			<label>Primer Nombre</label>
+			<label for="nombProv1">Primer Nombre</label>
 			<input type='hidden' name='id_DocProv' value='<?php echo $Proveedor->getId_DocProv()?>'>
-			<input type='text' placeholder="Primer Nombre"  name='nombProv1' value='<?php echo $Proveedor->getNombProv1()?>'>
+			<input type='text' placeholder="Primer Nombre"  name='nombProv1' id="nombProv1" value='<?php echo $Proveedor->getNombProv1()?>'>
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
-			<input type='text' placeholder="Segundo Nombre"  name='nombProv2' value='<?php echo $Proveedor->getNombProv2()?>'>
+			<label for="nombProv2">Segundo Nombre</label>
+			<input type='text' placeholder="Segundo Nombre" id="nombProv2"  name='nombProv2' value='<?php echo $Proveedor->getNombProv2()?>'>
 		</p>
 		<p>
-			<label>Primer Apellido</label>
-			<input type='text' placeholder="Primer Apellido"  name='apeProv1' value='<?php echo $Proveedor->getApeProv1()?>'>
+			<label for="apeProv1">Primer Apellido</label>
+			<input type='text' placeholder="Primer Apellido" id="apeProv1" name='apeProv1' value='<?php echo $Proveedor->getApeProv1()?>'>
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
-			<input type='text' placeholder="Segundo Apellido"  name='apeProv2' value='<?php echo $Proveedor->getApeProv2()?>'>
+			<label for="apeProv2">Segundo Nombre</label>
+			<input type='text' placeholder="Segundo Apellido" id="apeProv2"  name='apeProv2' value='<?php echo $Proveedor->getApeProv2()?>'>
 		</p>
 		<p>
-			<label>Empresa</label>
-			<input type='text' placeholder="Empresa"  name='empresa' value='<?php echo $Proveedor->getEmpresa()?>'>
+			<label for="empresa">Empresa</label>
+			<input type='text' placeholder="Empresa" id="empresa" name='empresa' value='<?php echo $Proveedor->getEmpresa()?>'>
 		</p>
 		<p>
-			<label>Dirección</label>
-			<input type='text' placeholder="Dirección" name='direccion1' value='<?php echo $Proveedor->getDireccion1()?>'>
+			<label for="direc">Dirección</label>
+			<input type='text' placeholder="Dirección" id="direc" name='direccion1' value='<?php echo $Proveedor->getDireccion1()?>'>
 		</p>
 		<p>
-			<label>Dirección Opc</label>
-			<input type='text' placeholder="(Opcional) " name='direccion2' value='<?php echo $Proveedor->getDireccion2()?>'>
+			<label for=" direc2">Dirección Opc</label>
+			<input type='text' placeholder="(Opcional)" id="direc2" name='direccion2' value='<?php echo $Proveedor->getDireccion2()?>'>
 		</p>
 		<p>
-			<label>Telefono</label>
-			<input type='tel' placeholder="Telefono" name='numTel1' value='<?php echo $Proveedor->getNumTel1()?>'>
+			<label for="tel">Telefono</label>
+			<input type='tel' placeholder="Telefono" id="tel" name='numTel1' value='<?php echo $Proveedor->getNumTel1()?>'>
 		</p>
 		<p>
-			<label>Telefono Opc</label>
-			<input type='tel' placeholder="(Opcional)" name='numTel2' value='<?php echo $Proveedor->getNumTel2()?>'>
+			<label for="tel2">Telefono Opc</label>
+			<input type='tel' placeholder="(Opcional)" id="tel2" name='numTel2' value='<?php echo $Proveedor->getNumTel2()?>'>
 		</p>
 		<p>
-			<label>Correo</label>
-			<input type='email' placeholder="ejemplo@smiep.com.co" name='email1' value='<?php echo $Proveedor->getEmail1()?>'>
+			<label for="email">Correo</label>
+			<input type='email' placeholder="ejemplo@smiep.com.co" id="email" name='email1' value='<?php echo $Proveedor->getEmail1()?>'>
 		</p>
 		<p class='block'>
-			<label>Correo Opc</label>
-			<input type='email' placeholder="(Opcional)" name='email2' value='<?php echo $Proveedor->getEmail2()?>'>
+			<label for="email2">Correo Opc</label>
+			<input type='email' placeholder="(Opcional)" name='email2' id='email2' value='<?php echo $Proveedor->getEmail2()?>'>
 		</p>
 
 		<input type='hidden' name='actualizar' value='Actualizar'>

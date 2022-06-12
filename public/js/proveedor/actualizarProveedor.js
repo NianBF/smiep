@@ -6,6 +6,34 @@
 
 
 
+        var validarNombProv1 = function(e){
+            if(formulario.nombProv1.value == 0){
+                swal.fire({
+                    title: "completa el campo primer nombre",
+                    toast: true,
+                    position: 'top-start',
+                    timer: 5000,
+                    timerProgressBar:true,  
+                }); 
+                e.preventDefault(); 
+    
+            }
+        };
+    
+         var validarApeProv1 = function(e){
+            if(formulario.apeProv1.value == 0){
+                swal.fire({
+                    title: "completa el campo primer apellido ",
+                    toast: true,
+                    position: 'top-start',
+                    timer: 5000,
+                    timerProgressBar:true,  
+                });
+                e.preventDefault(); 
+    
+            }
+        };
+
      var validarEmpresa = function(e){
         if(formulario.empresa.value == 0){
             swal.fire({
@@ -19,33 +47,8 @@
 
         }
     };
-    var validarNombProv1 = function(e){
-        if(formulario.nombProv1.value == 0){
-            swal.fire({
-                title: "completa el campo primer nombre",
-                toast: true,
-                position: 'top-start',
-                timer: 5000,
-	            timerProgressBar:true,  
-            }); 
-            e.preventDefault(); 
 
-        }
-    };
 
-     var validarApeProv1 = function(e){
-        if(formulario.apeProv1.value == 0){
-            swal.fire({
-                title: "completa el campo primer apellido ",
-                toast: true,
-                position: 'top-start',
-                timer: 5000,
-	            timerProgressBar:true,  
-            });
-            e.preventDefault(); 
-
-        }
-    };
     
     var validarDireccion = function(e){
         if(formulario.direc.value == 0){
@@ -88,7 +91,11 @@
         }
     };
  
- 
+    var mensaje = function(){
+        swal.fire({
+            title: 'registro cargado con exito',timer: 90000,
+            timerProgressBar:true, confirmButtonText:'Aceptar'});   
+        };
 
     var validar = function(e){
         validarEmpresa(e);

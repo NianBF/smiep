@@ -46,7 +46,7 @@ $listaCliente=$crud->mostrar();
             <th colspan="7">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
-		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Clientes" class="buscar1">
+		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Clientes" class="buscar1">
              </div>
             </th>
             </tr>

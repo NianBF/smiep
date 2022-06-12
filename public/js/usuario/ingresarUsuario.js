@@ -116,7 +116,7 @@
     };
 
     var validarTienda = function(e){
-        if(formulario.ti.value == 0){
+        if(formulario.idTi.value == 0){
             swal.fire({
                 title: "completa el campo id tienda",
                 toast: true,

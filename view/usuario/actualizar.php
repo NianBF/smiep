@@ -38,45 +38,45 @@ $_SESSION["pass"] == null ){
 	<h3>Cambia los datos de Usuario</h3>
 	<form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
 		<p>
-			<label>Primer Nombre</label>
+			<label for="nomb1">Primer Nombre</label>
 			<input type='hidden' name='id_doc' value='<?php echo $Usuario->getId_doc()?>'>
-			<input type='text' name='nombre1' placeholder="Primer Nombre" value='<?php echo $Usuario->getNombre1()?>'>
+			<input type='text' id="nomb1" name='nombre1' placeholder="Primer Nombre" value='<?php echo $Usuario->getNombre1()?>'>
 		</p>
 		<p>
-			<label>Segundo Nombre</label>
-			<input type='text' name='nombre2' placeholder="Segundo Nombre" value='<?php echo $Usuario->getNombre2()?>'>
+			<label for="nomb2">Segundo Nombre</label>
+			<input type='text' id="nomb2" name='nombre2' placeholder="Segundo Nombre" value='<?php echo $Usuario->getNombre2()?>'>
 		</p>
 		<p>
-			<label>Primer Apellido</label>
-			<input type='text' name='apellido1' placeholder="Primer Apellido" value='<?php echo $Usuario->getApellido1()?>'>
+			<label for="ape1">Primer Apellido</label>
+			<input type='text' id="ape1" name='apellido1' placeholder="Primer Apellido" value='<?php echo $Usuario->getApellido1()?>'>
 		</p>
 		<p>
-			<label>Segundo Apellido</label>
-			<input type='text' name='apellido2' placeholder="Segundo Apellido" value='<?php echo $Usuario->getApellido2()?>'>
+			<label for="ape2">Segundo Apellido</label>
+			<input type='text' id="ape2" name='apellido2' placeholder="Segundo Apellido" value='<?php echo $Usuario->getApellido2()?>'>
 		</p>
 		<p>
-			<label>Usuario</label>
-			<input type='text' name='userName' placeholder="NOMBRE DE USUARIO" value='<?php echo $Usuario->getUserName()?>'>
+			<label for="usua">Usuario</label>
+			<input type='text' id="usua" name='userName' placeholder="NOMBRE DE USUARIO" value='<?php echo $Usuario->getUserName()?>'>
 		</p>
 		<p>
-			<label>Correo</label>
-			<input type='text' name='email' placeholder="ejemplo@smiep.com.co" value='<?php echo $Usuario->getEmail()?>'>
+			<label for="email">Correo</label>
+			<input type='text' id="email" name='email' placeholder="ejemplo@smiep.com.co" value='<?php echo $Usuario->getEmail()?>'>
 		</p>
 		<p>
-			<label>Contraseña</label>
-			<input type='password' name='pass' placeholder="**********" value='<?php echo $Usuario->getPass()?>'>
+			<label for="pass">Contraseña</label>
+			<input type='password' id="pass" name='pass' placeholder="**********" value='<?php echo $Usuario->getPass()?>'>
 		</p>
 		<p>
-			<label>Rol</label>
-			<input type='text' name='rol' placeholder="Rol" value='<?php echo $Usuario->getRol()?>'>
+			<label for="rol">Rol</label>
+			<input type='text' name='rol' id="rol" placeholder="Rol" value='<?php echo $Usuario->getRol()?>'>
 		</p>
 		<p>
-			<label>ID Estado</label>
-			<input type='text' name='id_estado' placeholder="ID Estado" value='<?php echo $Usuario->getId_estado()?>'>
+			<label for="estado">ID Estado</label>
+			<input type='text' id="estado" name='id_estado' placeholder="ID Estado" value='<?php echo $Usuario->getId_estado()?>'>
 		</p>
 		<p>
-			<label>ID Tienda</label>
-			<input type='text' name='id_ti' placeholder="ID Tienda" value='<?php echo $Usuario->getId_ti()?>'>
+			<label for="idTi">ID Tienda</label>
+			<input type='text' id="idTi" name='id_ti' placeholder="ID Tienda" value='<?php echo $Usuario->getId_ti()?>'>
 		</p>
 	
 		<input type='hidden' name='actualizar' value='actualizar'>

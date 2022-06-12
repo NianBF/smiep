@@ -142,6 +142,10 @@ button{
 
 }
 
+.invisible{
+    display: none;
+}
+
 @media screen and (max-width: 480px){
     span.img img{
         width: 60%;

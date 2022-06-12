@@ -47,7 +47,10 @@ $listaTienda=$crud->mostrar();
         <th colspan="7">
             <div class="buscar">
             	<label for="filtrar-tabla"></label>
-		        <input type="text" name="filtrar-tabla" id="filtrar-tabla" placeholder="Tienda" class="buscar1">
+		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Tienda" class="buscar1">
+            	
+				<label for="filtrar-tabla"></label>
+		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Tienda" class="buscar1">
             </div>
 		</th>
         </tr>
@@ -76,8 +79,7 @@ $listaTienda=$crud->mostrar();
 			<?php }?>
 	</div>	
 	</table>
-	
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 	<script src="../../public/js/tienda/filtrarTienda.js"></script>
 	
 </body>

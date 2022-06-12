@@ -40,19 +40,20 @@ require_once('../../model/tiendaMdl.php');
 		<p>
 			<label>Nombre</label>
 			<input type='hidden' name='id_ti' value='<?php echo $Tienda->getId_ti()?>'>
-			<td> <input type='text' placeholder="Nombre Tienda" id="nomTienda" name='nombreTienda' value='<?php echo $Tienda->getNombreTienda()?>'>
+
+			<input type='text' placeholder="Nombre Tienda" id="nomTienda" name='nombreTienda' value='<?php echo $Tienda->getNombreTienda()?>'>
 		</p>
 		<p>
 			<label>Dirección</label>
-			<input type='text' placeholder="Dirección" name='direccionTi' value='<?php echo $Tienda->getDireccionTi()?>' >
+			<input type='text' placeholder="Dirección" name='direccionTi' id='direccionTi' value='<?php echo $Tienda->getDireccionTi()?>' >
 		</p>
 		<p>
 			<label>Telefono</label>
-			<input type='text' placeholder="Numero Telefono" name='telTi' value='<?php echo $Tienda->getTelTi()?>' >
+			<input type='text' placeholder="Numero Telefono" name='telTi' id='telTi' value='<?php echo $Tienda->getTelTi()?>' >
 		</p>
 		<p>
 			<label>Correo</label>
-			<input type='text' placeholder="ejemplo@smiep.com.co" name='emailTi' value='<?php echo $Tienda->getEmailTi()?>' >
+			<input type='text' placeholder="ejemplo@smiep.com.co"  id='emailTi' name='emailTi' value='<?php echo $Tienda->getEmailTi()?>' >
 		</p>
 
 		<input type='hidden' name='actualizar' value='actualizar'>
@@ -67,8 +68,8 @@ require_once('../../model/tiendaMdl.php');
 	</form>
 </div>
 </div>
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="../../public/js/tienda/actualizarTienda.js"></script>	
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
 <?php } ?>
