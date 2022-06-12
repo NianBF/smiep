@@ -1,5 +1,6 @@
 <?php
  $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
+ error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="es">
