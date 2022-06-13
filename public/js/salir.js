@@ -4,8 +4,8 @@ let salir = document.querySelector(".salir")
 
 function msgsalir() {
   Swal.fire({
-      title: 'estas seguro ?',
-      text: 'estas seguro que deseas salir',
+      title: '¿Está seguro?',
+      text: 'Está seguro que desea salir',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -20,9 +20,9 @@ function msgsalir() {
           url: '../../controller/salirCtrl.php',
           success: function(response)
           {					
-         					//alert("ggg");
+         		//alert("ggg");				
+            window.location.href = '../../controller/salirCtrl.php';	
          }
-        
        });
        
       }

@@ -63,8 +63,8 @@ $_SESSION["pass"] == null ){
                         <li><a href="../about/about.html"><span class="icon-earth"></span>Acerca de</a></li>
                         <li><a href="#"><span class="icon-mail2"></span>Contacto</a></li>
                         <li class="salir"><a href="javascript:msgsalir();"><span class="icon-exit"></span> Salir</a></li>
-                        <li class="salir"><a href="../../controller/salirCtrl.php"><span class="icon-exit"></span> Salir</a></li>
-                        <!--  -->
+                        <!-- <li class="salir"><a href="../../controller/salirCtrl.php"><span class="icon-exit"></span> Salir</a></li> -->
+                       
                         <li><a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a></li>
                     </ul>
                 </nav>

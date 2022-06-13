@@ -57,13 +57,13 @@ $Cliente= new Cliente();
 
 		echo "<script>
 		Swal.fire({
-		   title: 'Are you sure?',
-			 text: 'You wont be able to revert this!',
-			 icon: 'warning',
-			 showCancelButton: true,
-			 confirmButtonColor: '#3085d6',
-			 cancelButtonColor: '#d33',
-			 confirmButtonText: 'Yes, delete it!'
+			title: '¿Está seguro?',
+			text: 'No se podrá revertir esta acción!',
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Sí, Eliminar!'
 		 }).then((result) => {
 		   /* Read more about isConfirmed, isDenied below */
 		   if (result.isConfirmed) {
