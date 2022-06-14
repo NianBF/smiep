@@ -2,7 +2,6 @@
 
 *{
     box-sizing: border-box;
-    text-decoration: none;
     margin: 0;
     padding: 0;
 }
@@ -62,6 +61,7 @@ th.opc{
 tr:nth-child(even){
     background-color: rgba(229, 229, 229, 0.877);
 }
+
 span.column{
     font-weight: bold;}
 div.column{
@@ -210,6 +210,7 @@ a.mod:active{
     }
     .nameEmp{
         visibility: hidden;
+        left: -92px;
     }
     .nameEmp2{
         font-family: Verdana, Geneva, Tahoma, sans-serif;

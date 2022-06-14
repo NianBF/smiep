@@ -45,6 +45,7 @@ $listaProducto=$crud->mostrar();
         </div>
         <br>
         <hr>
+        <br>
         <div id="main-container">
         <thead>
             <tr>
@@ -62,7 +63,7 @@ $listaProducto=$crud->mostrar();
 		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Nombre Producto" class="buscar1">
 
                 
-             </div>
+                </div>
             </th>
             <th colspan="2">
                 <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
@@ -85,7 +86,7 @@ $listaProducto=$crud->mostrar();
                 <p><span class="column">ID: </span><span class="id"><?php echo $Producto->getId_prod() ?></span></p>
                 <p><span class="column">Código de barras: </span><span class="codigo_bar"><?php echo $Producto->getCodBar() ?></span></p>
                 <p><span class="column">Nombre: </span><span class="nomb_prod nombProd"><?php echo $Producto->getNombreProd() ?></span></p>
-                <p><span class="column">Detalles: </span><span class="nomb_prod"><?php echo $Producto->getDescripcion() ?></span></p>
+                <p><span class="column">Descripción: </span><span class="nomb_prod"><?php echo $Producto->getDescripcion() ?></span></p>
                 <p><span class="column">Precio: </span><span class="precio">$<?php echo $Producto->getPrecio() ?> COP</span></p>
                 <p><span class="column">Disponible: </span><span class="cantidad"><?php echo $Producto->getCantidadDisp() ?></span></p>
             </td>
@@ -102,8 +103,6 @@ $listaProducto=$crud->mostrar();
         <?php }?>
 
     </table>
-        
-
         <script src="../../public/js/producto/filtrarProducto.js"></script>
     
 </body>
