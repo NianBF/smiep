@@ -51,7 +51,7 @@ $_SESSION["pass"] == null ){
                         <li><a href="#"><span class="icon-user"></span>Personas</a>
                             <ul>
                                 <li><a href="../usuario/mostrar.php"><span class="icon-user-tie"></span>Usuarios</a></li>
-                                <li><a href="../cliente/mostrar.php"><span class="icon-user-tie"></span>Clientes</a></li>
+                                <li><a href='../cliente/mostrarCli.php'><span class="icon-user-tie"></span>Clientes</a></li>
                                 <li><a href="../proveedor/mostrar.php"><span class="icon-user-tie"></span>Proveedores</a></li>
                             </ul>
                         </li>
@@ -63,7 +63,6 @@ $_SESSION["pass"] == null ){
                         <li><a href="../about/about.html"><span class="icon-earth"></span>Acerca de</a></li>
                         <li><a href="#"><span class="icon-mail2"></span>Contacto</a></li>
                         <li class="salir"><a href="javascript:msgsalir();"><span class="icon-exit"></span> Salir</a></li>
-                        <!-- <li class="salir"><a href="../../controller/salirCtrl.php"><span class="icon-exit"></span> Salir</a></li> -->
                        
                         <li><a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a></li>
                     </ul>
