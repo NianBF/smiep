@@ -9,13 +9,6 @@
 body{ 
     color: #fff;    
 }
-header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #fff;
-}
 
 .header__superior{
     max-width: 1200px;

@@ -17,10 +17,10 @@ $listaProducto=$crud->mostrar();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <title>Mostrar Producto</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/producto.css">   
+    <link rel="stylesheet" type="text/css" href="../../public/css/producto1.css">   
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
@@ -28,23 +28,30 @@ $listaProducto=$crud->mostrar();
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
+<header>
 <table>
-        <header>
+        <div class="header__superior">
             <div class="logo">
-                <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
-                <h1 class="titulo">S.M.I.E.P</h1>
-                <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <img src="../../img/favicon.png" alt="">
             </div>
-        </header>
+            <div class="contenedor">
+            <section class="titulito">
+                <h1 class="title">S.M.I.E.P</h1>
+                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
+            </section>
+            </header>
+        </div>
+        </div>
         <br>
         <hr>
+        <br>
         <div id="main-container">
         <thead>
             <tr>
                 <th>Listado de Productos</th>
-                <th colspan="1" class="bot1"><a href='agregarProducto.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>Agregar</button></a></th>
-                <th class="bot1"><a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i>Volver</button></a></th>
+                <th colspan="1" class="bot1"><a href='agregarProducto.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i> Agregar</button></a></th>
+                <th class="bot1"><a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
             <tr id="lis">
             <th colspan="2">
@@ -56,7 +63,7 @@ $listaProducto=$crud->mostrar();
 		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Nombre Producto" class="buscar1">
 
                 
-             </div>
+                </div>
             </th>
             <th colspan="2">
                 <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
@@ -96,8 +103,11 @@ $listaProducto=$crud->mostrar();
         <?php }?>
 
     </table>
+    <footer class="footer">
+        <p>© S.M.I.E.P | 2022</p>
+    </footer>
         <script src="../../public/js/producto/filtrarProducto.js"></script>
     
 </body>
 </html>
-<?php } ?>
+<?php } ?>  
