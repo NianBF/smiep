@@ -33,7 +33,7 @@ $_SESSION["pass"] == null ){
 
 				<p>
 					<label for="img">Imagen</label>
-					<input type='text' placeholder="Imagen" id="img" name='imgProd'>
+					<input type='text' placeholder="Imagen" id="img" name='imgProd' value="https://i.ibb.co/2s4D1rc/bags-SMIEP.png">
 				</p>
 
 				<p>
@@ -58,7 +58,7 @@ $_SESSION["pass"] == null ){
 
 				<p>
 					<label for="cantMin">Cant Minima</label>
-					<input type='text' placeholder="Cantidad Minima" id="cantMin" name='cantidadMin'>
+					<input type='text' placeholder="Cantidad Minima" id="cantMin" name='cantidadMin' value="1" readonly>
 				</p>
 
 				<p>

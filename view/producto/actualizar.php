@@ -67,13 +67,13 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 
 				<p>
 					<label for="precio">Precio</label>
-					<input type='text' placeholder="PRESIO" id="precio" name='precio'
+					<input type='text' placeholder="Precio" id="precio" name='precio'
 								value='<?php echo $Producto->getPrecio()?>'>
 				</p>
 
 				<p>
 					<label for="cantMin">Cant Minima</label>
-					<input type='text' placeholder="Cantidad Minima" value="1" disabled readonly id="cantMin"
+					<input type='text' placeholder="Cantidad Minima" value="1" readonly id="cantMin"
 								name='cantidadMin' value='<?php echo $Producto->getCantidadMin()?>'>
 				</p>
 

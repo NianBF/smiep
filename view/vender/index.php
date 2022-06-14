@@ -53,7 +53,7 @@ include 'Configuracion.php';
     <div id="products" class="row list-group">
         <?php
         //get rows query
-        $query = $db->query("SELECT * FROM producto ORDER BY id_prod DESC LIMIT 100");
+        $query = $db->query("SELECT * FROM producto ORDER BY id_prod DESC LIMIT 20");
         if($query->num_rows > 0){ 
             while($row = $query->fetch_assoc()){
         ?>
@@ -61,6 +61,7 @@ include 'Configuracion.php';
             <div class="thumbnail">
                 <div class="caption">
                     <h4 class="list-group-item-heading"><?php echo $row["nombreProd"]; ?></h4>
+                    <figure><img src="<?php echo $row["imgProd"]; ?>" alt="<?php echo $row["nombreProd"]; ?>" width="20%"></figure>
                     <p class="list-group-item-text"><?php echo $row["descripcion"]; ?></p>
                     <div class="row">
                         <div class="col-md-6">
