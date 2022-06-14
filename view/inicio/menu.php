@@ -51,7 +51,7 @@ $_SESSION["pass"] == null ){
                         <li><a href="#"><span class="icon-user"></span>Personas</a>
                             <ul>
                                 <li><a href="../usuario/mostrar.php"><span class="icon-user-tie"></span>Usuarios</a></li>
-                                <li><a href="../../view/cliente/mostrar.php"><span class="icon-user-tie"></span>Clientes</a></li>
+                                <li><a href='../cliente/mostrarCli.php'><span class="icon-user-tie"></span>Clientes</a></li>
                                 <li><a href="../proveedor/mostrar.php"><span class="icon-user-tie"></span>Proveedores</a></li>
                             </ul>
                         </li>
