@@ -14,6 +14,7 @@ $_SESSION["pass"] == null ){
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+	<script async src="https://imgbb.com/upload.js" data-auto-insert="viewer-links"></script>
 
 	<title> Ingresar Producto</title>
 	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
