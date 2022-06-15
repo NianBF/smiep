@@ -18,47 +18,59 @@ $listaCategoria=$crud->mostrar();
 <head>
 <meta charset="UTF-8">
 	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
      <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 	<title>Mostrar Categoria</title>
-	<link rel="stylesheet" href="../../public/css/producto.css">
+	<link rel="stylesheet" href="../../public/css/categoria.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+<header>
 <table>
-    <header>
-    <div class="logo">
-                <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
-                <h1 class="titulo">S.M.I.E.P</h1>
-                <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+            <div class="header__superior">
+            <div class="logo">
+                <img src="../../img/favicon.png" alt="">
             </div>
-    </header>
+            <div class="contenedor">
+            <section class="titulito">
+                <h1 class="title">S.M.I.E.P</h1>
+                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
+            </section>
+            </header>
+        </div>
+        </div>
         <br>
         <hr>
         <br>
         <div id="main-container">
         <thead>
         <tr>
-            <th colspan="7">Listado de Categoria <a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Nueva Categoria</button></a>
-            <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
+            <th>Listado de Categoria</th>
+            <th colspan="2" class="bot1"><a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Agregar</button></a>
+            <a class="bot1 "href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
         </tr>
         <tr id="lis">
-            <th colspan="7">
+            <th colspan="2">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Categoria" class="buscar1">
                 
                 <label for="filtrar-tabla"></label>
-		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Categoria" class="buscar1">
+		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Nombre Categoria" class="buscar1">
              </div>
+            </th>
+            <th colspan="1">
+                <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
+                <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
             </th>
             </tr>
 	    <tr>
-            <th>ID Categoria</th>
-            <th>Categoria</th>
-            <th>Opcion</th>
+            <th class="categoria">ID Categoria</th>
+            <th class="opc" colspan="1">Nombre</th>
+            <th class="opc" colspan="1">Eliminar</th>
         </tr>
         </thead>
 		<?php foreach ($listaCategoria as $Categoria) {?>
@@ -72,7 +84,9 @@ $listaCategoria=$crud->mostrar();
         </div>
 			<?php }?>
 	</table>
-
+    <footer class="footer">
+        <p>© S.M.I.E.P | 2022</p>
+    </footer>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/categoria/filtrarCategoria.js"></script>
 </body>

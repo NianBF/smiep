@@ -190,6 +190,10 @@ a.mod:active{
 .oscuro a.modi:active{
     background-color: #808280;
 }
+.oscuro header{
+    background-color: #1f1f1f; 
+    color: #f1eded;
+}
 @media screen and (max-width: 720px){
     .buscar1{
         width: 80%;  
