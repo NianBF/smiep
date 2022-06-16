@@ -68,7 +68,7 @@ $listaCategoria=$crud->mostrar();
             </th>
             </tr>
 	    <tr>
-            <th class="categoria">ID Categoria</th>
+            <th class="categoria">Categoria</th>
             <th class="opc" colspan="1">Nombre</th>
             <th class="opc" colspan="1">Eliminar</th>
         </tr>
