@@ -31,8 +31,7 @@ $listaUsuario=$crud->mostrar();
     crossorigin="anonymous" referrerpolicy="no-referrer" />	
 
 </head>
-
-	<body>
+<body>
 	<table>
 		<header>
 			<div class="logo">
