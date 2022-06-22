@@ -40,9 +40,9 @@ $listaProducto=$crud->mostrar();
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
                 <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
             </section>
-            </header>
         </div>
         </div>
+        </header>
         <br>
         <hr>
         <br>

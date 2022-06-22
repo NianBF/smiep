@@ -16,34 +16,40 @@ $_SESSION["pass"] == null ){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <title>Reportes</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/producto.css">   
+    <link rel="stylesheet" type="text/css" href="../../public/css/reportes.css">   
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-
-<body>
-    <table>
-        <header>
+<header>
+<table>
+        <div class="header__superior">
             <div class="logo">
-                <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
-                <h1 class="titulo">S.M.I.E.P</h1>
-                <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <img src="../../img/favicon.png" alt="">
             </div>
+            <div class="contenedor">
+            <section class="titulito">
+                <h1 class="title">S.M.I.E.P</h1>
+                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
+            </section>
+        </div>
+        </div>
         </header>
         <br>
         <hr>
+        <br>
         <div id="main-container">
         <thead>
             <tr>
-                <th colspan="7">Listado de Reportes <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
+                <th>Listado de Categoria</th>
+                <th><a  colspan="2" class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
-
         <tr>
             <th>Nombre</th>
-            <th colspan="2">Opciones</th>
+            <th>Ver Reporte</th>
         </tr>
         </thead>
 
@@ -74,7 +80,9 @@ $_SESSION["pass"] == null ){
         </div>
 
     </table>
-        <script src="../../public/js/producto/filtrarProducto.js"></script>
+    <footer class="footer">
+        <p>© S.M.I.E.P | 2022</p>
+    </footer>
 </body>
 
 </html>
