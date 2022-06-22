@@ -1,6 +1,3 @@
-<title>Reporte Producto</title>
-<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-
 <?php
 session_start();
 if($_SESSION['email'] == null or $_SESSION["userName"]== null or
