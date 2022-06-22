@@ -44,7 +44,7 @@ $_SESSION["pass"] == null ){
         <div id="main-container">
         <thead>
             <tr>
-                <th>Listado de Categoria</th>
+                <th>Listado de Reportes</th>
                 <th><a  colspan="2" class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
         <tr>
