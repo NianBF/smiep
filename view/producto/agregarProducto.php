@@ -17,7 +17,7 @@ $_SESSION["pass"] == null ){
 	<script async src="https://imgbb.com/upload.js" data-auto-insert="viewer-links"></script>
 
 	<title> Ingresar Producto</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
 </head>
 <div class="contenedor">
 <span class="icon">
@@ -105,8 +105,12 @@ $_SESSION["pass"] == null ){
 		</form>
 	</div>
 </div>
+<footer class="footer">
+        <p>© S.M.I.E.P | 2022</p>
+    </footer>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="../../public/js/producto/ingresar.js"></script>
+	
 	</body>
 
 </html>
