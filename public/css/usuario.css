@@ -1,55 +1,46 @@
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 header{
-    text-align: center;
     width: 100%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
-    text-shadow: 3px 2px 0 #ffffff81, 2px 2px 2px rgba(206,206,206,0);
+    top: 0;
+    left: 0;
+    background: #fff;
 }
-.titulo{
+.header__superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+.logo img{
+    width: 190px;
+    height: 150px;
+}
+.title{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 3rem;
-    right: 36px;
-    top: 30px;
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    align-self: flex-end;
-    padding: 0;
-    margin-left: 45%;
-    padding-bottom: 0;
-    font-size: 170%;
+    margin-top: 7%;
+    margin-left: 20%;
+    font-size: 180%;
     color: #4e635a;
 }
-.subtitulo{
+.nameEmp2{
+    visibility: hidden;
+}
+.nameEmp{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    right: 67px;
-    top: 70px;
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    align-self: flex-end;
-    padding-bottom: 0;
-    font-size: 100%;
+    left: 92px;
+    position: relative;
+    padding: 1px;
+    font-size: 110%;
     color: #4e635a;
 }
-.logo{
-    padding-left: 2%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    align-self: start;
-}
-/*#main-container{
-    margin: 1% auto;
-    width: 150px;
-}*/
 table{
     background-color: #fff;
     margin-left: auto;
@@ -59,39 +50,40 @@ table{
     text-align: left;
     width: 80%;
     top: 1%;
-    
+}
+footer{
+    padding: 2em 0;
+    text-align: center;
+    bottom: 0;
+    font-weight: 800;
+    font-size: 1em;  
 }
 th, td{
-    padding: 1%;
+    padding: 1%; 
+}
+.tb{
+    width: 200px;
+}
+.to{
+    width: 215px;
+}
+.tx{
+    width: 250px;
+}
+.tz{
+    width: 225px;
 }
 th.bot1{
-    width: 10%;
     text-align: right;
 }
 th.opc{
     text-align: justify;
 }
-/*
-thead{
-    background-color: #75aba0;
-    border-bottom: solid 5px #0f362d;
-    color: #fff;
-}*/
 tr:nth-child(even){
     background-color: rgba(229, 229, 229, 0.877);
 }
-span.column{
-    font-weight: bold;
-}
-div.column{
-    font-weight: bold;
-}
-span.img img{
-    width: 20%;
-    height: 20%;
-}
 button{
-    width: 40%;
+    width: 45%;
     height: 45px;
     background: rgb(116, 206, 75);
     border-radius: 5px;
@@ -99,7 +91,7 @@ button{
     cursor: pointer;
 }
 #eliminar{
-    width: 60%;
+    width: 40%;
     height: 45px;
     background: rgb(206, 75, 75);
     border-radius: 5px;
@@ -108,7 +100,7 @@ button{
 }
 #agregar{
     margin-right: 1.2rem;
-    width: 150px;
+    width: 90px;
     height: 42px;
     background: #0d9df6;
     border-radius: 5px;
@@ -141,7 +133,6 @@ button{
         no-repeat 9px left;   
 
 }
-
 .invisible{
     display: none;
 }
@@ -205,35 +196,44 @@ a.mod:active{
     color: #f1eded;
 }
 @media screen and (max-width: 720px){
-    .buscar1{
-        width: 27%;  
-    }
-    #lis{
-    background-color: #023859;
+    th, td{
     padding: 1%;
-}
-}
-@media screen and (max-width: 480px){
-    span.img img{
-        width: 60%;
-        height: 50%;
+    width: 0%;
     }
-    #agregar{
-        margin-right: 1.2rem;
-        width: 7rem;
-        height: 42px;
-        background: #0d9df6;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        color: #fff;
+    .header__superior{
+        padding: 10px;
     }
-    button{
-    width: 50%;
-    height: 45px;
-    background: rgb(116, 206, 75);
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    .logo img{
+        width: 150px;
+        height: 100px;
+    }
+    .title{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 0.5rem;
+        margin-top: 10px;
+        display: flex;
+        margin-left: 1%;
+        font-size: 180%;
+        color: #4e635a;
+    }
+    .nameEmp{
+        visibility: hidden;
+        left: -92px;
+    }
+    .nameEmp2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: absolute;
+        top: 70px;
+        font-size: 90%;
+        text-align: center;
+        color: #4e635a;
+        visibility: visible;
+    }
+    footer{
+        padding: 2em 0;
+        text-align: center;
+        bottom: 0;
+        font-weight: 800;
+        font-size: 1em;  
     }
 }
