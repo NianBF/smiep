@@ -41,6 +41,13 @@ header{
     font-size: 110%;
     color: #4e635a;
 }
+footer{
+    padding: 2em 0;
+    text-align: center;
+    bottom: 0;
+    font-weight: 800;
+    font-size: 1em;  
+}
 table{
     background-color: #fff;
     margin-left: auto;
@@ -51,29 +58,14 @@ table{
     width: 80%;
     top: 1%;
 }
-footer{
-    padding: 2em 0;
-    text-align: center;
-    bottom: 0;
-    font-weight: 800;
-    font-size: 1em;  
-}
 th, td{
-    padding: 1%; 
+    padding: 1%;
 }
-.tb{
-    width: 200px;
+
+.teo{
+    width: 300px;
 }
-.to{
-    width: 215px;
-}
-.tx{
-    width: 250px;
-}
-.tz{
-    width: 225px;
-}
-th.bot1{
+.bot1{
     text-align: right;
 }
 th.opc{
@@ -83,7 +75,7 @@ tr:nth-child(even){
     background-color: rgba(229, 229, 229, 0.877);
 }
 button{
-    width: 45%;
+    width: 70%;
     height: 45px;
     background: rgb(116, 206, 75);
     border-radius: 5px;
@@ -91,7 +83,7 @@ button{
     cursor: pointer;
 }
 #eliminar{
-    width: 40%;
+    width: 60%;
     height: 45px;
     background: rgb(206, 75, 75);
     border-radius: 5px;
@@ -230,7 +222,7 @@ a.mod:active{
         visibility: visible;
     }
     th.bot1{
-        text-align: left;
+        text-align: center;
     }
     footer{
         padding: 2em 0;

@@ -52,7 +52,7 @@ $listaUsuario=$crud->mostrar();
 			<div id="main-container">
 			<thead>
 			<tr>
-            <th>Listado de Usuarios</th>
+            <th>Listado de Categoria</th>
             	<th colspan="6" class="bot1"><a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Agregar</button></a>
             	<a class="bot1 "href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
         	</tr>

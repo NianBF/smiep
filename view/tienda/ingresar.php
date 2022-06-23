@@ -13,7 +13,7 @@ $_SESSION["pass"] == null ){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 	<title> Ingresar Tienda</title>
-	<link rel="stylesheet" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" href="../../public/css/agregar.css">
 </head>
 <body>
 <div class="contenedor">

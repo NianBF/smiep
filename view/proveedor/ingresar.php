@@ -15,7 +15,7 @@ $_SESSION["pass"] == null ){
     
 	<title>Ingresar Proveedor</title>
 	
-	<link rel="stylesheet" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" href="../../public/css/agregar.css">
 </head>
 <div class="contenedor">
 <span class="icon">

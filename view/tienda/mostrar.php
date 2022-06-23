@@ -21,30 +21,38 @@ $listaTienda=$crud->mostrar();
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 	<title>Mostrar Tienda</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/producto.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/tienda.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />	
 </head>
 <body>
+<header>
 <table>
-	<header>
-     <div class="logo">
-        <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
-        <h1 class="titulo">S.M.I.E.P</h1>
-    	<h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
-	 </div>
-    </header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="../../img/favicon.png" alt="">
+            </div>
+            <div class="contenedor">
+            <section class="titulito">
+                <h1 class="title">S.M.I.E.P</h1>
+                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
+            </section>
+        </div>
+        </div>
+        </header>
 	<br>
 	<hr>
 	<div id="main-container">
 	<thead>
 		<tr>
-            <th colspan="7">Tienda <a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Nueva Tienda</button></a>
-            <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
+            <th>Tienda</th>
+            <th colspan="6" class="bot1"><a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Agregar</button></a>
+            <a class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
         </tr>
 		<tr id="lis">
-        <th colspan="7">
+        <th colspan="6">
             <div class="buscar">
             	<label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Tienda" class="buscar1">
@@ -53,14 +61,18 @@ $listaTienda=$crud->mostrar();
 		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Tienda" class="buscar1">
             </div>
 		</th>
+		<th colspan="2">
+                <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
+                <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
+            </th>
+            </tr>
         </tr>
-
-			<tr>
-			<th>ID</th>
-			<th>Nombre</th>
-			<th>Direccion</th>
-			<th>Telefono</th>
-			<th>Correo</th>
+			<tr class="tb">
+			<th class="tb">ID</th>
+			<th class="to">Nombre</th>
+			<th class="tl">Direccion</th>
+			<th class="tx">Telefono</th>
+			<th class="teo">Correo</th>
 			<th colspan="2">Opciones</th>
 			</tr>
 	</thead>
@@ -79,7 +91,9 @@ $listaTienda=$crud->mostrar();
 			<?php }?>
 	</div>	
 	</table>
-
+	<footer class="footer">
+        <p>© S.M.I.E.P | 2022</p>
+    </footer>
 	<script src="../../public/js/tienda/filtrarTienda.js"></script>
 	
 </body>

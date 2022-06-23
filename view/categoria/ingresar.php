@@ -14,7 +14,7 @@ $_SESSION["pass"] == null ){
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     
 	<title>Ingresar Categoria</title>
-	<link rel="stylesheet" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" href="../../public/css/agregar.css">
 </head>
 <body>
 <div class="contenedor">
