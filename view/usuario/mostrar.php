@@ -33,18 +33,7 @@ $listaUsuario=$crud->mostrar();
 </head>
 <header>
 <table>
-        <div class="header__superior">
-            <div class="logo">
-                <img src="../../img/favicon.png" alt="">
-            </div>
-            <div class="contenedor">
-            <section class="titulito">
-                <h1 class="title">S.M.I.E.P</h1>
-                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
-                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
-            </section>
-        </div>
-        </div>
+<?php include_once("../plantillas/header.html"); ?>
         </header>
 			<br>
 			<hr>
