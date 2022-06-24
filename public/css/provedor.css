@@ -77,20 +77,20 @@ tr:nth-child(even){
     width: 230px;
 }
 .te{
-    width: 200px;
+    width: 130px;
 }
 .tl{
     width: 150px;
 }
 .tz{
-    width: 180px;
+    width: 150px;
 }
 .tx{
     width: 150px;
 }
 
 button{
-    width: 42%;
+    width: 50%;
     height: 45px;
     background: rgb(116, 206, 75);
     border-radius: 5px;
@@ -98,7 +98,7 @@ button{
     cursor: pointer;
 }
 #eliminar{
-    width: 40%;
+    width: 55%;
     height: 45px;
     background: rgb(206, 75, 75);
     border-radius: 5px;
