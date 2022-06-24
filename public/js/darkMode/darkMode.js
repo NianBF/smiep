@@ -23,11 +23,11 @@ function getCookie(cname) {
 }
 
 function cambiarModo() {
-    const cuerpoweb = document.body;
-    const linksito = document.getElementById("mod");
-    const isDarkModeOn = cuerpoweb.classList.toggle("oscuro");
-    linksito.classList.toggle("modi");
-    createCookie("isDarkModeOn", isDarkModeOn.toString(), (60 * 60 * 24)); // 1 day expiry date
+  const cuerpoweb = document.body;
+  const linksito = document.getElementById("mod");
+  const isDarkModeOn = cuerpoweb.classList.toggle("oscuro");
+  linksito.classList.toggle("modi");
+  createCookie("isDarkModeOn", isDarkModeOn.toString(), 60 * 60 * 24); // 1 day expiry date
 }
 
 window.onload = function () {

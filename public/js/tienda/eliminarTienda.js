@@ -1,35 +1,26 @@
+//var eliminar = document.getElementById("btnEliminar");
 
-  //var eliminar = document.getElementById("btnEliminar");
-
-  var clear = function(e){
-    debugger;
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-
-
-        //código para eliminar
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
-      }
-      
-    });
-    //e.preventDefault(); 
-
+var clear = function (e) {
+  debugger;
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      //código para eliminar
+      Swal.fire("Deleted!", "Your file has been deleted.", "success");
+    }
+  });
+  //e.preventDefault();
 };
- //eliminar.addEventListener("click", clear);
+//eliminar.addEventListener("click", clear);
 
-  /*var ejemplo = function(e){
+/*var ejemplo = function(e){
     console.log('oh lol');
     e.preventDefault();
   }
@@ -37,7 +28,7 @@
   boton.addEventListener("click", saludo);
 */
 
-  /* Swal.fire({
+/* Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
         icon: 'warning',
@@ -54,10 +45,6 @@
           )
         }
       })*/
-   
-     
-
-
 
 /*swal.fire({
     text: "estas seguro que deseas eliminar este registro",
@@ -76,4 +63,3 @@
 
     showCloseButton: true
 });*/
-

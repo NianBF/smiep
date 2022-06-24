@@ -23,18 +23,19 @@ $cfg['Servers'][$i]['extension'] = 'mysqli';
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 $cfg['Lang'] = '';
 
- /**
- * Second server
-*/
+/**
+ * Second server */
 
 $i++;
 
-/* Authentication type */ 
+/* Authentication type */
+
 $cfg['Servers'][$i]['host'] = 'us-cdbr-east-05.cleardb.net';
 
 $cfg['Servers'][$i]['auth_type'] = 'config';
 
-$cfg['Servers'][$i]['user'] = 'bcc4441154c3a9'; 
+$cfg['Servers'][$i]['user'] = 'bcc4441154c3a9';
+
 
 $cfg['Servers'][$i]['password'] = 'b4a4c01d';
 
@@ -73,7 +74,8 @@ $cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
 $cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
 $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
 $cfg['Servers'][$i]['favorite'] = 'pma__favorite';
-$cfg['UploadDir'] = ''; $cfg['SaveDir'] = '';
+$cfg['UploadDir'] = '';
+$cfg['SaveDir'] = '';
 
 /*
  * End of servers configuration

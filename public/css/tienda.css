@@ -1,234 +1,236 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-header{
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
 }
-.header__superior{
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
+.header__superior {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
 }
-.logo img{
-    width: 190px;
-    height: 150px;
+.logo img {
+  width: 190px;
+  height: 150px;
 }
-.title{
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3rem;
+  margin-top: 7%;
+  margin-left: 20%;
+  font-size: 180%;
+  color: #4e635a;
+}
+.nameEmp2 {
+  visibility: hidden;
+}
+.nameEmp {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  left: 92px;
+  position: relative;
+  padding: 1px;
+  font-size: 110%;
+  color: #4e635a;
+}
+footer {
+  padding: 2em 0;
+  text-align: center;
+  bottom: 0;
+  font-weight: 800;
+  font-size: 1em;
+}
+table {
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  border-collapse: collapse;
+  text-align: left;
+  width: 80%;
+  top: 1%;
+}
+th,
+td {
+  padding: 1%;
+}
+
+.teo {
+  width: 300px;
+}
+.bot1 {
+  text-align: right;
+}
+th.opc {
+  text-align: justify;
+}
+tr:nth-child(even) {
+  background-color: rgba(229, 229, 229, 0.877);
+}
+button {
+  width: 70%;
+  height: 45px;
+  background: rgb(116, 206, 75);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+#eliminar {
+  width: 60%;
+  height: 45px;
+  background: rgb(206, 75, 75);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+#agregar {
+  margin-right: 1.2rem;
+  width: 90px;
+  height: 42px;
+  background: #0d9df6;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+#volver {
+  margin-right: 1.2rem;
+  width: 90px;
+  height: 42px;
+  background: #897212;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+#lis {
+  background-color: #023859;
+  padding: 1%;
+}
+.buscar1 {
+  padding: 0.5rem 1.7rem;
+  outline: none;
+  font-size: 14px;
+  border-radius: 15px;
+  color: #444;
+  border: 1px solid #000;
+  background: #fff
+    url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") no-repeat
+    9px left;
+}
+.invisible {
+  display: none;
+}
+a.mod {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #f1eded;
+  border-radius: 2rem;
+  background-color: #1f1f1f;
+  color: #f1eded;
+  width: 8rem;
+  text-align: center;
+  padding: 5%;
+  cursor: pointer;
+}
+a.mod:hover {
+  border: 1px solid #1f1f1f;
+  background-color: #f1eded;
+  color: #1f1f1f;
+  cursor: pointer;
+}
+a.mod:active {
+  background-color: #808280;
+}
+.oscuro {
+  background-color: #1f1f1f;
+  color: #f1eded;
+}
+.oscuro table {
+  background-color: #1f1f1f;
+}
+.oscuro tr:nth-child(even) {
+  background-color: rgba(63, 63, 63, 0.877);
+}
+.oscuro a:visited {
+  color: rgb(255, 254, 176);
+}
+.oscuro a.modi {
+  border: 1px solid #1f1f1f;
+  border-radius: 2rem;
+  background-color: #f1eded;
+  color: #1f1f1f;
+  width: 8rem;
+  text-align: center;
+  padding: 5%;
+  cursor: pointer;
+}
+.oscuro a.modi:hover {
+  border: 1px solid #f1eded;
+  background-color: #1f1f1f;
+  color: #f1eded;
+  cursor: pointer;
+}
+.oscuro a.modi:active {
+  background-color: #808280;
+}
+.oscuro header {
+  background-color: #1f1f1f;
+  color: #f1eded;
+}
+@media screen and (max-width: 720px) {
+  th,
+  td {
+    padding: 1%;
+    width: 0%;
+  }
+  .header__superior {
+    padding: 10px;
+  }
+  .logo img {
+    width: 150px;
+    height: 100px;
+  }
+  .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 3rem;
-    margin-top: 7%;
-    margin-left: 20%;
+    letter-spacing: 0.5rem;
+    margin-top: 10px;
+    display: flex;
+    margin-left: 1%;
     font-size: 180%;
     color: #4e635a;
-}
-.nameEmp2{
+  }
+  .nameEmp {
     visibility: hidden;
-}
-.nameEmp{
+    left: -92px;
+  }
+  .nameEmp2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    left: 92px;
-    position: relative;
-    padding: 1px;
-    font-size: 110%;
+    position: absolute;
+    top: 70px;
+    font-size: 90%;
+    text-align: center;
     color: #4e635a;
-}
-footer{
+    visibility: visible;
+  }
+  th.bot1 {
+    text-align: center;
+  }
+  footer {
     padding: 2em 0;
     text-align: center;
     bottom: 0;
     font-weight: 800;
-    font-size: 1em;  
-}
-table{
-    background-color: #fff;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 18px;
-    border-collapse: collapse;
-    text-align: left;
-    width: 80%;
-    top: 1%;
-}
-th, td{
-    padding: 1%;
-}
-
-.teo{
-    width: 300px;
-}
-.bot1{
-    text-align: right;
-}
-th.opc{
-    text-align: justify;
-}
-tr:nth-child(even){
-    background-color: rgba(229, 229, 229, 0.877);
-}
-button{
-    width: 70%;
-    height: 45px;
-    background: rgb(116, 206, 75);
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-#eliminar{
-    width: 60%;
-    height: 45px;
-    background: rgb(206, 75, 75);
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-#agregar{
-    margin-right: 1.2rem;
-    width: 90px;
-    height: 42px;
-    background: #0d9df6;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-}
-#volver{
-    margin-right: 1.2rem;
-    width: 90px;
-    height: 42px;
-    background: #897212;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-}
-#lis{
-    background-color: #023859;
-    padding: 1%;
-}
-.buscar1{
-    padding: 0.5rem 1.7rem;
-    outline: none;
-    font-size: 14px;
-    border-radius: 15px;
-    color: #444;
-    border: 1px solid #000;
-    background: #fff url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") 
-        no-repeat 9px left;   
-
-}
-.invisible{
-    display: none;
-}
-a.mod{
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
-    border: 1px solid #f1eded;
-    border-radius: 2rem;
-    background-color: #1f1f1f;
-    color: #f1eded;
-    width: 8rem;
-    text-align: center;
-    padding: 5%;
-    cursor: pointer;
-}
-a.mod:hover{
-    border: 1px solid #1f1f1f;
-    background-color: #f1eded;
-    color: #1f1f1f;
-    cursor: pointer;
-}
-a.mod:active{
-    background-color: #808280;
-}
-.oscuro{ 
-    background-color: #1f1f1f; 
-    color: #f1eded; 
-}
-.oscuro table{
-    background-color: #1f1f1f;
-}
-.oscuro tr:nth-child(even){
-    background-color: rgba(63, 63, 63, 0.877);
-}
-.oscuro a:visited{
-    color: rgb(255, 254, 176);
-}
-.oscuro a.modi{
-    border: 1px solid #1f1f1f;
-    border-radius: 2rem;
-    background-color: #f1eded;
-    color: #1f1f1f;
-    width: 8rem;
-    text-align: center;
-    padding: 5%;
-    cursor: pointer;
-}
-.oscuro a.modi:hover{
-    border: 1px solid #f1eded;
-    background-color: #1f1f1f;
-    color: #f1eded;
-    cursor: pointer;
-}
-.oscuro a.modi:active{
-    background-color: #808280;
-}
-.oscuro header{
-    background-color: #1f1f1f; 
-    color: #f1eded;
-}
-@media screen and (max-width: 720px){
-    th, td{
-    padding: 1%;
-    width: 0%;
-    }
-    .header__superior{
-        padding: 10px;
-    }
-    .logo img{
-        width: 150px;
-        height: 100px;
-    }
-    .title{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        letter-spacing: 0.5rem;
-        margin-top: 10px;
-        display: flex;
-        margin-left: 1%;
-        font-size: 180%;
-        color: #4e635a;
-    }
-    .nameEmp{
-        visibility: hidden;
-        left: -92px;
-    }
-    .nameEmp2{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        position: absolute;
-        top: 70px;
-        font-size: 90%;
-        text-align: center;
-        color: #4e635a;
-        visibility: visible;
-    }
-    th.bot1{
-        text-align: center;
-    }
-    footer{
-        padding: 2em 0;
-        text-align: center;
-        bottom: 0;
-        font-weight: 800;
-        font-size: 1em;  
-    }
+    font-size: 1em;
+  }
 }

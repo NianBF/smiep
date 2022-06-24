@@ -11,38 +11,44 @@
 
 require_once('../model/tiendaCrud_Mdl.php');
 require_once('../model/tiendaMdl.php');
- 
-$crud= new CrudTienda();
-$Tienda= new Tienda();
- 
-	if (isset($_POST['insertar'])) {
-		$Tienda->setId_ti($_POST['id_ti']);
-		$Tienda->setNombreTienda($_POST['nombreTienda']);
-		$Tienda->setDireccionTi($_POST['direccionTi']);
-		$Tienda->setTelTi($_POST['telTi']);
-		$Tienda->setEmailTi($_POST['emailTi']);
-		
-		
-		$crud->insertar($Tienda);
-		header('Location: ../view/tienda/mostrar.php');
-		
-	}elseif(isset($_POST['actualizar'])){
-		$Tienda->setId_ti($_POST['id_ti']);
-		$Tienda->setNombreTienda($_POST['nombreTienda']);
-		$Tienda->setDireccionTi($_POST['direccionTi']);
-		$Tienda->setTelTi($_POST['telTi']);
-		$Tienda->setEmailTi($_POST['emailTi']);
-		
-		$crud->actualizar($Tienda);
-		header('Location: ../view/tienda/mostrar.php');
 
-					
-	}elseif ($_GET['accion']=='e') {
-		//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
 
-		$idDelete = $_GET['id_ti'];
+$crud = new CrudTienda();
+$Tienda = new Tienda();
 
-		echo "<script>
+if (isset($_POST['insertar']))
+{
+	$Tienda->setId_ti($_POST['id_ti']);
+	$Tienda->setNombreTienda($_POST['nombreTienda']);
+	$Tienda->setDireccionTi($_POST['direccionTi']);
+	$Tienda->setTelTi($_POST['telTi']);
+	$Tienda->setEmailTi($_POST['emailTi']);
+
+
+	$crud->insertar($Tienda);
+	header('Location: ../view/tienda/mostrar.php');
+
+}
+elseif (isset($_POST['actualizar']))
+{
+	$Tienda->setId_ti($_POST['id_ti']);
+	$Tienda->setNombreTienda($_POST['nombreTienda']);
+	$Tienda->setDireccionTi($_POST['direccionTi']);
+	$Tienda->setTelTi($_POST['telTi']);
+	$Tienda->setEmailTi($_POST['emailTi']);
+
+	$crud->actualizar($Tienda);
+	header('Location: ../view/tienda/mostrar.php');
+
+
+}
+elseif ($_GET['accion'] == 'e')
+{
+	//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
+
+	$idDelete = $_GET['id_ti'];
+
+	echo "<script>
 		Swal.fire({
 			title: '¿Está seguro?',
 			text: 'No se podrá revertir esta acción!',
@@ -57,7 +63,7 @@ $Tienda= new Tienda();
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controller/tiendaCtrl.php?id_ti=".$idDelete."&accion=eliminar',
+				 url: '../controller/tiendaCtrl.php?id_ti=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
 					window.location.href = '../view/tienda/mostrar.php';					
@@ -70,16 +76,18 @@ $Tienda= new Tienda();
 		 })
 		 </script>";
 
-	/*	
-*/
-	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
-	}elseif($_GET['accion']=='a'){
-		header('Location: ../view/tienda/actualizar.php');
-	}
-	elseif($_GET['accion']=='eliminar'){
-		$crud->eliminar($_GET['id_ti']);
-		
-	}
+/*	 */
+// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
+}
+elseif ($_GET['accion'] == 'a')
+{
+	header('Location: ../view/tienda/actualizar.php');
+}
+elseif ($_GET['accion'] == 'eliminar')
+{
+	$crud->eliminar($_GET['id_ti']);
+
+}
 ?>
 
 

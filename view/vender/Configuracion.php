@@ -8,7 +8,9 @@ $dbName = 'heroku_619553700a45b98';
 //Create connection and select DB
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-if ($db->connect_error) {
+if ($db->connect_error)
+{
     die("No hay Conexion con la base de datos: " . $db->connect_error);
-} 
+}
+
 ?>

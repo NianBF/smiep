@@ -5,7 +5,9 @@ require_once('conexion1.php');
 class CrudProducto
 {
 	// constructor de la clase
-	public function __construct(){}
+	public function __construct()
+	{
+	}
 
 	public function insertar($Producto)
 	{
@@ -16,7 +18,7 @@ class CrudProducto
 		$insert->bindValue('imgProd', $Producto->getImgProd());
 		$insert->bindValue('codBar', $Producto->getCodBar());
 		$insert->bindValue('nombreProd', $Producto->getNombreProd());
-		$insert->bindValue('descripcion',	$Producto->getDescripcion());
+		$insert->bindValue('descripcion', $Producto->getDescripcion());
 		$insert->bindValue('precio', $Producto->getPrecio());
 		$insert->bindValue('cantidadMin', $Producto->getCantidadMin());
 		$insert->bindValue('cantidadDisp', $Producto->getCantidadDisp());

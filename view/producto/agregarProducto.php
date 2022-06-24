@@ -1,9 +1,12 @@
 <?php
 session_start();
-if($_SESSION['email'] == null or $_SESSION["userName"]== null or
-$_SESSION["pass"] == null ){
-    header("location:../../index.php");
-}else{
+if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
+$_SESSION["pass"] == null)
+{
+	header("location:../../index.php");
+}
+else
+{
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +23,13 @@ $_SESSION["pass"] == null ){
 	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
 </head>
 <div class="contenedor">
-<span class="icon">
-			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
-		</span>
+	<span class="icon">
+		<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
+	</span>
 	<div class="contact-wrapper animated bounceInUp">
-	<div class="contact-form">
-		<h3>Agregar Productos</h3>
-		<form action="../../controller/productoCtrl.php" name="formulario" method="POST">
+		<div class="contact-form">
+			<h3>Agregar Productos</h3>
+			<form action="../../controller/productoCtrl.php" name="formulario" method="POST">
 				<p>
 					<label for="id_prod">ID Producto</label>
 					<input type="text" placeholder="ID Producto" id="id_prod" name="id_prod">
@@ -34,7 +37,8 @@ $_SESSION["pass"] == null ){
 
 				<p>
 					<label for="img">Imagen</label>
-					<input type='text' placeholder="Imagen" id="img" name='imgProd' value="https://i.ibb.co/2s4D1rc/bags-SMIEP.png">
+					<input type='text' placeholder="Imagen" id="img" name='imgProd'
+						value="https://i.ibb.co/2s4D1rc/bags-SMIEP.png">
 				</p>
 
 				<p>
@@ -49,7 +53,8 @@ $_SESSION["pass"] == null ){
 
 				<p>
 					<label for="descripcion">Descripción</label>
-					<input type='text' placeholder="Descripción" value="Sin detalles" id="descripcion" name='descripcion'>
+					<input type='text' placeholder="Descripción" value="Sin detalles" id="descripcion"
+						name='descripcion'>
 				</p>
 
 				<p>
@@ -102,16 +107,17 @@ $_SESSION["pass"] == null ){
 				<p class='block'>
 					<a href='mostrar.php'><button type="button">Volver</button></a>
 				</p>
-		</form>
+			</form>
+		</div>
 	</div>
-</div>
-<footer class="footer">
-        <p>© S.M.I.E.P | 2022</p>
-    </footer>
+	<footer class="footer">
+		<p>© S.M.I.E.P | 2022</p>
+	</footer>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="../../public/js/producto/ingresar.js"></script>
-	
+
 	</body>
 
 </html>
-<?php } ?>
+<?php
+}?>

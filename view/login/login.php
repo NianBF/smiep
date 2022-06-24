@@ -1,5 +1,5 @@
 <?php
- $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
+$isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -29,21 +29,23 @@
             </div>
             <p class="cuenta-gratis">S.M.I.E.P</p>
             <input type="email" id="email" name="email" placeholder="Email" required />
-            <input type="text" id="userName" name="userName"  placeholder="Nombre de Usuario" required />
+            <input type="text" id="userName" name="userName" placeholder="Nombre de Usuario" required />
             <input type="password" id="pass" name="pass" placeholder="Contraseña" required />
             <input name="ingresar" id="btn" type="submit" value="Iniciar Sesion">
         </form>
         <div class="welcome-back">
             <div class="message">
-                <img src="public/img/favicon.png" id="imagen"width="500rem">
+                <img src="public/img/favicon.png" id="imagen" width="500rem">
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
 
             </div>
 
         </div>
-        
+
     </div>
-    <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
+    <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i
+                class="fas fa-sun"></i></span>/<span id="id-sun" class="btn-mode sun active"><i
+                class="fas fa-moon"></i></span></a>
     <script type="text/javascript" src="public/js/darkMode/darkMode.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/js" src="public/js/login.js"></script>

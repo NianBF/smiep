@@ -11,53 +11,59 @@
 //incluye la clase usuario y Crudusuario
 require_once('../model/usuarioCrud_Mdl.php');
 require_once('../model/usuarioMdl.php');
- 
-$crud= new CrudUsuario();
-$Usuario= new Usuario();
- 
-	// si el elemento insertar no viene nulo llama al crud e inserta
-	if (isset($_POST['insertar'])) {
-		$Usuario->setId_doc($_POST['id_doc']);
-		$Usuario->setNombre1($_POST['nombre1']);
-		$Usuario->setNombre2($_POST['nombre2']);
-		$Usuario->setApellido1($_POST['apellido1']);
-		$Usuario->setApellido2($_POST['apellido2']);
-		$Usuario->setUserName($_POST['userName']);
-		$Usuario->setEmail($_POST['email']);
-		$Usuario->setPass($_POST['pass']);
-		$Usuario->setRol($_POST['rol']);
-		$Usuario->setId_estado($_POST['id_estado']);
-		$Usuario->setId_ti($_POST['id_ti']);
-		
-		//llama a la función insertar definida en el crud
-		$crud->insertar($Usuario);
-		header('Location: ../view/usuario/mostrar.php');
-		
-	// si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
-	}elseif(isset($_POST['actualizar'])){
-		$Usuario->setId_doc($_POST['id_doc']);
-		$Usuario->setNombre1($_POST['nombre1']);
-		$Usuario->setNombre2($_POST['nombre2']);
-		$Usuario->setApellido1($_POST['apellido1']);
-		$Usuario->setApellido2($_POST['apellido2']);
-		$Usuario->setUserName($_POST['userName']);
-		$Usuario->setEmail($_POST['email']);
-		$Usuario->setPass($_POST['pass']);
-		$Usuario->setRol($_POST['rol']);
-		$Usuario->setId_estado($_POST['id_estado']);
-		$Usuario->setId_ti($_POST['id_ti']);
-		
-		$crud->actualizar($Usuario);
-		header('Location: ../view/usuario/mostrar.php');
 
-					
-	// si la variable accion enviada por GET es == 'e' llama al crud y elimina
-	}elseif ($_GET['accion']=='e') {
-		//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
 
-		$idDelete = $_GET['id_doc'];
+$crud = new CrudUsuario();
+$Usuario = new Usuario();
 
-		echo "<script>
+// si el elemento insertar no viene nulo llama al crud e inserta
+if (isset($_POST['insertar']))
+{
+	$Usuario->setId_doc($_POST['id_doc']);
+	$Usuario->setNombre1($_POST['nombre1']);
+	$Usuario->setNombre2($_POST['nombre2']);
+	$Usuario->setApellido1($_POST['apellido1']);
+	$Usuario->setApellido2($_POST['apellido2']);
+	$Usuario->setUserName($_POST['userName']);
+	$Usuario->setEmail($_POST['email']);
+	$Usuario->setPass($_POST['pass']);
+	$Usuario->setRol($_POST['rol']);
+	$Usuario->setId_estado($_POST['id_estado']);
+	$Usuario->setId_ti($_POST['id_ti']);
+
+	//llama a la función insertar definida en el crud
+	$crud->insertar($Usuario);
+	header('Location: ../view/usuario/mostrar.php');
+
+// si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
+}
+elseif (isset($_POST['actualizar']))
+{
+	$Usuario->setId_doc($_POST['id_doc']);
+	$Usuario->setNombre1($_POST['nombre1']);
+	$Usuario->setNombre2($_POST['nombre2']);
+	$Usuario->setApellido1($_POST['apellido1']);
+	$Usuario->setApellido2($_POST['apellido2']);
+	$Usuario->setUserName($_POST['userName']);
+	$Usuario->setEmail($_POST['email']);
+	$Usuario->setPass($_POST['pass']);
+	$Usuario->setRol($_POST['rol']);
+	$Usuario->setId_estado($_POST['id_estado']);
+	$Usuario->setId_ti($_POST['id_ti']);
+
+	$crud->actualizar($Usuario);
+	header('Location: ../view/usuario/mostrar.php');
+
+
+// si la variable accion enviada por GET es == 'e' llama al crud y elimina
+}
+elseif ($_GET['accion'] == 'e')
+{
+	//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
+
+	$idDelete = $_GET['id_doc'];
+
+	echo "<script>
 		Swal.fire({
 			title: '¿Está seguro?',
 			text: 'No se podrá revertir esta acción!',
@@ -72,7 +78,7 @@ $Usuario= new Usuario();
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controller/usuarioCtrl.php?id_doc=".$idDelete."&accion=eliminar',
+				 url: '../controller/usuarioCtrl.php?id_doc=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
 					window.location.href = '../view/usuario/mostrar.php';					
@@ -85,16 +91,18 @@ $Usuario= new Usuario();
 		 })
 		</script>";
 
-	/*	
-*/
-	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
-	}elseif($_GET['accion']=='a'){
-		header('Location: ../view/usuario/actualizar.php');
-	}
-	elseif($_GET['accion']=='eliminar'){
-		$crud->eliminar($_GET['id_doc']);
-		
-	}
+/*	 */
+// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
+}
+elseif ($_GET['accion'] == 'a')
+{
+	header('Location: ../view/usuario/actualizar.php');
+}
+elseif ($_GET['accion'] == 'eliminar')
+{
+	$crud->eliminar($_GET['id_doc']);
+
+}
 ?>
 
 

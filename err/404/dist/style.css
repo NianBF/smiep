@@ -1,4 +1,15 @@
-html, html::after, html::before, body, body::after, body::before, head, head::after, head::before, style, style::after, style::before {
+html,
+html::after,
+html::before,
+body,
+body::after,
+body::before,
+head,
+head::after,
+head::before,
+style,
+style::after,
+style::before {
   content: "";
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +18,12 @@ html, html::after, html::before, body, body::after, body::before, head, head::af
   height: 0;
 }
 
-body::after, html::before, html::after, head::after, head, style {
+body::after,
+html::before,
+html::after,
+head::after,
+head,
+style {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,7 +36,7 @@ body::after, html::before, html::after, head::after, head, style {
   --main-color-hue: 217;
   --main-color: hsla(var(--main-color-hue), 97%, 61%, 1);
   --black: #222;
-  --red: #ED6B5F;
+  --red: #ed6b5f;
 }
 
 style {
@@ -38,7 +54,8 @@ style::before {
   margin-top: 1.6rem;
   margin-left: 1.6rem;
   border-radius: 50%;
-  box-shadow: 0 0 0 0.3rem white, 1.4rem -0.2rem 0 var(--black), 1.5rem 0 0 0.3rem white;
+  box-shadow: 0 0 0 0.3rem white, 1.4rem -0.2rem 0 var(--black),
+    1.5rem 0 0 0.3rem white;
 }
 
 head {
@@ -48,7 +65,9 @@ head {
   border-radius: 50%;
   margin: auto;
   z-index: -1;
-  box-shadow: 0 0 0 2rem hsla(var(--main-color-hue), 97%, 61%, 0.1), 0 0 0 4rem hsla(var(--main-color-hue), 97%, 61%, 0.05), 0 0 0 6rem hsla(var(--main-color-hue), 97%, 61%, 0.025);
+  box-shadow: 0 0 0 2rem hsla(var(--main-color-hue), 97%, 61%, 0.1),
+    0 0 0 4rem hsla(var(--main-color-hue), 97%, 61%, 0.05),
+    0 0 0 6rem hsla(var(--main-color-hue), 97%, 61%, 0.025);
 }
 head::after {
   background: #222;
@@ -71,7 +90,7 @@ html::after {
   transform: translatex(1rem);
   content: "4 4";
   font-size: 7rem;
-  color: #3C86FC;
+  color: #3c86fc;
   letter-spacing: 2rem;
   font-weight: bold;
 }
