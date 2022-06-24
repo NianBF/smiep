@@ -80,7 +80,7 @@ require_once('../../model/clienteMdl.php');
 			</button>
 		</p>
 		<p class='block'>
-			<a href="mostrar.php"><button type="button">Volver</button></a>
+			<a href="mostrarCli.php"><button type="button">Volver</button></a>
 		</p>
 	
 </form>

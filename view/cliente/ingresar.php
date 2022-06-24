@@ -73,8 +73,8 @@ $_SESSION["pass"] == null ){
 			</button>
 		</p>
 		<p class='block'>
-			<a href='mostrar.php'><button type="button">Volver</button></a>
-		</p
+			<a href='mostrarCli.php'><button type="button">Volver</button></a>
+</p>
 
 </form>
 	</div>
