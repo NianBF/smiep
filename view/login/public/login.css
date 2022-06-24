@@ -194,6 +194,7 @@ a.mod:active{
     }
     .formulario {
     padding: 4rem;
+    margin: 3rem;
     border-radius: 10px;
     background-color: rgb(51, 51, 51, 0.602);
     text-align: center;
@@ -201,7 +202,8 @@ a.mod:active{
     }
     
     #imagen{
-        max-width: 15rem;
+        max-width: 12rem;
+        margin-top: 5%;
     }
     .welcome-back {
         position: absolute;
