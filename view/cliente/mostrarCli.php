@@ -63,11 +63,11 @@ $listaCliente=$crud->mostrar();
 <?php foreach ($listaCliente as $Cliente) {?>
 			<tr class="cliente">
 	
-				<td class="idCli"><?php echo $Cliente->getId_CliDoc() ?></td>	
-				<td class="nombCli"> <?php echo $Cliente->getNombreCli1()." ".$Cliente->getNombreCli2()." ".$Cliente->getApellidoCli1()." ".$Cliente->getApellidoCli2() ?></td>
-				<td class="numbCli"><?php echo $Cliente->getTelCli() ?></td>
-				<td class="emailCli"><?php echo $Cliente->getEmailCli() ?></td>
-				<td class="fechNacCli"><?php echo $Cliente->getFechaNac() ?></td>
+				<td class="idCli"><?php echo $Cliente->getId_CliDoc(); ?></td>	
+				<td class="nombCli"> <?php echo $Cliente->getNombreCli1()." ".$Cliente->getNombreCli2()." ".$Cliente->getApellidoCli1()." ".$Cliente->getApellidoCli2(); ?></td>
+				<td class="numbCli"><?php echo $Cliente->getTelCli(); ?></td>
+				<td class="emailCli"><?php echo $Cliente->getEmailCli(); ?></td>
+				<td class="fechNacCli"><?php echo $Cliente->getFechaNac(); ?></td>
 				
 		
 				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc()?>&accion=a"><button type="button"><i class="fa-solid fa-pencil"></i></button></a></td>
