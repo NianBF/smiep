@@ -38,6 +38,9 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (23/06/2022 23:52)NB: Se modifica el código de 'view/inicio/menu.php' ára incluir plantillas y reducir código.
 
+(24/06/2022 15:27)NB: Se optimiza el código para facilitar su lectura y se busca reducir espacios y líneas de código
+            innecesarias, se da formato a todos los documentos para hacerlo más legible.
+            
 ////////////////////////////////////
 / Finaliza Mantenimiento de código /
 ////////////////////////////////////
