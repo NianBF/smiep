@@ -52,7 +52,7 @@ $listaProveedor=$crud->mostrar();
                 <a class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
 			<tr id="lis">
-            <th colspan="5">
+            <th colspan="6">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Proveedor" class="buscar1 ">

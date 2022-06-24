@@ -48,11 +48,11 @@ $listaCliente=$crud->mostrar();
         <thead>
             <tr>
                 <th>Listado de Clientes</th>
-                <th colspan="6" class="bot1"><a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i> Agregar</button></a>
+                <th colspan="5" class="bot1"><a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i> Agregar</button></a>
                 <a class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
             <tr id="lis">
-            <th colspan="7">
+            <th colspan="5">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Clientes" class="buscar1">
