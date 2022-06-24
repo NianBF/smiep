@@ -28,7 +28,7 @@
                 <a class="ingBot" href="view/login/login.php"><strong>Ingresar</strong></a>
         </div>
         <footer class="footer">
-            <h4>© S.M.I.E.P | 2022 <a href="view/about/about.html">Acerca de S.M.I.E.P</a></h4>
+            <h4>© S.M.I.E.P | 2022 <a href="view/about/about.php">Acerca de S.M.I.E.P</a></h4>
     </footer>
     </div>
     <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>

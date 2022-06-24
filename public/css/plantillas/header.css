@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+/*HEADER SUPERIOR*/
+
+.header__superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.logo img{
+    height: 130px;
+}
+
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3rem;
+    margin-top: 7%;
+    margin-left: 20%;
+    font-size: 180%;
+    color: #4e635a;
+}
+.nameEmp2{
+    visibility: hidden;
+}
+.nameEmp{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    left: 92px;
+    position: relative;
+    padding: 1px;
+    font-size: 110%;
+    color: #4e635a;
+}

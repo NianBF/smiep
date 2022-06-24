@@ -13,7 +13,7 @@ $_SESSION["pass"] == null ){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMIEP</title>
-    <link rel="icon" type="image/png" href="../home/img/favicon.png" sizes="any">
+    <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
@@ -25,53 +25,9 @@ $_SESSION["pass"] == null ){
 <body>
 
 <header>
-        <div class="header__superior">
-            <div class="logo">
-                <img src="../../img/favicon.png" alt="">
-            </div>
-            <div class="contenedor">
-            <section class="titulito">
-                <h1 class="title">S.M.I.E.P</h1>
-                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
-                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
-            </section>
-        </div>
-        </div>
-
-        <div class="container__menu">
-
-            <div class="menu">
-                <input type="checkbox" id="check__menu">
-                <label for="check__menu" id="label__check">
-                    <i class="fas fa-bars icon__menu"></i>
-                </label>
-                <nav>
-                    <ul>
-                        <li><a href="#" id="selected"></a></li>
-                        <li><a href="#"><span class="icon-user"></span>Personas</a>
-                            <ul>
-                                <li><a href="../usuario/mostrar.php"><span class="icon-user-tie"></span>Usuarios</a></li>
-                                <li><a href='../cliente/mostrarCli.php'><span class="icon-user-tie"></span>Clientes</a></li>
-                                <li><a href="../proveedor/mostrar.php"><span class="icon-user-tie"></span>Proveedores</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../producto/mostrar.php"><span class="icon-truck"></span>Productos</a></li>
-                        <li><a href="../categoria/mostrar.php"><span class="icon-briefcase"></span>Categoria</a></li>
-                        <li><a href="../tienda/mostrar.php"><span class="icon-cart"></span>Tienda</a></li>
-                        <li><a href="../vender/index.php" ><span><i class="fa-solid fa-sack-dollar"></i></></span>Vender</a></li>
-                        <li><a href="../reportes/mostrar.php"><span><i class="fa-solid fa-square-poll-horizontal"></i></span>Reportes</a></li>
-                        <li><a href="../about/about.html"><span class="icon-earth"></span>Acerca de</a></li>
-                        <li><a href="#"><span class="icon-mail2"></span>Contacto</a></li>
-                        <li class="salir"><a href="javascript:msgsalir();"><span class="icon-exit"></span> Salir</a></li>
-                       
-                        <li><a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a></li>
-                    </ul>
-                </nav>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include_once("../plantillas/header.html"); ?>
+    <?php include_once("../plantillas/navBar.html"); ?>
+</header>
     <main>
         <article>
             <h2>Smiep</h2>
@@ -79,10 +35,8 @@ $_SESSION["pass"] == null ){
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los productos, se hace en unos cuadernos y estos no permiten realizar un análisis profundo de los productos que se tienen y se deben pedir, situación que ha dado paso a pérdidas económicas, pues productos que exceden la fecha de caducidad no son contados y cambiados oportunamente. De igual forma, se observa que a falta de un buen sistema, ellos se han visto en la necesidad de hacer las cosas más esenciales a instinto y sin ninguna herramienta plausible para la tarea.</p>
         </article>
     </main>
-    <footer class="footer">
-        <p>© S.M.I.E.P | 2022</p>
-    </footer>
-    
+    <?php include_once("../plantillas/footer.html"); ?>
+
     <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/main.js"></script>
