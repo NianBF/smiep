@@ -35,7 +35,7 @@
         </form>
         <div class="welcome-back">
             <div class="message">
-                <img src="public/img/favicon.png" id="imagen"width="350rem">
+                <img src="public/img/favicon.png" id="imagen"width="500rem">
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
 
             </div>
