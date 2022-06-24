@@ -5,7 +5,7 @@ $_SESSION["pass"] == null ){
     header("location:../../index.php");
 }else{
 require_once('../../model/clienteCrud_Mdl.php');
-require_once('../../model/clienteMdl.php');
+require_once('../../model/ClienteMdl.php');
 $crud=new CrudCliente();
 $Cliente= new Cliente();
 
@@ -70,7 +70,7 @@ $listaCliente=$crud->mostrar();
 				<td class="fechNacCli"><?php echo $Cliente->getFechaNac(); ?></td>
 				
 		
-				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc()?>&accion=a"><button type="button"><i class="fa-solid fa-pencil"></i></button></a></td>
+				<td><a class="editar" id="btnActualizar" name="btnActualizar" href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc();?>&accion=a"><button type="button"><i class="fa-solid fa-pencil"></i></button></a></td>
 				<td><a type="submit" class="eliminar" id="btnEliminar" name="btnEliminar" href="../../controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc()?>&accion=e"><button type="button" id="eliminar"><i class="fa-solid fa-trash-can"></i></button></a></td>	
 			</tr>
 			<?php }?>
