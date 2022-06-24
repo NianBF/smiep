@@ -52,7 +52,7 @@ $listaProveedor=$crud->mostrar();
                 <a class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
 			<tr id="lis">
-            <th colspan="6">
+            <th colspan="5">
              <div class="buscar">
                 <label for="filtrar-tabla"></label>
 		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Proveedor" class="buscar1 ">
@@ -61,7 +61,7 @@ $listaProveedor=$crud->mostrar();
 		        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Empresa" class="buscar1">
              </div>
             </th>
-			<th colspan="2">
+			<th colspan="">
                 <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
                 <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
             </th>

@@ -20,27 +20,36 @@ $listaCliente=$crud->mostrar();
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <title>Mostrar Cliente</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/producto.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/cliente.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
+<header>
 <table>
-    <header>
-        <div class="logo">
-            <img src="../../img/favicon.png" alt="Logo SMIEP" width="150rem">
-            <h1 class="titulo">S.M.I.E.P</h1>
-            <h3 class="subtitulo">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="../../img/favicon.png" alt="">
+            </div>
+            <div class="contenedor">
+            <section class="titulito">
+                <h1 class="title">S.M.I.E.P</h1>
+                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+                <h3 class="nameEmp2">Software de Manejo <br>de Inventarios <br>para Empresas Pequeñas</h3>
+            </section>
         </div>
+        </div>
+        </header>
         <br>
         <hr>
         <div id="main-container">
         <thead>
             <tr>
-                <th colspan="7">Listado de Clientes <a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i>  Nuevo Cliente</button></a>
-                <a href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
+                <th>Listado de Clientes</th>
+                <th colspan="6" class="bot1"><a href='ingresar.php'><button type="button" id="agregar"><i class="fa-solid fa-plus"></i> Agregar</button></a>
+                <a class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
             </tr>
             <tr id="lis">
             <th colspan="7">
@@ -49,13 +58,17 @@ $listaCliente=$crud->mostrar();
 		        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Clientes" class="buscar1">
              </div>
             </th>
+            <th colspan="2">
+                <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span  id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
+                <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
+            </th>
             </tr>
 
 		<tr>
             <th>Documento</th>
             <th>Nombre</th>
             <th>Telefono</th>
-            <th>Correo</th>
+            <th class="tl">Correo</th>
             <th>Fecha de Nacimiento</th>
             <th colspan="2">Opciones</th>
         </tr>
@@ -76,6 +89,9 @@ $listaCliente=$crud->mostrar();
 			<?php }?>
 			
 </table>
+    <footer class="footer">
+        <p>© S.M.I.E.P | 2022</p>
+    </footer>
 	<script src="../../public/js/cliente/filtrarCliente.js"></script>
 </body>
 </html>
