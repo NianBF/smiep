@@ -25,7 +25,7 @@ $_SESSION["pass"] == null ){
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
    
 	<title>Actualizar Usuario</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
 
 </head>
 <body>

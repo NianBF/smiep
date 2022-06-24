@@ -62,13 +62,13 @@ th, td{
     padding: 1%; 
 }
 .tb{
-    width: 200px;
+    width: 190px;
 }
 .to{
     width: 215px;
 }
 .tx{
-    width: 250px;
+    width: 220px;
 }
 .tz{
     width: 225px;
@@ -83,7 +83,7 @@ tr:nth-child(even){
     background-color: rgba(229, 229, 229, 0.877);
 }
 button{
-    width: 45%;
+    width: 60%;
     height: 45px;
     background: rgb(116, 206, 75);
     border-radius: 5px;
@@ -91,7 +91,7 @@ button{
     cursor: pointer;
 }
 #eliminar{
-    width: 40%;
+    width: 70%;
     height: 45px;
     background: rgb(206, 75, 75);
     border-radius: 5px;

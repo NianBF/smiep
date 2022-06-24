@@ -28,7 +28,7 @@ $Producto = $crud->obtenerProducto($_GET['id_prod']);
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 
 	<title>Actualizar Producto</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
 
 </head>
 

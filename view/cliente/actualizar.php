@@ -23,7 +23,7 @@ require_once('../../model/clienteMdl.php');
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     
 	<title>Actualizar Cliente</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
 
 </head>
 <body>

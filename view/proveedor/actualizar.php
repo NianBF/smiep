@@ -23,7 +23,7 @@ $_SESSION["pass"] == null ){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
 	<title>Actualizar Proveedor</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
 
 </head>
 
