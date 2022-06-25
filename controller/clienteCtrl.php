@@ -9,8 +9,8 @@
 
 <?php
 
-require_once('../model/clienteCrud_Mdl.php');
-require_once('../model/clienteMdl.php');
+require_once('../model/clienteCrud_mdl.php');
+require_once('../model/ClienteMdl.php');
 
 
 $crud = new CrudCliente();
