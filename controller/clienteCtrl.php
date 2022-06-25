@@ -9,8 +9,8 @@
 
 <?php
 
-require_once('../model/clienteCrud_Mdl.php');
-require_once('../model/clienteMdl.php');
+require_once('../model/clienteCrud_mdl.php');
+require_once('../model/ClienteMdl.php');
  
 $crud= new CrudCliente();
 $Cliente= new Cliente();
@@ -29,7 +29,7 @@ $Cliente= new Cliente();
 		
 		//llama a la función insertar definida en el crud
 		$crud->insertar($Cliente);
-		header('Location: ../view/cliente/mostrar.php');
+		header('Location: ../view/cliente/mostrarCli.php');
 		
 
 
@@ -46,7 +46,7 @@ $Cliente= new Cliente();
 		$Cliente->setFechaNac($_POST['fechaNac']);
 		
 		$crud->actualizar($Cliente);
-		header('Location: ../view/cliente/mostrar.php');
+		header('Location: ../view/cliente/mostrarCli.php');
 
 					
 	// si la variable accion enviada por GET es == 'e' llama al crud y envia el mensaje si la respuesta es acepto se envia a eliminar y elimina el cliente
@@ -73,12 +73,12 @@ $Cliente= new Cliente();
 				 url: '../controller/clienteCtrl.php?id_cliDoc=".$idDelete."&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../view/cliente/mostrar.php';					
+					window.location.href = '../view/cliente/mostrarCli.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../view/cliente/mostrar.php';
+			window.location.href = '../view/cliente/mostrarCli.php';
 		   }
 		 })
 		 </script>";
