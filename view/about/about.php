@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php include_once("../plantillas/header.html"); ?>
-    <article></article>
+    <article>A</article>
     <?php include_once("../plantillas/footer.html"); ?>
 </body>
 </html>
