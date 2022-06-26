@@ -6,7 +6,7 @@ $_SESSION["pass"] == null)
 	header("location:../../index.php");
 }
 else
-{	require_once('../../model/clienteCrud_mdl.php');	require_once('../../model/ClienteMdl.php');
+{	require_once('../../model/clienteCrud_Mdl.php');	require_once('../../model/clienteMdl.php');
 	$crud = new CrudCliente();
 	$Cliente = new Cliente();
 

@@ -62,7 +62,6 @@ class Login
             $sql = null;
             $resultado = null;
             $cantidad_resultado = null;
-            echo "<script>alert('finally')</script>";
             header("location:../index.php");
 
         }
