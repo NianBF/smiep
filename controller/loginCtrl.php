@@ -9,6 +9,5 @@ if (isset($_POST["email"]) && isset($_POST["userName"]) && isset($_POST["pass"])
 }
 else
 {
-    echo "<script>alert('Errorsito') </script>";
     header("location:../index.php");
 }
