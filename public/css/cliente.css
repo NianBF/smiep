@@ -185,6 +185,11 @@ a.mod:active {
   background-color: #1f1f1f;
   color: #f1eded;
 }
+
+.invisible{
+  display: none;
+}
+
 @media screen and (max-width: 720px) {
   th,
   td {
