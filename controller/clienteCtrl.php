@@ -31,7 +31,7 @@ if (isset($_POST['insertar']))
 
 	//llama a la función insertar definida en el crud
 	$crud->insertar($Cliente);
-	header('Location: ../view/cliente/mostrar.php');
+	header('Location: ../view/cliente/mostrarCli.php');
 
 
 
@@ -50,7 +50,7 @@ elseif (isset($_POST['actualizar']))
 	$Cliente->setFechaNac($_POST['fechaNac']);
 
 	$crud->actualizar($Cliente);
-	header('Location: ../view/cliente/mostrar.php');
+	header('Location: ../view/cliente/mostrarCli.php');
 
 
 // si la variable accion enviada por GET es == 'e' llama al crud y envia el mensaje si la respuesta es acepto se envia a eliminar y elimina el cliente
@@ -79,12 +79,12 @@ elseif ($_GET['accion'] == 'e')
 				 url: '../controller/clienteCtrl.php?id_cliDoc=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../view/cliente/mostrar.php';					
+					window.location.href = '../view/cliente/mostrarCli.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../view/cliente/mostrar.php';
+			window.location.href = '../view/cliente/mostrarCli.php';
 		   }
 		 })
 		 </script>";

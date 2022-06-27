@@ -34,7 +34,6 @@ else
         unset($_SESSION["error"]);
 
     }
-
     include_once("view/index.php");
 }
 
