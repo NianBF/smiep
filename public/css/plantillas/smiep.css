@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div.cont{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin: auto;
+    user-select: none;
+    background-color: #339999;
+    text-align: center;
+    width: 80%;
+    color: white;
+}
+div.cont span{
+    font-size: 12vw;
+    font-weight: 600;
+    text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.9);
+}
+div.cont span:not(:first-child){
+    margin-left: -0.23em;
+}

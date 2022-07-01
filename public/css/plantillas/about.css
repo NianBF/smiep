@@ -1,0 +1,30 @@
+/*Estilos para el título «¿Quiénes somos?»*/
+section.about{
+    margin: 0 2rem;
+    padding: 1em;
+    width: min-content;
+    box-sizing: border-box;
+    background-color: #339999;
+}
+section.about h1{
+    font-size: 3em;
+    text-align: end;
+    -webkit-text-stroke: 0.9px black;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url('../../../img/animation/back.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text 7.5s linear infinite;
+}
+@keyframes text {
+    from { background-position: 0% 50%;}
+    to { background-position: 100% 100%;}
+}
+/*Estilos para el contenido de la sección «¿Quiénes somos?»*/
+section.contenido p{
+    margin-top: 0.5rem;
+    margin: 0 3.5rem 3.5rem 3.5rem;
+}
