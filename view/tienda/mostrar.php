@@ -106,8 +106,8 @@ else
 	<footer class="footer">
 		<p>© S.M.I.E.P | 2022</p>
 	</footer>
+	
 	<script src="../../public/js/tienda/filtrarTienda.js"></script>
-
 </body>
 
 </html>

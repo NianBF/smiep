@@ -1,16 +1,16 @@
 let campoIdCateg = document.querySelector("#buscar1");
 let campoCateg = document.querySelector("#buscar2");
-let valores = document.querySelectorAll(".categoria");
+let valores = document.querySelectorAll(".categoriaFiltro");
 
 campoCateg.addEventListener("input", function () {
   if (this.value.length > 0) {
     for (var i = 0; i < valores.length; i++) {
       var valor = valores[i];
 
-      /* en la sigiente linea indicamos el campo al que queremos realizar el filtro*/
-      var tdNombre = valor.querySelector(".nombCat");
-      var nombre = tdNombre.textContent;
-      var expresion = new RegExp(this.value, "i");
+        //en la sigiente linea indicamos el campo al que queremos realizar el filtro
+      let TbNombre = valor.querySelector(".nombCat");
+      let nombre = TbNombre.textContent;
+      let expresion = new RegExp(this.value, "i");
 
       if (!expresion.test(nombre)) {
         valor.classList.add("invisible");
@@ -31,10 +31,10 @@ campoIdCateg.addEventListener("input", function () {
     for (var i = 0; i < valores.length; i++) {
       var valor = valores[i];
 
-      /* en la sigiente linea indicamos el campo al que queremos realizar el filtro*/
-      var tdNombre = valor.querySelector(".idCat");
-      var nombre = tdNombre.textContent;
-      var expresion = new RegExp(this.value, "i");
+       //en la sigiente linea indicamos el campo al que queremos realizar el filtro
+      let tdNombre = valor.querySelector(".idCat");
+      let nombre = tdNombre.textContent;
+      let expresion = new RegExp(this.value, "i");
 
       if (!expresion.test(nombre)) {
         valor.classList.add("invisible");
