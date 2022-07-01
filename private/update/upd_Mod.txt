@@ -44,3 +44,5 @@ donde se elimina la sesión de: email, usuario & contraseña.
 ////////////////////////////////////
 / Finaliza Mantenimiento de código /
 ////////////////////////////////////
+
+(01/07/2022 13:03)NB: Se actualiza pestaña 'About us', se empieza a insertar contenido.

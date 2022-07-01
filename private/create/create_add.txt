@@ -29,3 +29,5 @@
 ////////////////////////////////////
 / Finaliza Mantenimiento de código /
 ////////////////////////////////////
+
+(01/07/2022 13:03)NB: Se crean archivos para contenido y estilos en 'about.php'.
