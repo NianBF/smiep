@@ -7,10 +7,24 @@
     <title>SMIEP</title>
     <link rel="stylesheet" href="../../public/css/plantillas/header.css">
     <link rel="stylesheet" href="../../public/css/plantillas/footer.css">  
+    <link rel="stylesheet" href="../../public/css/plantillas/smiep.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/about.css">
 </head>
 <body>
     <?php include_once("../plantillas/header.html"); ?>
-    <article>A</article>
+    <article>
+        <section>
+            <section class="about">
+                <h1>¿Quiénes<br/>somos?</h1>
+            </section>
+            <section class="contenido">
+                <p><?php include_once("../plantillas/lorem.html"); ?></p>
+            </section>
+        </section>
+        <section>
+        <?php include_once("../plantillas/smiep.html"); ?>
+        </section>
+    </article>
     <?php include_once("../plantillas/footer.html"); ?>
 </body>
 </html>
