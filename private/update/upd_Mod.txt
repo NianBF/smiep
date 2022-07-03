@@ -46,3 +46,6 @@ donde se elimina la sesión de: email, usuario & contraseña.
 ////////////////////////////////////
 
 (01/07/2022 13:03)NB: Se actualiza pestaña 'About us', se empieza a insertar contenido.
+
+(02/07/2022 23:18)NB: Se actualiza menú para añadir el cuadro en donde se meustra el SO y el navegador desde donde se
+    accede a SMIEP.

@@ -31,3 +31,6 @@
 ////////////////////////////////////
 
 (01/07/2022 13:03)NB: Se crean archivos para contenido y estilos en 'about.php'.
+
+(02/07/2022 23:18)NB: Se crea carpeta y archivo detetectSoft y detetctSoft.js en carpeta public/js, con el propósito
+    de detetctar SO y Browser ´para ser mostrador en SMIEP.
