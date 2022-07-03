@@ -35,6 +35,9 @@ else
     </header>
     <main>
         <article>
+            <div class="infCont">
+                <h2>Sistema Operativo: <span id="osType"></span><br/>Navegador: <span id="browserType"></span></h2>
+            </div>
             <h2>Smiep</h2>
             <h4>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los
@@ -47,6 +50,7 @@ else
     </main>
     <?php include_once("../plantillas/footer.html"); ?>
 
+    <script type="text/javascript" src="../../public/js/detectSoft/detetctSoft.js"></script>
     <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/main.js"></script>
