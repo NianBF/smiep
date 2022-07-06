@@ -1,4 +1,4 @@
 Options All
 ErrorDocument 404 /err/404/dist/404.html
 ErrorDocument 500 /err/500/dist/500.html
-redirect 301 www.smiep.herokuapp.com https://smiep.herokuapp.com
+Redirect 301 /www.smiep.herokuapp.com /https://smiep.herokuapp.com
