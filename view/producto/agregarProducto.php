@@ -110,8 +110,8 @@ else
 				<p class="block">
 					<label for="id_estado">Estado</label>
 					<select id="id_estado" name='id_estado'>
-					<?php foreach ($listaProducto as $Producto) {?>
-					<option><?php echo $Producto->getId_estado();?></option><?php } ?>
+					<option value=2>Disponible</option>
+					<option value=3>No Disponible</option>
 				</select>
 				</p>
 
