@@ -14,6 +14,7 @@ class Producto
 	private $id_docUsu;
 	private $id_cat;
 	private $id_estado;
+	private $estado;
 
 
 	function __construct()
@@ -161,5 +162,14 @@ class Producto
 	public function setId_estado($id_estado)
 	{
 		$this->id_estado = $id_estado;
+	}
+	public function getEstado()
+	{
+		return $this->estado;
+	}
+
+	public function setEstado($estado)
+	{
+		$this->estado = $estado;
 	}
 }

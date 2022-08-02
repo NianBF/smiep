@@ -12,6 +12,12 @@ else
     $crud = new CrudCategoria();
     $Categoria = new Categoria();
     $listaCategoria = $crud->mostrar();
+	require_once('../../model/productoCRUD_Mdl.php');
+    require_once('../../model/productoMdl.php');
+    $crud = new CrudProducto();
+    $Producto = new Producto();
+    $listaProducto = $crud->mostrar();
+
 ?>
 
 <!DOCTYPE html>
@@ -96,13 +102,17 @@ else
 					<label for="id_cat">Categoria</label>
 					<select id="id_cat" name='id_cat'>
 					<?php foreach ($listaCategoria as $Categoria)
-    { ?><option value="<?php $Categoria->getid_Cat();?>"><?php echo $Categoria->getnCategoria();?></option><?php } ?></select>
-	 
+    				{ ?><option value="<?php $Categoria->getid_Cat();?>">
+					<?php echo $Categoria->getnCategoria();?></option><?php } ?>
+					</select>
 				</p>
 
 				<p class="block">
 					<label for="id_estado">Estado</label>
-					<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'>
+					<select id="id_estado" name='id_estado'>
+					<?php foreach ($listaProducto as $Producto) {?>
+					<option><?php echo $Producto->getId_estado();?></option><?php } ?>
+				</select>
 				</p>
 
 				<input type='hidden' name='insertar' value='insertar'>

@@ -36,7 +36,7 @@ class CrudProducto
 	{
 		$db = Db::conectar();
 		$listaProducto = [];
-		$select = $db->query('SELECT * FROM producto');
+		$select = $db->query('SELECT * FROM producto, estado');
 
 		foreach ($select->fetchAll() as $Producto)
 		{
@@ -54,6 +54,7 @@ class CrudProducto
 			$myProducto->setId_docUSu($Producto['id_docUsu']);
 			$myProducto->setId_cat($Producto['id_cat']);
 			$myProducto->setId_estado($Producto['id_estado']);
+			$myProducto->setEstado($Producto['tEstado']);
 
 			$listaProducto[] = $myProducto;
 		}
