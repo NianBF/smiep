@@ -7,6 +7,11 @@ $_SESSION["pass"] == null)
 }
 else
 {
+    require_once('../../model/categoriaCrud_Mdl.php');
+    require_once('../../model/categoriaMdl.php');
+    $crud = new CrudCategoria();
+    $Categoria = new Categoria();
+    $listaCategoria = $crud->mostrar();
 ?>
 
 <!DOCTYPE html>
@@ -88,12 +93,15 @@ else
 				</p>
 
 				<p>
-					<label for="id_cat">ID Categoria</label>
-					<input type='text' placeholder="ID Categoria" id="id_cat" name='id_cat'>
+					<label for="id_cat">Categoria</label>
+					<select id="id_cat" name='id_cat'>
+					<?php foreach ($listaCategoria as $Categoria)
+    { ?><option value="<?php $Categoria->getid_Cat();?>"><?php echo $Categoria->getnCategoria();?></option><?php } ?></select>
+	 
 				</p>
 
 				<p class="block">
-					<label for="id_estado">ID Estado</label>
+					<label for="id_estado">Estado</label>
 					<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'>
 				</p>
 
