@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+    text-decoration: none; 
+    
+}
+
+.header__superior{
+
+    display:flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content: space-between;
+    margin:20px
+}
+.logo{
+    margin:0 2px 0 2px; 
+
+}
+.logo__imagen{
+    width:25vh;
+    height:20vh
+}
+
+.titulito{
+    text-align: center;
+    margin:auto;
+}
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5rem;
+    font-size: 180%;
+    color: #4e635a;
+    
+}
+
+.nameEmp {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 190%;
+    color: #4e635a;
+  }
+
+
+@media screen and (max-width: 710px) {
+    .header__superior{
+        flex-wrap: wrap;
+    }
+    .logo{
+       margin:auto;
+    }
+    .logo__imagen{
+        width:25vh;
+    }
+    .title{
+       display:none;
+    }
+    .nameEmp{
+        font-size:90%
+    }
+    
+  }
+
+  @media screen and (max-width: 840px) {
+    .header__superior{
+        flex-wrap: wrap;
+    }
+    .logo{
+       margin:auto;
+    }
+    .logo__imagen{
+        width:25vh;
+    }
+    .contenedor{
+        margin:auto;
+    }
+    .title{
+
+        display:none;
+    }
+    
+  }
+
+  @media screen and (max-width:   1075px) {
+    .header__superior{
+        flex-wrap: wrap;
+    }
+    .logo{
+       margin:auto;
+    }
+    .logo__imagen{
+        width:25vh;
+    }
+    .contenedor{
+        margin:auto;
+    }
+    .title{
+
+        display:none;
+    }
+    
+  }
+
+  

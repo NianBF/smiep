@@ -31,9 +31,9 @@ else
 
     <header>
         <?php include_once("../plantillas/header.html"); ?>
-        <?php include_once("../plantillas/navBar.html"); ?>
     </header>
     <main>
+        <?php include_once("../plantillas/navBar.html"); ?>
         <article>
             <div class="infCont">
                 <h2>Sistema Operativo: <span id="osType"></span><br/>Navegador: <span id="browserType"></span></h2>
