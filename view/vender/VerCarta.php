@@ -25,7 +25,7 @@ else
         }
 
         input[type="number"] {
-            width: 20%;
+            width: 21%;
         }
     </style>
     <script>
@@ -84,9 +84,9 @@ else
                             <td>
                                 <?php echo '$' . $item["precio"] . ' COP'; ?>
                             </td>
-                            <td><input type="number" class="form-control text-center" value="<?php echo $item[" qty"];
-                                    ?>" onchange="updateCartItem(this, '
-                                <?php echo $item["rowid"]; ?>')">
+                            <td><input type="number" min=0 class="form-control text-center" value="<?php echo $item[" qty"];
+                                    ?>" onchange="updateCartItem(this, 
+                                    '<?php echo $item['rowid']; ?>')">
                             </td>
                             <td>
                                 <?php echo '$' . $item["subtotal"] . ' COP'; ?>

@@ -48,25 +48,12 @@ if (isset($_REQUEST['action']) && !empty($_REQUEST['action']))
         if ($insertOrder)
         {
             $orderID = $db->insert_id;
-            $sql = '';
             // get cart items
-            $cartItems = $cart->contents();
-            foreach ($cartItems as $item)
-            {
-                $sql .= "INSERT INTO venta VALUES ('" . $orderID . "', '" . $item['qty'] . "', '" . $item['id_prod'] . "', '" . date("Y-m-d H-i-s") . "', 1001, '" . $_SESSION['sessCustomerID'] . "', 1002563489);";
-            }
-            // insert order items into database
-            $insertOrderItems = $db->multi_query($sql);
-
-            if ($insertOrderItems)
-            {
                 $cart->destroy();
                 header("Location: OrdenExito.php?id_venta=$orderID");
-            }
-            else
-            {
+        }else{
                 header("Location: Pagos.php");
-            }
+             }
         }
         else
         {
@@ -77,8 +64,3 @@ if (isset($_REQUEST['action']) && !empty($_REQUEST['action']))
     {
         header("Location: index.php");
     }
-}
-else
-{
-    header("Location: index.php");
-}
