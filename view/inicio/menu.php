@@ -20,8 +20,12 @@ else
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/header1.css">  
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
+=======
+    <!-- <link rel="stylesheet" type="text/css" href="../../public/css/menu.css"> -->
+>>>>>>> 8b7d69158a52241f9ba74e1967a93ac3be25308c
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -40,13 +44,13 @@ else
                 <h2>Sistema Operativo: <span id="osType"></span><br/>Navegador: <span id="browserType"></span></h2>
             </div>
             <h2>Smiep</h2>
-            <h4>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
+            <h4>Prueba PyScript<br><!--Software de Manejo de Inventarios para Empresas Pequeñas</h4>
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los
                 productos, se hace en unos cuadernos y estos no permiten realizar un análisis profundo de los productos
                 que se tienen y se deben pedir, situación que ha dado paso a pérdidas económicas, pues productos que
                 exceden la fecha de caducidad no son contados y cambiados oportunamente. De igual forma, se observa que
                 a falta de un buen sistema, ellos se han visto en la necesidad de hacer las cosas más esenciales a
-                instinto y sin ninguna herramienta plausible para la tarea.</p>
+                instinto y sin ninguna herramienta plausible para la tarea.--> <?php include_once("../plantillas/pyscript/grafico/test.html"); ?></p>
         </article>
     </main>
     <?php include_once("../plantillas/footer.html"); ?>

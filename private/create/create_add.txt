@@ -34,3 +34,6 @@
 
 (02/07/2022 23:18)NB: Se crea carpeta y archivo detetectSoft y detetctSoft.js en carpeta public/js, con el propósito
     de detetctar SO y Browser ´para ser mostrador en SMIEP.
+
+(04/08/2022)JEstu:Se crea copia de <<AccionCarta>>, con el fin de dejar la tabla "orden" para la venta de productos
+    y se deja abierto para poder generar la resta de productos para el inventario.

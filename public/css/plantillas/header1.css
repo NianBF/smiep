@@ -18,13 +18,13 @@
     justify-content: space-between;
     margin:20px
 }
-.logo{
+/*.logo{
     margin:0 2px 0 2px; 
 
-}
+}*/
 .logo__imagen{
-    width:25vh;
-    height:20vh
+    width:13rem;
+    height: 15rem;
 }
 
 .titulito{
@@ -54,7 +54,7 @@
        margin:auto;
     }
     .logo__imagen{
-        width:25vh;
+        width:13rem;
     }
     .title{
        display:none;
@@ -73,7 +73,7 @@
        margin:auto;
     }
     .logo__imagen{
-        width:25vh;
+        width:13rem;
     }
     .contenedor{
         margin:auto;
@@ -93,7 +93,7 @@
        margin:auto;
     }
     .logo__imagen{
-        width:25vh;
+        width:13rem;
     }
     .contenedor{
         margin:auto;
