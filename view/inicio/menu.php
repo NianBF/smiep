@@ -20,6 +20,7 @@ else
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/header1.css">  
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
