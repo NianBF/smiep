@@ -20,12 +20,12 @@ else
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-<<<<<<< HEAD
+
     <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/header1.css">  
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
-=======
-    <!-- <link rel="stylesheet" type="text/css" href="../../public/css/menu.css"> -->
->>>>>>> 8b7d69158a52241f9ba74e1967a93ac3be25308c
+
+    <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
+
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
