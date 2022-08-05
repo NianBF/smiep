@@ -36,7 +36,6 @@
     color: #4e635a;
   }
 
-
 @media screen and (max-width: 710px) {
     .header__superior{
         flex-wrap: wrap;
