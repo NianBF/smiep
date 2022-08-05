@@ -39,13 +39,13 @@ else
                 <h2>Sistema Operativo: <span id="osType"></span><br/>Navegador: <span id="browserType"></span></h2>
             </div>
             <h2>Smiep</h2>
-            <h4>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
+            <h4>Prueba PyScript<br><!--Software de Manejo de Inventarios para Empresas Pequeñas</h4>
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los
                 productos, se hace en unos cuadernos y estos no permiten realizar un análisis profundo de los productos
                 que se tienen y se deben pedir, situación que ha dado paso a pérdidas económicas, pues productos que
                 exceden la fecha de caducidad no son contados y cambiados oportunamente. De igual forma, se observa que
                 a falta de un buen sistema, ellos se han visto en la necesidad de hacer las cosas más esenciales a
-                instinto y sin ninguna herramienta plausible para la tarea.</p>
+                instinto y sin ninguna herramienta plausible para la tarea.--> <?php include_once("../plantillas/pyscript/grafico/test.html"); ?></p>
         </article>
     </main>
     <?php include_once("../plantillas/footer.html"); ?>
