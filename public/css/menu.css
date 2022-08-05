@@ -113,10 +113,7 @@ article p {
 }
 
 @media screen and (max-width: 720px) {
-  
-  main {
-    margin-top: 210px;
-  }
+
   
   a.mod {
     border: 1px solid #f1eded;
