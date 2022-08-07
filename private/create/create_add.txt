@@ -37,3 +37,5 @@
 
 (04/08/2022)JEstu:Se crea copia de <<AccionCarta>>, con el fin de dejar la tabla "orden" para la venta de productos
     y se deja abierto para poder generar la resta de productos para el inventario.
+
+(07/08/2022 00:55)NB: se crea preloader como plantilla con archivo .css, .js y .php.

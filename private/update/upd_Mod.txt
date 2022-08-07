@@ -49,3 +49,5 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (02/07/2022 23:18)NB: Se actualiza menú para añadir el cuadro en donde se meustra el SO y el navegador desde donde se
     accede a SMIEP.
+
+(07/05/2022 00:56)NB: Se actualiza menu.php para añadir el preloader.
