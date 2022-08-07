@@ -25,7 +25,9 @@ else
     <link rel="stylesheet" href="../../public/css/plantillas/navBar1.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
 
-
+    <link rel="stylesheet" href="../../public/css/plantillas/preloader.css">
+    
+    <link rel="stylesheet" href="../../public/css/plantillas/smiep.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -43,6 +45,7 @@ else
             <div class="infCont">
                 <h2>Sistema Operativo: <span id="osType"></span><br/>Navegador: <span id="browserType"></span></h2>
             </div>
+            <?php include_once("../plantillas/preloader.php"); ?>
             <h2>Smiep</h2>
             <h4>Prueba PyScript<br>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los
@@ -60,6 +63,7 @@ else
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/main.js"></script>
     <script src="../../public/js/salir.js"></script>
+    <script src="../../public/js/plantillas/preloader.js"></script>
 </body>
 
 </html>

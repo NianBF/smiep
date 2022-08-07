@@ -1,0 +1,41 @@
+.loading {
+    margin-top: 10%;
+    text-align: center;
+    color: #000;
+}
+.loade {
+    display: block;
+    margin: auto;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #fff;
+    transition: opacity .25s, visibility 1s;
+}
+.loader{
+    display: block;
+    margin: auto;
+    content: "";
+    /* position: absolute; */
+    /* top: 40%; */
+    width: 85%;
+    height: 10%;
+    background-image: linear-gradient(332deg, #e4ff6b, #339999);
+    border-radius: 40px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: scale 1s infinite;
+}
+@keyframes scale {
+    50%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+.fade{
+    opacity: 0;
+    visibility: hidden;
+}

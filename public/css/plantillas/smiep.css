@@ -11,6 +11,7 @@ div.cont{
     margin: auto;
     user-select: none;
     background-color: #339999;
+    border-radius: 0.5rem;
     text-align: center;
     width: 80%;
     color: white;
