@@ -52,4 +52,6 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (07/05/2022 00:56)NB: Se actualiza menu.php para añadir el preloader.
 
-(08/08/2022 23:56)NB: Se actualiza vista de reportes actualizada con sección para gráficos y pdf. (Pendiente por actualizar pycript)
+(07/08/2022 23:56)NB: Se actualiza vista de reportes actualizada con sección para gráficos y pdf. (Pendiente por actualizar pycript)
+
+(08/08/2022)NB: Se actualiza estilos de login y se crea link para ir a recuperar contraseña(no funciona)
