@@ -27,24 +27,30 @@ $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
             
         <h2 class="create-account">Iniciar Sesion</h2>
 
-            <div class="iconos">
-                <div class="border-icon">
-                    <i class='bx bx-phone'></i>
+            <div class="space">
+                <div class="passR">
+                    <a href="#" target="_blank" rel="noopener noreferrer">¿Olvidó su contraseña? <svg viewbox="0 0 70 36">
+                        <path d="M6.9739 30.8153H63.0244C65.5269
+                        30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598
+                        11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153
+                        54.5169 -6.68469 23.489 9.31527" /> </svg>
+                    </a>
                 </div>
             </div>
-            <p class="cuenta-gratis">S.M.I.E.P</p>
-
-            <div class="user-box">
-                <input type="email" id="email" name="email" required />
-                <label>email</label>
+            <!--<p class="cuenta-gratis">S.M.I.E.P</p>-->
+            <br/>
+            <br/>
+            <div class="userBox">
+                <input type="email" id="email" name="email" placeholder=" " required />
+                <label>Email</label>
             </div>
-            <div class="user-box">
-                <input type="text" id="userName" name="userName" required />
-                <label>usuario</label>
+            <div class="userBox">
+                <input type="text" id="userName" name="userName" placeholder=" " required />
+                <label>Usuario</label>
             </div>
-            <div class="user-box">
-                <input type="password" id="pass" name="pass" required />
-                <label>contraseña</label>
+            <div class="userBox">
+                <input type="password" id="pass" name="pass" placeholder=" " required />
+                <label>Contraseña</label>
             </div>
             <div>
                 <input name="ingresar" id="btn" type="submit" value="Iniciar Sesion">

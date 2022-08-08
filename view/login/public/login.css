@@ -14,7 +14,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: #5c676c;
 }
 
 .container-form {
@@ -71,40 +71,88 @@ body {
 }
 
 .create-account {
+  color: #fff;
   padding: 2.7rem 0;
   font-size: 1.7rem;
 }
-
-.iconos {
-  width: 200px;
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
+.passR {
+  font-size: 14px;
+  margin: 0;
+  color: rgb(255, 253, 152);;
 }
-
-.border-icon {
-  height: 20px;
-  width: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  border: solid thin white;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  transition: all 0.3s ease-in;
+.passR a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 var(--spacing, 0px);
+  transition: margin 0.25s;
 }
-
-.border-icon:hover {
-  background-color: #409dc4;
-  cursor: pointer;
+.passR a svg {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 40px) translateZ(0);
+  fill: none;
+  stroke: var(--stroke, #fff);
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: var(--offset, 69px) 278px;
+  stroke-dashoffset: 361px;
+  transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+}
+.passR a:hover {
+  --spacing: 4px;
+  --stroke: #339999bd;
+  --stroke-delay: 0.1s;
+  --offset: 180px;
 }
 
 .cuenta-gratis {
   padding: 2rem 0;
 }
 
-.formulario input {
+.userBox {
+  position: relative;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+.userBox label {
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 41px;
+  transform: translateY(-25%);
+  text-transform: capitalize;
+  pointer-events: none;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.userBox input {
+  padding: 18px 15px;
+  margin: 0.5rem;
+  width: 300px;
+  border: 3px solid #fff;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 10px;
+}
+.userBox input:focus + label,
+.userBox input:not(:placeholder-shown) + label {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #5c676c;
+  top: 0;
+  font-size: 16px;
+}
+
+/*.formulario input {
   width: 70%;
   display: block;
   margin: auto;
@@ -117,9 +165,9 @@ body {
   padding: 0.2rem 0;
   font-size: 0.9rem;
   color: white;
-}
+}*/
 
-.formulario input[type="button"] {
+/*.formulario input[type="button"] {
   width: 60%;
   margin: auto;
   border: solid thin white;
@@ -131,7 +179,7 @@ body {
   font-size: 0.8rem;
   cursor: pointer;
   color: #222;
-}
+}*/
 a.mod {
   margin-top: 40%;
   border: 1px solid #f1eded;
@@ -153,8 +201,16 @@ a.mod:active {
   background-color: #808280;
 }
 .oscuro {
-  background-color: #1f1f1f;
+  background-color: #2b2b2b;
   color: #f1eded;
+}
+.oscuro .userBox input:focus + label,
+.oscuro .userBox input:not(:placeholder-shown) + label {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #303030;
+  top: 0;
+  font-size: 16px;
 }
 .oscuro .ingBot:visited {
   color: #fff;
