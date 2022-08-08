@@ -1,0 +1,70 @@
+.contTarget {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.reportCont {
+    background-color: transparent;
+    width: 300px;
+    height: 16rem;
+    perspective: 1000px;
+}
+.target {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.reportCont:hover .target {
+    transform: rotateY(180deg);
+}
+.imgReport,
+.goTo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+.imgReport {
+    background-image: linear-gradient(45deg, #3399, #339999);
+}
+.imgReport img {
+    width: 220px;
+    margin-top: 1rem;
+}
+.goTo {
+    background-image: linear-gradient(315deg, #3399, #339999);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+.goTo img {
+    width: 140px;
+    margin-top: 1rem;
+}
+.goTo h3 {
+    margin-bottom: 0.3rem;
+}
+.goTo p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+.goTo a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    letter-spacing: 2px;
+    color: #8a045c;
+    background-color: transparent;
+    border: 2px solid #8a045c;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.goTo a:hover {
+    background-color: #8a045c;
+    color: #fff;
+}

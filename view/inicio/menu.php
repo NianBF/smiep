@@ -53,7 +53,7 @@ else
                 que se tienen y se deben pedir, situación que ha dado paso a pérdidas económicas, pues productos que
                 exceden la fecha de caducidad no son contados y cambiados oportunamente. De igual forma, se observa que
                 a falta de un buen sistema, ellos se han visto en la necesidad de hacer las cosas más esenciales a
-                instinto y sin ninguna herramienta plausible para la tarea. <?php include_once("../plantillas/pyscript/grafico/test.html"); ?></p>
+                instinto y sin ninguna herramienta plausible para la tarea.</p>
         </article>
     </main>
     <?php include_once("../plantillas/footer.html"); ?>
