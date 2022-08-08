@@ -39,3 +39,5 @@
     y se deja abierto para poder generar la resta de productos para el inventario.
 
 (07/08/2022 00:55)NB: se crea preloader como plantilla con archivo .css, .js y .php.
+
+(08/08/2022 23:56)NB: Se crea vista de reportes actualizada con sección para gráficos y pdf.
