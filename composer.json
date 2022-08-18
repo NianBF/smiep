@@ -1,11 +1,19 @@
 {
-  "name": "smiep/smiep",
-  "description": "A description of my project",
-  "type": "project",
-  "require": {
-    "php": ">=8.1.5"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^9.5"
-  }
+    "name": "smiep/smiep",
+    "description": "This is SMIEP, our tenichal project from SENA.",
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "smiep\\Smiep\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "NianBF",
+            "email": "nianbf07@gmail.com"
+        }
+    ],
+    "require": {}
 }
