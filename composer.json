@@ -2,6 +2,7 @@
   "description": "A description of my project",
   "type": "project",
   "require": {
+    "phpunit/phpunit": "^9.5",
     "php": ">=8.1.5"
   },
   "require-dev": {
