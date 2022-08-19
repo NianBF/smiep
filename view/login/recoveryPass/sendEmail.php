@@ -27,5 +27,6 @@ $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 //dirección del remitente 
 $headers .= "From: Nicolas Bautista <$recoveryEmail>\r\n"; 
  
-mail($destinatario,$asunto,$cuerpo,$headers) 
+mail($destinatario,$asunto,$cuerpo,$headers);
+exit;
 ?>
