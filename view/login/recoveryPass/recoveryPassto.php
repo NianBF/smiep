@@ -18,7 +18,7 @@ $id_doc = $_GET["id_doc"];
         <h1>¿Perdiste tu contraseña?</h1>
         <p>Se enviara un correo donde se te indicará cómo recuperar tu contraseña, no olvides revisar en SPAM.</p>
         <div>
-            <form action="sendEmail.php?recoveryEmail=$recoveryEmail&id_doc=$id_doc&userName=$userName" method="post">
+            <form action="sendEmail.php" method="post">
                 <fieldset>
                     <legend>Usted es:</legend>
                     <div>
