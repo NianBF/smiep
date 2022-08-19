@@ -38,6 +38,4 @@ $headers.= "To: Sitio web <nianbf07@gmail.com> \r\n";
 //ASUNTO 
 //CUERPO 
 $rta = mail($recoveryEmail, "Mensaje web", $body, $headers );
-//var_dump($rta);
-
-header("Location: gracias.html" );
+var_dump($rta);
