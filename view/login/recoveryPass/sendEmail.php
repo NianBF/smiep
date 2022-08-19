@@ -25,8 +25,8 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
 
 //dirección del remitente 
-$headers .= "From: Nicolas Bautista <$recoveryEmail>\r\n"; 
+$headers .= "From: Nicolas Bautista <narufansofficial@gmail.com>\r\n"; 
  
 mail($destinatario,$asunto,$cuerpo,$headers);
-exit;
+
 ?>
