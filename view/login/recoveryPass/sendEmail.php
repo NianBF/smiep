@@ -9,6 +9,7 @@ $asunto = "Este mensaje es de prueba";
 $cuerpo =  
 <<<HTML
 <head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Prueba de correo</title> 
 </head> 
 <body> 
