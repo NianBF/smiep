@@ -24,7 +24,7 @@ if (isset($_POST['insertar']))
 	$Proveedor->setNumTel2($_POST['numTel2']);
 	$Proveedor->setEmail1($_POST['email1']);
 	$Proveedor->setEmail2($_POST['email2']);
-	//$Proveedor->setCreadoEn($_POST['creadoEn']);
+	$Proveedor->setCreadoEn(date("Y-m-d"));
 
 	//llama a la función insertar definida en el crud
 	$crud->insertar($Proveedor);
