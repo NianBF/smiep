@@ -2,11 +2,9 @@
 ***|Documentación específica de cambios y/o actualizaciones realizadas|***
 **************************************************************************
 
-Modificación en «~/model/proveedorCrud_Mdl.php» en los nombres de las columnas de la DB, pues al estar mal nombrados
-generaban errores que impedían el funcionamiento del CRUD.
+Modificación en «~/model/proveedorCrud_Mdl.php» en los nombres de las columnas de la DB, pues al estar mal nombrados generaban errores que impedían el funcionamiento del CRUD.
 
-(01/06/2022)Jeison: Se modifican las vistas haciendo la validación de que se haya iniciado sesión, al igual que se modifica el archivo «~/controller/salirCtrl.php» 
-donde se elimina la sesión de: email, usuario & contraseña.
+(01/06/2022)Jeison: Se modifican las vistas haciendo la validación de que se haya iniciado sesión, al igual que se modifica el archivo «~/controller/salirCtrl.php» donde se elimina la sesión de: email, usuario & contraseña.
 
 (01/06/2022 21:10)NB: Se actualiza campos de fechas en «smiep2.8.sql» para evitar que sean campos obligatorios.
 
@@ -21,8 +19,7 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (10/06/2022 14:30)NB: Se modifica estilos para tabla 'producto' y se empieza a hacer un diseño responsive para la misma.
 
-(10/06/2022)Jeison: Se actualiza el archivo «module/reportes/plantilla.php» insertando el usuario, hora y fecha en la que se 
-    crea el documento.pdf.
+(10/06/2022)Jeison: Se actualiza el archivo «module/reportes/plantilla.php» insertando el usuario, hora y fecha en la que se  crea el documento.pdf.
 
 (10/06/2022)Cristian: Se actualiza el login.
 (11/06/2022 00:19)NB: se completa y se hace 100% funcional el modo oscuro, además se aplica al index.php y al login.
@@ -38,8 +35,7 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (23/06/2022 23:52)NB: Se modifica el código de 'view/inicio/menu.php' ára incluir plantillas y reducir código.
 
-(24/06/2022 15:27)NB: Se optimiza el código para facilitar su lectura y se busca reducir espacios y líneas de código
-            innecesarias, se da formato a todos los documentos para hacerlo más legible.
+(24/06/2022 15:27)NB: Se optimiza el código para facilitar su lectura y se busca reducir espacios y líneas de código innecesarias, se da formato a todos los documentos para hacerlo más legible.
             
 ////////////////////////////////////
 / Finaliza Mantenimiento de código /
@@ -47,11 +43,12 @@ donde se elimina la sesión de: email, usuario & contraseña.
 
 (01/07/2022 13:03)NB: Se actualiza pestaña 'About us', se empieza a insertar contenido.
 
-(02/07/2022 23:18)NB: Se actualiza menú para añadir el cuadro en donde se meustra el SO y el navegador desde donde se
-    accede a SMIEP.
+(02/07/2022 23:18)NB: Se actualiza menú para añadir el cuadro en donde se meustra el SO y el navegador desde donde se accede a SMIEP.
 
 (07/05/2022 00:56)NB: Se actualiza menu.php para añadir el preloader.
 
 (07/08/2022 23:56)NB: Se actualiza vista de reportes actualizada con sección para gráficos y pdf. (Pendiente por actualizar pycript)
 
 (08/08/2022)NB: Se actualiza estilos de login y se crea link para ir a recuperar contraseña(no funciona)
+
+(24/08/2022 11:31)NB: Se actualiza código de Inicio de sesión para lograr el acceso con roles, falta corregir parámetros de seguridad.
