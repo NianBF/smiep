@@ -3,7 +3,7 @@ use PhpParser\Node\Expr\FuncCall;
 require_once("conexion.php");
 
 class PassDefault {
-    public function respawnPass($email, $id_doc, $newPass) {
+    public function respawnPass($email, $id_doc) {
 
         $con = null;
         $sql = null;
@@ -21,7 +21,7 @@ class PassDefault {
         }
 
         // Consulta
-        $sql = "UPDATE usuario SET password = MD5($newPass) WHERE id_doc = :USERDOC AND email = :EMAIL";
+        $sql = "UPDATE usuario SET password = MD5('default') WHERE id_doc = :USERDOC AND email = :EMAIL";
 
         $resultado = $con->prepare($sql);
         $resultado->execute(array(":USERDOC" => $id_doc, ":EMAIL" => $email));

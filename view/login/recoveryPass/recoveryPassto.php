@@ -12,6 +12,8 @@ if ($userName = $_GET["userName"] == null or $id_doc = $_GET["id_doc"] == null o
     $userName = $_GET["userName"];
     $id_doc = $_GET["id_doc"];
     $email = $_GET["email"];
+    $numero_aleatorio = mt_rand(0,20);
+    $numero_aleatorio1 = mt_rand(0,20);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,7 +30,7 @@ if ($userName = $_GET["userName"] == null or $id_doc = $_GET["id_doc"] == null o
         <h1>¿Perdiste tu contraseña?</h1>
         <p>Hola <strong><?php echo $userName; ?></strong>, no dudamos que seas tú, sin embargo necesitamos validar nuevamente tu número de documento</p>
         <div>
-            <form action="../../../controller/passDefaultCtrl.php" method="post">
+            <form action="../../../controller/passDefaultCtrl.php?num1=$numero_aleatorio&num2=$numero_aleatorio1" method="post">
                 <fieldset>
                     <legend>Usted es:</legend>
                     <p><b><?php echo("$userName"); ?> --- <?php echo("$rol"); ?></b></p>
@@ -42,12 +44,14 @@ if ($userName = $_GET["userName"] == null or $id_doc = $_GET["id_doc"] == null o
                         <label for="id_doc">Documento</label>
                     </div>
                     <div>
-                        <input type="password" name="newPass" id="newPass">
-                        <label for="newPass">Nueva Contraseña</label>
+                    <h1>Aquí voy a hacer otra cosa, solo estaba verificando que funcionara</h1>
+                    <h5>Cuál es el resultado de la suma entre</h5>
+                    <input type="number" name="num1" id="num1" value="<?php echo("$numero_aleatorio"); ?>">
+                    <input type="number" name="num2" id="num2" value="<?php echo("$numero_aleatorio1"); ?>">
                     </div>
                     <div>
-                        <input type="password" name="confNewPass" id="confNewPass">
-                        <label for="confNewPass">Repita la contraseña</label>
+                        <input type="number" name="res" id="res">
+                        <label for="res">resultado</label>
                     </div>
                     <input type="submit" value="Enviar">
                 </fieldset>
