@@ -102,7 +102,7 @@ else
 					<label for="id_cat">Categoria</label>
 					<select id="id_cat" name='id_cat'>
 					<?php foreach ($listaCategoria as $Categoria)
-    				{ ?><option value="<?php $Categoria->getid_Cat();?>">
+    				{ ?><option value='"<?php echo $Categoria->getid_Cat();?>"'>
 					<?php echo $Categoria->getnCategoria();?></option><?php } ?>
 					</select>
 				</p>
