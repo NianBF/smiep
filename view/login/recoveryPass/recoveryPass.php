@@ -14,7 +14,6 @@
     </header>
     <section>
         <h1>¿Perdiste tu contraseña?</h1>
-        <p>Llena estos datos para verificar que seas parte de S.M.I.E.P y te enviaremos un correo donde te indicaremos como reestablecer tu contraseña</p>
         <div>
             <form action="../../../controller/recoveryPassCtrl.php" method="post">
                 <fieldset>
@@ -34,10 +33,6 @@
                     <div>
                         <input type="number" name="id_ti" id="id_ti">
                         <label for="id_ti">Tienda</label>
-                    </div>
-                    <div>
-                        <input type="email" name="recoveryEmail" id="recoveryEmail">
-                        <label for="recoveryEmail">Email para recuperación</label>
                     </div>
                     <input type="submit" value="Enviar">
                 </fieldset>
