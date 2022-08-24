@@ -44,7 +44,6 @@ if ($userName = $_GET["userName"] == null or $id_doc = $_GET["id_doc"] == null o
                         <label for="id_doc">Documento</label>
                     </div>
                     <div>
-                    <h1>Aquí voy a hacer otra cosa, solo estaba verificando que funcionara</h1>
                     <h5>Cuál es el resultado de la suma entre</h5>
                     <input type="number" name="num1" id="num1" value="<?php echo("$numero_aleatorio"); ?>">
                     <input type="number" name="num2" id="num2" value="<?php echo("$numero_aleatorio1"); ?>">
