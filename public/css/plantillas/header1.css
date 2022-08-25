@@ -1,102 +1,101 @@
-/*
-*
-* Estilos predeterminados para el Header de SMIEP
-*
-*/
+/**
+  *
+  * Estilos predeterminados para el Header de SMIEP
+  *
+  **/
 
 /***ESTILOS UNIVERSALES***/
-@font-face { 
-    font-family: 'Montserrat';
-    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
-  } /*Fuente Montserrat regular*/
-  @font-face {
-    font-family: 'Montserrat-Bold';
-    src: local("Montserrat-Bold"),
-    local("Montserrat-Bold"),
+/***---Fuentes para textos---***/
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+} /*Fuente Montserrat regular*/
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"), local("Montserrat-Bold"),
     url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
-    font-weight: bold;
-  } /*Fuente Montserrat Negrita*/
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat';
-  }
-  body {
-    max-width: 100%;
-    padding: 1%;
-  }
-  
-  /***ESTILOS AL CONTENEDOR DEL HEADER***/
-  .header_superior {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /***ESTILOS A LA IMAGEN/LOGO***/
-  span.logo {
-    max-width: max-content;
-  }
-  .logo_imagen {
-    width: 12rem;
-    height: 12rem;
-  }
-  /***ESTILOS A NOMBRE SMIEP***/
-  .contenedor {
-    max-width: max-content;
-    color: #4e635a;
-  }
-  .titulito {
-    word-spacing: 0.5rem;
-    margin-right: 5rem;
-    text-align: center;
-    font-size: 1.36rem;
-  }
-  .title {
-    font-family: 'Montserrat-Bold';
-    letter-spacing: 2rem;
-    text-transform: capitalize;
-    font-size: 3.5rem;
-  }
-  
-  /***
+  font-weight: bold;
+} /*Fuente Montserrat Negrita*/
+
+/***---Reseteo---***/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+body {
+  max-width: 100%;
+  padding: 1%;
+}
+
+/***ESTILOS AL CONTENEDOR DEL HEADER***/
+.header_superior {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/***ESTILOS A LA IMAGEN/LOGO***/
+span.logo {
+  max-width: max-content;
+}
+.logo_imagen {
+  width: 12rem;
+  height: 12rem;
+}
+/***ESTILOS A NOMBRE SMIEP***/
+.contenedor {
+  max-width: max-content;
+  color: #4e635a;
+}
+.titulito {
+  word-spacing: 0.5rem;
+  margin-right: 5rem;
+  text-align: center;
+  font-size: 1.36rem;
+}
+.title {
+  font-family: "Montserrat-Bold";
+  letter-spacing: 2rem;
+  text-transform: capitalize;
+  font-size: 3.5rem;
+}
+
+/**
   *
   * @media_querys aplicados para distintos tipos de pantalla
   *
-  ***/
-  @media screen and (max-width: 840px) {
-    /***ESTILOS AL CONTENEDOR DEL HEADER***/
-    .header_superior{
-        flex-direction: column;
-    }
-    /***ESTILOS A NOMBRE SMIEP***/
-    .contenedor{
-        margin:auto;
-    }
-    .titulito {
-        margin-right: 0;
-    }
-    .title{
-        display:none;
-    }
-    
+  **/
+@media screen and (max-width: 840px) {
+  /***ESTILOS AL CONTENEDOR DEL HEADER***/
+  .header_superior {
+    flex-direction: column;
   }
-
-  @media screen and (max-width: 1075px) {
-     /***ESTILOS A LA IMAGEN/LOGO***/
-    .logo{
-       margin:auto;
-    }
-    .logo_imagen{
-        height:10rem;
-        width: 10rem;
-    }
-    /***ESTILOS A NOMBRE SMIEP***/
-    .titulito {
-        margin-right: 2rem;
-    }
-    
+  /***ESTILOS A NOMBRE SMIEP***/
+  .contenedor {
+    letter-spacing: 0;
+    margin: auto;
   }
+  .titulito {
+    margin-right: 0;
+  }
+  .title {
+    display: none;
+  }
+}
 
-  
+@media screen and (max-width: 1075px) {
+  /***ESTILOS A LA IMAGEN/LOGO***/
+  .logo {
+    margin: auto;
+  }
+  .logo_imagen {
+    height: 10rem;
+    width: 10rem;
+  }
+  /***ESTILOS A NOMBRE SMIEP***/
+  .titulito {
+    margin-right: 2rem;
+  }
+}

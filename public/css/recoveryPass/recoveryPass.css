@@ -5,12 +5,161 @@
 */
 
 /***ESTILOS UNIVERSALES***/
+
+/***---Fuentes para textos---***/
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  } /*Fuente Montserrat regular*/
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: local("Montserrat-Bold"), local("Montserrat-Bold"),
+      url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+    font-weight: bold;
+  } /*Fuente Montserrat Negrita*/
+
+  /***ESTILOS PARA CONTENIDO***/
+  .losePass {
+    margin: 2rem 5rem 0 5rem;
+  }
+
+  /***---Animación efecto glitch en título---***/
+  .losePass h1 {
+    margin-left: -1rem;
+    font-family: "Montserrat-Bold";
+    font-size: 32px;
+    animation: glitch 1s linear infinite;
+  }
+
+  @keyframes glitch {
+    2%,64% {
+        transform: translate(2px,0) skew(0deg);
+    }
+    4%,60% {
+        transform: translate(-2px,0) skew(0deg);
+    }
+    62% {
+        transform: translate(0,0) skew(5deg);
+    }
+  }
+
+  .losePass h1:before, .losePass h1:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  .losePass h1:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+
+  @keyframes glitchTop {
+    2%,64% {
+        transform: translate(2px,-2px);
+    }
+    4%,60% {
+        transform: translate(-2px,2px);
+    }
+    62% {
+        transform: translate(13px,-1px) skew(-13deg);
+    }
+  }
+
+  .losePass h1:after {
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+
+  @keyframes glitchBottom {
+    2%,64% {
+        transform: translate(-2px,0);
+    }
+    4%,60% {
+        transform: translate(-2px,0);
+    }
+    62% {
+        transform: translate(-22px,5px) skew(21deg);
+    }
+  }
+
+/***---Estilos en formulario---***/
+.loseUser {
+    margin-top: 2rem;
+    box-sizing: content-box;
+    max-width: max-content;
 }
-* {
-    margin: 0;
-    padding: 0;
+.loseUser fieldset{
+    display: inline-block;
+    border: 2px solid #AA1132;
+    border-radius: 10px 13px;
+    padding: 2.5rem;
+}
+.loseUser fieldset.anuncio {
+    border: 2px solid #339999;
+    margin-right: 7rem;
+    max-width: 40%;
+}
+.loseUser legend {
+    font-family: "Montserrat-Bold";
+    padding: 0.3rem;
+    font-size: 24px;
+}
+
+/***---Estilos en inputs y labels---***/
+.userBox {
+    position: relative;
     font-family: 'Montserrat';
+  }
+  .userBox label {
+    padding: 5px 10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 40%;
+    left: 25px;
+    transform: translateY(-25%);
+    text-transform: capitalize;
+    pointer-events: none;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+  .userBox input {
+    padding: 18px 15px 18px 10px;
+    margin: 0.5rem;
+    width: 300px;
+    border: 3px solid rgba(0, 0, 0, 0.192);
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  .userBox input:focus + label,
+  .userBox input:not(:placeholder-shown) + label {
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: #fff;
+    top: 0;
+    font-size: 16px;
+  }
+  .oscuro {
+    background-color: #2b2b2b;
+    color: #f1eded;
+  }
+  .oscuro .userBox input:focus + label,
+  .oscuro .userBox input:not(:placeholder-shown) + label {
+    color: #fff;
+    border-radius: 5px;
+    background-color: #303030;
+    top: 0;
+    font-size: 16px;
+  }
+
+/***---Estilos adicionales para etiqueta article---***/
+article {
+    font-size: 18px;
+    text-align: justify;
 }
