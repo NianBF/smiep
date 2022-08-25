@@ -8,12 +8,12 @@
 
 .container__menu {
     display: flex;
+    padding: 10px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 70px;
+    height: auto;
     background: #023859;
-    padding: 0px 20px;
 }
 
 .navBar {
@@ -23,11 +23,15 @@
 .navBar > .navBar__list {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
 }
 
 .navBar .navBar__list li {
   list-style: none;
   position: relative;
+  padding: 10px;
 }
 
 nav > ul > li:first-child > a {
@@ -92,7 +96,7 @@ nav ul li ul {
 
 nav ul li:hover ul {
   visibility: visible;
-  opacity: 1;
+  opacity: .9;
   top: 70px;
 }
 
@@ -136,7 +140,7 @@ nav ul li ul li a:hover {
   color: white;
   cursor: pointer;
   width: 26px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   height: 100%;
   display: none;
   align-items: center;
@@ -228,12 +232,19 @@ a.mod:active {
 }
 
 @media screen and (max-width: 720px) {
+
+  .container__menu{
+    height: 70px;
+  }
+  .navBar > .navBar__list{
+    flex-wrap: nowrap;
+  }
   nav > ul {
     flex-direction: column;
     background-color: #023859;
-    position: fixed;
+    position: absolute;
     left: 0;
-    top: 218px;
+    
     width: 100%;
     height: 0px;
     transition: all 300ms ease;
@@ -271,9 +282,9 @@ a.mod:active {
   }
 
   #check__menu:checked ~ nav > ul {
-    height: 500px;
+    height: auto;
     visibility: visible;
-    opacity: 1;
+    opacity: .968;
   }
 
   nav > ul > li > a.mod {
