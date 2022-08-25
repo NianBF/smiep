@@ -3,16 +3,11 @@
 ************************************************************
 
 (01/06/2022 21:23)NB: Se crea archivo de versión 2.8.6 para base de datos.
-    Se crea el archivo para la configuración de PHPMYADMIN, el cual permite acceder a DB Heroku desde Local.
-        [~/smiep/config/config.inc.php]-Este archivo debe ser copiado en la carpeta C:/xampp/phpmyadmin/
-        para reemplazar el que contiene la conf. original.
+    Se crea el archivo para la configuración de PHPMYADMIN, el cual permite acceder a DB Heroku desde Local. [~/smiep/config/config.inc.php]-Este archivo debe ser copiado en la carpeta C:/xampp/phpmyadmin/ para reemplazar el que contiene la conf. original.
 
-(05/06/2022)NB: Se crea carpeta «modules» para agregar modulos de venta y reportes, en ventas no se hacen modificaciones,
-    sin embargo, en reportes se crea «plantilla.php» que maneja una plantilla predeterminada para generar PDF
-        adicional se crea el archivo «product.php» el cual se encarga de generar el reporte de la tabla 'producto'
+(05/06/2022)NB: Se crea carpeta «modules» para agregar modulos de venta y reportes, en ventas no se hacen modificaciones, sin embargo, en reportes se crea «plantilla.php» que maneja una plantilla predeterminada para generar PDF adicional se crea el archivo «product.php» el cual se encarga de generar el reporte de la tabla 'producto'
 
-(10/06/2022)JEstu: Se crean archivos «provee.php»,«usuario.php»,«venta.php»,«cliente.php»,«categoria.php» correspondiente 
-    a los reportes en la carpeta «modules».
+(10/06/2022)JEstu: Se crean archivos «provee.php»,«usuario.php»,«venta.php»,«cliente.php»,«categoria.php» correspondiente a los reportes en la carpeta «modules».
 
 (10/06/2022)Cristian: Se crean nuevos estilos para el login.
 (11/06/2022 00:19)NB: Se crean archivos enlazados al modo oscuro [darkMode.js(...)].
@@ -32,12 +27,12 @@
 
 (01/07/2022 13:03)NB: Se crean archivos para contenido y estilos en 'about.php'.
 
-(02/07/2022 23:18)NB: Se crea carpeta y archivo detetectSoft y detetctSoft.js en carpeta public/js, con el propósito
-    de detetctar SO y Browser ´para ser mostrador en SMIEP.
+(02/07/2022 23:18)NB: Se crea carpeta y archivo detetectSoft y detetctSoft.js en carpeta public/js, con el propósito de detetctar SO y Browser ´para ser mostrador en SMIEP.
 
-(04/08/2022)JEstu:Se crea copia de <<AccionCarta>>, con el fin de dejar la tabla "orden" para la venta de productos
-    y se deja abierto para poder generar la resta de productos para el inventario.
+(04/08/2022)JEstu:Se crea copia de <<AccionCarta>>, con el fin de dejar la tabla "orden" para la venta de productos y se deja abierto para poder generar la resta de productos para el inventario.
 
 (07/08/2022 00:55)NB: se crea preloader como plantilla con archivo .css, .js y .php.
 
 (08/08/2022 23:56)NB: Se crea vista de reportes actualizada con sección para gráficos y pdf.
+
+(22/08/2022 00:00 - 24/08/2022 11:28)NB: Se crean archivos y carpeta necesarios para el funcionamiento del prótocolo de Recuperación de Contraseña (solo es funcional con Rol = Administrador, pues pienso hacer algo diferente en Rol = Empleado)

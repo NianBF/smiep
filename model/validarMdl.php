@@ -31,11 +31,17 @@ class Validar
             $resultado = $con->prepare($sql);
             $resultado->execute(array(":USERNAME" => $_SESSION["userName"], ":EMAIL" => $_SESSION["email"], ":PASS" => $_SESSION["pass"]));
 
+            $rol = $resultado->fetchColumn(8);
+
             $cantidad_resultado = $resultado->rowCount();
 
             if ($cantidad_resultado == 1)
             {
-                header("location:view/inicio/menu.php");
+                if ($_SESSION["rol"] == "Administrador") {
+                    header("location:view/inicio/menu.php");
+                }elseif ($_SESSION["rol"] == "Empleado") {
+                    header("location:view/about/about.php");
+                }
 
             }
             else

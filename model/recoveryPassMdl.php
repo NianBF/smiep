@@ -3,7 +3,7 @@ require_once("conexion.php");
 
 class PassRecovery
 {
-    public function validarDatos($id_doc, $userName, $email, $id_ti, $recoveryEmail)
+    public function validarDatos($id_doc, $userName, $email, $id_ti)
     {
 
         $con = null;
@@ -27,6 +27,8 @@ class PassRecovery
         $resultado = $con->prepare($sql);
         $resultado->execute(array(":USERDOC" => $id_doc, ":USERNAME" => $userName, ":EMAIL" => $email, ":TIENDA" => $id_ti));
 
+        $rol = $resultado->fetchColumn(3);
+
         $cantidad_resultado = $resultado->rowCount();
 
         if ($cantidad_resultado == 0)
@@ -36,12 +38,7 @@ class PassRecovery
         }
         elseif($cantidad_resultado == 1)
         {
-            $GLOBALS["id_doc"] = $id_doc;
-            $GLOBALS["userName"] = $userName;
-            $GLOBALS["email"] = $email;
-            $GLOBALS["id_ti"] = $id_ti;
-            $GLOBALS["recoveryEmail"] = $recoveryEmail;
-            header("location:../view/login/recoveryPass/recoveryPassto.php?recoveryEmail=$recoveryEmail&id_doc=$id_doc&userName=$userName");
+            header("location:../view/login/recoveryPass/recoveryPassto.php?id_doc=$id_doc&userName=$userName&email=$email&rol=$rol");
         }
 
     }
