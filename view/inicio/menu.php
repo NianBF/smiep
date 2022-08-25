@@ -47,7 +47,7 @@ else
             </div>
             <?php include_once("../plantillas/preloader.php"); ?>
             <h2>Smiep</h2>
-            <h4>Prueba PyScript<br>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
+            <h4>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los
                 productos, se hace en unos cuadernos y estos no permiten realizar un análisis profundo de los productos
                 que se tienen y se deben pedir, situación que ha dado paso a pérdidas económicas, pues productos que

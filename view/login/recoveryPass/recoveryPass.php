@@ -7,6 +7,8 @@
     <meta name="theme-color" content="#339999">
     <link rel="icon" type="image/png" href="../public/img/favicon.png" sizes="any">
     <title>SMIEP</title>
+    <link rel="stylesheet" href="../../../public/css/recoveryPass/recoveryPass.css">
+    <link rel="stylesheet" href="../../../public/css/plantillas/header1.css">
 </head>
 <body>
     <header>
