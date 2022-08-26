@@ -5,18 +5,6 @@
   **/
 
 /***ESTILOS UNIVERSALES***/
-/***---Fuentes para textos---***/
-@font-face {
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
-} /*Fuente Montserrat regular*/
-@font-face {
-  font-family: "Montserrat-Bold";
-  src: local("Montserrat-Bold"), local("Montserrat-Bold"),
-    url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
-  font-weight: bold;
-} /*Fuente Montserrat Negrita*/
-
 /***---Reseteo---***/
 * {
   margin: 0;
