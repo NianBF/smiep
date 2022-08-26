@@ -24,7 +24,6 @@ if (isset($_POST['insertar']))
 	$Producto->setNombreProd($_POST['nombreProd']);
 	$Producto->setDescripcion($_POST['descripcion']);
 	$Producto->setPrecio($_POST['precio']);
-	$Producto->setCantidadMin($_POST['cantidadMin']);
 	$Producto->setCantidadDisp($_POST['cantidadDisp']);
 	$Producto->setTipoPresentacion($_POST['tipoPresentacion']);
 	$Producto->setCreadoEn($_POST['creadoEn']);

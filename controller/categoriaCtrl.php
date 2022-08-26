@@ -1,4 +1,11 @@
-
+<?php
+session_start();
+if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
+$_SESSION["pass"] == null)
+{
+	header("location: ../index.php");
+}else{
+?>
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -12,26 +19,21 @@
 require_once('../model/categoriaCrud_Mdl.php');
 require_once('../model/categoriaMdl.php');
 
-
 $crud = new CrudCategoria();
 $Categoria = new Categoria();
 
-
-if (isset($_POST['insertar']))
+if (isset($_POST['insertar'])) //Si se obtiene 'insertar' del $_POST llama a la función de insertar del CRUD
 {
 	$Categoria->setId_cat($_POST['id_cat']);
 	$Categoria->setnCategoria($_POST['nCategoria']);
-
 
 	$crud->insertar($Categoria);
 	header('Location: ../view/categoria/mostrar.php');
 
 }
-elseif ($_GET['accion'] == 'e')
+elseif ($_GET['accion'] == 'e')//si la variable GET=='e' llama al crud y envía una alerta, si la respesta es afirmativa se envía a 'eliminar'
 {
-
 	$idDelete = $_GET['id_Cat'];
-
 	echo "<script>
 		Swal.fire({
 		   title: '¿Está seguro?',
@@ -59,10 +61,8 @@ elseif ($_GET['accion'] == 'e')
 		   }
 		 })
 		 </script>";
-
-/*	 */
 }
-elseif ($_GET['accion'] == 'a')
+elseif ($_GET['accion'] == 'a') // si la variable accion enviada por GET es == 'a', envía a la vista actualizar.php 
 {
 	header('Location: ../view/categoria/actualizar.php');
 }
@@ -71,8 +71,7 @@ elseif ($_GET['accion'] == 'eliminar')
 	$crud->eliminar($_GET['id_Cat']);
 
 }
+}
 ?>
-
-
 </body>
 </html>

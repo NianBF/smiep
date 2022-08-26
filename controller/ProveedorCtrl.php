@@ -1,63 +1,40 @@
-
 <?php
-
+session_start();
+if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
+$_SESSION["pass"] == null)
+{
+	header("location: ../index.php");
+}else{
 require_once('../model/proveedorCrud_Mdl.php');
 require_once('../model/proveedorMdl.php');
 
-
-$crud = new crudProveedor();
+$crud = new CrudProveedor();
 $Proveedor = new Proveedor();
 
-// si el elemento insertar no viene nulo llama al crud e inserta
-if (isset($_POST['insertar']))
-{
-	$Proveedor->setId_DocProv($_POST['id_DocProv']);
-	$Proveedor->setEmpresa($_POST['empresa']);
-	$Proveedor->setImgEmpresa($_POST['imgEmpresa']);
-	$Proveedor->setNombProv1($_POST['nombProv1']);
-	$Proveedor->setNombProv2($_POST['nombProv2']);
-	$Proveedor->setApeProv1($_POST['apeProv1']);
-	$Proveedor->setApeProv2($_POST['apeProv2']);
-	$Proveedor->setDireccion1($_POST['direccion1']);
-	$Proveedor->setDireccion2($_POST['direccion2']);
-	$Proveedor->setNumTel1($_POST['numTel1']);
-	$Proveedor->setNumTel2($_POST['numTel2']);
-	$Proveedor->setEmail1($_POST['email1']);
-	$Proveedor->setEmail2($_POST['email2']);
-	$Proveedor->setCreadoEn(date("Y-m-d"));
+$Proveedor->setId_DocProv($_POST['id_DocProv']);
+$Proveedor->setEmpresa($_POST['empresa']);
+$Proveedor->setImgEmpresa($_POST['imgEmpresa']);
+$Proveedor->setNombProv1($_POST['nombProv1']);
+$Proveedor->setNombProv2($_POST['nombProv2']);
+$Proveedor->setApeProv1($_POST['apeProv1']);
+$Proveedor->setApeProv2($_POST['apeProv2']);
+$Proveedor->setDireccion1($_POST['direccion1']);
+$Proveedor->setDireccion2($_POST['direccion2']);
+$Proveedor->setNumTel1($_POST['numTel1']);
+$Proveedor->setNumTel2($_POST['numTel2']);
+$Proveedor->setEmail1($_POST['email1']);
+$Proveedor->setEmail2($_POST['email2']);
 
+if (isset($_POST['insertar'])){
 	//llama a la función insertar definida en el crud
+	date_default_timezone_set("America/Bogota");
+	$Proveedor->setCreadoEn(date("Y-m-d"));
 	$crud->insertar($Proveedor);
 	header('Location: ../view/proveedor/mostrar.php');
-
-// si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
-}
-elseif (isset($_POST['actualizar']))
-{
-
-	$Proveedor->setId_DocProv($_POST['id_DocProv']);
-	$Proveedor->setEmpresa($_POST['empresa']);
-	$Proveedor->setImgEmpresa($_POST['imgEmpresa']);
-	$Proveedor->setNombProv1($_POST['nombProv1']);
-	$Proveedor->setNombProv2($_POST['nombProv2']);
-	$Proveedor->setApeProv1($_POST['apeProv1']);
-	$Proveedor->setApeProv2($_POST['apeProv2']);
-	$Proveedor->setDireccion1($_POST['direccion1']);
-	$Proveedor->setDireccion2($_POST['direccion2']);
-	$Proveedor->setNumTel1($_POST['numTel1']);
-	$Proveedor->setNumTel2($_POST['numTel2']);
-	$Proveedor->setEmail1($_POST['email1']);
-	$Proveedor->setEmail2($_POST['email2']);
-	//$Proveedor->setCreadoEn($_POST['creadoEn']);
-
+}elseif (isset($_POST['actualizar'])){
 	$crud->actualizar($Proveedor);
 	header('Location: ../view/proveedor/mostrar.php');
-
-
-// si la variable accion enviada por GET es == 'e' llama al crud y elimina
-}
-elseif ($_GET['accion'] == 'e')
-{
+}elseif ($_GET['accion'] == 'e'){
 	//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
 
 	$idDelete = $_GET['id_DocProv'];
@@ -90,7 +67,6 @@ elseif ($_GET['accion'] == 'e')
 		 })
 		 </script>";
 
-/*	 */
 // si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 }
 elseif ($_GET['accion'] == 'a')
@@ -101,5 +77,6 @@ elseif ($_GET['accion'] == 'eliminar')
 {
 	$crud->eliminar($_GET['id_DocProv']);
 
+}
 }
 ?>

@@ -4,16 +4,18 @@ require_once('conexion1.php');
 
 class CrudCategoria
 {
+	private $db;
 
 	public function __construct()
 	{
+		//Inicia la base de datos para todo el documento
+		$this->db=Db::conectar();
 	}
 
 
 	public function insertar($Categoria)
 	{
-		$db = Db::conectar();
-		$insert = $db->prepare('INSERT INTO categoria (id_cat, nCategoria) values(:id_cat,:nCategoria)');
+		$insert = $this->db->prepare('INSERT INTO categoria (id_cat, nCategoria) values(:id_cat,:nCategoria)');
 		$insert->bindValue('id_cat', $Categoria->getid_cat());
 		$insert->bindValue('nCategoria', $Categoria->getnCategoria());
 		$insert->execute();
@@ -23,9 +25,8 @@ class CrudCategoria
 
 	public function mostrar()
 	{
-		$db = Db::conectar();
 		$listaCategoria = [];
-		$select = $db->query('SELECT * FROM categoria');
+		$select = $this->db->query('SELECT * FROM categoria');
 
 		foreach ($select->fetchAll() as $Categoria)
 		{
@@ -41,8 +42,7 @@ class CrudCategoria
 
 	public function eliminar($id_Cat)
 	{
-		$db = Db::conectar();
-		$eliminar = $db->prepare('DELETE FROM categoria WHERE id_Cat=:id_Cat');
+		$eliminar = $this->db->prepare('DELETE FROM categoria WHERE id_Cat=:id_Cat');
 		$eliminar->bindValue('id_Cat', $id_Cat);
 		$eliminar->execute();
 	}

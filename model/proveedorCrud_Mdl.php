@@ -12,10 +12,10 @@ class CrudProveedor
 	public function insertar($Proveedor)
 	{
 		$db = Db::conectar();
-		$insert = $db->prepare('INSERT INTO proveedor (id_DocProv,empresa,imgEmpresa,nombProv1,
-			nombProv2,appelProv1,apellProv2,direccion1,direccion2,numTel1,numTel2,email1,email2)
-			values(:id_DocProv,:empresa,:imgEmpresa,:nombProv1,:nombProv2,:appelProv1,:apellProv2,
-			:direccion1,:direccion2,:numTel1,:numTel2,:email1,:email2)');
+		$insert = $db->prepare('INSERT INTO proveedor (id_docPov,empresa,imgEmpresa,nombProv1,
+			nombProv2,appelProv1,apellProv2,direccion1,direccion2,numTel1,numTel2,email1,email2,creadoEn)
+			values(:id_docPov,:empresa,:imgEmpresa,:nombProv1,:nombProv2,:appelProv1,:apellProv2,
+			:direccion1,:direccion2,:numTel1,:numTel2,:email1,:email2,:creadoEn)');
 		$insert->bindValue('id_docPov', $Proveedor->getId_DocProv());
 		$insert->bindValue('empresa', $Proveedor->getEmpresa());
 		$insert->bindValue('imgEmpresa', $Proveedor->getImgEmpresa());
@@ -29,7 +29,7 @@ class CrudProveedor
 		$insert->bindValue('numTel2', $Proveedor->getNumTel2());
 		$insert->bindValue('email1', $Proveedor->getEmail1());
 		$insert->bindValue('email2', $Proveedor->getEmail2());
-		//$insert->bindValue('creadoEn',$Proveedor->getCreadoEn());
+		$insert->bindValue('creadoEn',$Proveedor->getCreadoEn());
 
 		$insert->execute();
 
