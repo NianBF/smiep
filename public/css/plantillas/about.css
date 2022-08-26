@@ -1,4 +1,8 @@
 /*Estilos para el título «¿Quiénes somos?»*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  }
 section.about{
     margin: 0 2rem;
     padding: 1em;
@@ -12,7 +16,7 @@ section.about h1{
     -webkit-text-stroke: 0.9px black;
     letter-spacing: 1px;
     font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat';
     background: url('../../../img/animation/back.png');
     -webkit-background-clip: text;
     background-clip: text;
