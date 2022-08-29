@@ -126,9 +126,6 @@ a.mod:active {
   color: #f1eded;
 }
 
-.table-contenedor{
-  border: solid 2px;
-}
 .tabla{
   background-color: #fff;
   font-size: 18px;
@@ -173,57 +170,7 @@ thead{
 }
 .idUsua, .nombUsua, .nickUsua,
 .emailUsua, .rolUsua, .btn-usu{
-  width: 100%;
+  width: 90%;
 }
 
-}
-
-
-
-/*
-@media screen and (max-width: 720px) {
-  th,
-  td {
-    padding: 1%;
-    width: 0%;
-  }
-  .header__superior {
-    padding: 10px;
-  }
-  .logo img {
-    width: 150px;
-    height: 100px;
-  }
-  .title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 0.5rem;
-    margin-top: 10px;
-    display: flex;
-    margin-left: 1%;
-    font-size: 180%;
-    color: #4e635a;
-  }
-  .nameEmp {
-    visibility: hidden;
-    left: -92px;
-  }
-  .nameEmp2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
-    top: 70px;
-    font-size: 90%;
-    text-align: center;
-    color: #4e635a;
-    visibility: visible;
-  }
-  th.bot1 {
-    text-align: left;
-  }
-  footer {
-    padding: 2em 0;
-    text-align: center;
-    bottom: 0;
-    font-weight: 800;
-    font-size: 1em;
-  }
 }
