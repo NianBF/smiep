@@ -26,10 +26,13 @@ else
     <!--Se llaman estilos para el documento-->
     <link rel="stylesheet" href="../../public/css/categoria.css">
     <!--Estilos generales para SMIEP-->
+    <link rel="stylesheet" href="../../public/css/searchBar.css">
     <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../public/css/fonts.css">
+    <link rel="stylesheet" href="../../public/css/variables.css">
     <!--Fuente de iconos-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -39,19 +42,30 @@ else
     <header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>
-    <section>
+    <section class="contentList">
         <fieldset>
             <legend>Listado de Categoría</legend>
             <div class="btnMos">
-                <a href='ingresar.php'><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
-                <a href='../inicio/menu.php'><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+                <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
+                <a href='../inicio/menu.php' class="back"><span><i
+                            class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
             <div class="searchNav">
-                <label for="filtrar-tabla"></label>
-                <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Categoria" class="buscar1">
-                <label for="filtrar-tabla"></label>
-                <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Nombre Categoria" class="buscar1">
-                <span class="darkMode">
+                <div class="buscarOne">
+                    <input type="text" name="filtrar-tabla" class="buscar1" id="buscar1" placeholder="ID Categoria"
+                        class="buscar1">
+                    <button type="button" class="searchBtn">
+                        <i class="ri-search-2-line"></i>
+                    </button>
+                </div>
+                <div class="buscarTwo">
+                    <input type="text" name="filtrar-tabla" class="buscar1" id="buscar2" placeholder="Categoria"
+                        class="buscar1">
+                    <button type="button" class="searchBtn">
+                        <i class="ri-search-2-line"></i>
+                    </button>
+                </div>
+                <div class="darkMode">
                     <a id="mod" class="mod" onclick="cambiarModo()">
                         <span id="id-moon" class="btn-mode moon">
                             <i class="fas fa-sun"></i>
@@ -60,7 +74,7 @@ else
                             <i class="fas fa-moon"></i>
                         </span>
                     </a>
-                </span>
+                </div>
             </div>
             <section class="listElements">
                 <div class="titleList">
