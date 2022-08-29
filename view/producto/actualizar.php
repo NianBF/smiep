@@ -7,6 +7,11 @@ $_SESSION["pass"] == null)
 }
 else
 {
+	require_once('../../model/categoriaCrud_Mdl.php');
+    require_once('../../model/categoriaMdl.php');
+    $crud = new CrudCategoria();
+    $Categoria = new Categoria();
+    $listaCategoria = $crud->mostrar();
 	require_once('../../model/productoCRUD_Mdl.php');
 	require_once('../../model/productoMdl.php');
 	$crud = new CrudProducto();
@@ -73,12 +78,6 @@ else
 					</p>
 
 					<p>
-						<label for="cantMin">Cant Minima</label>
-						<input type='text' placeholder="Cantidad Minima" value="1" readonly id="cantMin"
-							name='cantidadMin' value='<?php echo $Producto->getCantidadMin()?>'>
-					</p>
-
-					<p>
 						<label for="cantDisp">Cant Disponible</label>
 						<input type='text' placeholder="Cantidad Disponible" id="cantDisp" name='cantidadDisp'
 							value='<?php echo $Producto->getCantidadDisp()?>'>
@@ -89,17 +88,25 @@ else
 						<input type='text' placeholder="Tipo Presentación" id="tipoPresentacion" name='tipoPresentacion'
 							value='<?php echo $Producto->getTipoPresentacion()?>'>
 					</p>
-
 					<p>
-						<label for="id_cat">ID Categoria</label>
-						<input type='text' placeholder="ID Categoria" id="id_cat" name='id_cat'
-							value='<?php echo $Producto->getId_cat()?>'>
+						<label for="priceArrive">Precio de Llegada</label>
+						<input type='text' placeholder='<?php echo $Producto->getPriceArrive(); ?>' value='<?php echo $Producto->getPriceArrive(); ?>' id="priceArrive"
+						name='priceArrive'>
 					</p>
-
 					<p>
-						<label for="id_estado">ID Estado</label>
-						<input type='text' placeholder="ID Estado" id="id_estado" name='id_estado'
-							value='<?php echo $Producto->getId_estado()?>'>
+						<label for="id_estado">Estado</label>
+						<select id="id_estado" name='id_estado'>
+							<option value=2>Disponible</option>
+							<option value=3>No Disponible</option>
+						</select>
+					</p>
+					<p>
+						<label for="id_cat">Categoria</label>
+						<select id="id_cat" name='id_cat'>
+						<?php foreach ($listaCategoria as $Categoria){ ?>
+						<option value='<?php echo $Categoria->getid_Cat();?>'>
+						<?php echo $Categoria->getnCategoria();?></option><?php } ?>
+						</select>
 					</p>
 					<input type='hidden' name='actualizar' value='actualizar'>
 

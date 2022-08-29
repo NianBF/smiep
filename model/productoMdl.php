@@ -7,7 +7,7 @@ class Producto
 	private $nombreProd;
 	private $descripcion;
 	private $precio;
-	private $cantidadMin;
+	private $priceArrive;
 	private $cantidadDisp;
 	private $tipoPresentacion;
 	private $creadoEn;
@@ -162,5 +162,13 @@ class Producto
 	public function setId_estado($id_estado)
 	{
 		$this->id_estado = $id_estado;
+	}
+
+	public function getPriceArrive(){
+		return $this->priceArrive;
+	}
+
+	public function setPriceArrive($priceArray){
+		$this->priceArrive = $priceArray;
 	}
 }

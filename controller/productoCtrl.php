@@ -18,6 +18,7 @@ $Producto = new Producto();
 // si el elemento insertar no viene nulo llama al crud e inserta
 if (isset($_POST['insertar']))
 {
+	date_default_timezone_set("America/Bogota");
 	$Producto->setId_prod($_POST['id_prod']);
 	$Producto->setImgProd($_POST['imgProd']);
 	$Producto->setCodBar($_POST['codBar']);
@@ -26,10 +27,11 @@ if (isset($_POST['insertar']))
 	$Producto->setPrecio($_POST['precio']);
 	$Producto->setCantidadDisp($_POST['cantidadDisp']);
 	$Producto->setTipoPresentacion($_POST['tipoPresentacion']);
-	$Producto->setCreadoEn($_POST['creadoEn']);
+	$Producto->setCreadoEn(date("Y-m-d"));
 	$Producto->setId_docUSu($_POST['id_docUsu']);
 	$Producto->setId_cat($_POST['id_cat']);
 	$Producto->setId_estado($_POST['id_estado']);
+	$Producto->setPriceArrive($_POST['modificadoEn']);
 
 
 	//llama a la función insertar definida en el crud
@@ -40,19 +42,20 @@ if (isset($_POST['insertar']))
 }
 elseif (isset($_POST['actualizar']))
 {
+	date_default_timezone_set("America/Bogota");
 	$Producto->setId_prod($_POST['id_prod']);
 	$Producto->setImgProd($_POST['imgProd']);
 	//$Producto->setCodBar($_POST['codBar']);
 	$Producto->setNombreProd($_POST['nombreProd']);
 	$Producto->setDescripcion($_POST['descripcion']);
 	$Producto->setPrecio($_POST['precio']);
-	$Producto->setCantidadMin($_POST['cantidadMin']);
 	$Producto->setCantidadDisp($_POST['cantidadDisp']);
 	$Producto->setTipoPresentacion($_POST['tipoPresentacion']);
-	//$Producto->setCreadoEn($_POST['creadoEn']);
 	//$Producto->setId_docUSu($_POST['id_docUsu']);
 	$Producto->setId_cat($_POST['id_cat']);
 	$Producto->setId_estado($_POST['id_estado']);
+	$Producto->setPriceArrive($_POST['priceArrive']);
+	$Producto->setCreadoEn(date("Y-m-d H:i:s"));
 
 	$crud->actualizar($Producto);
 	header('Location: ../view/producto/mostrar.php');
