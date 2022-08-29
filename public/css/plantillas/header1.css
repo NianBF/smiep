@@ -11,10 +11,6 @@
   padding: 0;
   font-family: "Montserrat";
 }
-body {
-  max-width: 100%;
-  padding: 1%;
-}
 
 /***ESTILOS AL CONTENEDOR DEL HEADER***/
 .header_superior {
@@ -26,11 +22,12 @@ body {
 
 /***ESTILOS A LA IMAGEN/LOGO***/
 span.logo {
+  margin-top: 1rem;
   max-width: max-content;
 }
 .logo_imagen {
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
 }
 /***ESTILOS A NOMBRE SMIEP***/
 .contenedor {
@@ -39,7 +36,7 @@ span.logo {
 }
 .titulito {
   word-spacing: 0.5rem;
-  margin-right: 5rem;
+  margin-right: 3rem;
   text-align: center;
   font-size: 1.36rem;
 }

@@ -26,33 +26,39 @@ else
     <header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>
-    <section class="contact-wrapper animated bounceInUp">
+    <section class="initForm">
 
         <div class="contForm">
             <form action='../../controller/categoriaCtrl.php' id="formulario" name="formulario" method='post'>
-                <fieldset class="contact-form">
-                    <legend>Agregar Categoria</legend>
+            <fieldset class="anuncio">
+                    <legend>Advertencia</legend>
+                    <div>
+                        <article>
+                            <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
+                            <p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p></br>
+                            <p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser igual a las ya existentes.</p>
+                        </article>
+                    </div>
+                </fieldset>    
+            <fieldset class="contact-form">
+                    <legend>Agregar Categoría</legend>
 
                     <div class="userBox">
                         <input type='text' id="id_cat" name='id_cat' placeholder=" ">
-                        <label for="id_cat">ID Categoria</label>
+                        <label for="id_cat">ID Categoría</label>
                     </div>
 
                     <div class="userBox">
                         <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                        <label for="nCategoria">Categoria</label>
+                        <label for="nCategoria">Categoría</label>
                     </div>
 
                     <input type='hidden' name='insertar' value='insertar'>
 
-                    <p class='block'>
-                        <button type='submit' id="btn" name="btn" value='Guardar'>
-                            Guardar
-                        </button>
-                    </p>
-                    <p class='block'>
-                        <a href='mostrar.php'><button type="button">Volver</button></a>
-                    </p>
+                    <div class="btn">
+                        <span><input type="button" value="Guardar"></span>
+                        <span><a href='mostrar.php'><input type="button" value="Volver"></a></span>
+                    </div>
                 </fieldset>
             </form>
         </div>

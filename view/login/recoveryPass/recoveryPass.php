@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="../../../public/css/recoveryPass/recoveryPass.css">
     <link rel="stylesheet" href="../../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../../public/css/plantillas/forms.css">
+    <link rel="stylesheet" href="../../../public/css/fonts.css">
 </head>
 <body>
     <header>
         <?php include_once("../../plantillas/header.html"); ?>
     </header>
-    <section class="losePass">
+    <section class="initForm">
         <h1 title="¿Perdiste tu contraseña?">¿Perdiste tu contraseña?</h1></br>
         <article>
             <p>Por favor, llene los siguientes datos con la información exacta con la que está registrado en <strong>S.M.I.E.P</strong>, así podremos validar que sea parte de nuestra base de datos y recuperar de forma correcta su acceso al sistema.</p></br>
@@ -48,7 +49,7 @@
                     <div class=userBox>
                         <input type="number" name="id_ti" id="id_ti" placeholder=" ">
                         <label for="id_ti">ID Tienda</label>
-                    </div>
+                    </div></br>
                     <input type="submit" value="Enviar">
                 </fieldset>
                 

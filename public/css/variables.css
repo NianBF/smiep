@@ -1,3 +1,13 @@
 :root {
-    --bgColor : #fff;
+    --bgColor: #f0f0f0;
+    --bgColorDark: #000;
+    --submitBtn: #2eb369;
+    --submitBtnHov: #154e2f;
+    --colorSMIEP: #339999;
+    --BtnHov: #184b4b;
+    --letterColW: #fff;
+    --backBtn: #dada6d;
+    --backBtnHov: #616130;
+    --paddingBtn: 0.7rem 2rem;
+    --radiousBtn: 10px;
 }

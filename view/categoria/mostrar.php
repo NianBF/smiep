@@ -14,7 +14,6 @@ else
     $listaCategoria = $crud->mostrar();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,8 +22,17 @@ else
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-    <title>Mostrar Categoria</title>
+    <title>SMIEP</title>
+    <!--Se llaman estilos para el documento-->
     <link rel="stylesheet" href="../../public/css/categoria.css">
+    <!--Estilos generales para SMIEP-->
+    <link rel="stylesheet" href="../../public/css/searchBar.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
+    <link rel="stylesheet" href="../../public/css/fonts.css">
+    <link rel="stylesheet" href="../../public/css/variables.css">
+    <!--Fuente de iconos-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,68 +40,68 @@ else
 
 <body>
     <header>
-        <table>
-            <?php include_once("../plantillas/header.html"); ?>
+        <?php include_once("../plantillas/header.html"); ?>
     </header>
-    </div>
-    </div>
-    <br>
-    <hr>
-    <br>
-    <div id="main-container">
-        <thead>
-            <tr>
-                <th>Listado de Categoria</th>
-                <th colspan="2" class="bot1"><a href='ingresar.php'><button type="button" id="agregar"><i
-                                class="fa-solid fa-plus"></i> Agregar</button></a>
-                    <a class="bot1" href='../inicio/menu.php'><button type="button" id="volver"><i
-                                class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a>
-                </th>
-            </tr>
-            <tr id="lis">
-                <th colspan="2">
-                    <div class="buscar">
-                        <label for="filtrar-tabla"></label>
-                        <input type="text" name="filtrar-tabla" id="buscar1" placeholder="ID Categoria" class="buscar1">
-
-                        <label for="filtrar-tabla"></label>
-                        <input type="text" name="filtrar-tabla" id="buscar2" placeholder="Nombre Categoria"class="buscar1">
+    <section class="contentList">
+        <fieldset>
+            <legend>Listado de Categoría</legend>
+            <div class="btnMos">
+                <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
+                <a href='../inicio/menu.php' class="back"><span><i
+                            class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+            </div>
+            <div class="searchNav">
+                <div class="buscarOne">
+                    <input type="text" name="filtrar-tabla" class="buscar1" id="buscar1" placeholder="ID Categoria"
+                        class="buscar1">
+                    <button type="button" class="searchBtn">
+                        <i class="ri-search-2-line"></i>
+                    </button>
+                </div>
+                <div class="buscarTwo">
+                    <input type="text" name="filtrar-tabla" class="buscar1" id="buscar2" placeholder="Categoria"
+                        class="buscar1">
+                    <button type="button" class="searchBtn">
+                        <i class="ri-search-2-line"></i>
+                    </button>
+                </div>
+                <div class="darkMode">
+                    <a id="mod" class="mod" onclick="cambiarModo()">
+                        <span id="id-moon" class="btn-mode moon">
+                            <i class="fas fa-sun"></i>
+                        </span>/
+                        <span id="id-sun" class="btn-mode sun active">
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <section class="listElements">
+                <div class="titleList">
+                    <h3>ID</h3>
+                    <h3>Categoría</h3>
+                    <h3>Eliminar</h3>
+                </div>
+                <div class="contentList">
+                    <?php foreach ($listaCategoria as $Categoria) { ?>
+                    <div class="id">
+                        <?php echo $Categoria->getid_Cat() ?>
                     </div>
-                </th>
-                <th colspan="1">
-                    <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i
-                                class="fas fa-sun"></i></span>/<span id="id-sun" class="btn-mode sun active"><i
-                                class="fas fa-moon"></i></span></a>
-                    
-                </th>
-            </tr>
-            <tr>
-                <th class="categoria">Categoria</th>
-                <th class="opc" colspan="1">Nombre</th>
-                <th class="opc" colspan="1">Eliminar</th>
-            </tr>
-        </thead>
-        <?php foreach ($listaCategoria as $Categoria)
-    { ?>
-        <tr class="categoriaFiltro">
-
-            <td class="idCat">
-                <?php echo $Categoria->getid_Cat() ?>
-            </td>
-            <td class="nombCat">
-                <?php echo $Categoria->getnCategoria() ?>
-            </td>
-            <td><a class="eliminar" type="submit"
-                    href="../../controller/categoriaCtrl.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e"><button
-                        type="button" id="eliminar"><i class="fa-solid fa-trash-can"></i></button></a></td>
-        </tr>
-    </div>
-    <?php }?>
-    </table>
-    <footer class="footer">
-        <p>© S.M.I.E.P | 2022</p>
-    </footer>
-    
+                    <div class="colName">
+                        <?php echo $Categoria->getnCategoria() ?>
+                    </div>
+                    <div class="btnOpt">
+                        <a class="eliminar" type="submit"
+                            href="../../controller/categoriaCtrl.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </div>
+                    <?php } ?>
+                </div>
+            </section>
+        </fieldset>
+    </section>
+    <?php include_once("../plantillas/footer.html"); ?>
     <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
     <script src="../../public/js/categoria/filtrarCategoria.js"></script>
 </body>

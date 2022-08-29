@@ -23,7 +23,7 @@ $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
 
 <body>
     <div class="container-form sign-UP contact-form">
-        <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma" class="formulario">
+        <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma" class="formulario" autocomplete="off">
             
         <h2 class="create-account">Iniciar Sesion</h2>
 
