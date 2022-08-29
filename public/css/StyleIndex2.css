@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main{
+    margin: 20px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cup{
+    margin: 20px;
+    
+}
+
+.ingBot {
+    text-decoration: none;
+    background-color: #0d9256;
+    border: solid #808280 0.5px;
+    border-radius: 10px 0 10px 0;
+    padding: 1.5%;
+    color: #fff;
+  }
+  .ingBot:hover {
+    background-color: #00a8f7;
+  }
+  .ingBot:active {
+    background-color: #808280;
+  }
+
+footer{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+
+
+
+
+
+
+a.mod {
+    border: 1px solid #f1eded;
+    border-radius: 2rem;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    width: 8rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+    margin: 20px;
+  }
+  a.mod:hover {
+    border: 1px solid #1f1f1f;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    cursor: pointer;
+  }
+  a.mod:active {
+    background-color: #808280;
+  }
+  .oscuro {
+    background-color: #1f1f1f;
+    color: #f1eded;
+  }
+  .oscuro .ingBot:visited {
+    color: #fff;
+  }
+  .oscuro a:visited {
+    color: rgb(255, 254, 176);
+  }
+  .oscuro a.modi {
+    border: 1px solid #1f1f1f;
+    border-radius: 2rem;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    width: 8rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+  }
+  .oscuro a.modi:hover {
+    border: 1px solid #f1eded;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    cursor: pointer;
+  }
+  .oscuro a.modi:active {
+    background-color: #808280;
+  }
