@@ -1,0 +1,61 @@
+/*
+*
+* Estilos para formaularios
+*
+*/
+/***---Estilos en inputs y labels---***/
+.userBox {
+    position: relative;
+    font-family: 'Montserrat';
+  }
+  .userBox label {
+    padding: 5px 10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 40%;
+    left: 25px;
+    transform: translateY(-25%);
+    text-transform: capitalize;
+    pointer-events: none;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+  .userBox input {
+    padding: 18px 15px 18px 15px;
+    margin: 0.5rem;
+    width: 300px;
+    border: 3px solid rgba(0, 0, 0, 0.192);
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  .userBox input:focus + label,
+  .userBox input:not(:placeholder-shown) + label {
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: #fff;
+    top: 0;
+    font-size: 16px;
+  }
+
+/***---Fieldset---***/
+.contForm {
+  margin-top: 2rem;
+  box-sizing: content-box;
+  max-width: max-content;
+}
+.contForm fieldset{
+  display: inline-block;
+  border: 2px solid #AA1132;
+  border-radius: 10px 13px;
+  padding: 2.5rem;
+}
+.lcontForm legend {
+  font-family: "Montserrat-Bold";
+  padding: 0.3rem;
+  font-size: 24px;
+}

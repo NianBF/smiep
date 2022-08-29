@@ -43,7 +43,7 @@ if (isset($_REQUEST['action']) && !empty($_REQUEST['action']))
     elseif ($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['sessCustomerID']))
     {
         // insert order details into database
-        $insertOrder = $db->query("INSERT INTO orden (id_cliDoc, total,creadoEn, modificadoEn, id_doc, id_caja) VALUES ('" . $_SESSION['sessCustomerID'] . "', '" . $cart->total() . "','". date("Y-m-d H:i:s") ." ','" . date("Y-m-d H:i:s") . "','123456789', '1001')");
+        $insertOrder = $db->query("INSERT INTO orden (id_cliDoc, total,creadoEn, modificadoEn, id_doc, id_caja) VALUES ('" . $_SESSION['sessCustomerID'] . "', '" . $cart->total() . "','". date("Y-m-d H:i:s") ." ','" . date("Y-m-d H:i:s") . "','100837029', '1001')");
 
         if ($insertOrder)
         {

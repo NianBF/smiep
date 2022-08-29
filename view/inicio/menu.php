@@ -20,16 +20,18 @@ else
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
-    <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/header1.css"> 
+    <!--SE LLAMAN ESTILOS-->
+    <!--//Estilos para plantilla Header\\-->
+    <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/header1.css">
+    <!--//Estilos para plantilla navBar\\-->
     <link rel="stylesheet" href="../../public/css/plantillas/navBar1.css">
+    <!--//Estilos únicos del menú\\-->
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
-
+    <!--//Estilos para preloader\\-->
     <link rel="stylesheet" href="../../public/css/plantillas/preloader.css">
-    
-    <link rel="stylesheet" href="../../public/css/plantillas/smiep.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/smiep.css"> <!--Trae estilos de plantilla SMIEP para preloader-->
+    <!--//Estilos donde se declara fuentes para uso general\\-->
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
-    <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 
 </head>
@@ -47,7 +49,7 @@ else
             </div>
             <?php include_once("../plantillas/preloader.php"); ?>
             <h2>Smiep</h2>
-            <h4>Prueba PyScript<br>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
+            <h4>Software de Manejo de Inventarios para Empresas Pequeñas</h4>
             <p>En este lugar se puede observar que, el poco control que se intenta llevar acerca del inventario de los
                 productos, se hace en unos cuadernos y estos no permiten realizar un análisis profundo de los productos
                 que se tienen y se deben pedir, situación que ha dado paso a pérdidas económicas, pues productos que

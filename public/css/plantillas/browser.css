@@ -1,9 +1,13 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
 body main article div.infCont{
     display: grid;
     place-items: end;
     font-size: 0.57rem;
     width: fit-content;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-family: 'Montserrat'; 
     background: #339999;
   }
   div.infCont{
