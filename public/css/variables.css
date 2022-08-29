@@ -1,3 +1,8 @@
 :root {
-    --bgColor : #fff;
+    --bgColor: #fff;
+    --submitBtn: #2eb369;
+    --submitBtnHov: #154e2f;
+    --backBtn: #339999;
+    --backNtnHov: #184b4b;
+    --letterColW: #fff;
 }

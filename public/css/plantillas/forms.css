@@ -3,59 +3,135 @@
 * Estilos para formaularios
 *
 */
+/***---Form---***/
 /***---Estilos en inputs y labels---***/
 .userBox {
-    position: relative;
-    font-family: 'Montserrat';
-  }
-  .userBox label {
-    padding: 5px 10px;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    position: absolute;
-    top: 40%;
-    left: 25px;
-    transform: translateY(-25%);
-    text-transform: capitalize;
-    pointer-events: none;
-    font-size: 20px;
-    transition: all 0.3s;
-  }
-  .userBox input {
-    padding: 18px 15px 18px 15px;
-    margin: 0.5rem;
-    width: 300px;
-    border: 3px solid rgba(0, 0, 0, 0.192);
-    outline: none;
-    font-size: 16px;
-    font-family: inherit;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
-  }
-  .userBox input:focus + label,
-  .userBox input:not(:placeholder-shown) + label {
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    background-color: #fff;
-    top: 0;
-    font-size: 16px;
-  }
-
+  position: relative;
+  font-family: "Montserrat";
+}
+.userBox label {
+  padding: 5px 10px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 40%;
+  left: 25px;
+  transform: translateY(-25%);
+  text-transform: capitalize;
+  pointer-events: none;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.userBox input {
+  padding: 18px 15px 18px 15px;
+  margin: 0.3rem;
+  width: 300px;
+  border: 3px solid #00000031;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.userBox input:focus + label,
+.userBox input:not(:placeholder-shown) + label {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  top: 0;
+  font-size: 16px;
+}
+/*Contenedor contenido*/
+.initForm {
+  margin: 2rem 5rem 0 5rem;
+}
 /***---Fieldset---***/
 .contForm {
+  background-color: #3399993d;
+  padding: 2rem;
+  border-radius: 3rem 1rem;
   margin-top: 2rem;
   box-sizing: content-box;
   max-width: max-content;
 }
-.contForm fieldset{
+.contForm fieldset /*Formulario*/ {
+  background-color: #f0f0f0;
   display: inline-block;
-  border: 2px solid #AA1132;
+  -webkit-box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+  -moz-box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+  box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+  border: 2px solid #aa1132;
   border-radius: 10px 13px;
   padding: 2.5rem;
 }
-.lcontForm legend {
+.contForm legend {
+  border-radius: 10px 10px;
+  background-color: #f0f0f0;
   font-family: "Montserrat-Bold";
   padding: 0.3rem;
   font-size: 24px;
+}
+.contForm fieldset.anuncio /*advertencia/Anuncio*/ {
+  border: 2px solid #339999;
+  margin-right: 10%;
+  max-width: 40%;
+}
+
+/***---Botón---***/
+/*Estilo para botón Submit*/
+input[type="submit"] {
+  display: block;
+  margin: auto;
+  font-family: "Montserrat-Bold";
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.17rem;
+  background-color: #2eb369;
+  border: transparent;
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+.contForm {
+  display: block;
+  margin: auto;
+}
+.contForm .btn {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contForm .btn span input {
+  font-family: "Montserrat-Bold";
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.17rem;
+  background-color: #2eb369;
+  border: transparent;
+  border-radius: 10px;
+  padding: 0.7rem 2rem;
+}
+.contForm .btn span a input {
+  background-color: #339999;
+}
+/***---Estilos hover, after, before, active para botón---***/
+.contForm .btn span input:hover {
+  letter-spacing: 0.2rem;
+  background-color: #154e2f;
+  cursor: pointer;
+  -webkit-box-shadow: 11px 13px 38px 3px #333333;
+  -moz-box-shadow: 11px 13px 38px 3px #333333;
+  box-shadow: 11px 13px 38px 3px #333333;
+}
+.contForm .btn span a input:hover {
+  background-color: #184b4b;
+}
+input[type="submit"]:hover {
+  letter-spacing: 0.2rem;
+  background-color: #154e2f;
+  cursor: pointer;
+  -webkit-box-shadow: 11px 13px 38px 3px #333333;
+  -moz-box-shadow: 11px 13px 38px 3px #333333;
+  box-shadow: 11px 13px 38px 3px #333333;
 }

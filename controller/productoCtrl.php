@@ -15,21 +15,23 @@ require_once('../model/productoMdl.php');
 $crud = new CrudProducto();
 $Producto = new Producto();
 
+$Producto->setId_prod($_POST['id_prod']);
+$Producto->setImgProd($_POST['imgProd']);
+$Producto->setCodBar($_POST['codBar']);
+$Producto->setNombreProd($_POST['nombreProd']);
+$Producto->setDescripcion($_POST['descripcion']);
+$Producto->setPrecio($_POST['precio']);
+$Producto->setCantidadDisp($_POST['cantidadDisp']);
+$Producto->setTipoPresentacion($_POST['tipoPresentacion']);
+$Producto->setCreadoEn($_POST['creadoEn']);
+$Producto->setId_docUSu($_POST['id_docUsu']);
+$Producto->setId_cat($_POST['id_cat']);
+$Producto->setId_estado($_POST['id_estado']);
+
 // si el elemento insertar no viene nulo llama al crud e inserta
 if (isset($_POST['insertar']))
 {
-	$Producto->setId_prod($_POST['id_prod']);
-	$Producto->setImgProd($_POST['imgProd']);
-	$Producto->setCodBar($_POST['codBar']);
-	$Producto->setNombreProd($_POST['nombreProd']);
-	$Producto->setDescripcion($_POST['descripcion']);
-	$Producto->setPrecio($_POST['precio']);
-	$Producto->setCantidadDisp($_POST['cantidadDisp']);
-	$Producto->setTipoPresentacion($_POST['tipoPresentacion']);
-	$Producto->setCreadoEn($_POST['creadoEn']);
-	$Producto->setId_docUSu($_POST['id_docUsu']);
-	$Producto->setId_cat($_POST['id_cat']);
-	$Producto->setId_estado($_POST['id_estado']);
+
 
 
 	//llama a la función insertar definida en el crud
