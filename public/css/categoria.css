@@ -52,3 +52,13 @@ section {
 .searchNav {
   margin-top: 2rem;
 }
+
+.contentTable {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.row {
+  border: 1px dotted #000;
+  padding: 2rem;
+}

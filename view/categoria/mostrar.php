@@ -82,20 +82,21 @@ else
                     <h3>Categoría</h3>
                     <h3>Eliminar</h3>
                 </div>
-                <div class="contentList">
+                <div class="contentTable">
                     <?php foreach ($listaCategoria as $Categoria) { ?>
-                    <div class="id">
-                        <?php echo $Categoria->getid_Cat() ?>
-                    </div>
-                    <div class="colName">
-                        <?php echo $Categoria->getnCategoria() ?>
-                    </div>
-                    <div class="btnOpt">
-                        <a class="eliminar" type="submit"
-                            href="../../controller/categoriaCtrl.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </a>
-                    </div>
+                    <div class="row">
+                        <div class="id">
+                            <?php echo $Categoria->getid_Cat() ?>
+                        </div>
+                        <div class="colName">
+                         <?php echo $Categoria->getnCategoria() ?>
+                        </div>
+                        <div class="btnOpt">
+                            <a class="eliminar" type="submit" href="../../controller/categoriaCtrl.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
+                    </div> </br>
                     <?php } ?>
                 </div>
             </section>
