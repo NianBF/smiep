@@ -79,17 +79,14 @@ section {
 
 .contentTable {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .row {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: row;
+
   border: 1px dotted #000;
   border-radius: var(--radiousBtn) 5px;
-  margin: 1rem 1rem auto auto;
+  margin: 10px;
   padding: 2rem;
   width: 7rem;
   -webkit-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
@@ -100,6 +97,7 @@ section {
 /***Estilos para los datos***/
 div .id, div .colName {
   font-family: 'Montserrat-Bold';
+  margin-bottom: 10px;
 }
 
 /***---Estilos para botón eliminar---***/
@@ -123,4 +121,59 @@ div .btnOpt a i {
   color: var(--bgColor);
   width: 100%;
   height: 100%;
+}
+
+a.mod {
+
+  border: 1px solid #f1eded;
+  border-radius: 2rem;
+  background-color: #1f1f1f;
+  color: #f1eded;
+  width: 5rem;
+  text-align: center;
+  padding: 5%;
+  margin:  10px 0 10px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.mod:hover {
+  border: 1px solid #1f1f1f;
+  background-color: #f1eded;
+  color: #1f1f1f;
+  cursor: pointer;
+}
+a.mod:active {
+  background-color: #808280;
+}
+
+
+@media screen and (max-width: 1030px) {
+  .btnMos a{
+    
+    position: inherit;
+    margin-left: 20px;
+  }
+  .contentList fieldset{
+    padding: 1.5rem 0;
+  }
+
+}
+
+@media screen and ( max-width:470px) {
+  .btnMos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+
+  }
+
+  .btnMos a{
+    width: 100%;
+    margin:0  20px 10px 20px;
+  }
+
+ 
 }
