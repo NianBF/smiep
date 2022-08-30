@@ -19,5 +19,10 @@
 @font-face {
   font-family: "Montserrat-Italic";
   src: local("Montserrat-Italic"), local("Montserrat-Italic"),
-    url(fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf)
+    url(fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
 } /*Fuente Montserrat Cursiva*/
+@font-face {
+  font-family: "Montserrat-BoldItalic";
+  src: local("Montserrat-BoldItalic"), local("Montserrat-BoldItalic"),
+    url(fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+}

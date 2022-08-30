@@ -28,6 +28,7 @@ else
     <!--Se llaman estilos para el documento-->
     <link rel="stylesheet" href="../../public/css/categoria.css">
     <!--Estilos generales para SMIEP-->
+    <link rel="stylesheet" href="../../public/css/mostrar.css">
     <link rel="stylesheet" href="../../public/css/searchBar.css">
     <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
@@ -35,9 +36,7 @@ else
     <link rel="stylesheet" href="../../public/css/variables.css">
     <!--Fuente de iconos-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -46,7 +45,7 @@ else
     </header>
     <section class="contentList">
         <fieldset>
-            <legend>Listado de Categoría</legend>
+            <legend>Listado de Categorías</legend>
             <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
                 <a href='../inicio/menu.php' class="back"><span><i
@@ -98,9 +97,11 @@ else
                          <?php echo $Categoria->getnCategoria() ?>
                         </div>
                         <div class="btnOpt">
+                            <div class="btnOptDel">
                             <a class="eliminar" type="submit" href="../../controller/categoriaCtrl.php?id_Cat=<?php echo $Categoria->getid_Cat()?>&accion=e">
                                 <i class="fa-solid fa-trash-can"></i>
                             </a>
+                            </div>
                         </div>
                     </div> </br>
                     <?php } ?>

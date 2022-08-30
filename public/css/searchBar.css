@@ -22,7 +22,7 @@
 }
 
 /***---Estilos a inputs de buscar---***/
-.searchNav .buscarOne, .searchNav .buscarTwo {
+.searchNav .buscarOne, .searchNav .buscarTwo, .searchNav .buscarThree {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -32,35 +32,35 @@
     border-radius: 10px;
     margin-right: .5rem;
 }
-.searchNav .buscarOne:focus-within, .searchNav .buscarTwo:focus-within {
+.searchNav .buscarOne:focus-within, .searchNav .buscarTwo:focus-within, .searchNav .buscarThree:focus-within {
     background: linear-gradient(to bottom right,var(--BtnHov), #649191);
 }
 
 /***---Estilos para cuando el mouse pase por encima del input---***/
-.searchNav .buscarOne:hover, .searchNav .buscarTwo:hover{
+.searchNav .buscarOne:hover, .searchNav .buscarTwo:hover, .searchNav .buscarThree:hover {
     background: linear-gradient(to bottom right,var(--BtnHov), #649191);
     border: .5px outset var(--bgColorDark);
 }
 
 /****---Estilos para transición y ocultado del input---***/
-.searchNav .buscarOne :is(input, button), .searchNav .buscarTwo :is(input, button) {
+.searchNav .buscarOne :is(input, button), .searchNav .buscarTwo :is(input, button), .searchNav .buscarThree :is(input, button) {
     color: inherit;
     border: none;
     background: transparent;
     outline: none;
 }
-.searchNav .buscarOne .buscar1, .searchNav .buscarTwo .buscar1 {
+.searchNav .buscarOne .buscar1, .searchNav .buscarTwo .buscar1, .searchNav .buscarThree .buscar1 {
     width: 0;
     transition: width .5s;
 }
-.searchNav .buscarOne .searchBtn, .searchNav .buscarTwo .searchBtn {
+.searchNav .buscarOne .searchBtn, .searchNav .buscarTwo .searchBtn, .searchNav .buscarThree .searchBtn {
     width: 1.3rem;
     height: 1.3rem;
     display: grid;
     place-items: center;
     cursor: pointer;
 }
-.searchNav .buscarOne:focus-within input, .searchNav .buscarTwo:focus-within input {
+.searchNav .buscarOne:focus-within input, .searchNav .buscarTwo:focus-within input, .searchNav .buscarThree:focus-within input {
     width: 200px;
 }
 ::placeholder {

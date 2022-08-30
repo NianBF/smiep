@@ -22,7 +22,7 @@
 
 /***ESTILOS A LA IMAGEN/LOGO***/
 span.logo {
-  margin-top: 1rem;
+  margin: 1rem 0 0 2rem;
   max-width: max-content;
 }
 .logo_imagen {
@@ -36,7 +36,7 @@ span.logo {
 }
 .titulito {
   word-spacing: 0.5rem;
-  margin-right: 3rem;
+  margin-right: 2rem;
   text-align: center;
   font-size: 1.36rem;
 }
@@ -56,31 +56,29 @@ span.logo {
   /***ESTILOS AL CONTENEDOR DEL HEADER***/
   .header_superior {
     flex-direction: column;
+    margin: 0;
   }
   /***ESTILOS A NOMBRE SMIEP***/
   .contenedor {
     letter-spacing: 0;
     margin: auto;
   }
-  .titulito {
-    margin-right: 0;
-  }
   .title {
     display: none;
+  }
+  .titulito {
+    margin: 0;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 1075px) {
   /***ESTILOS A LA IMAGEN/LOGO***/
   .logo {
-    margin: auto;
+    margin: 0;
   }
   .logo_imagen {
     height: 10rem;
     width: 10rem;
-  }
-  /***ESTILOS A NOMBRE SMIEP***/
-  .titulito {
-    margin-right: 2rem;
   }
 }
