@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
+$_SESSION["pass"] == null)
+{
+	header("location: ../index.php");
+}else{ ?>
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -15,6 +22,7 @@ require_once('../model/productoMdl.php');
 $crud = new CrudProducto();
 $Producto = new Producto();
 
+date_default_timezone_set("America/Bogota");
 $Producto->setId_prod($_POST['id_prod']);
 $Producto->setImgProd($_POST['imgProd']);
 $Producto->setCodBar($_POST['codBar']);
@@ -23,31 +31,15 @@ $Producto->setDescripcion($_POST['descripcion']);
 $Producto->setPrecio($_POST['precio']);
 $Producto->setCantidadDisp($_POST['cantidadDisp']);
 $Producto->setTipoPresentacion($_POST['tipoPresentacion']);
-$Producto->setCreadoEn($_POST['creadoEn']);
+$Producto->setCreadoEn(date("Y-m-d H:i:s"));
 $Producto->setId_docUSu($_POST['id_docUsu']);
 $Producto->setId_cat($_POST['id_cat']);
 $Producto->setId_estado($_POST['id_estado']);
+$Producto->setPriceArrive($_POST['modificadoEn']);
 
 // si el elemento insertar no viene nulo llama al crud e inserta
 if (isset($_POST['insertar']))
 {
-	date_default_timezone_set("America/Bogota");
-	$Producto->setId_prod($_POST['id_prod']);
-	$Producto->setImgProd($_POST['imgProd']);
-	$Producto->setCodBar($_POST['codBar']);
-	$Producto->setNombreProd($_POST['nombreProd']);
-	$Producto->setDescripcion($_POST['descripcion']);
-	$Producto->setPrecio($_POST['precio']);
-	$Producto->setCantidadDisp($_POST['cantidadDisp']);
-	$Producto->setTipoPresentacion($_POST['tipoPresentacion']);
-	$Producto->setCreadoEn(date("Y-m-d"));
-	$Producto->setId_docUSu($_POST['id_docUsu']);
-	$Producto->setId_cat($_POST['id_cat']);
-	$Producto->setId_estado($_POST['id_estado']);
-	$Producto->setPriceArrive($_POST['modificadoEn']);
-
-
-
 	//llama a la función insertar definida en el crud
 	$crud->insertar($Producto);
 	header('Location: ../view/producto/mostrar.php');
@@ -56,24 +48,8 @@ if (isset($_POST['insertar']))
 }
 elseif (isset($_POST['actualizar']))
 {
-	date_default_timezone_set("America/Bogota");
-	$Producto->setId_prod($_POST['id_prod']);
-	$Producto->setImgProd($_POST['imgProd']);
-	//$Producto->setCodBar($_POST['codBar']);
-	$Producto->setNombreProd($_POST['nombreProd']);
-	$Producto->setDescripcion($_POST['descripcion']);
-	$Producto->setPrecio($_POST['precio']);
-	$Producto->setCantidadDisp($_POST['cantidadDisp']);
-	$Producto->setTipoPresentacion($_POST['tipoPresentacion']);
-	//$Producto->setId_docUSu($_POST['id_docUsu']);
-	$Producto->setId_cat($_POST['id_cat']);
-	$Producto->setId_estado($_POST['id_estado']);
-	$Producto->setPriceArrive($_POST['priceArrive']);
-	$Producto->setCreadoEn(date("Y-m-d H:i:s"));
-
 	$crud->actualizar($Producto);
 	header('Location: ../view/producto/mostrar.php');
-
 
 // si la variable accion enviada por GET es == 'e' llama al crud y elimina
 }
@@ -122,6 +98,7 @@ elseif ($_GET['accion'] == 'eliminar')
 {
 	$crud->eliminar($_GET['id_prod']);
 
+}
 }
 ?>
 

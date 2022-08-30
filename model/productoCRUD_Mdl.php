@@ -104,12 +104,12 @@ class CrudProducto
 	{
 		$actualizar = $this->db->prepare('UPDATE producto 
 			SET imgProd=:imgProd, nombreProd=:nombreProd, descripcion=:descripcion,
-			precio=:precio, cantidadDisp=:cantidadDisp, 
+			precio=:precio, cantidadDisp=:cantidadDisp, codBar=:codBar,
 			tipoPresentacion=:tipoPresentacion, id_cat=:id_cat, id_estado=:id_estado, priceArrive=:priceArrive, modificadoEn=:modificadoEn
 			WHERE id_prod=:id_prod ');
 		$actualizar->bindValue('id_prod', $producto->getId_prod());
 		$actualizar->bindValue('imgProd', $producto->getImgProd());
-		//$actualizar->bindValue('codBar', $producto->getCodBar());
+		$actualizar->bindValue('codBar', $producto->getCodBar());
 		$actualizar->bindValue('nombreProd', $producto->getNombreProd());
 		$actualizar->bindValue('descripcion', $producto->getDescripcion());
 		$actualizar->bindValue('precio', $producto->getPrecio());
