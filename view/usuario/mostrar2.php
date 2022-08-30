@@ -26,6 +26,7 @@ else
 
 	<link rel="stylesheet" href="../../public/css/usuario2.css">
 	<link rel="stylesheet" href="../../public/css/plantillas/header1.css">
+	<link rel="stylesheet" href="../../public/css/plantillas/footer.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -39,7 +40,7 @@ else
 	<main>
 		<div class="title-btn">
 			<p>Listado de Usuario</p>
-			<div>
+			<div class="btn_main">
 				<a href='ingresar.php'>
 					<button type="button" class="agregar">
 					<i class="fa-solid fa-plus"></i> Agregar</button>
@@ -68,6 +69,7 @@ else
 							class="fas fa-moon"></i></span></a>
 			</div>
 		</div>
+		
 		<div class="table-contenedor">
 			<table class="tabla">
 				<thead>

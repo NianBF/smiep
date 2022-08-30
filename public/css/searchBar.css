@@ -13,6 +13,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 10px 20%;
     color: #eee;
     background-color: var(--colorSMIEP);

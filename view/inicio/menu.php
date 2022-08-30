@@ -23,6 +23,7 @@ else
     <!--SE LLAMAN ESTILOS-->
     <!--//Estilos para plantilla Header\\-->
     <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/header1.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/footer.css">
     <!--//Estilos para plantilla navBar\\-->
     <link rel="stylesheet" href="../../public/css/plantillas/navBar1.css">
     <!--//Estilos únicos del menú\\-->
