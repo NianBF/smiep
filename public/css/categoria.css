@@ -3,14 +3,19 @@
 * ESTILOS categoria (beta para plantilla general de mostrar)
 *
 ***/
+/****---Estilos a contenedor general---***/
 section {
   padding: 2rem;
 }
+
+/****---Estilos al contenedor del contenido---***/
 .contentList fieldset {
   padding: 1.5rem;
   border: 3px outset var(--colorSMIEP);
   border-radius: 1rem 3rem;
 }
+
+/****---Estilos a título del contenedor del contenido---***/
 .contentList fieldset legend {
   border-radius: 10px 10px;
   font-family: "Montserrat-Bold";
@@ -18,6 +23,7 @@ section {
   font-size: 24px;
 }
 
+/****---Estilos a los botones---***/
 .btnMos a{
   position: relative;
   left: 60%;
@@ -33,6 +39,13 @@ section {
   background-color: var(--submitBtn);
   margin-right: 2rem;
 }
+.btnMos .add:hover {
+  background-color: var(--submitBtnHov);
+  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  transition: .5s;
+}
 .btnMos .add span {
   background-color: var(--submitBtnHov);
   border-radius: 3px;
@@ -42,6 +55,13 @@ section {
 .btnMos .back { 
   background-color: var(--backBtn);
 }
+.btnMos .back:hover { 
+  background-color: var(--backBtnHov);
+  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  transition: .5s;
+}
 .btnMos .back span {
   background-color: var(--backBtnHov);
   border-radius: 3px;
@@ -49,16 +69,58 @@ section {
   margin-right: 2%;
 }
 
-.searchNav {
-  margin-top: 2rem;
+/****Estilos a contenido***/
+/****---Estilos a títulos del contenido---***/
+.listElements .titleList {
+  font-family: 'Montserrat-Bold';
+  text-align: center;
+  margin: auto auto 1.5rem auto;
 }
 
 .contentTable {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
   border: 1px dotted #000;
+  border-radius: var(--radiousBtn) 5px;
+  margin: 1rem 1rem auto auto;
   padding: 2rem;
+  width: 7rem;
+  -webkit-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+  -moz-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+  box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+}
+
+/***Estilos para los datos***/
+div .id, div .colName {
+  font-family: 'Montserrat-Bold';
+}
+
+/***---Estilos para botón eliminar---***/
+div .btnOpt{
+  margin-top: 1rem;
+  border-radius: var(--radiousBtn);
+  height: 1rem;
+  width: 6rem;
+  background-color: var(--btnDel);
+  text-align: center;
+  padding: .6rem;
+}
+div .btnOpt:hover{
+  background-color: var(--btnDelHov);
+  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  transition: .5s;
+}
+div .btnOpt a i {
+  color: var(--bgColor);
+  width: 100%;
+  height: 100%;
 }

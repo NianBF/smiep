@@ -7,9 +7,6 @@ body {
   font-family: "Quicksand", sans-serif;
   padding: 0 1.5em;
 }
-/*.contenedor{
-    max-width: 12000px; 
-}*/
 .contenedor .icon {
   text-align: center;
   display: flex;

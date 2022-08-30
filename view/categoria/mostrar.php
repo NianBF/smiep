@@ -52,19 +52,25 @@ else
             </div>
             <div class="searchNav">
                 <div class="buscarOne">
-                    <input type="text" name="filtrar-tabla" class="buscar1" id="buscar1" placeholder="ID Categoria"
+                    <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Categoria"
                         class="buscar1">
                     <button type="button" class="searchBtn">
                         <i class="ri-search-2-line"></i>
                     </button>
                 </div>
+                <span class="labelsito">
+                    <label for="filtrar-tabla1">ID</label>
+                </span>
                 <div class="buscarTwo">
-                    <input type="text" name="filtrar-tabla" class="buscar1" id="buscar2" placeholder="Categoria"
+                    <input type="text" name="filtrar-tabla2" class="buscar1" id="buscar2" placeholder="Categoria"
                         class="buscar1">
                     <button type="button" class="searchBtn">
                         <i class="ri-search-2-line"></i>
                     </button>
                 </div>
+                <span class="labelsito">
+                    <label for="filtrar-tabla2">Categoría</label>
+                </span>
                 <div class="darkMode">
                     <a id="mod" class="mod" onclick="cambiarModo()">
                         <span id="id-moon" class="btn-mode moon">
@@ -78,12 +84,10 @@ else
             </div>
             <section class="listElements">
                 <div class="titleList">
-                    <h3>ID</h3>
-                    <h3>Categoría</h3>
-                    <h3>Eliminar</h3>
+                    <h3>Categorías</h3>
                 </div>
                 <div class="contentTable">
-                    <?php foreach ($listaCategoria as $Categoria) { ?>
+                    <?php foreach ($listaCategoria as $Categoria) { ?> 
                     <div class="row">
                         <div class="id">
                             <?php echo $Categoria->getid_Cat() ?>
