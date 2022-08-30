@@ -1,3 +1,9 @@
+/***
+*
+*   Estilos para barra de inputs de busqueda
+*
+***/
+/****---Estilos a contenedor general de la barra---***/
 .searchNav {
     position: sticky;
     top: 0;
@@ -7,11 +13,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+    padding: 10px 20%;
     color: #eee;
     background-color: var(--colorSMIEP);
     border-radius: 4px;
+    margin-top: 2rem;
 }
+
+/***---Estilos a inputs de buscar---***/
 .searchNav .buscarOne, .searchNav .buscarTwo {
     display: flex;
     flex-direction: row;
@@ -20,38 +29,44 @@
     border: .5px outset var(--bgColor);
     background: linear-gradient(to bottom right, var(--colorSMIEP), #649191);
     border-radius: 10px;
+    margin-right: .5rem;
 }
+.searchNav .buscarOne:focus-within, .searchNav .buscarTwo:focus-within {
+    background: linear-gradient(to bottom right,var(--BtnHov), #649191);
+}
+
+/***---Estilos para cuando el mouse pase por encima del input---***/
 .searchNav .buscarOne:hover, .searchNav .buscarTwo:hover{
     background: linear-gradient(to bottom right,var(--BtnHov), #649191);
     border: .5px outset var(--bgColorDark);
 }
+
+/****---Estilos para transición y ocultado del input---***/
 .searchNav .buscarOne :is(input, button), .searchNav .buscarTwo :is(input, button) {
     color: inherit;
     border: none;
     background: transparent;
     outline: none;
 }
-.searchNav .buscarOne .buscar1 {
-    width: 0;
-    transition: width .5s;
-}
-.searchNav .buscarTwo .buscar1 {
+.searchNav .buscarOne .buscar1, .searchNav .buscarTwo .buscar1 {
     width: 0;
     transition: width .5s;
 }
 .searchNav .buscarOne .searchBtn, .searchNav .buscarTwo .searchBtn {
-    width: 25px;
-    height: 25px;
+    width: 1.3rem;
+    height: 1.3rem;
     display: grid;
     place-items: center;
     cursor: pointer;
 }
-.searchNav .buscarOne:focus-within input {
-    width: 200px;
-}
-.searchNav .buscarTwo:focus-within input {
+.searchNav .buscarOne:focus-within input, .searchNav .buscarTwo:focus-within input {
     width: 200px;
 }
 ::placeholder {
     color: inherit;
+}
+
+/****---Estilos a label junto al input---***/
+.labelsito {
+    margin: auto auto auto -.01rem;
 }

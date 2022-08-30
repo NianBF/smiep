@@ -123,9 +123,11 @@ input[type="submit"] {
   -webkit-box-shadow: 11px 13px 38px 3px #333333;
   -moz-box-shadow: 11px 13px 38px 3px #333333;
   box-shadow: 11px 13px 38px 3px #333333;
+  transition: .2s;
 }
 .contForm .btn span a input:hover {
   background-color: #184b4b;
+  transition: .2s;
 }
 input[type="submit"]:hover {
   letter-spacing: 0.2rem;
@@ -134,4 +136,5 @@ input[type="submit"]:hover {
   -webkit-box-shadow: 11px 13px 38px 3px #333333;
   -moz-box-shadow: 11px 13px 38px 3px #333333;
   box-shadow: 11px 13px 38px 3px #333333;
+  transition: .2s;
 }
