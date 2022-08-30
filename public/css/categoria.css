@@ -123,7 +123,6 @@ div .btnOpt a i {
   height: 100%;
 }
 
-
 a.mod {
 
   border: 1px solid #f1eded;
@@ -160,9 +159,7 @@ a.mod:active {
   .contentList fieldset{
     padding: 1.5rem 0;
   }
-  label{
-    display: none;
-  }
+
 }
 
 @media screen and ( max-width:470px) {
