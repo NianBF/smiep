@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 10px 20px;
+    padding: 10px 15%;
     color: #eee;
     background-color: var(--colorSMIEP);
     border-radius: 4px;

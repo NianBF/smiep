@@ -1,15 +1,8 @@
 .footer {
-  position: absolute  ;
   width: 100%;
   text-align: center;
   bottom: 0;
   margin-bottom: 20px;
-} 
-@media screen and (max-width: 710px){
-
-  .footer{
-    position: relative;
-  }
 }
 
 

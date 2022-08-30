@@ -29,7 +29,7 @@ else
     <link rel="stylesheet" href="../../public/css/categoria.css">
     <!--Estilos generales para SMIEP-->
     <link rel="stylesheet" href="../../public/css/searchBar.css">
-    <!-- <link rel="stylesheet" href="../../public/css/plantillas/footer.css"> -->
+    <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../public/css/fonts.css">
     <link rel="stylesheet" href="../../public/css/variables.css">

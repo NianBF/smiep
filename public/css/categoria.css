@@ -24,15 +24,15 @@ section {
 }
 
 /****---Estilos a los botones---***/
-.btnMos a{
+.btnMos a {
   position: relative;
   left: 60%;
   text-decoration: none;
-  font-family: 'Montserrat-Bold';
+  font-family: "Montserrat-Bold";
   color: var(--bgColor);
   padding: var(--paddingBtn);
   padding-left: 0;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   border-radius: var(--radiousBtn);
 }
 .btnMos .add {
@@ -44,35 +44,35 @@ section {
   -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
   -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
   box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  transition: .5s;
+  transition: 0.5s;
 }
 .btnMos .add span {
   background-color: var(--submitBtnHov);
   border-radius: 3px;
-  padding: .7rem .5rem;
+  padding: 0.7rem 0.5rem;
   margin-right: 2%;
 }
-.btnMos .back { 
+.btnMos .back {
   background-color: var(--backBtn);
 }
-.btnMos .back:hover { 
+.btnMos .back:hover {
   background-color: var(--backBtnHov);
   -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
   -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
   box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  transition: .5s;
+  transition: 0.5s;
 }
 .btnMos .back span {
   background-color: var(--backBtnHov);
   border-radius: 3px;
-  padding: .7rem .4rem;
+  padding: 0.7rem 0.4rem;
   margin-right: 2%;
 }
 
 /****Estilos a contenido***/
 /****---Estilos a títulos del contenido---***/
 .listElements .titleList {
-  font-family: 'Montserrat-Bold';
+  font-family: "Montserrat-Bold";
   text-align: center;
   margin: auto auto 1.5rem auto;
 }
@@ -83,7 +83,6 @@ section {
   flex-wrap: wrap;
 }
 .row {
-
   border: 1px dotted #000;
   border-radius: var(--radiousBtn) 5px;
   margin: 10px;
@@ -95,27 +94,28 @@ section {
 }
 
 /***Estilos para los datos***/
-div .id, div .colName {
-  font-family: 'Montserrat-Bold';
+div .id,
+div .colName {
+  font-family: "Montserrat-Bold";
   margin-bottom: 10px;
 }
 
 /***---Estilos para botón eliminar---***/
-div .btnOpt{
+div .btnOpt {
   margin-top: 1rem;
   border-radius: var(--radiousBtn);
   height: 1rem;
   width: 6rem;
   background-color: var(--btnDel);
   text-align: center;
-  padding: .6rem;
+  padding: 0.6rem;
 }
-div .btnOpt:hover{
+div .btnOpt:hover {
   background-color: var(--btnDelHov);
   -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
   -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
   box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  transition: .5s;
+  transition: 0.5s;
 }
 div .btnOpt a i {
   color: var(--bgColor);
@@ -123,57 +123,25 @@ div .btnOpt a i {
   height: 100%;
 }
 
-a.mod {
-
-  border: 1px solid #f1eded;
-  border-radius: 2rem;
-  background-color: #1f1f1f;
-  color: #f1eded;
-  width: 5rem;
-  text-align: center;
-  padding: 5%;
-  margin:  10px 0 10px;
-  cursor: pointer;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-a.mod:hover {
-  border: 1px solid #1f1f1f;
-  background-color: #f1eded;
-  color: #1f1f1f;
-  cursor: pointer;
-}
-a.mod:active {
-  background-color: #808280;
-}
-
-
 @media screen and (max-width: 1030px) {
-  .btnMos a{
-    
+  .btnMos a {
     position: inherit;
     margin-left: 20px;
   }
-  .contentList fieldset{
+  .contentList fieldset {
     padding: 1.5rem 0;
   }
-
 }
 
-@media screen and ( max-width:470px) {
-  .btnMos{
+@media screen and (max-width: 470px) {
+  .btnMos {
     display: flex;
     justify-content: center;
     flex-wrap: wrap-reverse;
-
   }
 
-  .btnMos a{
+  .btnMos a {
     width: 100%;
-    margin:0  20px 10px 20px;
+    margin: 0 20px 10px 20px;
   }
-
- 
 }
