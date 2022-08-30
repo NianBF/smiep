@@ -1,0 +1,59 @@
+/***
+*
+* ESTILOS usuario
+*
+***/
+/****---Estilos a contenedor general---***/
+.listElements .titleList {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.listElements .titleList h3 {
+  width: 5rem;
+}
+.contentTable {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px dotted #000;
+  border-radius: var(--radiousBtn) 5px;
+  margin: 10px 10px 0px 10px;
+  padding: 2rem;
+  -webkit-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+  -moz-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+  box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+}
+
+/***Estilos para los datos***/
+div .id,
+div .colName,
+div .userName,
+div .email,
+div .rol {
+  font-family: "Montserrat-Italic";
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 10rem;
+}
+div .id {
+  font-family: "Montserrat-BoldItalic";
+}
+
+/***---Estilos para opciones---***/
+
+div .btnOpt {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
