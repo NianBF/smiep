@@ -1,0 +1,57 @@
+.searchNav {
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    max-height: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    color: #eee;
+    background-color: var(--colorSMIEP);
+    border-radius: 4px;
+}
+.searchNav .buscarOne, .searchNav .buscarTwo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 20px;
+    border: .5px outset var(--bgColor);
+    background: linear-gradient(to bottom right, var(--colorSMIEP), #649191);
+    border-radius: 10px;
+}
+.searchNav .buscarOne:hover, .searchNav .buscarTwo:hover{
+    background: linear-gradient(to bottom right,var(--BtnHov), #649191);
+    border: .5px outset var(--bgColorDark);
+}
+.searchNav .buscarOne :is(input, button), .searchNav .buscarTwo :is(input, button) {
+    color: inherit;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.searchNav .buscarOne .buscar1 {
+    width: 0;
+    transition: width .5s;
+}
+.searchNav .buscarTwo .buscar1 {
+    width: 0;
+    transition: width .5s;
+}
+.searchNav .buscarOne .searchBtn, .searchNav .buscarTwo .searchBtn {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.searchNav .buscarOne:focus-within input {
+    width: 200px;
+}
+.searchNav .buscarTwo:focus-within input {
+    width: 200px;
+}
+::placeholder {
+    color: inherit;
+}
