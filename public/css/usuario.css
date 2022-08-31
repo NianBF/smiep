@@ -7,6 +7,8 @@
 table {
   width: 100%;
   padding: 0 10px 0 10px;
+  border-collapse: separate;
+  border-spacing: 0 0.9rem;
 }
 th {
   width: 5rem;
@@ -21,13 +23,8 @@ th {
 .titleTable {
   text-align: center;
 }
-table {
-  border-collapse: separate;
-  border-spacing: 0 .9rem;
-}
 .row {
   text-align: center;
-  border: 1px dotted #000;
   border-radius: var(--radiousBtn) 5px;
   -webkit-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
   -moz-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
@@ -43,6 +40,9 @@ td.btnOpt {
 }
 
 @media screen and (max-width: 820px) {
+ .listElements {
+  padding: 0 2rem;
+ }
   th {
     display: none;
   }
@@ -51,11 +51,9 @@ td.btnOpt {
   }
   .row {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-content: center;
+    margin-bottom: 2rem;
   }
   .id,
   .colName,
