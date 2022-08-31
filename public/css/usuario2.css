@@ -1,0 +1,71 @@
+/***
+*
+* ESTILOS usuario
+*
+***/
+/****---Estilos a contenedor general---***/
+.listElements{
+  margin-top: 30px;
+  align-items: center;
+}
+table{
+  width: 100%;
+  padding: 0 10px 0 10px ;
+}
+th{
+  width: 5rem;
+  padding: 20px;
+  font-family: "Montserrat-BoldItalic";
+}
+
+
+/***Estilos para los datos***/
+.contentTable{
+  height: 60rem;
+}
+
+
+.row {
+  border: 1px dotted #000;
+  border-radius: var(--radiousBtn) 5px;
+  -webkit-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+  -moz-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+  box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
+}
+.id {
+  font-family: "Montserrat-BoldItalic";
+  padding-left: 10px;
+}
+.userName{
+padding-left: 15px;
+}
+/***---Estilos para opciones---***/
+
+td.btnOpt{
+  padding-top: 40px;
+}
+
+
+@media screen and (max-width:820px) {
+  
+  th{
+    display: none;
+  }
+  .contentTable{
+    height: 40px;
+  }
+  .row{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+.id, .colName, .userName, .email, .rol{
+  padding: 10px;
+}
+  td.btnOpt{
+    padding: 10px 0 10px 0;
+  }
+}
