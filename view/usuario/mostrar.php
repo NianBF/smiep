@@ -51,6 +51,7 @@ else
                 <a href='../inicio/menu.php' class="back"><span><i
                             class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
+
             <div class="searchNav">
                 <div class="buscarOne">
                     <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Categoria"
@@ -93,51 +94,55 @@ else
                     </a>
                 </div>
             </div>
-            <section class="listElements">
-                <div class="titleList">
-                    <h3>ID</h3>
-                    <h3>Nombre</h3>
-                    <h3>Usuario</h3>
-                    <h3>Correo</h3>
-                    <h3>Rol</h3>
-                    <h3>Opciones</h3>
-                </div>
-                <div class="contentTable">
+
+            <div class="listElements">
+                <table >
+                    <thead>
+                        <tr class="titleTable">
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Usuario</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th class="opcTitle">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="contentTable">
                     <?php foreach ($listaUsuario as $Usuario) {?>
-                    <div class="row">
-                        <div class="id">
+                    <tr class="row">
+                        <td class="id">
                             <?php echo $Usuario->getId_doc() ?>
-                        </div>
-                        <div class="colName">
+                        </td>
+                        <td class="colName">
                             <?php echo $Usuario->getNombre1()." ".$Usuario->getNombre2()." ".$Usuario->getApellido1()." ".$Usuario->getapellido2() ?>
-                        </div>
-                        <div class="userName">
+                        </td>
+                        <td class="userName">
                             <?php echo $Usuario->getUserName() ?>
-                        </div>
-                        <div class="email">
+                        </td>
+                        <td class="email">
                             <?php echo $Usuario->getEmail() ?>
-                        </div>
-                        <div class="rol">
+                        </td>
+                        <td class="rol">
                             <?php echo $Usuario->getRol() ?>
-                        </div>
-                        <div class="btnOpt">
-                            <div class="btnOptDel">
-                                <a class="delete" type="submit"
-                                    href="../../controller/usuarioCtrl.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=e">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                </a>
-                            </div>
-                            <div class="btnOptUpd">
-                                <a class="update" type="submit"
-                                    href="actualizar.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=a">
+                        </td>
+                        <td class="btnOpt">
+                            <a class="delete btnOptDel" type="submit"
+                                href="../../controller/usuarioCtrl.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=e">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                    
+                            <a class="update btnOptUpd" type="submit"
+                                href="actualizar.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=a">
                                     <i class="fa-solid fa-pencil"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div> </br>
+                            </a>
+                        </td>
+                            
+                        
+                    </tr> 
                     <?php } ?>
-                </div>
-            </section>
+                    </tbody>
+                </table>
+            </div>
         </fieldset>
     </section>
     <footer>

@@ -4,83 +4,67 @@
 *
 ***/
 /****---Estilos a contenedor general---***/
-.listElements .titleList {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+table {
+  width: 100%;
+  padding: 0 10px 0 10px;
 }
-.listElements .titleList h3 {
+th {
   width: 5rem;
+  padding: 2rem 0 20px 0;
+  font-family: "Montserrat-BoldItalic";
 }
 
+/***Estilos para los datos***/
+.contentTable {
+  height: 60rem;
+}
+.titleTable {
+  text-align: center;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 .9rem;
+}
 .row {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
   border: 1px dotted #000;
   border-radius: var(--radiousBtn) 5px;
-  /* margin: 10px 10px 0px 10px; */
-  padding: 2rem 0 2rem 0;
   -webkit-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
   -moz-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
   box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
 }
-
-
- /***Estilos para los datos***/
- div .id,
- div .colName,
- div .userName,
- div .email,
- div .rol {
-  
-  display: flex;
-  flex-wrap: wrap;
-   font-family: "Montserrat-Italic";
-   
-   width: 12%;
-
-  }
-
-  div.rol{
-    margin-left: 37px;
-  }
-
-  div .id {
-    font-family: "Montserrat-BoldItalic";
-  }
-  /* 
-
- *//***---Estilos para opciones---***/
-/* 
-*/
-div .btnOpt {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: nowrap;
+.id {
+  font-family: "Montserrat-BoldItalic";
+  padding-left: 10px;
+}
+/***---Estilos para opciones---***/
+td.btnOpt {
+  padding: 2.25rem 10px 0 0;
 }
 
-@media screen and (max-width:967px){
-
-
-  .listElements .titleList{
+@media screen and (max-width: 820px) {
+  th {
     display: none;
   }
-  .row{
-    justify-content: center;
+  .contentTable {
+    height: 40px;
   }
-  div .id,
-  div .colName,
-  div .userName,
-  div .email,
-  div .rol,
-  div .btnOpt {
-    width: 90%;    
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    margin: .5rem; 
+    align-items: center;
+    align-content: center;
   }
-
+  .id,
+  .colName,
+  .userName,
+  .email,
+  .rol {
+    padding: 10px;
+  }
+  td.btnOpt {
+    padding: 10px 0 10px 0;
+  }
 }
