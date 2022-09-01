@@ -30,24 +30,22 @@ class Login
 
             $resultado = $con->prepare($sql);
             $resultado->execute(array(":USERNAME" => $userName, ":EMAIL" => $email, ":PASS" => $password));
-
+//Almacenamiento de la consulta para crear sesiones
             foreach($resultado->fetchAll() as $usuario){
                 $rol= $usuario["rol"];
                 $doc= $usuario["id_doc"];
             }
-/*             $rol = $resultado->fetchColumn(8);
-            $doc = $resultado->fetchColumn(1); */
-
             $cantidad_resultado = $resultado->rowCount();
 
             session_start();
 
             if ($cantidad_resultado === 1)
             {
-                $_SESSION["rol"] = $rol;
                 $_SESSION["email"] = $email;
                 $_SESSION["userName"] = $userName;
                 $_SESSION["pass"] = $password;
+                $_SESSION["rol"] = $rol;
+//La sesión de docUsu será usada para el registro en la base de datos
                 $_SESSION["docUsu"] = $doc;
 
             }
