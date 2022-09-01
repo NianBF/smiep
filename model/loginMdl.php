@@ -43,7 +43,6 @@ class Login
                 $_SESSION["email"] = $email;
                 $_SESSION["userName"] = $userName;
                 $_SESSION["pass"] = $password;
-
             }
             else
             {

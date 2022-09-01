@@ -31,8 +31,6 @@ class Validar
             $resultado = $con->prepare($sql);
             $resultado->execute(array(":USERNAME" => $_SESSION["userName"], ":EMAIL" => $_SESSION["email"], ":PASS" => $_SESSION["pass"]));
 
-            $rol = $resultado->fetchColumn(8);
-
             $cantidad_resultado = $resultado->rowCount();
 
             if ($cantidad_resultado == 1)
