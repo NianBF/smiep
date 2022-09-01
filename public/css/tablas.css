@@ -38,6 +38,9 @@ th {
   font-family: "Montserrat-BoldItalic";
   padding-left: 10px;
 }
+.img img{
+  width: 10rem;
+}
 
 
 /***---Estilos para opciones---***/

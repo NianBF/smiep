@@ -123,7 +123,7 @@ else
 					</button>
 				</p>
 				<p class='block'>
-					<a href='mostrar.php'><button type="button">Volver</button></a>
+					<a href='mostrarProd.php'><button type="button">Volver</button></a>
 				</p>
 			</form>
 		</div>

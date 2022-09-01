@@ -59,7 +59,7 @@ else
 
                     <div class="btn">
                         <span><input type="button" value="Guardar"></span>
-                        <span><a href='mostrar.php'><input type="button" value="Volver"></a></span>
+                        <span><a href='mostrarCat.php'><input type="button" value="Volver"></a></span>
                     </div>
                 </fieldset>
             </form>
