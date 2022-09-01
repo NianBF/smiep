@@ -83,9 +83,11 @@ else
                 <p>
                 <div class="column">Imagen: </div><br><span class="img"><img src="<?php echo $Producto->getImgProd() ?>"
                         alt="<?php echo $Producto->getNombreProd() ?>"></span></p>
+
                 <p><span class="column">ID: </span><span class="id">
                         <?php echo $Producto->getId_prod() ?>
                     </span></p>
+                    
                 <p><span class="column">Código de barras: </span><span class="codigo_bar">
                         <?php echo $Producto->getCodBar() ?>
                     </span></p>
