@@ -4,7 +4,7 @@ require_once('conexion1.php');
 
 class CrudCategoria
 {
-	private $db;
+	private $db;//Variable para iniciar la conexión
 
 	public function __construct()
 	{
@@ -50,8 +50,7 @@ class CrudCategoria
 
 	public function obtenerCategoria($id_Cat)
 	{
-		$db = Db::conectar();
-		$select = $db->prepare('SELECT * FROM categoria WHERE id_Cat=:id_Cat');
+		$select = $this->db->prepare('SELECT * FROM categoria WHERE id_Cat=:id_Cat');
 		$select->bindValue('id_Cat', $id_Cat);
 		$select->execute();
 		$Categoria = $select->fetch();

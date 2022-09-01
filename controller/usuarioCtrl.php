@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
+$_SESSION["pass"] == null)
+{
+	header("location: ../index.php");
+}else{ ?>
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -12,25 +18,24 @@
 require_once('../model/usuarioCrud_Mdl.php');
 require_once('../model/usuarioMdl.php');
 
-
 $crud = new CrudUsuario();
 $Usuario = new Usuario();
+
+$Usuario->setId_doc($_POST['id_doc']);
+$Usuario->setNombre1($_POST['nombre1']);
+$Usuario->setNombre2($_POST['nombre2']);
+$Usuario->setApellido1($_POST['apellido1']);
+$Usuario->setApellido2($_POST['apellido2']);
+$Usuario->setUserName($_POST['userName']);
+$Usuario->setEmail($_POST['email']);
+$Usuario->setPass($_POST['pass']);
+$Usuario->setRol($_POST['rol']);
+$Usuario->setId_estado($_POST['id_estado']);
+$Usuario->setId_ti($_POST['id_ti']);
 
 // si el elemento insertar no viene nulo llama al crud e inserta
 if (isset($_POST['insertar']))
 {
-	$Usuario->setId_doc($_POST['id_doc']);
-	$Usuario->setNombre1($_POST['nombre1']);
-	$Usuario->setNombre2($_POST['nombre2']);
-	$Usuario->setApellido1($_POST['apellido1']);
-	$Usuario->setApellido2($_POST['apellido2']);
-	$Usuario->setUserName($_POST['userName']);
-	$Usuario->setEmail($_POST['email']);
-	$Usuario->setPass($_POST['pass']);
-	$Usuario->setRol($_POST['rol']);
-	$Usuario->setId_estado($_POST['id_estado']);
-	$Usuario->setId_ti($_POST['id_ti']);
-
 	//llama a la función insertar definida en el crud
 	$crud->insertar($Usuario);
 	header('Location: ../view/usuario/mostrar.php');
@@ -39,21 +44,9 @@ if (isset($_POST['insertar']))
 }
 elseif (isset($_POST['actualizar']))
 {
-	$Usuario->setId_doc($_POST['id_doc']);
-	$Usuario->setNombre1($_POST['nombre1']);
-	$Usuario->setNombre2($_POST['nombre2']);
-	$Usuario->setApellido1($_POST['apellido1']);
-	$Usuario->setApellido2($_POST['apellido2']);
-	$Usuario->setUserName($_POST['userName']);
-	$Usuario->setEmail($_POST['email']);
-	$Usuario->setPass($_POST['pass']);
-	$Usuario->setRol($_POST['rol']);
-	$Usuario->setId_estado($_POST['id_estado']);
-	$Usuario->setId_ti($_POST['id_ti']);
 
 	$crud->actualizar($Usuario);
 	header('Location: ../view/usuario/mostrar.php');
-
 
 // si la variable accion enviada por GET es == 'e' llama al crud y elimina
 }
@@ -102,6 +95,7 @@ elseif ($_GET['accion'] == 'eliminar')
 {
 	$crud->eliminar($_GET['id_doc']);
 
+}
 }
 ?>
 

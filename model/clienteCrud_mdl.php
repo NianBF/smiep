@@ -4,16 +4,18 @@ require_once('conexion1.php');
 
 class CrudCliente
 {
+	private $db;//Variable para iniciar la conexión
 
 	public function __construct()
 	{
+		//Inicia la conexión a BD en todo el archivo
+		$this->db=Db::conectar();
 	}
 
 	//metodo para ingresar  los clientes
 	public function insertar($Cliente)
 	{
-		$db = Db::conectar();
-		$insert = $db->prepare('INSERT INTO cliente 
+		$insert = $this->db->prepare('INSERT INTO cliente 
 			values(:id_cliDoc,:nombreCli1,:nombreCli2,:apellidoCli1,:apellidoCli2,
 			:direccionCli,:telCli,:emailCli,:fechaNac)');
 		$insert->bindValue('id_cliDoc', $Cliente->getId_cliDoc());
@@ -32,9 +34,8 @@ class CrudCliente
 	// método para mostrar todos los clientes
 	public function mostrar()
 	{
-		$db = Db::conectar();
 		$listaCliente = [];
-		$select = $db->query('SELECT * FROM cliente');
+		$select = $this->db->query('SELECT * FROM cliente');
 
 		foreach ($select->fetchAll() as $Cliente)
 		{
@@ -56,8 +57,7 @@ class CrudCliente
 	// método para eliminar el cliente
 	public function eliminar($id_cliDoc)
 	{
-		$db = Db::conectar();
-		$eliminar = $db->prepare('DELETE FROM cliente WHERE id_cliDoc=:id_cliDoc');
+		$eliminar = $this->db->prepare('DELETE FROM cliente WHERE id_cliDoc=:id_cliDoc');
 		$eliminar->bindValue('id_cliDoc', $id_cliDoc);
 		$eliminar->execute();
 	}
@@ -65,8 +65,7 @@ class CrudCliente
 	// método para buscar el cliente
 	public function obtenerCliente($id_cliDoc)
 	{
-		$db = Db::conectar();
-		$select = $db->prepare('SELECT * FROM cliente WHERE id_cliDoc=:id_cliDoc');
+		$select = $this->db->prepare('SELECT * FROM cliente WHERE id_cliDoc=:id_cliDoc');
 		$select->bindValue('id_cliDoc', $id_cliDoc);
 		$select->execute();
 		$Cliente = $select->fetch();
@@ -88,8 +87,7 @@ class CrudCliente
 	// método para actualizar un cliente, recibe como parámetro el cliente
 	public function actualizar($Cliente)
 	{
-		$db = Db::conectar();
-		$actualizar = $db->prepare('UPDATE cliente
+		$actualizar = $this->db->prepare('UPDATE cliente
 			 SET  id_cliDoc=:id_cliDoc,nombreCli1=:nombreCli1,nombreCli2=:nombreCli2,
 			 apellidoCli1=:apellidoCli1,apellidoCli2=:apellidoCli2,direccionCli=:direccionCli,
 			 telCli=:telCli,emailCli=:emailCli,fechaNac=:fechaNac 

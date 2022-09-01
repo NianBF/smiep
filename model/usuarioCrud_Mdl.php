@@ -4,16 +4,17 @@ require_once('conexion1.php');
 
 class CrudUsuario
 {
+	private $db;//Variable para iniciar la conexión
 
 	public function __construct()
 	{
+		//Inicia la base de datos para todo el documento
+		$this->db=Db::conectar();
 	}
 
 	public function insertar($Usuario)
 	{
-		$db = Db::conectar();
-
-		$insert = $db->prepare('INSERT INTO usuario (id_doc,nombre1,nombre2,apellido1,
+		$insert = $this->db->prepare('INSERT INTO usuario (id_doc,nombre1,nombre2,apellido1,
 			apellido2,userName,email,password,rol,id_estado,id_ti) 
 			values(:id_doc,:nombre1,:nombre2,:apellido1,:apellido2,:userName,:email
 			,md5(:password),:rol,:id_estado,:id_ti)');
@@ -33,14 +34,10 @@ class CrudUsuario
 
 	}
 
-
-
-
 	public function mostrar()
 	{
-		$db = Db::conectar();
 		$listaUsuario = [];
-		$select = $db->query('SELECT * FROM usuario');
+		$select = $this->db->query('SELECT * FROM usuario');
 
 		foreach ($select->fetchAll() as $Usuario)
 		{
@@ -64,8 +61,7 @@ class CrudUsuario
 
 	public function eliminar($id_doc)
 	{
-		$db = Db::conectar();
-		$eliminar = $db->prepare('DELETE FROM usuario WHERE id_doc=:id_doc');
+		$eliminar = $this->db->prepare('DELETE FROM usuario WHERE id_doc=:id_doc');
 		$eliminar->bindValue('id_doc', $id_doc);
 		$eliminar->execute();
 	}
@@ -73,8 +69,7 @@ class CrudUsuario
 
 	public function obtenerUsuario($id_doc)
 	{
-		$db = Db::conectar();
-		$select = $db->prepare('SELECT * FROM usuario WHERE id_doc=:id_doc');
+		$select = $this->db->prepare('SELECT * FROM usuario WHERE id_doc=:id_doc');
 		$select->bindValue('id_doc', $id_doc);
 		$select->execute();
 		$Usuario = $select->fetch();
@@ -97,8 +92,7 @@ class CrudUsuario
 
 	public function actualizar($Usuario)
 	{
-		$db = Db::conectar();
-		$actualizar = $db->prepare('UPDATE usuario
+		$actualizar = $this->db->prepare('UPDATE usuario
 			SET  nombre1=:nombre1, nombre2=:nombre2, apellido1=:apellido1, apellido2=:apellido2,
 			userName=:userName, email=:email, password=MD5(:password),rol=:rol,
 			id_estado=:id_estado, id_ti=:id_ti  WHERE id_doc=:id_doc');

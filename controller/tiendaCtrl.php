@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
+$_SESSION["pass"] == null)
+{
+	header("location: ../index.php");
+}else{ ?>
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -16,35 +22,25 @@ require_once('../model/tiendaMdl.php');
 $crud = new CrudTienda();
 $Tienda = new Tienda();
 
-if (isset($_POST['insertar']))
-{
-	$Tienda->setId_ti($_POST['id_ti']);
-	$Tienda->setNombreTienda($_POST['nombreTienda']);
-	$Tienda->setDireccionTi($_POST['direccionTi']);
-	$Tienda->setTelTi($_POST['telTi']);
-	$Tienda->setEmailTi($_POST['emailTi']);
+$Tienda->setId_ti($_POST['id_ti']);
+$Tienda->setNombreTienda($_POST['nombreTienda']);
+$Tienda->setDireccionTi($_POST['direccionTi']);
+$Tienda->setTelTi($_POST['telTi']);
+$Tienda->setEmailTi($_POST['emailTi']);
 
-
+if (isset($_POST['insertar'])){
 	$crud->insertar($Tienda);
 	header('Location: ../view/tienda/mostrar.php');
 
 }
-elseif (isset($_POST['actualizar']))
-{
-	$Tienda->setId_ti($_POST['id_ti']);
-	$Tienda->setNombreTienda($_POST['nombreTienda']);
-	$Tienda->setDireccionTi($_POST['direccionTi']);
-	$Tienda->setTelTi($_POST['telTi']);
-	$Tienda->setEmailTi($_POST['emailTi']);
+elseif (isset($_POST['actualizar'])){
 
 	$crud->actualizar($Tienda);
 	header('Location: ../view/tienda/mostrar.php');
 
-
 }
 elseif ($_GET['accion'] == 'e')
 {
-	//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
 
 	$idDelete = $_GET['id_ti'];
 
@@ -87,6 +83,7 @@ elseif ($_GET['accion'] == 'eliminar')
 {
 	$crud->eliminar($_GET['id_ti']);
 
+}
 }
 ?>
 

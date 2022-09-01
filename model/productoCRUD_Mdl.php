@@ -9,11 +9,11 @@ require_once('conexion1.php');
 
 class CrudProducto
 {
-	private $db;
+	private $db;//Variable para iniciar la conexión
 	// constructor de la clase
 	public function __construct()
 	{
-		$this->db=Db::conectar();
+		$this->db=Db::conectar();//Inicia la conexión en todo el archivo
 	}
 
 	public function insertar($Producto)

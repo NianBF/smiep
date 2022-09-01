@@ -4,15 +4,16 @@ require_once('conexion1.php');
 
 class CrudProveedor
 {
-
+	private $db;//Variable para conectar la BD
 	public function __construct()
 	{
+		//Inicia la conexión en todo el archivo
+		$this->db=Db::conectar();
 	}
 
 	public function insertar($Proveedor)
 	{
-		$db = Db::conectar();
-		$insert = $db->prepare('INSERT INTO proveedor (id_docPov,empresa,imgEmpresa,nombProv1,
+		$insert = $this->db->prepare('INSERT INTO proveedor (id_docPov,empresa,imgEmpresa,nombProv1,
 			nombProv2,appelProv1,apellProv2,direccion1,direccion2,numTel1,numTel2,email1,email2,creadoEn)
 			values(:id_docPov,:empresa,:imgEmpresa,:nombProv1,:nombProv2,:appelProv1,:apellProv2,
 			:direccion1,:direccion2,:numTel1,:numTel2,:email1,:email2,:creadoEn)');
@@ -38,9 +39,8 @@ class CrudProveedor
 	// método para mostrar todos los proveedores
 	public function mostrar()
 	{
-		$db = Db::conectar();
 		$listaProveedor = [];
-		$select = $db->query('SELECT * FROM proveedor');
+		$select = $this->db->query('SELECT * FROM proveedor');
 
 		foreach ($select->fetchAll() as $Proveedor)
 		{
@@ -68,16 +68,14 @@ class CrudProveedor
 
 	public function eliminar($id_DocProv)
 	{
-		$db = Db::conectar();
-		$eliminar = $db->prepare('DELETE FROM proveedor WHERE id_docPov=:id_docPov');
+		$eliminar = $this->db->prepare('DELETE FROM proveedor WHERE id_docPov=:id_docPov');
 		$eliminar->bindValue('id_docPov', $id_DocProv);
 		$eliminar->execute();
 	}
 
 	public function obtenerProveedor($id_DocProv)
 	{
-		$db = Db::conectar();
-		$select = $db->prepare('SELECT * FROM proveedor WHERE id_docPov=:id_docPov');
+		$select = $this->db->prepare('SELECT * FROM proveedor WHERE id_docPov=:id_docPov');
 		$select->bindValue('id_docPov', $id_DocProv);
 		$select->execute();
 		$Proveedor = $select->fetch();
