@@ -87,12 +87,9 @@ class CrudCliente
 	// método para actualizar un cliente, recibe como parámetro el cliente
 	public function actualizar($Cliente)
 	{
-		$actualizar = $this->db->prepare('UPDATE cliente
-			 SET  id_cliDoc=:id_cliDoc,nombreCli1=:nombreCli1,nombreCli2=:nombreCli2,
-			 apellidoCli1=:apellidoCli1,apellidoCli2=:apellidoCli2,direccionCli=:direccionCli,
-			 telCli=:telCli,emailCli=:emailCli,fechaNac=:fechaNac 
-			  WHERE id_cliDoc=:id_cliDoc');
+		$actualizar = $this->db->prepare('UPDATE cliente SET  id_cliDoc=:docChange,nombreCli1=:nombreCli1,nombreCli2=:nombreCli2, apellidoCli1=:apellidoCli1,apellidoCli2=:apellidoCli2,direccionCli=:direccionCli,telCli=:telCli,emailCli=:emailCli,fechaNac=:fechaNac WHERE id_cliDoc=:id_cliDoc');
 		$actualizar->bindValue('id_cliDoc', $Cliente->getId_cliDoc());
+		$actualizar->bindValue('docChange', $Cliente->getDocChange());
 		$actualizar->bindValue('nombreCli1', $Cliente->getNombreCli1());
 		$actualizar->bindValue('nombreCli2', $Cliente->getNombreCli2());
 		$actualizar->bindValue('apellidoCli1', $Cliente->getApellidoCli1());

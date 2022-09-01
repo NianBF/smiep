@@ -7,16 +7,16 @@ $_SESSION["pass"] == null)
 }
 else
 {
-    require_once('../../model/clienteCrud_mdl.php');
-    require_once('../../model/ClienteMdl.php');
-    $crud = new CrudCliente();
-    $Cliente = new Cliente();
-    $listaCliente = $crud->mostrar();
+    require_once('../../model/productoCRUD_Mdl.php');
+    require_once('../../model/productoMdl.php');
+    $crud = new CrudProducto();
+    $Producto = new Producto();
+    $listaProducto = $crud->mostrar();
 ?>
 
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,6 +25,7 @@ else
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
+    
     <link rel="stylesheet" href="../../public/css/tablas.css">
     <link rel="stylesheet" href="../../public/css/searchBar.css">
     <link rel="stylesheet" href="../../public/css/mostrar.css">
@@ -41,7 +42,7 @@ else
 </head>
 
 <body>
-
+    
     <header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>
@@ -49,7 +50,7 @@ else
     <section class="contentList">
         <fieldset>
 
-        <legend>Listado de Clientes</legend>
+        <legend>Listado de Productos</legend>
         <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
                 <a href='../inicio/menu.php' class="back"><span><i
@@ -85,42 +86,51 @@ else
             <table>
                 <thead>
                     <tr class="titleTable">
-                        <th>Documento</th>
+                        <th>Imagen</th>
+                        <th>ID</th>
+                        <th>Codigo de Barras</th>
                         <th>Nombre</th>
-                        <th>Telefono</th>
-                        <th>Correo</th>
-                        <th>Fecha de Nacimiento</th>
+                        <th>Descripción</th>
+                        <th>precio</th>
+                        <th>Disponible</th>
                         <th class="opcTitle">Opciones</th>
                     </tr>
                 </thead>
                 <tbody class="contentTable">
-                <?php foreach ($listaCliente as $Cliente) {?>
+                <?php foreach ($listaProducto as $Producto) {?>
                 <tr class="row">
 
-                    <td class="idCli id">
-                        <?php echo $Cliente->getId_CliDoc(); ?>
+                    <td class="img">
+                        <img src="<?php echo $Producto->getImgProd() ?>"
+                        alt="<?php echo $Producto->getNombreProd() ?>">
                     </td>
-                    <td class="nombCli">
-                        <?php echo $Cliente->getNombreCli1() . " " . $Cliente->getNombreCli2() . " " . $Cliente->getApellidoCli1() . " " . $Cliente->getApellidoCli2(); ?>
+                    <td class="idProd">
+                        <?php echo $Producto->getId_prod() ?>
                     </td>
-                    <td class="numbCli">
-                        <?php echo $Cliente->getTelCli(); ?>
+                    <td class="nomProd">
+                        <?php echo $Producto->getCodBar() ?>
                     </td>
                     <td class="emailCli">
-                        <?php echo $Cliente->getEmailCli(); ?>
+                        <?php echo $Producto->getNombreProd() ?>
                     </td>
-                    <td class="fechNacCli">
-                        <?php echo $Cliente->getFechaNac(); ?>
+                    <td class="descripcion">
+                        <?php echo $Producto->getDescripcion() ?>
+                    </td>
+                    <td class="precio">
+                        <?php echo $Producto->getPrecio() ?> COP
+                    </td>
+                    <td class="disponible">
+                        <?php echo $Producto->getCantidadDisp() ?>
                     </td>
 
                     <td class="btnOpt">
                         <a class="delete btnOptDel" type="submit"
-                        href="../../controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc()?>&accion=e">
+                        href="../../controller/productoCtrl.php?id_prod=<?php echo $Producto->getId_prod()?>&accion=e">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
                 
                         <a class="update btnOptUpd" type="submit"
-                        href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc();?>&accion=a">
+                        href="actualizar.php?id_prod=<?php echo $Producto->getId_prod()?>&accion=a">
                                 <i class="fa-solid fa-pencil"></i>
                         </a>
                     </td>
@@ -136,10 +146,10 @@ else
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
     
-    <script src="../../public/js/cliente/filtrarCliente.js"></script>
-    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
-</body>
-</html>
 
+    <script src="../../public/js/producto/filtrarProducto.js"></script>
+</body>
+
+</html>
 <?php
 }?>

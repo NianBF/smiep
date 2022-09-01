@@ -1,6 +1,6 @@
 /***
 *
-* ESTILOS usuario
+* ESTILOS Tablas
 *
 ***/
 /****---Estilos a contenedor general---***/
@@ -18,7 +18,7 @@ th {
 
 /***Estilos para los datos***/
 .contentTable {
-  height: 60rem;
+  /* height: 60rem; */
 }
 .titleTable {
   text-align: center;
@@ -30,13 +30,22 @@ th {
   -moz-box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
   box-shadow: 2px 5px 10px 2px var(--shadowColorSoft);
 }
+
+/***Estilos para los datos***/
+
+
 .id {
   font-family: "Montserrat-BoldItalic";
   padding-left: 10px;
 }
+.img img{
+  width: 10rem;
+}
+
+
 /***---Estilos para opciones---***/
 td.btnOpt {
-  padding: 2.25rem 10px 0 0;
+  padding: 2rem;
 }
 
 @media screen and (max-width: 820px) {
@@ -55,13 +64,11 @@ td.btnOpt {
     align-items: center;
     margin-bottom: 2rem;
   }
-  .id,
-  .colName,
-  .userName,
-  .email,
-  .rol {
+
+  .contentTable td{
     padding: 10px;
   }
+
   td.btnOpt {
     padding: 10px 0 10px 0;
   }

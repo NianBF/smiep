@@ -21,6 +21,7 @@ require_once('../model/ClienteMdl.php');
 $crud = new CrudCliente();
 $Cliente = new Cliente();
 
+$Cliente->setDocChange($_POST['docChange']);
 $Cliente->setId_cliDoc($_POST['id_cliDoc']);
 $Cliente->setNombreCli1($_POST['nombreCli1']);
 $Cliente->setNombreCli2($_POST['nombreCli2']);

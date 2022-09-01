@@ -3,20 +3,20 @@ session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 $_SESSION["pass"] == null)
 {
-    header("location:../../index.php");
+	header("location:../../index.php");
 }
 else
 {
-    require_once('../../model/clienteCrud_mdl.php');
-    require_once('../../model/ClienteMdl.php');
-    $crud = new CrudCliente();
-    $Cliente = new Cliente();
-    $listaCliente = $crud->mostrar();
+	require_once('../../model/proveedorCrud_Mdl.php');
+	require_once('../../model/proveedorMdl.php');
+	$crud = new CrudProveedor();
+	$Proveedor = new Proveedor();
+	$listaProveedor = $crud->mostrar();
 ?>
 
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,15 +41,13 @@ else
 </head>
 
 <body>
-
-    <header>
-        <?php include_once("../plantillas/header.html"); ?>
-    </header>
-
-    <section class="contentList">
+	<header>
+		<?php include_once("../plantillas/header.html"); ?>
+	</header>
+	<section class="contentList">
         <fieldset>
 
-        <legend>Listado de Clientes</legend>
+        <legend>Listado de Proveedores</legend>
         <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
                 <a href='../inicio/menu.php' class="back"><span><i
@@ -85,42 +83,46 @@ else
             <table>
                 <thead>
                     <tr class="titleTable">
-                        <th>Documento</th>
+                        <th>ID Proveedor</th>
                         <th>Nombre</th>
+                        <th>Empresa</th>
+                        <th>Dirección</th>
                         <th>Telefono</th>
                         <th>Correo</th>
-                        <th>Fecha de Nacimiento</th>
                         <th class="opcTitle">Opciones</th>
                     </tr>
                 </thead>
                 <tbody class="contentTable">
-                <?php foreach ($listaCliente as $Cliente) {?>
+                <?php foreach ($listaProveedor as $Proveedor) {?>
                 <tr class="row">
 
-                    <td class="idCli id">
-                        <?php echo $Cliente->getId_CliDoc(); ?>
+                    <td class="idProv id">
+						<?php echo $Proveedor->getId_DocProv() ?>
                     </td>
-                    <td class="nombCli">
-                        <?php echo $Cliente->getNombreCli1() . " " . $Cliente->getNombreCli2() . " " . $Cliente->getApellidoCli1() . " " . $Cliente->getApellidoCli2(); ?>
+                    <td class="nombreProv">
+						<?php echo $Proveedor->getNombProv1()." ".$Proveedor->getNombProv2()." ".$Proveedor->getApeProv1()." ".$Proveedor->getApeProv2() ?>
                     </td>
-                    <td class="numbCli">
-                        <?php echo $Cliente->getTelCli(); ?>
+                    <td class="empresa">
+						<?php echo $Proveedor->getEmpresa() ?>
                     </td>
-                    <td class="emailCli">
-                        <?php echo $Cliente->getEmailCli(); ?>
+                    <td class="direccion">
+						<?php echo $Proveedor->getDireccion1()." ".$Proveedor->getDireccion2() ?>
                     </td>
-                    <td class="fechNacCli">
-                        <?php echo $Cliente->getFechaNac(); ?>
+                    <td class="numProv">
+						<?php echo $Proveedor->getNumTel1() ?>
+                    </td>
+                    <td class="email">
+						<?php echo $Proveedor->getEmail1() ?>
                     </td>
 
                     <td class="btnOpt">
                         <a class="delete btnOptDel" type="submit"
-                        href="../../controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc()?>&accion=e">
+                        href="../../controller/proveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=e">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
                 
                         <a class="update btnOptUpd" type="submit"
-                        href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc();?>&accion=a">
+                        href="actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=a">
                                 <i class="fa-solid fa-pencil"></i>
                         </a>
                     </td>
@@ -131,15 +133,12 @@ else
         </div>
         </fieldset>
     </section>
-
-    <footer>
+	<footer>
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-    
-    <script src="../../public/js/cliente/filtrarCliente.js"></script>
-    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
+	<script src="../../public/js/proveedor/filtrarProveedor.js"></script>
 </body>
-</html>
 
+</html>
 <?php
 }?>

@@ -38,7 +38,6 @@ else
 </head>
 
 <body>
-
     <header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>

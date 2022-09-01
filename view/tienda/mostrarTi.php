@@ -3,20 +3,21 @@ session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 $_SESSION["pass"] == null)
 {
-    header("location:../../index.php");
+	header("location:../../index.php");
 }
 else
 {
-    require_once('../../model/clienteCrud_mdl.php');
-    require_once('../../model/ClienteMdl.php');
-    $crud = new CrudCliente();
-    $Cliente = new Cliente();
-    $listaCliente = $crud->mostrar();
+	require_once('../../model/tiendaCrud_Mdl.php');
+	require_once('../../model/tiendaMdl.php');
+	$crud = new CrudTienda();
+	$Tienda = new Tienda();
+	$listaTienda = $crud->mostrar();
 ?>
 
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,17 +40,15 @@ else
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-
-    <header>
+<header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>
 
     <section class="contentList">
         <fieldset>
 
-        <legend>Listado de Clientes</legend>
+        <legend>Listado de Tiendas</legend>
         <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
                 <a href='../inicio/menu.php' class="back"><span><i
@@ -85,42 +84,42 @@ else
             <table>
                 <thead>
                     <tr class="titleTable">
-                        <th>Documento</th>
+                        <th>ID</th>
                         <th>Nombre</th>
+                        <th>Direccion</th>
                         <th>Telefono</th>
                         <th>Correo</th>
-                        <th>Fecha de Nacimiento</th>
                         <th class="opcTitle">Opciones</th>
                     </tr>
                 </thead>
                 <tbody class="contentTable">
-                <?php foreach ($listaCliente as $Cliente) {?>
+                <?php foreach ($listaTienda as $Tienda) {?>
                 <tr class="row">
 
-                    <td class="idCli id">
-                        <?php echo $Cliente->getId_CliDoc(); ?>
+                    <td class="idTienda id">
+						<?php echo $Tienda->getId_ti() ?>
                     </td>
-                    <td class="nombCli">
-                        <?php echo $Cliente->getNombreCli1() . " " . $Cliente->getNombreCli2() . " " . $Cliente->getApellidoCli1() . " " . $Cliente->getApellidoCli2(); ?>
+                    <td class="nombTienda">
+                        <?php echo $Tienda->getNombreTienda() ?>
                     </td>
-                    <td class="numbCli">
-                        <?php echo $Cliente->getTelCli(); ?>
+                    <td class="direccion">
+                        <?php echo $Tienda->getDireccionTi() ?>
                     </td>
-                    <td class="emailCli">
-                        <?php echo $Cliente->getEmailCli(); ?>
+                    <td class="numTienda">
+                        <?php echo $Tienda->getTelTi() ?>
                     </td>
-                    <td class="fechNacCli">
-                        <?php echo $Cliente->getFechaNac(); ?>
+                    <td class="emailTienda">
+                        <?php echo $Tienda->getEmailTi() ?>
                     </td>
 
                     <td class="btnOpt">
                         <a class="delete btnOptDel" type="submit"
-                        href="../../controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc()?>&accion=e">
+                        href="../../controller/tiendaCtrl.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=e">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
                 
                         <a class="update btnOptUpd" type="submit"
-                        href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc();?>&accion=a">
+                        href="actualizar.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=a">
                                 <i class="fa-solid fa-pencil"></i>
                         </a>
                     </td>
@@ -135,11 +134,10 @@ else
     <footer>
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-    
-    <script src="../../public/js/cliente/filtrarCliente.js"></script>
-    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
+	
+	<script src="../../public/js/tienda/filtrarTienda.js"></script>
 </body>
-</html>
 
+</html>
 <?php
 }?>

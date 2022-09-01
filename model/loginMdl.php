@@ -4,7 +4,6 @@ require_once("conexion.php");
 
 class Login
 {
-
     public function validarDatos($email, $userName, $password)
     {
 
@@ -47,7 +46,9 @@ class Login
                 $_SESSION["rol"] = $rol;
 //La sesión de docUsu será usada para el registro en la base de datos
                 $_SESSION["docUsu"] = $doc;
-
+//Se insertan los datos de sesión en la tabla correspondiente
+                $consu= $con->prepare("INSERT INTO initsession(id_doc) VALUES (".$doc.");");
+                $consu->execute();
             }
             else
             {
@@ -74,5 +75,4 @@ class Login
         }
 
     }
-
 }
