@@ -31,18 +31,24 @@ class Login
             $resultado = $con->prepare($sql);
             $resultado->execute(array(":USERNAME" => $userName, ":EMAIL" => $email, ":PASS" => $password));
 
-            $rol = $resultado->fetchColumn(8);
+            foreach($resultado->fetchAll() as $usuario){
+                $rol= $usuario["rol"];
+                $doc= $usuario["id_doc"];
+            }
+/*             $rol = $resultado->fetchColumn(8);
+            $doc = $resultado->fetchColumn(1); */
 
             $cantidad_resultado = $resultado->rowCount();
 
             session_start();
 
-            if ($cantidad_resultado == 1)
+            if ($cantidad_resultado === 1)
             {
                 $_SESSION["rol"] = $rol;
                 $_SESSION["email"] = $email;
                 $_SESSION["userName"] = $userName;
                 $_SESSION["pass"] = $password;
+                $_SESSION["docUsu"] = $doc;
 
             }
             else

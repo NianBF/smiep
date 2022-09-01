@@ -29,36 +29,30 @@ $Producto->setCodBar($_POST['codBar']);
 $Producto->setNombreProd($_POST['nombreProd']);
 $Producto->setDescripcion($_POST['descripcion']);
 $Producto->setPrecio($_POST['precio']);
+//La fecha será un valor actual
 $Producto->setCantidadDisp($_POST['cantidadDisp']);
 $Producto->setTipoPresentacion($_POST['tipoPresentacion']);
 $Producto->setCreadoEn(date("Y-m-d H:i:s"));
-$Producto->setId_docUSu($_POST['id_docUsu']);
+$Producto->setId_docUSu($_SESSION["docUsu"]);
 $Producto->setId_cat($_POST['id_cat']);
 $Producto->setId_estado($_POST['id_estado']);
-$Producto->setPriceArrive($_POST['modificadoEn']);
+$Producto->setPriceArrive($_POST['priceArrive']);
 
-// si el elemento insertar no viene nulo llama al crud e inserta
 if (isset($_POST['insertar']))
 {
-	//llama a la función insertar definida en el crud
+	//llama a la función insertar definida en el crud si el POST es Insertar
 	$crud->insertar($Producto);
 	header('Location: ../view/producto/mostrar.php');
 
-// si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
 }
 elseif (isset($_POST['actualizar']))
-{
+{//llama a la función actualizar definida en el crud si el POST es Actualizar
 	$crud->actualizar($Producto);
 	header('Location: ../view/producto/mostrar.php');
 
-// si la variable accion enviada por GET es == 'e' llama al crud y elimina
 }
-elseif ($_GET['accion'] == 'e')
-{
-	//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
-
+elseif ($_GET['accion'] == 'e'){// si la variable accion enviada por GET es == 'e' llama al crud y elimina
 	$idDelete = $_GET['id_prod'];
-
 	echo "<script>
 		Swal.fire({
 			title: '¿Está seguro?',
@@ -86,8 +80,6 @@ elseif ($_GET['accion'] == 'e')
 		   }
 		 })
 		 </script>";
-
-/*	 */
 // si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 }
 elseif ($_GET['accion'] == 'a')

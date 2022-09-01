@@ -7,16 +7,17 @@ $_SESSION["pass"] == null)
 }
 else
 {
+	//Se llama la categoría para poder mostrarla en el select
 	require_once('../../model/categoriaCrud_Mdl.php');
     require_once('../../model/categoriaMdl.php');
     $crud = new CrudCategoria();
     $Categoria = new Categoria();
     $listaCategoria = $crud->mostrar();
+	//Se llaman las clases de producto para obtener toda la información
 	require_once('../../model/productoCRUD_Mdl.php');
 	require_once('../../model/productoMdl.php');
 	$crud = new CrudProducto();
 	$Producto = new Producto();
-	$dato = $_GET['id_prod'];
 	$Producto = $crud->obtenerProducto($_GET['id_prod']);
 
 
@@ -52,7 +53,11 @@ else
 						<input type='text' placeholder="ID Producto" id="id_prod" name='id_prod'
 							value='<?php echo $Producto->getId_prod()?>'>
 					</p>
-
+					<p>
+						<label for="codBar">Código de Barras</label>
+						<input type='text' placeholder="Cod" id="cod" name='codBar'
+							value='<?php echo $Producto->getCodBar()?>'>
+					</p>
 					<p>
 						<label for="img">Imagen</label>
 						<input type='text' placeholder="Imagen" id="img" name='imgProd'
@@ -82,7 +87,6 @@ else
 						<input type='text' placeholder="Cantidad Disponible" id="cantDisp" name='cantidadDisp'
 							value='<?php echo $Producto->getCantidadDisp()?>'>
 					</p>
-
 					<p>
 						<label for="tipoPresentacion">Tipo Presentación</label>
 						<input type='text' placeholder="Tipo Presentación" id="tipoPresentacion" name='tipoPresentacion'

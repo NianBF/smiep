@@ -18,8 +18,7 @@ class CrudProducto
 
 	public function insertar($Producto)
 	{
-		$insert = $this->db->prepare('INSERT INTO producto VALUES(:id_prod, :imgProd, :codBar, :nombreProd, :descripcion, :precio,
-			:cantidadDisp, :tipoPresentacion, :creadoEn, :id_docUsu, :id_cat, :id_estado, :priceArrive);');
+		$insert = $this->db->prepare('INSERT INTO producto VALUES(:id_prod, :imgProd, :codBar, :nombreProd, :descripcion, :precio,:cantidadDisp, :tipoPresentacion, :creadoEn, :id_docUsu, :id_cat, :id_estado, :priceArrive);');
 		$insert->bindValue('id_prod', $Producto->getId_Prod());
 		$insert->bindValue('imgProd', $Producto->getImgProd());
 		$insert->bindValue('codBar', $Producto->getCodBar());
@@ -105,7 +104,7 @@ class CrudProducto
 		$actualizar = $this->db->prepare('UPDATE producto 
 			SET imgProd=:imgProd, nombreProd=:nombreProd, descripcion=:descripcion,
 			precio=:precio, cantidadDisp=:cantidadDisp, codBar=:codBar,
-			tipoPresentacion=:tipoPresentacion, id_cat=:id_cat, id_estado=:id_estado, priceArrive=:priceArrive, modificadoEn=:modificadoEn
+			tipoPresentacion=:tipoPresentacion, id_cat=:id_cat, id_estado=:id_estado, priceArrive=:priceArrive, modificadoEn=:modificadoEn, id_docUsu=:id_docUsu
 			WHERE id_prod=:id_prod ');
 		$actualizar->bindValue('id_prod', $producto->getId_prod());
 		$actualizar->bindValue('imgProd', $producto->getImgProd());
@@ -115,7 +114,7 @@ class CrudProducto
 		$actualizar->bindValue('precio', $producto->getPrecio());
 		$actualizar->bindValue('cantidadDisp', $producto->getCantidadDisp());
 		$actualizar->bindValue('tipoPresentacion', $producto->getTipoPresentacion());
-		//$actualizar->bindValue('id_docUsu',$producto->getId_docUsu());
+		$actualizar->bindValue('id_docUsu',$producto->getId_docUsu());
 		$actualizar->bindValue('id_cat', $producto->getId_cat());
 		$actualizar->bindValue('id_estado', $producto->getId_estado());
 		$actualizar->bindValue('priceArrive',$producto->getPriceArrive());

@@ -87,17 +87,6 @@ class Producto
 		$this->precio = $precio;
 	}
 
-	//cantidadMin = cintidad minima
-	public function getCantidadMin()
-	{
-		return $this->cantidadMin;
-	}
-
-	public function setCantidadMin($cantidadMin)
-	{
-		$this->cantidadMin = $cantidadMin;
-	}
-
 	//cantidadDisp = cantidad disponible
 	public function getCantidadDisp()
 	{
@@ -120,7 +109,7 @@ class Producto
 		$this->tipoPresentacion = $tipoPresentacion;
 	}
 
-	//creadoEn =fecha de creacion
+	//creadoEn =fecha de creacion Base de datos = modificadoEn
 	public function getCreadoEn()
 	{
 		return $this->creadoEn;

@@ -53,7 +53,7 @@ else
 				</p>
 
 				<p>
-					<label for="codBar">Cod de Barras</label>
+					<label for="codBar">Código de de Barras</label>
 					<input type='text' placeholder="Codigo de Barras" id="codBar" name='codBar'>
 				</p>
 
@@ -69,13 +69,13 @@ else
 				</p>
 
 				<p>
-					<label for="precio">Precio</label>
+					<label for="precio">Precio de Venta</label>
 					<input type='text' placeholder="Precio" id="precio" name='precio'>
 				</p>
-
 				<p>
-					<label for="cantMin">Cant Minima</label>
-					<input type='text' placeholder="Cantidad Minima" id="cantMin" name='cantidadMin' value="1" readonly>
+						<label for="priceArrive">Precio de Llegada</label>
+						<input type='text' placeholder='$0000' id="priceArrive"
+						name='priceArrive'>
 				</p>
 
 				<p>
@@ -89,16 +89,6 @@ else
 				</p>
 
 				<p>
-					<label for="creadoEn">Creado en</label>
-					<input type='text' placeholder="Creado en" value="00000000" id="creadoEn" name='creadoEn'>
-				</p>
-
-				<p>
-					<label for="id_docUsu">ID Usuario</label>
-					<input type='text' placeholder="ID Usuario" id="id_docUsu" name='id_docUsu'>
-				</p>
-
-				<p>
 					<label for="id_cat">Categoria</label>
 					<select id="id_cat" name='id_cat'>
 					<?php foreach ($listaCategoria as $Categoria)
@@ -107,7 +97,7 @@ else
 					</select>
 				</p>
 
-				<p class="block">
+				<p>
 					<label for="id_estado">Estado</label>
 					<select id="id_estado" name='id_estado'>
 					<option value=2>Disponible</option>
