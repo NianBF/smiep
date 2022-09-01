@@ -24,7 +24,8 @@ else
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
-    <link rel="stylesheet" href="../../public/css/usuario.css">
+    
+    <link rel="stylesheet" href="../../public/css/tablas.css">
     <link rel="stylesheet" href="../../public/css/searchBar.css">
     <link rel="stylesheet" href="../../public/css/mostrar.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
