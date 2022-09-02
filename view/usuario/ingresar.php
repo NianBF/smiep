@@ -34,12 +34,15 @@ else
     </header>
     <section class="initForm">
         <div class="btn">
-            <span><a href='mostrar.php'><input type="button" value="Volver"></a></span>
+            <span><a href='mostrarUsu.php'><input type="button" value="Volver"></a></span>
 
         </div>
         <div class="contForm">
             <form action='../../controller/usuarioCtrl.php' id="formulario" name="formulario" method='post'>
-                <fieldset class="anuncio">
+            
+            <button class="info">?</button>
+
+                <fieldset class="anuncio invisible">
                     <legend>Advertencia</legend>
                     <div>
                         <article>
@@ -53,6 +56,7 @@ else
                         </article>
                     </div>
                 </fieldset>
+
                 <fieldset class="contact-form">
                     <legend>Agregar Usuario</legend>
 

@@ -54,6 +54,7 @@
   margin-top: 2rem;
   box-sizing: content-box;
   max-width: max-content;
+  position: relative;
 }
 .contForm fieldset /*Formulario*/ {
   background-color: #f0f0f0;
@@ -76,6 +77,10 @@
   border: 2px solid #339999;
   margin-right: 10%;
   max-width: 40%;
+  
+}
+fieldset.invisible{
+  display: none;
 }
 
 /***---Botón---***/
@@ -137,4 +142,14 @@ input[type="submit"]:hover {
   -moz-box-shadow: 11px 13px 38px 3px #333333;
   box-shadow: 11px 13px 38px 3px #333333;
   transition: .2s;
+}
+
+button.info{
+  display: block;
+    position: absolute;
+    bottom: 0;
+    height: 2rem;
+    right: 0;
+    background: red;
+    width: 3rem;
 }

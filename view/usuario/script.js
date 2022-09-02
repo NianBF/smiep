@@ -14,6 +14,16 @@ const progressCheck = document.querySelectorAll(".step .check");
 const bullet = document.querySelectorAll(".step .bullet");
 let current = 1;
 
+const btninfo = document.querySelector(".info");
+const info = document.querySelector(".anuncio");
+btninfo.addEventListener("click", (e)=>{
+  e.preventDefault();
+  
+  info.classList.toggle("invisible")
+  console.log(info.classList.value)
+
+})
+
 nextBtnFirst.addEventListener("click", function(event){
   event.preventDefault();
   slidePage.style.display = "none";
