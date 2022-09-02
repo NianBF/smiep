@@ -1,0 +1,126 @@
+
+
+.initForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.contForm{
+  padding: 1rem;
+  border-radius: 3rem 1rem;
+  margin-top: 2rem;
+  box-sizing: content-box;
+
+  position: relative;
+}
+
+.contForm fieldset{
+ /*  border: solid; */
+ background-color: #f0f0f0;-webkit-box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+ -moz-box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+ box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+ border-radius: 10px 13px;
+ padding: 2rem;
+}
+.contForm legend {
+  border-radius: 10px 10px;
+  background-color: #f0f0f0;
+  font-family: "Montserrat-Bold";
+  padding: 0.3rem;
+  font-size: 24px;
+}
+.contForm fieldset.anuncio /*advertencia/Anuncio*/ {
+  border: 2px solid #339999;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: -2rem;
+}
+.contForm fieldset.contact-form {
+  border: 2px solid #aa1132;
+}
+fieldset.invisible{
+  display: none;
+}
+
+.titleSect{
+  padding: 1rem;
+}
+
+.formPage .userBox{
+  position: relative;
+  font-family: "Montserrat";
+}
+
+.formPage .userBox label{
+  padding: 5px 10px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 40%;
+  left: 25px;
+  transform: translateY(-25%);
+  text-transform: capitalize;
+  pointer-events: none;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.formPage .userBox input{
+  padding: 18px 15px 18px 15px;
+  margin: 0.3rem;
+  width: 300px;
+  border: 3px solid #00000031;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.formPage .userBox input:focus + label,
+.formPage .userBox input:not(:placeholder-shown) + label {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  top: 0;
+  font-size: 16px;
+}
+
+.formularios .infTi label{
+  padding: 5px 10px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.formularios .infTi select{
+  padding: 18px 15px 18px 15px;
+  margin: 0.3rem;
+  width: 350px;
+  border: 3px solid #00000031;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.formularios .btn{
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+.btn button{
+  padding: 1rem 0 1rem 0;
+  width: 6rem;
+}
+
+.info{
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  
+}
