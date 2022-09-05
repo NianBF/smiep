@@ -10,6 +10,8 @@ class CrudProveedor
 		//Inicia la conexión en todo el archivo
 		$this->db=Db::conectar();
 	}
+	sdbkjdansdsandlksand
+	
 
 	public function insertar($Proveedor)
 	{

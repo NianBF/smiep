@@ -1,4 +1,4 @@
 # Ignorar carpeta vendor
 /vendor/
+/config/config.inc.php
 .env
-/config/
