@@ -20,8 +20,8 @@ body main article div.infCont{
   place-items: end;
   font-size: 0.57rem;
   width: fit-content;
-  font-family: 'Montserrat'; 
-  background: #339999;
+  font-family: 'Montserrat';
+  background: #3399;
 }
 div.infCont{
   line-height: 20px;

@@ -7,13 +7,12 @@
 /*BARRA MENU*/
 
 .container__menu {
-    display: flex;
-    padding: 10px;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: auto;
-    background: #023859;
+    max-height: 5rem;
+    background: #339999;
 }
 
 .navBar {
@@ -72,7 +71,7 @@ span {
 
 #selected {
   transform: scale(1.1);
-  background-color: #0074c7;
+  background-color: #3399;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
