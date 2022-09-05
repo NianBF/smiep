@@ -20,12 +20,19 @@ else
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
     <link rel="stylesheet" href="stepsForm.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/forms.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/formsnic.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
+    <link rel="stylesheet" href="../../public/css/tablas.css">
     <link rel="stylesheet" href="../../public/css/fonts.css">
     <link rel="stylesheet" href="../../public/css/variables.css">
     <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    
 </head>
 
 <body>
@@ -33,14 +40,17 @@ else
         <?php include_once("../plantillas/header.html"); ?>
     </header>
     <section class="initForm">
-        <div class="btn">
-            <span><a href='mostrarUsu.php'><input type="button" value="Volver"></a></span>
 
-        </div>
+            <a href="../inicio/menu.php" class="back">
+            <span>
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </span>Volver</a>
+            
         <div class="contForm">
+         
             <form action='../../controller/usuarioCtrl.php' id="formulario" name="formulario" method='post'>
             
-            <button class="info">?</button>
+            <img class="info" src="https://img.icons8.com/hands/100/000000/experimental-question-mark-hands.png"/>
 
                 <fieldset class="anuncio invisible">
                     <legend>Advertencia</legend>
@@ -93,8 +103,8 @@ else
                         </div>
                     </section>
 
-                    <section>
-                        <div class="slide-page">
+                    <section class="formularios">
+                        <div class="slide-page formPage">
                             <h4 class="titleSect">Documento de Identidad</h4>
                             <div class="userBox">
                                 <input type='text' id="id_cat" name='id_cat' placeholder=" ">
@@ -104,7 +114,7 @@ else
                                 <button class="firstNext next">Siguiente</button>
                             </div>
                         </div>
-                        <div class="page">
+                        <div class="page formPage">
                             <h4 class="titleSect">Nombres y Apellidos</h4>
                             <div class="userBox">
                                 <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
@@ -129,7 +139,7 @@ else
                                 <button class="next-1 next">Siguiente</button>
                             </div>
                         </div>
-                        <div class="page page1">
+                        <div class="page page1 formPage">
                             <h4 class="titleSect">Información de Usuario</h4>
                             <div class="userBox">
                                 <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
@@ -166,8 +176,8 @@ else
 
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-                                <label for="selEs" class="lSel">Estado</label>
-                                <select name="selEs">
+                                <label for="selEs" class="lSel x">Estado</label>
+                                <select name="selEs">estado
                                     <optgroup label="Estado">
                                         <option value="">Elige una opción</option>
                                         <option value="2">Disponible</option>
@@ -199,7 +209,10 @@ else
             </form>
         </div>
     </section>
-    <?php include_once("../plantillas/footer.html"); ?>
+    <footer>
+
+        <?php include_once("../plantillas/footer.html"); ?>
+    </footer>
     <script src="script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/categoria/ingresarCategoria.js"></script>

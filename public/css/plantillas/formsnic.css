@@ -1,12 +1,17 @@
-
-
+/*
+*
+* Estilos para formaularios
+*
+*/
+/***---Form---***/
+/*Contenedor contenido*/
 .initForm {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 2rem;
 }
-
+/***---Fieldset---***/
 .contForm{
   padding: 1rem;
   border-radius: 3rem 1rem;
@@ -34,9 +39,10 @@
 .contForm fieldset.anuncio /*advertencia/Anuncio*/ {
   border: 2px solid #339999;
   position: absolute;
-  bottom: 0;
   width: 100%;
+  top: 18%;
   left: -2rem;
+  z-index: 1000;
 }
 .contForm fieldset.contact-form {
   border: 2px solid #aa1132;
