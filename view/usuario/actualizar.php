@@ -43,9 +43,13 @@ else
 			<div class="contact-form">
 				<h3>Cambia los datos de Usuario</h3>
 				<form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
+				<p>
+						<label for="doc">Documento</label>
+						<input type='text' placeholder="Documento" id="doc" name='docChange' value='<?php echo $Usuario->getId_Doc()?>'>							
+						<input type='hidden' name='id_doc' value='<?php echo $Usuario->getId_doc()?>'>
+					</p>
 					<p>
 						<label for="nomb1">Primer Nombre</label>
-						<input type='hidden' name='id_doc' value='<?php echo $Usuario->getId_doc()?>'>
 						<input type='text' id="nomb1" name='nombre1' placeholder="Primer Nombre"
 							value='<?php echo $Usuario->getNombre1()?>'>
 					</p>
@@ -80,14 +84,11 @@ else
 							value='<?php echo $Usuario->getPass()?>'>
 					</p>
 					<p>
-						<label for="rol">Rol</label>
-						<input type='text' name='rol' id="rol" placeholder="Rol"
-							value='<?php echo $Usuario->getRol()?>'>
-					</p>
-					<p>
-						<label for="estado">ID Estado</label>
-						<input type='text' id="estado" name='id_estado' placeholder="ID Estado"
-							value='<?php echo $Usuario->getId_estado()?>'>
+						<label for="id_estado">Estado</label>
+						<select id="id_estado" name='id_estado'>
+							<option value=2>Disponible</option>
+							<option value=3>No Disponible</option>
+						</select>
 					</p>
 					<p>
 						<label for="idTi">ID Tienda</label>

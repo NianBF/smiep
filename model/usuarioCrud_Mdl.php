@@ -14,10 +14,7 @@ class CrudUsuario
 
 	public function insertar($Usuario)
 	{
-		$insert = $this->db->prepare('INSERT INTO usuario (id_doc,nombre1,nombre2,apellido1,
-			apellido2,userName,email,password,rol,id_estado,id_ti) 
-			values(:id_doc,:nombre1,:nombre2,:apellido1,:apellido2,:userName,:email
-			,md5(:password),:rol,:id_estado,:id_ti)');
+		$insert = $this->db->prepare('INSERT INTO usuario (id_doc,nombre1,nombre2,apellido1, apellido2,userName,email,password,rol,id_estado,id_ti) values(:id_doc,:nombre1,:nombre2,:apellido1,:apellido2,:userName,:email,md5(:password),:rol,:id_estado,:id_ti)');
 		$insert->bindValue('id_doc', $Usuario->getId_doc());
 		$insert->bindValue('nombre1', $Usuario->getNombre1());
 		$insert->bindValue('nombre2', $Usuario->getNombre2());
@@ -37,7 +34,7 @@ class CrudUsuario
 	public function mostrar()
 	{
 		$listaUsuario = [];
-		$select = $this->db->query('SELECT * FROM usuario');
+		$select = $this->db->query('SELECT * FROM usuario ORDER BY rol DESC');
 
 		foreach ($select->fetchAll() as $Usuario)
 		{
@@ -92,11 +89,8 @@ class CrudUsuario
 
 	public function actualizar($Usuario)
 	{
-		$actualizar = $this->db->prepare('UPDATE usuario
-			SET  nombre1=:nombre1, nombre2=:nombre2, apellido1=:apellido1, apellido2=:apellido2,
-			userName=:userName, email=:email, password=MD5(:password),rol=:rol,
-			id_estado=:id_estado, id_ti=:id_ti  WHERE id_doc=:id_doc');
-
+		$actualizar = $this->db->prepare('UPDATE usuario SET /* id_doc=:docChan, */ nombre1=:nombre1, nombre2=:nombre2, apellido1=:apellido1, apellido2=:apellido2, userName=:userName, email=:email, password=MD5(:password),id_estado=:id_estado, id_ti=:id_ti  WHERE id_doc=:id_doc');
+		/* $actualizar->bindValue('docChan',$Usuario->getDocChange()); */
 		$actualizar->bindValue('id_doc', $Usuario->getId_doc());
 		$actualizar->bindValue('nombre1', $Usuario->getNombre1());
 		$actualizar->bindValue('nombre2', $Usuario->getNombre2());
@@ -105,7 +99,6 @@ class CrudUsuario
 		$actualizar->bindValue('userName', $Usuario->getUserName());
 		$actualizar->bindValue('email', $Usuario->getEmail());
 		$actualizar->bindValue('password', $Usuario->getPass());
-		$actualizar->bindValue('rol', $Usuario->getRol());
 		$actualizar->bindValue('id_estado', $Usuario->getId_estado());
 		$actualizar->bindValue('id_ti', $Usuario->getId_ti());
 		$actualizar->execute();

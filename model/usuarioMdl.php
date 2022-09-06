@@ -13,6 +13,7 @@ class Usuario
 	private $creadoEn;
 	private $id_estado;
 	private $id_ti;
+	private $docChange;
 
 
 	function __construct()
@@ -138,6 +139,15 @@ class Usuario
 	public function setId_ti($id_ti)
 	{
 		$this->id_ti = $id_ti;
+	}
+	public function getDocChange()
+	{
+		return $this->docChange;
+	}
+
+	public function setDocChange($docChan)
+	{
+		$this->docChange = $docChan;
 	}
 
 }

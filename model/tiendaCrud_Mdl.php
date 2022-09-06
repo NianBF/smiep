@@ -70,9 +70,7 @@ class CrudTienda
 
 	public function actualizar($Tienda)
 	{
-		$actualizar = $this->db->prepare('UPDATE tienda 
-			SET  id_ti=:id_ti,nombreTienda=:nombreTienda,direccionTi=:direccionTi,telTi=:telTi,emailTi=:emailTi 
-			WHERE id_ti=:id_ti');
+		$actualizar = $this->db->prepare('UPDATE tienda SET  id_ti=:id_ti,nombreTienda=:nombreTienda,direccionTi=:direccionTi,telTi=:telTi,emailTi=:emailTi WHERE id_ti=:id_ti');
 		$actualizar->bindValue('id_ti', $Tienda->getId_ti());
 		$actualizar->bindValue('nombreTienda', $Tienda->getNombreTienda());
 		$actualizar->bindValue('direccionTi', $Tienda->getDireccionTi());

@@ -96,7 +96,6 @@ class CrudProveedor
 		$myProveedor->setNumTel2($Proveedor['numTel2']);
 		$myProveedor->setEmail1($Proveedor['email1']);
 		$myProveedor->setEmail2($Proveedor['email2']);
-		//$myProveedor->setCreadoEn($Proveedor['CreadoEn']);
 
 		return $myProveedor;
 	}
@@ -122,7 +121,6 @@ class CrudProveedor
 		$actualizar->bindValue('numTel2', $Proveedor->getNumTel2());
 		$actualizar->bindValue('email1', $Proveedor->getEmail1());
 		$actualizar->bindValue('email2', $Proveedor->getEmail2());
-		//$actualizar->bindValue('creadoEn',$Proveedor->getCreadoEn());
 		$actualizar->execute();
 	}
 }
