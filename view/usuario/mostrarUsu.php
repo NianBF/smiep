@@ -55,7 +55,7 @@ else
 
             <div class="searchNav">
                 <div class="buscarOne">
-                    <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Categoria"
+                    <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Usuario"
                         class="buscar1">
                     <button type="button" class="searchBtn">
                         <i class="ri-search-2-line"></i>
@@ -65,7 +65,7 @@ else
                     <label for="filtrar-tabla1">ID</label>
                 </span>
                 <div class="buscarTwo">
-                    <input type="text" name="filtrar-tabla2" class="buscar1" id="buscar2" placeholder="Categoria"
+                    <input type="text" name="filtrar-tabla2" class="buscar1" id="buscar2" placeholder="Usuario"
                         class="buscar1">
                     <button type="button" class="searchBtn">
                         <i class="ri-search-2-line"></i>
@@ -75,7 +75,7 @@ else
                     <label for="filtrar-tabla2">Usuario</label>
                 </span>
                 <div class="buscarThree">
-                    <input type="text" name="filtrar-tabla3" class="buscar1" id="buscar2" placeholder="Categoria"
+                    <input type="text" name="filtrar-tabla3" class="buscar1" id="buscar3" placeholder="Rol Usuario"
                         class="buscar1">
                     <button type="button" class="searchBtn">
                         <i class="ri-search-2-line"></i>

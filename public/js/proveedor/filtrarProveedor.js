@@ -1,6 +1,6 @@
 let campoIDProv = document.querySelector("#buscar1");
 let campoEmpresaProv = document.querySelector("#buscar2");
-let valores = document.querySelectorAll(".proveedor");
+let valores = document.querySelectorAll(".row");
 
 campoIDProv.addEventListener("input", function () {
   if (this.value.length > 0) {

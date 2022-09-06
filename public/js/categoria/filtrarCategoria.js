@@ -1,6 +1,6 @@
 let campoIdCateg = document.querySelector("#buscar1");
 let campoCateg = document.querySelector("#buscar2");
-let valores = document.querySelectorAll(".categoriaFiltro");
+let valores = document.querySelectorAll(".row");
 
 campoCateg.addEventListener("input", function () {
   if (this.value.length > 0) {
@@ -8,7 +8,7 @@ campoCateg.addEventListener("input", function () {
       var valor = valores[i];
 
         //en la sigiente linea indicamos el campo al que queremos realizar el filtro
-      let TbNombre = valor.querySelector(".nombCat");
+      let TbNombre = valor.querySelector(".colName");
       let nombre = TbNombre.textContent;
       let expresion = new RegExp(this.value, "i");
 
@@ -32,7 +32,7 @@ campoIdCateg.addEventListener("input", function () {
       var valor = valores[i];
 
        //en la sigiente linea indicamos el campo al que queremos realizar el filtro
-      let tdNombre = valor.querySelector(".idCat");
+      let tdNombre = valor.querySelector(".id");
       let nombre = tdNombre.textContent;
       let expresion = new RegExp(this.value, "i");
 

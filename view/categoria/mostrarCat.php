@@ -103,7 +103,7 @@ else
                             </a>
                             </div>
                         </div>
-                    </div> </br>
+                    </div> 
                     <?php } ?>
                 </div>
             </section>
