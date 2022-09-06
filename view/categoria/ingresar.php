@@ -19,6 +19,7 @@ else
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
+    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
     <link rel="stylesheet" href="../../public/css/plantillas/forms.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../public/css/fonts.css">

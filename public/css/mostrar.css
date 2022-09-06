@@ -23,52 +23,6 @@ section {
   font-size: 24px;
 }
 
-/****---Estilos a los botones---***/
-.btnMos a {
-  position: relative;
-  left: 60%;
-  text-decoration: none;
-  font-family: "Montserrat-Bold";
-  color: var(--bgColor);
-  padding: var(--paddingBtn);
-  padding-left: 0;
-  letter-spacing: 0.2rem;
-  border-radius: var(--radiousBtn);
-}
-.btnMos .add {
-  background-color: var(--submitBtn);
-  margin-right: 2rem;
-}
-.btnMos .add:hover {
-  background-color: var(--submitBtnHov);
-  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  transition: 0.5s;
-}
-.btnMos .add span {
-  background-color: var(--submitBtnHov);
-  border-radius: 3px;
-  padding: 0.7rem 0.5rem;
-  margin-right: 2%;
-}
-.btnMos .back {
-  background-color: var(--backBtn);
-}
-.btnMos .back:hover {
-  background-color: var(--backBtnHov);
-  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  transition: 0.5s;
-}
-.btnMos .back span {
-  background-color: var(--backBtnHov);
-  border-radius: 3px;
-  padding: 0.7rem 0.4rem;
-  margin-right: 2%;
-}
-
 /****Estilos a contenido***/
 /****---Estilos a títulos del contenido---***/
 .listElements .titleList {
@@ -77,68 +31,8 @@ section {
   margin: auto auto 1.5rem auto;
 }
 
-/***---Estilos para botón eliminar---***/
-div .btnOpt {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-}
-div .btnOptDel {
-  border-radius: var(--radiousBtn);
-  height: 1rem;
-  width: 2rem;
-  background-color: var(--btnDel);
-  text-align: center;
-  padding: 0.6rem;
-}
-div .btnOptUpd {
-  border-radius: var(--radiousBtn);
-  height: 1rem;
-  width: 2rem;
-  background-color: var(--colorSMIEP);
-  text-align: center;
-  padding: 0.6rem;
-}
-div .btnOpt .btnOptDel:hover {
-  background-color: var(--btnDelHov);
-  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  transition: 0.5s;
-}
-div .btnOpt .btnOptUpd:hover {
-  background-color: var(--BtnHov);
-  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
-  transition: 0.5s;
-}
-div .btnOpt a i {
-  color: var(--bgColor);
-  width: 100%;
-  height: 100%;
-}
-
 @media screen and (max-width: 1030px) {
-  .btnMos a {
-    position: inherit;
-    margin-left: 20px;
-  }
   .contentList fieldset {
     padding: 1.5rem 0;
-  }
-}
-
-@media screen and (max-width: 470px) {
-  .btnMos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-  }
-
-  .btnMos a {
-    width: 100%;
-    margin: 0 20px 10px 20px;
   }
 }
