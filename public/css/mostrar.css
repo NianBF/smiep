@@ -33,8 +33,6 @@ section {
   text-align: center;
   margin: auto auto 1.5rem auto;
 }
-
-<<<<<<< HEAD
 /***---Estilos para botón eliminar---***/
 div .btnOpt {
   display: flex;
@@ -78,10 +76,6 @@ div .btnOpt a i {
   height: 100%;
 }
 
-
-
-=======
->>>>>>> 924c1916f0e3241bd51aa493a110cc86574634b1
 @media screen and (max-width: 1030px) {
   .contentList fieldset {
     padding: 1.5rem 0;
