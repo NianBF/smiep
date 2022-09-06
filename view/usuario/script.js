@@ -1,3 +1,7 @@
+/**
+ * Variables de botoness, clases y pasos del formulario
+ */
+const form = document.querySelector(".contact-form");
 const slidePage = document.querySelector(".slide-page");
 const page = document.querySelector(".page");
 const page1 = document.querySelector(".page1");
@@ -13,16 +17,28 @@ const progressText = document.querySelectorAll(".step p");
 const progressCheck = document.querySelectorAll(".step .check");
 const bullet = document.querySelectorAll(".step .bullet");
 let current = 1;
-
+//Anuncio
 const btninfo = document.querySelector(".info");
+const closeinfo = document.querySelector(".closer");
 const info = document.querySelector(".anuncio");
-btninfo.addEventListener("click", (e)=>{
-  e.preventDefault();
-  
-  info.classList.toggle("invisible")
-  console.log(info.classList.value)
 
-})
+btninfo.addEventListener("click", function(event){
+  event.preventDefault();
+  info.style.display = "inline-block";
+  form.style.display = "none";
+});
+
+closeinfo.addEventListener("click", function(event){
+  event.preventDefault();
+  info.style.display = "none";
+  form.style.display = "inline-block";
+  //page.style.display = "none";
+});
+
+/**
+ * Avanzar página formulario por pasos
+*/
+
 
 nextBtnFirst.addEventListener("click", function(event){
   event.preventDefault();

@@ -77,13 +77,58 @@
   border: 2px solid #339999;
   margin-right: 10%;
   max-width: 40%;
-  
-}
-fieldset.invisible{
-  display: none;
 }
 
 .contForm {
   display: block;
   margin: auto;
 }
+
+.info {
+  display: none;
+}
+.closer {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 1259px) {
+  .contForm fieldset.anuncio {
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 1165px) {
+  .contForm fieldset.anuncio {
+    margin-right: 4%;
+  }
+}
+@media screen and (max-width: 1148px) {
+  .contForm fieldset.anuncio {
+    margin-right: 3%;
+  }
+} 
+@media screen and (max-width: 1132px) {
+  .contForm fieldset.anuncio {
+    margin-right: 2%;
+  }
+} 
+@media screen and (max-width: 1116px) {
+  .contForm fieldset.anuncio {
+    margin-right: 1%;
+  }
+}
+@media screen and (max-width: 1116px) {
+  .contForm fieldset.anuncio {
+    margin-right: 1%;
+  }
+}
+@media screen and (max-width: 1101px) {
+  .contForm fieldset.anuncio {
+    display: none;
+    z-index: 5;
+  }
+  .info {
+    display: inline-block;
+  }
+} 

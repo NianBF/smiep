@@ -27,6 +27,7 @@ else
     <title>SMIEP</title>
     
     <link rel="stylesheet" href="../../public/css/tablas.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
     <link rel="stylesheet" href="../../public/css/searchBar.css">
     <link rel="stylesheet" href="../../public/css/mostrar.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">

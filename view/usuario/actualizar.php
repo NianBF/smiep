@@ -31,7 +31,7 @@ else
 
 	<title>Actualizar Usuario</title>
 	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
-
+	<link rel="stylesheet" href="../../public/css/plantillas/btns.css">
 </head>
 
 <body>

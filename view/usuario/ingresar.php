@@ -20,7 +20,8 @@ else
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
     <link rel="stylesheet" href="stepsForm.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/formsnic.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/forms.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../public/css/tablas.css">
     <link rel="stylesheet" href="../../public/css/fonts.css">
@@ -50,10 +51,11 @@ else
          
             <form action='../../controller/usuarioCtrl.php' id="formulario" name="formulario" method='post'>
             
-            <img class="info" src="https://img.icons8.com/hands/100/000000/experimental-question-mark-hands.png"/>
+            <img class="info add" src="https://img.icons8.com/hands/100/000000/experimental-question-mark-hands.png"/>
 
-                <fieldset class="anuncio invisible">
+                <fieldset class="anuncio movAds">
                     <legend>Advertencia</legend>
+                    <span class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></span>
                     <div>
                         <article>
                             <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
