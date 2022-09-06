@@ -25,13 +25,8 @@ else
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
-    <link rel="stylesheet" href="../../public/css/tablas.css">
-    <link rel="stylesheet" href="../../public/css/searchBar.css">
-    <link rel="stylesheet" href="../../public/css/mostrar.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
-    <link rel="stylesheet" href="../../public/css/fonts.css">
-    <link rel="stylesheet" href="../../public/css/variables.css">
+   
+    <link rel="stylesheet" href="../../public/css/mostarAll.css">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <!--Fuente de iconos-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
