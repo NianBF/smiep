@@ -113,6 +113,7 @@ else
                         <th>Descripción</th>
                         <th>precio</th>
                         <th>Disponible</th>
+                        <th>Estado</th>
                         <th class="opcTitle">Opciones</th>
                     </tr>
                 </thead>
@@ -142,6 +143,9 @@ else
                     <td class="disponible">
                         <?php echo $Producto->getCantidadDisp() ?>
                     </td>
+                   <td class="Estado">
+                        <?php echo $Producto->getEstado(); ?>
+                    </td> 
 
                     <td class="btnOpt">
                         <a class="delete btnOptDel" type="submit"

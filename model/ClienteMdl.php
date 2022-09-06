@@ -1,7 +1,6 @@
 <?php
 class Cliente
 {
-	private $docChan;
 	private $id_cliDoc;
 	private $nombreCli1;
 	private $nombreCli2;
@@ -114,15 +113,5 @@ class Cliente
 		$this->fechaNac = $fechaNac;
 	}
 
-	//Se crea variable docChange para almacenar el documento que se quiera actualizar
-	public function getDocChange()
-	{
-		return $this->docChan;
-	}
-
-	public function setDocChange($Doc)
-	{
-		$this->docChan = $Doc;
-	}
 }
 ?>

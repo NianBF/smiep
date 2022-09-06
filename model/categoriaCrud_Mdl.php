@@ -26,7 +26,7 @@ class CrudCategoria
 	public function mostrar()
 	{
 		$listaCategoria = [];
-		$select = $this->db->query('SELECT * FROM categoria');
+		$select = $this->db->query('SELECT * FROM categoria ORDER BY nCategoria ASC');
 
 		foreach ($select->fetchAll() as $Categoria)
 		{

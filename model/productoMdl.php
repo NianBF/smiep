@@ -153,6 +153,14 @@ class Producto
 		$this->id_estado = $id_estado;
 	}
 
+	public function getEstado(){
+		return $this->estado;
+	}
+
+	public function setEstado($estado){
+		$this->estado=$estado;
+	}
+
 	public function getPriceArrive(){
 		return $this->priceArrive;
 	}

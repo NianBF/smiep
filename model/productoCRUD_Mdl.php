@@ -36,11 +36,11 @@ class CrudProducto
 
 	}
 
-	// método para mostrar todos los producto
+	// método para mostrar todos los productos
 	public function mostrar()
 	{
 		$listaProducto = [];
-		$select = $this->db->query('SELECT * FROM producto');
+		$select = $this->db->query('SELECT *,tEstado FROM producto INNER JOIN estado ON estado.id_estado=producto.id_estado');
 
 		foreach ($select->fetchAll() as $Producto)
 		{
@@ -58,6 +58,7 @@ class CrudProducto
 			$myProducto->setId_cat($Producto['id_cat']);
 			$myProducto->setId_estado($Producto['id_estado']);
 			$myProducto->setPriceArrive($Producto['priceArrive']);
+			$myProducto->setEstado($Producto['tEstado']);
 
 			$listaProducto[] = $myProducto;
 		}
@@ -93,6 +94,7 @@ class CrudProducto
 		$myProducto->setId_cat($Producto['id_cat']);
 		$myProducto->setId_Estado($Producto['id_estado']);
 		$myProducto->setPriceArrive($Producto['priceArrive']);
+		$myProducto->setEstado($Producto['tEstado']);
 
 
 		return $myProducto;

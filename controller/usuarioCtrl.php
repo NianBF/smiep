@@ -36,7 +36,6 @@ $Usuario->setId_ti($_POST['id_ti']);
 if (isset($_POST['insertar']))
 {
 	//llama a la función insertar definida en el crud
-	
 	$Usuario->setRol($_POST['rol']);
 	$crud->insertar($Usuario);
 	header('Location: ../view/usuario/mostrarUsu.php');
