@@ -28,6 +28,7 @@ else
     <!--Se llaman estilos para el documento-->
     <link rel="stylesheet" href="../../public/css/categoria.css">
     <!--Estilos generales para SMIEP-->
+    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
     <link rel="stylesheet" href="../../public/css/mostrar.css">
     <link rel="stylesheet" href="../../public/css/searchBar.css">
     <link rel="stylesheet" href="../../public/css/plantillas/footer.css">

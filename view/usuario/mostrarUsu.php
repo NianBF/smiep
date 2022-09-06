@@ -30,6 +30,7 @@ else
     <link rel="stylesheet" href="../../public/css/mostrar.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
     <link rel="stylesheet" href="../../public/css/fonts.css">
     <link rel="stylesheet" href="../../public/css/variables.css">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>

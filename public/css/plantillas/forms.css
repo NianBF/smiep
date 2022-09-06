@@ -83,73 +83,7 @@ fieldset.invisible{
   display: none;
 }
 
-/***---Botón---***/
-/*Estilo para botón Submit*/
-input[type="submit"] {
-  display: block;
-  margin: auto;
-  font-family: "Montserrat-Bold";
-  color: #fff;
-  font-size: 18px;
-  letter-spacing: 0.17rem;
-  background-color: #2eb369;
-  border: transparent;
-  border-radius: 10px;
-  padding: 0.6rem;
-}
 .contForm {
   display: block;
   margin: auto;
-}
-.contForm .btn {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.contForm .btn span input {
-  font-family: "Montserrat-Bold";
-  color: #fff;
-  font-size: 18px;
-  letter-spacing: 0.17rem;
-  background-color: #2eb369;
-  border: transparent;
-  border-radius: 10px;
-  padding: 0.7rem 2rem;
-}
-.contForm .btn span a input {
-  background-color: #339999;
-}
-/***---Estilos hover, after, before, active para botón---***/
-.contForm .btn span input:hover {
-  letter-spacing: 0.2rem;
-  background-color: #154e2f;
-  cursor: pointer;
-  -webkit-box-shadow: 11px 13px 38px 3px #333333;
-  -moz-box-shadow: 11px 13px 38px 3px #333333;
-  box-shadow: 11px 13px 38px 3px #333333;
-  transition: .2s;
-}
-.contForm .btn span a input:hover {
-  background-color: #184b4b;
-  transition: .2s;
-}
-input[type="submit"]:hover {
-  letter-spacing: 0.2rem;
-  background-color: #154e2f;
-  cursor: pointer;
-  -webkit-box-shadow: 11px 13px 38px 3px #333333;
-  -moz-box-shadow: 11px 13px 38px 3px #333333;
-  box-shadow: 11px 13px 38px 3px #333333;
-  transition: .2s;
-}
-
-button.info{
-  display: block;
-    position: absolute;
-    bottom: 0;
-    height: 2rem;
-    right: 0;
-    background: red;
-    width: 3rem;
 }
