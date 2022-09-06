@@ -48,6 +48,10 @@ td.btnOpt {
   padding: 2rem;
 }
 
+
+.invisible{
+  display: none; 
+}
 @media screen and (max-width: 820px) {
  .listElements {
   padding: 0 2rem;

@@ -1,5 +1,5 @@
 let campoIdCli = document.querySelector("#buscar1");
-let valores = document.querySelectorAll(".cliente");
+let valores = document.querySelectorAll(".row");
 
 let filtar = campoIdCli.addEventListener("input", function () {
   if (this.value.length > 0) {
