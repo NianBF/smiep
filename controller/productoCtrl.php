@@ -37,18 +37,19 @@ $Producto->setId_docUSu($_SESSION["docUsu"]);
 $Producto->setId_cat($_POST['id_cat']);
 $Producto->setId_estado($_POST['id_estado']);
 $Producto->setPriceArrive($_POST['priceArrive']);
+$Producto->setEstado($_POST['tEstado']);
 
 if (isset($_POST['insertar']))
 {
 	//llama a la función insertar definida en el crud si el POST es Insertar
 	$crud->insertar($Producto);
-	header('Location: ../view/producto/mostrar.php');
+	header('Location: ../view/producto/mostrarProd.php');
 
 }
 elseif (isset($_POST['actualizar']))
 {//llama a la función actualizar definida en el crud si el POST es Actualizar
 	$crud->actualizar($Producto);
-	header('Location: ../view/producto/mostrar.php');
+	header('Location: ../view/producto/mostrarProd.php');
 
 }
 elseif ($_GET['accion'] == 'e'){// si la variable accion enviada por GET es == 'e' llama al crud y elimina
@@ -71,12 +72,12 @@ elseif ($_GET['accion'] == 'e'){// si la variable accion enviada por GET es == '
 				 url: '../controller/productoCtrl.php?id_prod=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../view/producto/mostrar.php';					
+					window.location.href = '../view/producto/mostrarProd.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../view/producto/mostrar.php';
+			window.location.href = '../view/producto/mostrarProd.php';
 		   }
 		 })
 		 </script>";

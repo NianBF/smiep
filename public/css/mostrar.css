@@ -33,6 +33,51 @@ section {
   text-align: center;
   margin: auto auto 1.5rem auto;
 }
+<<<<<<< HEAD
+=======
+/***---Estilos para botón eliminar---***/
+div .btnOpt {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+div .btnOptDel {
+  border-radius: var(--radiousBtn);
+  height: 1rem;
+  width: 2rem;
+  background-color: var(--btnDel);
+  text-align: center;
+  padding: 0.6rem;
+}
+div .btnOptUpd {
+  border-radius: var(--radiousBtn);
+  height: 1rem;
+  width: 2rem;
+  background-color: var(--colorSMIEP);
+  text-align: center;
+  padding: 0.6rem;
+}
+div .btnOpt .btnOptDel:hover {
+  background-color: var(--btnDelHov);
+  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  transition: 0.5s;
+}
+div .btnOpt .btnOptUpd:hover {
+  background-color: var(--BtnHov);
+  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  transition: 0.5s;
+}
+div .btnOpt a i {
+  color: var(--bgColor);
+  width: 100%;
+  height: 100%;
+}
+>>>>>>> 89c751f684587ac0dd529e1f47170be170a08e1d
 
 @media screen and (max-width: 1030px) {
   .contentList fieldset {

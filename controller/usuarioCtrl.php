@@ -29,7 +29,6 @@ $Usuario->setApellido2($_POST['apellido2']);
 $Usuario->setUserName($_POST['userName']);
 $Usuario->setEmail($_POST['email']);
 $Usuario->setPass($_POST['pass']);
-$Usuario->setRol($_POST['rol']);
 $Usuario->setId_estado($_POST['id_estado']);
 $Usuario->setId_ti($_POST['id_ti']);
 
@@ -37,16 +36,16 @@ $Usuario->setId_ti($_POST['id_ti']);
 if (isset($_POST['insertar']))
 {
 	//llama a la función insertar definida en el crud
+	$Usuario->setRol($_POST['rol']);
 	$crud->insertar($Usuario);
-	header('Location: ../view/usuario/mostrar.php');
+	header('Location: ../view/usuario/mostrarUsu.php');
 
 // si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
 }
 elseif (isset($_POST['actualizar']))
 {
-
 	$crud->actualizar($Usuario);
-	header('Location: ../view/usuario/mostrar.php');
+	header('Location: ../view/usuario/mostrarUsu.php');
 
 // si la variable accion enviada por GET es == 'e' llama al crud y elimina
 }

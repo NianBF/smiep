@@ -40,15 +40,10 @@ else
 				<h3>Cambia los datos del Cliente</h3>
 				<form action='../../controller/clienteCtrl.php' name="formulario" method='post'>
 					<p>
-						<label for="doc">Documento</label>
-						<input type='text' placeholder="Documento" id="doc" name='docChange'
-							value='<?php echo $Cliente->getId_cliDoc()?>'>
-						<input type="hidden" name='id_cliDoc' value="<?php echo $Cliente->getId_cliDoc()?>">
-					</p>
-					<p>
 						<label for="nombreCli1">Primer Nombre</label>
 						<input type='text' placeholder="Primer Nombre" id="nombreCli1" name='nombreCli1'
 							value='<?php echo $Cliente->getNombreCli1()?>'>
+							<input type="hidden" name='id_cliDoc' value="<?php echo $Cliente->getId_cliDoc()?>">
 					</p>
 					<p>
 						<label for="nombreCli2">Segundo Nombre</label>
@@ -80,7 +75,7 @@ else
 						<input type='email' id="email" placeholder="ejemplo@smiep.com.co" name='emailCli'
 							value='<?php echo $Cliente->getEmailCli()?>'>
 					</p>
-					<p class='block'>
+					<p>
 						<label for="FecNac">Fecha de Nacimiento</label>
 						<input type='date' id="FecNac" placeholder="fecha de nacimineto" name='fechaNac'
 							value='<?php echo $Cliente->getFechaNac()?>'>
