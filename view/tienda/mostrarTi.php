@@ -58,7 +58,7 @@ else
         
         <div class="searchNav">
             <div class="buscarOne">
-                <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Clientes"
+                <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Tienda"
                     class="buscar1">
                 <button type="button" class="searchBtn">
                     <i class="ri-search-2-line"></i>
@@ -67,6 +67,17 @@ else
             <span class="labelsito">
                 <label for="filtrar-tabla1">ID</label>
             </span>
+
+            <div class="buscarTwo">
+                    <input type="text" name="filtrar-tabla2" class="buscar1" id="buscar2" placeholder="Nombre Tienda"
+                        class="buscar1">
+                    <button type="button" class="searchBtn">
+                        <i class="ri-search-2-line"></i>
+                    </button>
+                </div>
+                <span class="labelsito">
+                    <label for="filtrar-tabla2">Nombre</label>
+                </span>
                 
             <div class="darkMode">
                 <a id="mod" class="mod" onclick="cambiarModo()">

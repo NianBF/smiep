@@ -1,7 +1,7 @@
 let campoIdUsua = document.querySelector("#buscar1");
 let campoUsua = document.querySelector("#buscar2");
 let campoRol = document.querySelector("#buscar3");
-let valores = document.querySelectorAll(".usuario");
+let valores = document.querySelectorAll(".row");
 
 /* filtro para buscar por id usuario */
 campoIdUsua.addEventListener("input", function () {
@@ -10,7 +10,7 @@ campoIdUsua.addEventListener("input", function () {
       var valor = valores[i];
 
       /* en la sigiente linea indicamos el campo al que queremos realizar el filtro*/
-      var tdNombre = valor.querySelector(".idUsua");
+      var tdNombre = valor.querySelector(".id");
       var nombre = tdNombre.textContent;
       var expresion = new RegExp(this.value, "i");
 
@@ -35,7 +35,7 @@ campoUsua.addEventListener("input", function () {
       var valor = valores[i];
 
       /* en la sigiente linea indicamos el campo al que queremos realizar el filtro*/
-      var tdNombre = valor.querySelector(".nickUsua");
+      var tdNombre = valor.querySelector(".userName");
       var nombre = tdNombre.textContent;
       var expresion = new RegExp(this.value, "i");
 
@@ -60,7 +60,7 @@ campoRol.addEventListener("input", function () {
       var valor = valores[i];
 
       /* en la sigiente linea indicamos el campo al que queremos realizar el filtro*/
-      var tdNombre = valor.querySelector(".rolUsua");
+      var tdNombre = valor.querySelector(".rol");
       var nombre = tdNombre.textContent;
       var expresion = new RegExp(this.value, "i");
 
