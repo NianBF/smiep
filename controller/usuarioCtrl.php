@@ -22,7 +22,6 @@ $crud = new CrudUsuario();
 $Usuario = new Usuario();
 
 $Usuario->setId_doc($_POST['id_doc']);
-$Usuario->setDocChange($_POST['docChange']);
 $Usuario->setNombre1($_POST['nombre1']);
 $Usuario->setNombre2($_POST['nombre2']);
 $Usuario->setApellido1($_POST['apellido1']);

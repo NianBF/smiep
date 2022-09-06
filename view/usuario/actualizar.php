@@ -43,15 +43,12 @@ else
 			<div class="contact-form">
 				<h3>Cambia los datos de Usuario</h3>
 				<form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
-				<p>
-						<label for="doc">Documento</label>
-						<input type='text' placeholder="Documento" id="doc" name='docChange' value='<?php echo $Usuario->getId_Doc()?>'>							
-						<input type='hidden' name='id_doc' value='<?php echo $Usuario->getId_doc()?>'>
-					</p>
+					
 					<p>
 						<label for="nomb1">Primer Nombre</label>
 						<input type='text' id="nomb1" name='nombre1' placeholder="Primer Nombre"
 							value='<?php echo $Usuario->getNombre1()?>'>
+							<input type='hidden' name='id_doc' value='<?php echo $Usuario->getId_doc()?>'>
 					</p>
 					<p>
 						<label for="nomb2">Segundo Nombre</label>

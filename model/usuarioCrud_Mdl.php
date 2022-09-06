@@ -89,8 +89,7 @@ class CrudUsuario
 
 	public function actualizar($Usuario)
 	{
-		$actualizar = $this->db->prepare('UPDATE usuario SET /* id_doc=:docChan, */ nombre1=:nombre1, nombre2=:nombre2, apellido1=:apellido1, apellido2=:apellido2, userName=:userName, email=:email, password=MD5(:password),id_estado=:id_estado, id_ti=:id_ti  WHERE id_doc=:id_doc');
-		/* $actualizar->bindValue('docChan',$Usuario->getDocChange()); */
+		$actualizar = $this->db->prepare('UPDATE usuario SET nombre1=:nombre1, nombre2=:nombre2, apellido1=:apellido1, apellido2=:apellido2, userName=:userName, email=:email, password=MD5(:password),id_estado=:id_estado, id_ti=:id_ti  WHERE id_doc=:id_doc');
 		$actualizar->bindValue('id_doc', $Usuario->getId_doc());
 		$actualizar->bindValue('nombre1', $Usuario->getNombre1());
 		$actualizar->bindValue('nombre2', $Usuario->getNombre2());

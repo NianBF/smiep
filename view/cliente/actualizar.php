@@ -40,9 +40,6 @@ else
 				<h3>Cambia los datos del Cliente</h3>
 				<form action='../../controller/clienteCtrl.php' name="formulario" method='post'>
 					<p>
-						<label for="doc">Documento</label>
-						<input type='text' placeholder="Documento" id="doc" name='docChange'
-							value='<?php echo $Cliente->getId_cliDoc()?>'>
 						<input type="hidden" name='id_cliDoc' value="<?php echo $Cliente->getId_cliDoc()?>">
 					</p>
 					<p>
