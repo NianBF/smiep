@@ -75,7 +75,7 @@
 }
 .contForm fieldset.anuncio /*advertencia/Anuncio*/ {
   border: 2px solid #339999;
-  margin-right: 10%;
+  margin-right: 15%;
   max-width: 40%;
 }
 
@@ -108,9 +108,11 @@
 }
 .closer {
   display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
+}
+@media screen and (max-width: 1366px) {
+  .contForm fieldset.anuncio {
+    margin-right: 10%;
+  }
 }
 @media screen and (max-width: 1259px) {
   .contForm fieldset.anuncio {
@@ -149,5 +151,10 @@
   }
   .info {
     display: inline-block;
+  }
+  .closer {
+    display: contents;
+  position: absolute;
+  top 0
   }
 }
