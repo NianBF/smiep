@@ -51,7 +51,7 @@ else
          
             <form action='../../controller/usuarioCtrl.php' id="formulario" name="formulario" method='post'>
             
-            <img class="info add" src="https://img.icons8.com/hands/100/000000/experimental-question-mark-hands.png"/>
+            <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
 
                 <fieldset class="anuncio movAds">
                     <legend>Advertencia</legend>
