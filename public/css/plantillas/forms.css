@@ -60,7 +60,7 @@
   background-color: #f0f0f0;
   display: inline-block;
   -webkit-box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
-  -moz-box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+  -moz-box-shadow: 11px 13px 38px 3px #435959;
   box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
   border: 2px solid #aa1132;
   border-radius: 10px 13px;
@@ -83,16 +83,35 @@
   display: block;
   margin: auto;
 }
-
 .info {
   display: none;
+  margin-right: 0.9rem;
+  padding: 5px;
+  background-color: crimson;
+  border-radius: 50%;
+  text-align: center;
+  max-width: max-content;
+  color: var(--bgColor);
+  text-shadow: 1px 0px 14px #000000e8;
+}
+.info:hover {
+  background-color: #aa1132;
+  -webkit-box-shadow: 0 0 5px 2px var(--shadowColorSoft);
+  -moz-box-shadow: 0 0 5px 2px var(--shadowColorSoft);
+  box-shadow: 0 0 5px 2px var(--shadowColorSoft);
+  cursor: pointer;
+}
+.info i {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
 }
 .closer {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
 }
-
 @media screen and (max-width: 1259px) {
   .contForm fieldset.anuncio {
     margin-right: 5%;
@@ -107,12 +126,12 @@
   .contForm fieldset.anuncio {
     margin-right: 3%;
   }
-} 
+}
 @media screen and (max-width: 1132px) {
   .contForm fieldset.anuncio {
     margin-right: 2%;
   }
-} 
+}
 @media screen and (max-width: 1116px) {
   .contForm fieldset.anuncio {
     margin-right: 1%;
@@ -131,4 +150,4 @@
   .info {
     display: inline-block;
   }
-} 
+}
