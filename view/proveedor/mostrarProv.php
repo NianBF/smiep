@@ -123,7 +123,7 @@ else
 
                     <td class="btnOpt">
                         <a class="delete btnOptDel" type="submit"
-                        href="../../controller/proveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=e">
+                        href="../../controller/ProveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv();?>&accion=e">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
                 
