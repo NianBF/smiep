@@ -48,13 +48,18 @@
 }
 /***---Fieldset---***/
 .contForm {
-  background-color: #3399993d;
+  /* background-color: #3399993d; */
   padding: 2rem;
   border-radius: 3rem 1rem;
   margin-top: 2rem;
   box-sizing: content-box;
   max-width: max-content;
-  position: relative;
+}
+.contForm form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .contForm fieldset /*Formulario*/ {
   background-color: #f0f0f0;
@@ -62,7 +67,7 @@
   -webkit-box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
   -moz-box-shadow: 11px 13px 38px 3px #435959;
   box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
-  border: 2px solid #aa1132;
+  border: 2px solid #339999;
   border-radius: 10px 13px;
   padding: 2.5rem;
 }
@@ -74,9 +79,9 @@
   font-size: 24px;
 }
 .contForm fieldset.anuncio /*advertencia/Anuncio*/ {
-  border: 2px solid #339999;
-  margin-right: 15%;
-  max-width: 40%;
+  border: 2px solid #aa1132;
+/*   margin-right: 15%;
+ */  max-width: 40%;
 }
 
 .contForm {
@@ -109,52 +114,28 @@
 .closer {
   display: none;
 }
-@media screen and (max-width: 1366px) {
-  .contForm fieldset.anuncio {
-    margin-right: 10%;
-  }
-}
-@media screen and (max-width: 1259px) {
-  .contForm fieldset.anuncio {
-    margin-right: 5%;
-  }
-}
-@media screen and (max-width: 1165px) {
-  .contForm fieldset.anuncio {
-    margin-right: 4%;
-  }
-}
-@media screen and (max-width: 1148px) {
-  .contForm fieldset.anuncio {
-    margin-right: 3%;
-  }
-}
-@media screen and (max-width: 1132px) {
-  .contForm fieldset.anuncio {
-    margin-right: 2%;
-  }
-}
-@media screen and (max-width: 1116px) {
-  .contForm fieldset.anuncio {
-    margin-right: 1%;
-  }
-}
-@media screen and (max-width: 1116px) {
-  .contForm fieldset.anuncio {
-    margin-right: 1%;
-  }
-}
 @media screen and (max-width: 1101px) {
   .contForm fieldset.anuncio {
     display: none;
-    z-index: 5;
+    /* z-index: 5; */
   }
   .info {
     display: inline-block;
+    position: absolute;
   }
   .closer {
-    display: contents;
-  position: absolute;
-  top 0
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+  }
+  .closer i {
+    position: absolute;
+    font-size: 2rem;
+    color: #aa1132;
+    text-shadow: 1px 1px 5px var(--shadowColorSoft);
+    cursor: pointer;
+  }
+  .closer i:hover {
+    -webkit-text-stroke: 2px var(--shadowColorSoft);
   }
 }

@@ -48,14 +48,14 @@ else
             </span>Volver</a>
             
         <div class="contForm">
+
          
             <form action='../../controller/usuarioCtrl.php' id="formulario" name="formulario" method='post'>
-            
-            <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
 
                 <fieldset class="anuncio movAds">
+                <div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
+
                     <legend>Advertencia</legend>
-                    <span class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></span>
                     <div>
                         <article>
                             <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
@@ -206,10 +206,13 @@ else
                                 <button class="submit">Enviar</button>
                             </div>
                         </div>
+                        <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
+
                     </section>
                 </fieldset>
             </form>
         </div>
+
     </section>
     <footer>
 
