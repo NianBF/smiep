@@ -12,7 +12,7 @@ $_SESSION["pass"] == null)
 
 </head>
 
-
+</html>
 <?php 
 require_once('../model/proveedorCrud_Mdl.php');
 require_once('../model/proveedorMdl.php');
@@ -87,4 +87,3 @@ elseif ($_GET['accion'] == 'eliminar')
 }
 }
 ?>
-</html>
