@@ -51,7 +51,6 @@ elseif (isset($_POST['actualizar']))
 }
 elseif ($_GET['accion'] == 'e')
 {
-	//echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");
 
 	$idDelete = $_GET['id_doc'];
 
@@ -65,7 +64,6 @@ elseif ($_GET['accion'] == 'e')
 			cancelButtonColor: '#d33',
 			confirmButtonText: 'Sí, Eliminar!'
 		 }).then((result) => {
-		   /* Read more about isConfirmed, isDenied below */
 		   if (result.isConfirmed) {
 			
 			 $.ajax({
@@ -73,12 +71,12 @@ elseif ($_GET['accion'] == 'e')
 				 url: '../controller/usuarioCtrl.php?id_doc=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../view/usuario/mostrar.php';					
+					window.location.href = '../view/usuario/mostrarUsu.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../view/usuario/mostrar.php';
+			window.location.href = '../view/usuario/mostrarUsu.php';
 		   }
 		 })
 		</script>";

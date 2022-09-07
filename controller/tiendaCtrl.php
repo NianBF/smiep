@@ -1,19 +1,21 @@
 <?php
 session_start();
-if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
-$_SESSION["pass"] == null)
+if ($_SESSION['email'] == null or $_SESSION["userName"] == null or $_SESSION["pass"] == null)
 {
 	header("location: ../index.php");
 }else{ ?>
 <html>
-<head>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-</head>	
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+</head>
+
 <body>
 
-<?php
+    <?php
 
 require_once('../model/tiendaCrud_Mdl.php');
 require_once('../model/tiendaMdl.php');
@@ -30,13 +32,13 @@ $Tienda->setEmailTi($_POST['emailTi']);
 
 if (isset($_POST['insertar'])){
 	$crud->insertar($Tienda);
-	header('Location: ../view/tienda/mostrar.php');
+	header('Location: ../view/tienda/mostrarTi.php');
 
 }
 elseif (isset($_POST['actualizar'])){
 
 	$crud->actualizar($Tienda);
-	header('Location: ../view/tienda/mostrar.php');
+	header('Location: ../view/tienda/mostrarTi.php');
 
 }
 elseif ($_GET['accion'] == 'e')
@@ -62,12 +64,12 @@ elseif ($_GET['accion'] == 'e')
 				 url: '../controller/tiendaCtrl.php?id_ti=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../view/tienda/mostrar.php';					
+					window.location.href = '../view/tienda/mostrarTi.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../view/tienda/mostrar.php';
+			window.location.href = '../view/tienda/mostrarTi.php';
 		   }
 		 })
 		 </script>";
@@ -89,4 +91,5 @@ elseif ($_GET['accion'] == 'eliminar')
 
 
 </body>
+
 </html>
