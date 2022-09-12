@@ -24,13 +24,94 @@ else
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+    <!--Color para navegador móvil-->
+    <meta name="theme-color" content="#339999">
+    <title>SMIEP</title>
+    <link rel="stylesheet" href="stepsForm.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/formsnic.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
+    <link rel="stylesheet" href="../../public/css/tablas.css">
+    <link rel="stylesheet" href="../../public/css/fonts.css">
+    <link rel="stylesheet" href="../../public/css/variables.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-	<title>Actualizar Cliente</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
+    <header>
+        <?php include_once("../plantillas/header.html"); ?>
+    </header>
+    <section class="initForm">
+
+            <div class="btnMos">
+                <a href='../usuario/mostrarUsu.php' class="back"><span><i
+                class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+        	</div>
+            
+        <div class="contForm">
+        <form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
+
+		<img class="info" src="https://img.icons8.com/hands/100/000000/experimental-question-mark-hands.png"/>
+
+        <fieldset class="anuncio invisible">
+                    <legend>Advertencia</legend>
+                    <div>
+                        <article>
+                            <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+                                correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
+                            <p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
+                                consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+                            </br>
+                            <p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
+                                igual a las ya existentes.</p>
+                        </article>
+                    </div>
+                </fieldset>
+
+				<fieldset class="contact-form">
+                    <legend>Actualizar Usuario</legend>
+
+                    <section>
+                        <div class="progress-bar">
+                            <div class="step">
+                                <p>Paso 1</p>
+                                <div class="bullet">
+                                    <span>1</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p>Paso 2</p>
+                                <div class="bullet">
+                                    <span>2</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p>Paso 3</p>
+                                <div class="bullet">
+                                    <span>3</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p>Fin</p>
+                                <div class="bullet">
+                                    <span>4</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                        </div>
+                    </section>
+					
+					
+						
+<!-- <body>
 	<div class="contenedor">
 		<span class="icon">
 			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure>
@@ -97,7 +178,7 @@ else
 		</div>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="../../public/js/cliente/actializarCliente.js"></script>
-</body>
+</body> -->
 
 </html>
 <?php

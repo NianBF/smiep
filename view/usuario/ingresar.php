@@ -42,10 +42,10 @@ else
     </header>
     <section class="initForm">
 
-            <a href="../inicio/menu.php" class="back">
-            <span>
-                <i class="fa-solid fa-arrow-rotate-left"></i>
-            </span>Volver</a>
+            <div class="btnMos">
+                <a href='../usuario/mostrarUsu.php' class="back"><span><i
+                class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+        	</div>
             
         <div class="contForm">
 
