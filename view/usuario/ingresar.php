@@ -19,7 +19,7 @@ else
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
-    <link rel="stylesheet" href="stepsForm.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/stepsForm.css">
     <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
     <link rel="stylesheet" href="../../public/css/plantillas/forms.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
@@ -30,10 +30,10 @@ else
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
 </head>
 
 <body>
@@ -42,18 +42,18 @@ else
     </header>
     <section class="initForm">
 
-            <div class="btnMos">
-                <a href='../usuario/mostrarUsu.php' class="back"><span><i
-                class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
-        	</div>
-            
+        <div class="btnMos">
+            <a href='../usuario/mostrarUsu.php' class="back"><span><i
+                        class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+        </div>
+
         <div class="contForm">
 
-         
+
             <form action='../../controller/usuarioCtrl.php' id="formulario" name="formulario" method='post'>
 
                 <fieldset class="anuncio movAds">
-                <div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
+                    <div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
 
                     <legend>Advertencia</legend>
                     <div>
@@ -109,8 +109,8 @@ else
                         <div class="slide-page formPage">
                             <h4 class="titleSect">Documento de Identidad</h4>
                             <div class="userBox">
-                                <input type='text' id="id_cat" name='id_cat' placeholder=" ">
-                                <label for="id_cat">ID Usuario</label>
+                                <input type='text' id="id_doc" name='id_doc' placeholder=" " required>
+                                <label for="id_doc">ID Usuario</label>
                             </div>
                             <div class="btn">
                                 <button class="firstNext next">Siguiente</button>
@@ -119,22 +119,22 @@ else
                         <div class="page formPage">
                             <h4 class="titleSect">Nombres y Apellidos</h4>
                             <div class="userBox">
-                                <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                                <label for="nCategoria">Primer Nombre</label>
+                                <input type='text' id="nombre1" name='nombre1' placeholder=" " required>
+                                <label for="nombre1">Primer Nombre</label>
                             </div>
-                                <div class="userBox">
-                                    <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                                    <label for="nCategoria">Segundo Nombre</label>
-                                </div>
-
                             <div class="userBox">
-                                <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                                <label for="nCategoria">Primer Apellido</label>
+                                <input type='text' id="nombre2" name='nombre2' placeholder=" ">
+                                <label for="nombre2">Segundo Nombre</label>
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                                <label for="nCategoria">Segundo Apellido</label>
+                                <input type='text' id="apellido1" name='apellido1' placeholder=" " required>
+                                <label for="apellido1">Primer Apellido</label>
+                            </div>
+
+                            <div class="userBox">
+                                <input type='text' id="apellido2" name='apellido2' placeholder=" ">
+                                <label for="apellido2">Segundo Apellido</label>
                             </div>
                             <div class="btn">
                                 <button class="prev-1 prev">Atrás</button>
@@ -144,18 +144,18 @@ else
                         <div class="page page1 formPage">
                             <h4 class="titleSect">Información de Usuario</h4>
                             <div class="userBox">
-                                <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                                <label for="nCategoria">Nombre de Usuario</label>
+                                <input type='text' id="useName" name='userName' placeholder=" " required>
+                                <label for="useName">Nombre de Usuario</label>
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                                <label for="nCategoria">Correo</label>
+                                <input type='text' id="email" name='email' placeholder=" " required>
+                                <label for="email">Correo</label>
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="nCategoria" name='nCategoria' placeholder=" ">
-                                <label for="nCategoria">Contraseña</label>
+                                <input type='text' id="pass" name='pass' placeholder=" " required>
+                                <label for="pass">Contraseña</label>
                             </div>
                             <div class="btn">
                                 <button class="prev-2 prev">Atrás</button>
@@ -166,10 +166,10 @@ else
                             <h4 class="titleSect">Información de Tienda</h4>
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-                                <label for="selRol" class="lSel">Rol</label>
-                                <select name="selRol">
+                                <label for="rol" class="lSel">Rol</label><br>
+                                <select name="rol" required>
                                     <optgroup label="Rol">
-                                        <option value="">Elige una opción</option>
+                                        <option selected>Elige una opción</option>
                                         <option value="Administrador">Administrador</option>
                                         <option value="Empleado">Empleado</option>
                                     </optgroup>
@@ -178,10 +178,10 @@ else
 
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-                                <label for="selEs" class="lSel x">Estado</label>
-                                <select name="selEs">estado
+                                <label for="id_estado" class="lSel">Estado</label><br>
+                                <select name="id_estado" required>
                                     <optgroup label="Estado">
-                                        <option value="">Elige una opción</option>
+                                        <option selected>Elige una opción</option>
                                         <option value="2">Disponible</option>
                                         <option value="3">No Disponible</option>
                                     </optgroup>
@@ -190,10 +190,10 @@ else
 
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-                                <label for="selTi" class="lSel">Tienda</label>
-                                <select name="selTi">
+                                <label for="id_ti" class="lSel">Tienda</label><br>
+                                <select name="id_ti" required>
                                     <optgroup label="Tienda">
-                                        <option value="">Elige una opción</option>
+                                        <option selected>Elige una opción</option>
                                         <option value="1">Tienda Express</option>
                                     </optgroup>
                                 </select>
@@ -218,7 +218,7 @@ else
 
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-    <script src="script.js"></script>
+    <script src="../../public/js/stepsForm.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/categoria/ingresarCategoria.js"></script>
 </body>

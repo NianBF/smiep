@@ -8,8 +8,9 @@
 .userBox {
   position: relative;
   font-family: "Montserrat";
+  margin-top: .5rem;
 }
-.userBox label {
+.userBox label:not(.lSel) {
   padding: 5px 10px;
   background-color: transparent;
   color: rgb(0, 0, 0);
@@ -23,6 +24,21 @@
   transition: all 0.3s;
 }
 .userBox input {
+  padding: 18px 20px 18px 15px;
+  margin: 0.3rem;
+  width: 300px;
+  border: 3px solid #00000031;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.userBox label.lSel {
+  font-family: 'Montserrat-Bold';
+}
+.userBox select {
   padding: 18px 15px 18px 15px;
   margin: 0.3rem;
   width: 300px;

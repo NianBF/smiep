@@ -14,25 +14,21 @@ else
 
 	$dato = $_GET['id_doc'];
 	$Usuario = $crud->obtenerUsuario($_GET['id_doc']);
-
-
 ?>
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
-    <link rel="stylesheet" href="stepsForm.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/formsnic.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/stepsForm.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/forms.css">
     <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../public/css/tablas.css">
     <link rel="stylesheet" href="../../public/css/fonts.css">
@@ -41,28 +37,31 @@ else
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
+
 <body>
     <header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>
     <section class="initForm">
 
-            <div class="btnMos">
-                <a href='../usuario/mostrarUsu.php' class="back"><span><i
-                class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
-        	</div>
-            
+        <div class="btnMos">
+            <a href='../usuario/mostrarUsu.php' class="back"><span><i
+                        class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+        </div>
+
         <div class="contForm">
-        <form action='../../controller/usuarioCtrl.php' name="formulario" method='post'>
 
-		<img class="info" src="https://img.icons8.com/hands/100/000000/experimental-question-mark-hands.png"/>
 
-        <fieldset class="anuncio invisible">
+            <form action='../../controller/usuarioCtrl.php' id="formulario" name="formulario" method='post'>
+
+                <fieldset class="anuncio movAds">
+                    <div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
+
                     <legend>Advertencia</legend>
                     <div>
                         <article>
@@ -77,8 +76,8 @@ else
                     </div>
                 </fieldset>
 
-				<fieldset class="contact-form">
-                    <legend>Actualizar Usuario</legend>
+                <fieldset class="contact-form">
+                    <legend>Agregar Usuario</legend>
 
                     <section>
                         <div class="progress-bar">
@@ -112,71 +111,57 @@ else
                             </div>
                         </div>
                     </section>
-					
-					<section class="formularios">
+
+                    <section class="formularios">
                         <div class="slide-page formPage">
                             <h4 class="titleSect">Documento de Identidad</h4>
-                            
-							<div class="userBox">
-                                <input type='text' id="" value='<?php echo $Usuario->getId_doc()?>' placeholder= " ">
-                                <label for="">ID Usuario</label>
+                            <div class="userBox">
+                                <input type='text' id="id_doc" name='id_doc' placeholder=" " value='<?php echo $Usuario->getId_doc()?>' required>
+                                <label for="id_doc">ID Usuario</label>
                             </div>
                             <div class="btn">
                                 <button class="firstNext next">Siguiente</button>
                             </div>
                         </div>
-
-
-
-						<div class="page formPage">
+                        <div class="page formPage">
                             <h4 class="titleSect">Nombres y Apellidos</h4>
                             <div class="userBox">
-								<input type='text' id="nomb1" name='nombre1' placeholder=" "
-								value='<?php echo $Usuario->getNombre1()?>'>
-								<label for="nomb1">Primer Nombre</label>
+                                <input type='text' id="nombre1" name='nombre1' placeholder=" " value='<?php echo $Usuario->getNombre1()?>' required>
+                                <label for="nombre1">Primer Nombre</label>
                             </div>
-                                <div class="userBox">
-								<input type='text' id="nomb2" name='nombre2' placeholder=" "
-								value='<?php echo $Usuario->getNombre2()?>'>
-                                <label for="nomb2">Segundo Nombre</label>
+                            <div class="userBox">
+                                <input type='text' id="nombre2" name='nombre2' placeholder=" " value='<?php echo $Usuario->getNombre2()?>'>
+                                <label for="nombre2">Segundo Nombre</label>
                             </div>
 
                             <div class="userBox">
-								<input type='text' id="ape1" name='apellido1' placeholder=" "
-								value='<?php echo $Usuario->getApellido1()?>'>
-                                <label for="ape1">Primer Apellido</label>
+                                <input type='text' id="apellido1" name='apellido1' placeholder=" " value='<?php echo $Usuario->getApellido1()?>' required>
+                                <label for="apellido1">Primer Apellido</label>
                             </div>
 
                             <div class="userBox">
-								<input type='text' id="ape2" name='apellido2' placeholder=" "
-								value='<?php echo $Usuario->getApellido2()?>'>
-                                <label for="ape2">Segundo Apellido</label>
+                                <input type='text' id="apellido2" name='apellido2' placeholder=" " value='<?php echo $Usuario->getApellido2()?>'>
+                                <label for="apellido2">Segundo Apellido</label>
                             </div>
                             <div class="btn">
                                 <button class="prev-1 prev">Atrás</button>
                                 <button class="next-1 next">Siguiente</button>
                             </div>
                         </div>
-
-
-
-						<div class="page page1 formPage">
+                        <div class="page page1 formPage">
                             <h4 class="titleSect">Información de Usuario</h4>
                             <div class="userBox">
-								<input type='text' id="usua" name='userName' placeholder=" "
-								value='<?php echo $Usuario->getUserName()?>'>
-                                <label for="usua">Nombre de Usuario</label>
+                                <input type='text' id="useName" name='userName' placeholder=" " value='<?php echo $Usuario->getUserName()?>' required>
+                                <label for="useName">Nombre de Usuario</label>
                             </div>
 
                             <div class="userBox">
-								<input type='text' id="email" name='email' placeholder=" "
-								value='<?php echo $Usuario->getEmail()?>'>
+                                <input type='text' id="email" name='email' placeholder=" " value='<?php echo $Usuario->getEmail()?>' required>
                                 <label for="email">Correo</label>
                             </div>
 
                             <div class="userBox">
-								<input type='password' id="pass" name='pass' placeholder=" "
-								value='<?php echo $Usuario->getPass()?>'>
+                                <input type='text' id="pass" name='pass' placeholder=" " value='<?php echo $Usuario->getPass()?>' required>
                                 <label for="pass">Contraseña</label>
                             </div>
                             <div class="btn">
@@ -184,17 +169,17 @@ else
                                 <button class="next-2 next">Siguiente</button>
                             </div>
                         </div>
-
-
-						
-						<div class="page infTi">
+                        <div class="page infTi">
                             <h4 class="titleSect">Información de Tienda</h4>
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-                                <label for="selRol" class="lSel">Rol</label>
-                                <select name="selRol">
+                                <label for="rol" class="lSel">Rol</label><br>
+                                <select name="rol" required>
+                                <optgroup label="Seleccionado">
+                                        <option value='<?php echo $Usuario->getRol()?>'  selected><?php switch ($Usuario->getRol()) {case "Administrador": echo "Administrador"; break; case "Empleado": echo "Empleado"; break;} ?></option>
+                                    </optgroup>
                                     <optgroup label="Rol">
-                                        <option value='<?php echo $Usuario->getRol()?>'>Elige una opción</option>
+                                        <option>Elige una opción</option>
                                         <option value="Administrador">Administrador</option>
                                         <option value="Empleado">Empleado</option>
                                     </optgroup>
@@ -203,10 +188,13 @@ else
 
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-                                <label for="selEs" class="lSel x">Estado</label>
-                                <select name="selEs">estado
+                                <label for="id_estado" class="lSel">Estado</label><br>
+                                <select name="id_estado" required>
+                                <optgroup label="Seleccionado">
+                                        <option value='<?php echo $Usuario->getId_estado()?>'  selected><?php switch ($Usuario->getId_estado()) {case 2: echo "Disponible"; break; case 3: echo "No Disponible"; break;} ?></option>
+                                    </optgroup>
                                     <optgroup label="Estado">
-                                        <option value='<?php echo $Usuario->getId_estado()?>'>Elige una opción</option>
+                                        <option>Elige una opción</option>
                                         <option value="2">Disponible</option>
                                         <option value="3">No Disponible</option>
                                     </optgroup>
@@ -215,10 +203,13 @@ else
 
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-                                <label for="selTi" class="lSel">Tienda</label>
-                                <select name="selTi">
+                                <label for="id_ti" class="lSel">Tienda</label><br>
+                                <select name="id_ti" required>
+                                <optgroup label="Seleccionado">
+                                        <option value='<?php echo $Usuario->getId_ti()?>'  selected><?php switch ($Usuario->getId_ti()) {case 1: echo "Tienda Express"; break;} ?></option>
+                                    </optgroup>
                                     <optgroup label="Tienda">
-                                        <option value='<?php echo $Usuario->getId_ti()?>'>Elige una opción</option>
+                                        <option>Elige una opción</option>
                                         <option value="1">Tienda Express</option>
                                     </optgroup>
                                 </select>
@@ -231,38 +222,23 @@ else
                                 <button class="submit">Enviar</button>
                             </div>
                         </div>
-					</section>		
-				</fieldset>
-		</form>
+                        <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
 
+                    </section>
+                </fieldset>
+            </form>
+        </div>
 
-	<footer>
+    </section>
+    <footer>
 
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-    <script src="script.js"></script>
+    <script src="../../public/js/stepsForm.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../public/js/categoria/ingresarCategoria.js"></script>
-
 </body>
 
 </html>
 <?php
 }?>
-<!--		
-					<p>
-						<label for="rol">Rol</label>
-						<input type='text' name='rol' id="rol" placeholder="Rol"
-							value='<?php/*  echo $Usuario->getRol() */?>'>
-					</p>
-					<p>
-						<label for="estado">ID Estado</label>
-						<input type='text' id="estado" name='id_estado' placeholder="ID Estado"
-							value='<?php /* echo $Usuario->getId_estado() */?>'>
-					</p>
-					<p>
-						<label for="idTi">ID Tienda</label>
-						<input type='text' id="idTi" name='id_ti' placeholder="ID Tienda"
-							value='<?php /* echo $Usuario->getId_ti() */?>'>
-					</p>
--->

@@ -15,7 +15,7 @@ input[type="submit"] {
     background-color: var(--submitBtn);
     border: transparent;
     border-radius: 10px;
-    padding: 0.6rem;
+    padding: var(--paddingBtn);
 }
 
 input[type="submit"]:hover
@@ -184,6 +184,65 @@ div .btnOpt a i {
     height: 100%;
 }
 
+/**
+ * Estilos para botones de formulario por pasos
+ */
+
+ button {
+    padding: var(--paddingBtn);
+    display: block;
+      margin: auto;
+      font-family: "Montserrat-Bold";
+      color: var(--bgColor);
+      font-size: 18px;
+      letter-spacing: 0.17rem;
+      background-color: var(--colorSMIEP);
+      border: transparent;
+      border-radius: 10px;
+  }
+  .prev {
+    background-color: var(--backBtn);
+  }
+  .prev:hover {
+    background-color: var(--backBtnHov);
+  }
+  
+  button:hover {
+    letter-spacing: 0.2rem;
+      background-color: var(--BtnHov);
+      cursor: pointer;
+      -webkit-box-shadow: 11px 13px 38px 3px var(--shadowColor);
+      -moz-box-shadow: 11px 13px 38px 3px var(--shadowColor);
+      box-shadow: 11px 13px 38px 3px var(--shadowColor);
+      transition: .2s;
+  }
+  /*Estilo para botón Submit*/
+  .submit {
+    display: block;
+    margin: auto;
+    font-family: "Montserrat-Bold";
+    color: var(--bgColor);
+    font-size: 18px;
+    letter-spacing: 0.17rem;
+    background-color: var(--submitBtn);
+    border: transparent;
+    border-radius: 10px;
+    padding: var(--paddingBtn);
+  }
+  
+  .submit:hover
+  
+  /*Hover Submit*/
+    {
+    letter-spacing: 0.2rem;
+    background-color: var(--submitBtnHov);
+    cursor: pointer;
+    -webkit-box-shadow: 11px 13px 38px 3px var(--shadowColor);
+    -moz-box-shadow: 11px 13px 38px 3px var(--shadowColor);
+    box-shadow: 11px 13px 38px 3px var(--shadowColor);
+    transition: .2s;
+  }
+  
 /*
   * RESPOSIVE BTN
   */
