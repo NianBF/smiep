@@ -126,8 +126,8 @@ else
                         <div class="page page1 formPage">
                             <h4 class="titleSect">Información de Usuario</h4>
                             <div class="userBox">
-                                <input type='text' id="userName" name='userName' placeholder=" " value='<?php echo $Usuario->getUserName()?>' required>
-                                <label for="useName">Nombre de Usuario</label>
+                                <input type='text' id="userName" name='userName' placeholder=" " value='<?php  echo $Usuario->getUserName()?>' required>
+                                <label for="userName">Nombre de Usuario</label>
                             </div>
 
                             <div class="userBox">
@@ -136,8 +136,8 @@ else
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="pass" name='pass' placeholder=" " value='<?php echo $Usuario->getPass()?>' required>
-                                <label for="password">Contraseña</label>
+                                <input type='password' id="pass" name='pass' placeholder=" " value='<?php echo $Usuario->getPass()?>' required>
+                                <label for="pass">Contraseña</label>
                             </div>
                             <div class="btn">
                                 <button class="prev-2 prev">Atrás</button>
@@ -194,7 +194,7 @@ else
 
                             <div class="btn">
                                 <button class="prev-3 prev">Atrás</button>
-                                <button class="submit" id="btn-enviar" >Enviar</button>
+                                <button type="submit" class="submit" id="btn-enviar" >Enviar</button>
                             </div>
                         </div>
                         <figure class="info add"><i class="fa-duotone fa-question"></i></figure>

@@ -2,11 +2,12 @@
  * Variables de botoness, clases y pasos del formulario
  */
 const form = document.querySelector("contact-form");
+
+var formulario = document.querySelector("form")
 const slidePage = document.querySelector(".slide-page");
 const page = document.querySelector(".page");
 const page1 = document.querySelector(".page1");
 const infTi = document.querySelector(".infTi");
-
 
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
@@ -42,7 +43,7 @@ closeinfo.addEventListener("click", function(event){
  * Avanzar página formulario por pasos
 */
 
-let nextStyleProgresBar = function (){
+const nextStyleProgresBar = function (){
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
@@ -56,13 +57,15 @@ nextBtnFirst.addEventListener("click", function(event){
   }
 });
 nextBtnSec.addEventListener("click", function(event){
-  if (formulario.nombre1.value>0 && formulario.apellido1.value>0) {
-    event.preventDefault();nextStyleProgresBar()
+  if ((formulario.nombre1.value !=0) && (formulario.apellido1.value !=0)) {
     
+    event.preventDefault();nextStyleProgresBar()
   }
 });
 nextBtnThird.addEventListener("click", function(event){
-  event.preventDefault();nextStyleProgresBar()
+  if((formulario.userName.value !=0) && (formulario.email.value !=0) && (formulario.pass.value !=0)){
+      event.preventDefault();nextStyleProgresBar()
+    }
 });
 
 /**
@@ -81,7 +84,7 @@ nextBtnThird.addEventListener("click", function(event){
  * retroceder página formulario por pasos
 */
 
-let backStyleProgresBar = function(){
+const backStyleProgresBar = function(){
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
