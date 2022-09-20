@@ -205,7 +205,7 @@ else
     </footer>
     <script src="../../public/js/stepsForm.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../../public/js/categoria/ingresarCategoria.js"></script>
+    <script src="../../public/js/usuario/validarDatosUsu.js"></script>
 </body>
 
 </html>
