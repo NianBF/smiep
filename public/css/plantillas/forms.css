@@ -155,3 +155,17 @@
     -webkit-text-stroke: 2px var(--shadowColorSoft);
   }
 }
+
+@media screen and (max-width:470px) {
+  
+  .userBox input, .userBox select{
+    width: auto;
+  }
+
+  .contForm .btn{
+    flex-wrap: wrap;
+  }
+  button{
+    margin: 10px;
+  }
+}

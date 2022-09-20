@@ -79,38 +79,7 @@ else
                 <fieldset class="contact-form">
                     <legend>Agregar Usuario</legend>
 
-                    <section>
-                        <div class="progress-bar">
-                            <div class="step">
-                                <p>Paso 1</p>
-                                <div class="bullet">
-                                    <span>1</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                            <div class="step">
-                                <p>Paso 2</p>
-                                <div class="bullet">
-                                    <span>2</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                            <div class="step">
-                                <p>Paso 3</p>
-                                <div class="bullet">
-                                    <span>3</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                            <div class="step">
-                                <p>Fin</p>
-                                <div class="bullet">
-                                    <span>4</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                        </div>
-                    </section>
+                    <?php include_once("../plantillas/progres_bar.html"); ?>
 
                     <section class="formularios">
                         <div class="slide-page formPage">

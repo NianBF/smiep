@@ -83,3 +83,9 @@
 .page {
     display: none;
 }
+
+@media screen and (max-width:470px) {
+  .progress-bar .step .bullet::before, .progress-bar .step .bullet::after{
+    display: none;
+  }
+}

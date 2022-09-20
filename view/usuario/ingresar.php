@@ -72,44 +72,13 @@ else
                 <fieldset class="contact-form">
                     <legend>Agregar Usuario</legend>
 
-                    <section>
-                        <div class="progress-bar">
-                            <div class="step">
-                                <p>Paso 1</p>
-                                <div class="bullet">
-                                    <span>1</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                            <div class="step">
-                                <p>Paso 2</p>
-                                <div class="bullet">
-                                    <span>2</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                            <div class="step">
-                                <p>Paso 3</p>
-                                <div class="bullet">
-                                    <span>3</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                            <div class="step">
-                                <p>Fin</p>
-                                <div class="bullet">
-                                    <span>4</span>
-                                </div>
-                                <div class="check fas fa-check"></div>
-                            </div>
-                        </div>
-                    </section>
+                    <?php include_once("../plantillas/progres_bar.html"); ?>
 
                     <section class="formularios">
                         <div class="slide-page formPage">
                             <h4 class="titleSect">Documento de Identidad</h4>
                             <div class="userBox">
-                                <input type='text' id="id_doc" name='id_doc' placeholder=" " required>
+                                <input type='number' id="id_doc" name='id_doc' placeholder=" " required>
                                 <label for="id_doc">ID Usuario</label>
                             </div>
                             <div class="btn">
@@ -149,12 +118,12 @@ else
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="email" name='email' placeholder=" " required>
+                                <input type='email' id="email" name='email' placeholder=" " required>
                                 <label for="email">Correo</label>
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="pass" name='pass' placeholder=" " required>
+                                <input type='password' id="pass" name='pass' placeholder=" " required>
                                 <label for="pass">Contraseña</label>
                             </div>
                             <div class="btn">
@@ -167,9 +136,9 @@ else
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
                                 <label for="rol" class="lSel">Rol</label><br>
-                                <select name="rol" required>
+                                <select name="rol" id="rol" required>
                                     <optgroup label="Rol">
-                                        <option selected>Elige una opción</option>
+                                        <option selected value="0">Elige una opción</option>
                                         <option value="Administrador">Administrador</option>
                                         <option value="Empleado">Empleado</option>
                                     </optgroup>
@@ -179,9 +148,9 @@ else
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
                                 <label for="id_estado" class="lSel">Estado</label><br>
-                                <select name="id_estado" required>
+                                <select name="id_estado" id="estado" required>
                                     <optgroup label="Estado">
-                                        <option selected>Elige una opción</option>
+                                        <option selected value="0">Elige una opción</option>
                                         <option value="2">Disponible</option>
                                         <option value="3">No Disponible</option>
                                     </optgroup>
@@ -191,9 +160,9 @@ else
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
                                 <label for="id_ti" class="lSel">Tienda</label><br>
-                                <select name="id_ti" required>
+                                <select name="id_ti" id="idTi" required>
                                     <optgroup label="Tienda">
-                                        <option selected>Elige una opción</option>
+                                        <option selected value="0">Elige una opción</option>
                                         <option value="1">Tienda Express</option>
                                     </optgroup>
                                 </select>
@@ -203,7 +172,7 @@ else
 
                             <div class="btn">
                                 <button class="prev-3 prev">Atrás</button>
-                                <button class="submit">Enviar</button>
+                                <button class="submit" id="btn-enviar">Enviar</button>
                             </div>
                         </div>
                         <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
@@ -220,7 +189,7 @@ else
     </footer>
     <script src="../../public/js/stepsForm.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../../public/js/categoria/ingresarCategoria.js"></script>
+    <script src="../../public/js/usuario/ingresarUsuario.js"></script>
 </body>
 
 </html>

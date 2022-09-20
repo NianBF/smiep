@@ -1,145 +1,92 @@
-(function () {
-  var formulario = document.getElementsByName("formulario")[0],
-    elementos = formulario.elements,
-    boton = document.getElementById("btn");
 
-  var validarDoc = function (e) {
-    if (formulario.doc.value == 0) {
-      swal.fire({
-        title: "completa el campo documento",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
 
-  var validarNomb1 = function (e) {
-    if (formulario.nomb1.value == 0) {
-      swal.fire({
-        title: "completa el campo primer nombre",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
+var formulario = document.querySelector("form")
+var firstpage = document.querySelector(".firstNext")
+var secondpage = document.querySelector(".next-1")
+var  Thirdpage= document.querySelector(".next-2")
+var btn_enviar = document.querySelector("#btn-enviar")
 
-  var validarApe1 = function (e) {
-    if (formulario.ape1.value == 0) {
+firstpage.addEventListener("click", function(e){
+ if (formulario.id_doc.value ==0) {
       swal.fire({
-        title: "completa el campo primer apellido",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
+        title: "completa el campo documento",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
       });
-      e.preventDefault();
+    e.preventDefault();
     }
-  };
+    else{
+      slidePage.style.display = "none";page.style.display = "block";
+    }
+})
 
-  var validarNick = function (e) {
-    if (formulario.nick.value == 0) {
-      swal.fire({
-        title: "completa el campo usuario",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
 
-  var validarEmail = function (e) {
-    if (formulario.email.value == 0) {
-      swal.fire({
-        title: "completa el campo correo",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
 
-  var validarPass = function (e) {
-    if (formulario.pass.value == 0) {
-      swal.fire({
-        title: "completa el campo contraseña",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
-
-  var validarRol = function (e) {
-    if (formulario.rol.value == 0) {
-      swal.fire({
-        title: "completa el campo ROL",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
-  var validarEstado = function (e) {
-    if (formulario.estado.value == 0) {
-      swal.fire({
-        title: "completa el campo id estado",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
-
-  var validarTienda = function (e) {
-    if (formulario.idTi.value == 0) {
-      swal.fire({
-        title: "completa el campo id tienda",
-        toast: true,
-        position: "top-start",
-        timer: 5000,
-        timerProgressBar: true,
-      });
-      e.preventDefault();
-    }
-  };
-
-  var mensaje = function () {
+secondpage.addEventListener("click", function (e){
+ if (formulario.nombre1.value == 0) {
     swal.fire({
-      title: "registro cargado con exito",
-      timer: 90000,
-      timerProgressBar: true,
-      confirmButtonText: "Aceptar",
+      title: "completa el campo primer nombre",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
     });
-  };
+    e.preventDefault();
+  }else  if (formulario.apellido1.value == 0) {
+    swal.fire({
+      title: "completa el campo primer apellido",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    });
+    e.preventDefault();
+  }
+  else{
+    page.style.display = "none";
+  page1.style.display = "block";
+  }
+})
 
-  var validar = function (e) {
-    validarDoc(e);
-    validarApe1(e);
-    validarNomb1(e);
-    validarNick(e);
-    validarEmail(e);
-    validarPass(e);
-    validarRol(e);
-    validarEstado(e);
-    validarTienda(e);
-  };
+Thirdpage.addEventListener("click",function(e){
+  
+  if (formulario.useName.value == 0) {
+    swal.fire({
+      title: "completa el campo usuario",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    });
+    e.preventDefault();
+  }
+  else  if (formulario.email.value == 0) {
+    swal.fire({
+      title: "completa el campo correo",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    });
+    e.preventDefault();
+  }
+  else  if (formulario.pass.value == 0) {
+    swal.fire({
+      title: "completa el campo contraseña",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    });
+    e.preventDefault();
+  }
+  else{
+    page1.style.display = "none";
+    infTi.style.display = "block";
+  }
+})
 
-  formulario.addEventListener("submit", validar);
-  boton.addEventListener("click", mensaje);
-})();
+btn_enviar.addEventListener("click", function (e) {
+  console.log("click")
+  if (formulario.rol.value == 0) {
+    swal.fire({
+      title: "completa el campo ROL",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    });
+    e.preventDefault();
+  }
+  else if (formulario.estado.value == 0) {
+    swal.fire({
+      title: "completa el campo estado",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    });
+    e.preventDefault();
+  }
+  else if (formulario.idTi.value == 0) {
+    swal.fire({
+      title: "completa el campo id tienda",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    });
+    e.preventDefault();
+  }
+  else{
+    swal.fire({
+      title: "registro cargado con exito",timer: 90000,timerProgressBar: true,confirmButtonText: "Aceptar",
+    });
+  }
+})
