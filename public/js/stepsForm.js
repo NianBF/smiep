@@ -36,7 +36,7 @@ closeinfo.addEventListener("click", function(event){
   event.preventDefault();
   info.style.display = "none";
   form.style.display = "inline-block";
-  //page.style.display = "none";
+  page.style.display = "none";
 });
 
 /**
@@ -71,13 +71,13 @@ nextBtnThird.addEventListener("click", function(event){
 /**
  * boton para enviar
 */
-/* submitBtn.addEventListener("click", function(){
+submitBtn.addEventListener("click", function(){
   nextPage()
   setTimeout(function(){
     alert("Your Form Successfully Signed up");
     location.reload();
   },800);
-}); */
+});
 
 
 /**
