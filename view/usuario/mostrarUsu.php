@@ -105,7 +105,7 @@ else
                     <tbody class="contentTable">
                     <?php foreach ($listaUsuario as $Usuario) {?>
                     <tr class="row">
-                        <td class="id">
+                        <td class="id" id="id_doc">
                             <?php echo $Usuario->getId_doc() ?>
                         </td>
                         <td class="colName">
@@ -121,7 +121,7 @@ else
                             <?php echo $Usuario->getRol() ?>
                         </td>
                         <td class="btnOpt">
-                            <a class="delete btnOptDel" type="submit"
+                            <a class="delete btnOptDel" type="button"
                                 href="../../controller/usuarioCtrl.php?id_doc=<?php echo $Usuario->getId_doc()?>&accion=e">
                                 <i class="fa-solid fa-trash-can"></i>
                             </a>

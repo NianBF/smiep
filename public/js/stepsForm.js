@@ -1,7 +1,7 @@
 /**
  * Variables de botoness, clases y pasos del formulario
  */
-const form = document.querySelector("form");
+const form = document.querySelector("contact-form");
 const slidePage = document.querySelector(".slide-page");
 const page = document.querySelector(".page");
 const page1 = document.querySelector(".page1");

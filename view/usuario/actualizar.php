@@ -85,8 +85,10 @@ else
                         <div class="slide-page formPage">
                             <h4 class="titleSect">Documento de Identidad</h4>
                             <div class="userBox">
-                                <input type='text' id="id_doc" name='id_doc' placeholder=" " value='<?php echo $Usuario->getId_doc()?>' required>
+                                <input type='number' name='id_doc' placeholder=" " 
+                                value='<?php echo $Usuario->getId_doc()?>' readonly >
                                 <label for="id_doc">ID Usuario</label>
+                               
                             </div>
                             <div class="btn">
                                 <button class="firstNext next">Siguiente</button>
@@ -95,21 +97,25 @@ else
                         <div class="page formPage">
                             <h4 class="titleSect">Nombres y Apellidos</h4>
                             <div class="userBox">
-                                <input type='text' id="nombre1" name='nombre1' placeholder=" " value='<?php echo $Usuario->getNombre1()?>' required>
+                                <input type='text' id="nombre1" name='nombre1' placeholder=" " 
+                                value='<?php echo $Usuario->getNombre1()?>' required>
                                 <label for="nombre1">Primer Nombre</label>
                             </div>
                             <div class="userBox">
-                                <input type='text' id="nombre2" name='nombre2' placeholder=" " value='<?php echo $Usuario->getNombre2()?>'>
+                                <input type='text' id="nombre2" name='nombre2' placeholder=" " 
+                                value='<?php echo $Usuario->getNombre2()?>'>
                                 <label for="nombre2">Segundo Nombre</label>
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="apellido1" name='apellido1' placeholder=" " value='<?php echo $Usuario->getApellido1()?>' required>
+                                <input type='text' id="apellido1" name='apellido1' placeholder=" " 
+                                value='<?php echo $Usuario->getApellido1()?>' required>
                                 <label for="apellido1">Primer Apellido</label>
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="apellido2" name='apellido2' placeholder=" " value='<?php echo $Usuario->getApellido2()?>'>
+                                <input type='text' id="apellido2" name='apellido2' placeholder=" " 
+                                value='<?php echo $Usuario->getApellido2()?>'>
                                 <label for="apellido2">Segundo Apellido</label>
                             </div>
                             <div class="btn">
@@ -120,18 +126,18 @@ else
                         <div class="page page1 formPage">
                             <h4 class="titleSect">Información de Usuario</h4>
                             <div class="userBox">
-                                <input type='text' id="useName" name='userName' placeholder=" " value='<?php echo $Usuario->getUserName()?>' required>
+                                <input type='text' id="userName" name='userName' placeholder=" " value='<?php echo $Usuario->getUserName()?>' required>
                                 <label for="useName">Nombre de Usuario</label>
                             </div>
 
                             <div class="userBox">
-                                <input type='text' id="email" name='email' placeholder=" " value='<?php echo $Usuario->getEmail()?>' required>
+                                <input type='email' id="email" name='email' placeholder=" " value='<?php echo $Usuario->getEmail()?>' required>
                                 <label for="email">Correo</label>
                             </div>
 
                             <div class="userBox">
                                 <input type='text' id="pass" name='pass' placeholder=" " value='<?php echo $Usuario->getPass()?>' required>
-                                <label for="pass">Contraseña</label>
+                                <label for="password">Contraseña</label>
                             </div>
                             <div class="btn">
                                 <button class="prev-2 prev">Atrás</button>
@@ -143,12 +149,12 @@ else
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
                                 <label for="rol" class="lSel">Rol</label><br>
-                                <select name="rol" required>
+                                <select name="rol" id="rol" required>
                                 <optgroup label="Seleccionado">
                                         <option value='<?php echo $Usuario->getRol()?>'  selected><?php switch ($Usuario->getRol()) {case "Administrador": echo "Administrador"; break; case "Empleado": echo "Empleado"; break;} ?></option>
                                     </optgroup>
                                     <optgroup label="Rol">
-                                        <option>Elige una opción</option>
+                                        <option value="0">Elige una opción</option>
                                         <option value="Administrador">Administrador</option>
                                         <option value="Empleado">Empleado</option>
                                     </optgroup>
@@ -158,12 +164,12 @@ else
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
                                 <label for="id_estado" class="lSel">Estado</label><br>
-                                <select name="id_estado" required>
+                                <select name="id_estado" id="estado" required>
                                 <optgroup label="Seleccionado">
                                         <option value='<?php echo $Usuario->getId_estado()?>'  selected><?php switch ($Usuario->getId_estado()) {case 2: echo "Disponible"; break; case 3: echo "No Disponible"; break;} ?></option>
                                     </optgroup>
                                     <optgroup label="Estado">
-                                        <option>Elige una opción</option>
+                                        <option value="0">Elige una opción</option>
                                         <option value="2">Disponible</option>
                                         <option value="3">No Disponible</option>
                                     </optgroup>
@@ -173,22 +179,22 @@ else
                             <div class="userBox">
                                 <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
                                 <label for="id_ti" class="lSel">Tienda</label><br>
-                                <select name="id_ti" required>
+                                <select name="id_ti" id="idTi" required>
                                 <optgroup label="Seleccionado">
                                         <option value='<?php echo $Usuario->getId_ti()?>'  selected><?php switch ($Usuario->getId_ti()) {case 1: echo "Tienda Express"; break;} ?></option>
                                     </optgroup>
                                     <optgroup label="Tienda">
-                                        <option>Elige una opción</option>
+                                        <option value="0">Elige una opción</option>
                                         <option value="1">Tienda Express</option>
                                     </optgroup>
                                 </select>
                             </div>
 
-                            <input type='hidden' name='insertar' value='insertar'>
+                            <input type='hidden' name='actualizar' value='actualizar'>
 
                             <div class="btn">
                                 <button class="prev-3 prev">Atrás</button>
-                                <button class="submit">Enviar</button>
+                                <button class="submit" id="btn-enviar" >Enviar</button>
                             </div>
                         </div>
                         <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
