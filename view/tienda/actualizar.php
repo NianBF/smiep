@@ -1,12 +1,11 @@
 <?php
 session_start();
-if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
-$_SESSION["pass"] == null)
-{
+if (
+	$_SESSION['email'] == null or $_SESSION["userName"] == null or
+	$_SESSION["pass"] == null
+) {
 	header("location:../../index.php");
-}
-else
-{
+} else {
 	require_once('../../model/tiendaCrud_Mdl.php');
 	require_once('../../model/tiendaMdl.php');
 	$crud = new CrudTienda();
@@ -18,69 +17,136 @@ else
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+	<!DOCTYPE html>
+	<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+		<!--Color para navegador móvil-->
+		<meta name="theme-color" content="#339999">
+		<title>SMIEP</title>
+		<link rel="stylesheet" href="../../public/css/formularios.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-	<title>Actualizar tienda</title>
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregarpru.css">
+	</head>
 
-</head>
+	<>
+		<header>
+			<?php include_once("../plantillas/header.html"); ?>
+		</header>
+		<section class="initForm">
 
-<body>
-	<div class="contenedor">
-		<span class="icon">
-			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
-		</span>
-		<div class="contact-wrapper animated bounceInUp">
-			<div class="contact-form">
-				<h3>Cambia los datos de la Tienda</h3>
-				<form action='../../controller/tiendaCtrl.php' name="formulario" method='post'>
-					<p>
-						<label>Nombre</label>
-						<input type='hidden' name='id_ti' value='<?php echo $Tienda->getId_ti()?>'>
+			<div class="btnMos">
+				<a href='../tienda/mostrarTi.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+			</div>
 
-						<input type='text' placeholder="Nombre Tienda" id="nomTienda" name='nombreTienda'
-							value='<?php echo $Tienda->getNombreTienda()?>'>
-					</p>
-					<p>
-						<label>Dirección</label>
-						<input type='text' placeholder="Dirección" name='direccionTi' id='direccionTi'
-							value='<?php echo $Tienda->getDireccionTi()?>'>
-					</p>
-					<p>
-						<label>Telefono</label>
-						<input type='text' placeholder="Numero Telefono" name='telTi' id='telTi'
-							value='<?php echo $Tienda->getTelTi()?>'>
-					</p>
-					<p>
-						<label>Correo</label>
-						<input type='text' placeholder="ejemplo@smiep.com.co" id='emailTi' name='emailTi'
-							value='<?php echo $Tienda->getEmailTi()?>'>
-					</p>
+			<div class="contForm">
 
-					<input type='hidden' name='actualizar' value='actualizar'>
-					<p class='block'>
-						<button type='submit' id="btn" name="btn" value='Guardar'>
-							Guardar
-						</button>
-					</p>
-					<p class='block'>
-						<a href="mostrarTi.php"><button type="button">Volver</button></a>
-					</p>
+
+				<form action='../../controller/tiendaCtrl.php' id="formulario" name="formulario" method='post'>
+
+					<fieldset class="anuncio movAds">
+						<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
+
+						<legend>Advertencia</legend>
+						<div>
+							<article>
+								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+									correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
+								<p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
+									consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+								</br>
+								<p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
+									igual a las ya existentes.</p>
+							</article>
+						</div>
+					</fieldset>
+
+					<fieldset class="contact-form">
+						<legend>Agregar Tienda</legend>
+
+						<section>
+							<div class="progress-bar">
+								<div class="step">
+									<p>Paso </p>
+									<div class="bullet">
+										<span>1</span>
+									</div>
+									<div class="check fas fa-check"></div>
+								</div>
+								<div class="step">
+									<p>Fin</p>
+									<div class="bullet">
+										<span>2</span>
+									</div>
+									<div class="check fas fa-check"></div>
+								</div>
+							</div>
+						</section>
+
+						<section class="formularios">
+							<div class="slide-page formPage">
+								<h4 class="titleSect">Id Tienda</h4>
+								<div class="userBox">
+									<input type='number' id="id_ti" name='id_ti' placeholder=" " value='<?php echo $Tienda->getId_ti() ?>' required readonly>
+									<label for="id_ti">ID Tienda</label>
+								</div>
+								<div class="btn">
+									<button class="firstNext next">Siguiente</button>
+								</div>
+							</div>
+							<div class="page formPage">
+								<h4 class="titleSect">Información Tienda</h4>
+								<div class="userBox">
+									<input type='text' id="nombTi" name='nombreTienda' placeholder=" " value='<?php echo $Tienda->getNombreTienda() ?>'>
+									<label for="nombTi">Nombre</label>
+								</div>
+								<div class="userBox">
+									<input type='text' id="direc" name='direccionTi' placeholder=" " value='<?php echo $Tienda->getDireccionTi() ?>'>
+									<label for="direc">Dirección</label>
+								</div>
+
+								<div class="userBox">
+									<input type='number' id="tel" name='telTi' placeholder=" " value='<?php echo $Tienda->getTelTi() ?>'>
+									<label for="apellido1">Telefono</label>
+								</div>
+
+								<div class="userBox">
+									<input type='email' id="email" name='emailTi' placeholder=" " value='<?php echo $Tienda->getEmailTi() ?>'>
+									<label for="email">Correo</label>
+								</div>
+								<input type='hidden' name='actualizar' value='actualizar'>
+
+								<div class="btn">
+									<button class="prev-1 prev">Atrás</button>
+									<button type="submit" class="submit" id="btn-enviar">Enviar</button>
+								</div>
+							</div>
+
+							<figure class="info add"><i class="fa-duotone fa-question"></i></figure>
+
+						</section>
+					</fieldset>
 				</form>
 			</div>
-		</div>
-		<script src="../../public/js/tienda/actualizarTienda.js"></script>
-		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
 
-</html>
+		</section>
+		<footer>
+
+			<?php include_once("../plantillas/footer.html"); ?>
+		</footer>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="../../public/js/tienda/stepsFormTi.js"></script>
+		<script src="../../public/js/tienda/validarDatosTi.js"></script>
+
+		</body>
+
+	</html>
 <?php
-}?>
+} ?>

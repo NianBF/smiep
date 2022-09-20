@@ -26,14 +26,7 @@ else
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
-    <link rel="stylesheet" href="../../public/css/plantillas/stepsForm.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/forms.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
-    <link rel="stylesheet" href="../../public/css/tablas.css">
-    <link rel="stylesheet" href="../../public/css/fonts.css">
-    <link rel="stylesheet" href="../../public/css/variables.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
+    <link rel="stylesheet" href="../../public/css/formularios.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -209,8 +202,8 @@ else
 
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-    <script src="../../public/js/stepsForm.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../public/js/usuario/stepsForm.js"></script>
     <script src="../../public/js/usuario/validarDatosUsu.js"></script>
 </body>
 

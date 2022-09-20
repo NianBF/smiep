@@ -1,9 +1,7 @@
-
-
 var formulario = document.querySelector("form")
 var firstpage = document.querySelector(".firstNext")
 var secondpage = document.querySelector(".next-1")
-var Thirdpage= document.querySelector(".next-2")
+var Thirdpage = document.querySelector(".next-2")
 var btn_enviar = document.querySelector("#btn-enviar")
 
 firstpage.addEventListener("click", function(e){
