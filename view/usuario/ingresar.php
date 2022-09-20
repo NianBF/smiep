@@ -113,8 +113,8 @@ else
                         <div class="page page1 formPage">
                             <h4 class="titleSect">Información de Usuario</h4>
                             <div class="userBox">
-                                <input type='text' id="useName" name='userName' placeholder=" " required>
-                                <label for="useName">Nombre de Usuario</label>
+                                <input type='text' id="userName" name='userName' placeholder=" " required>
+                                <label for="userName">Nombre de Usuario</label>
                             </div>
 
                             <div class="userBox">
@@ -172,7 +172,7 @@ else
 
                             <div class="btn">
                                 <button class="prev-3 prev">Atrás</button>
-                                <button class="submit" id="btn-enviar">Enviar</button>
+                                <button type="submit" class="submit" id="btn-enviar">Enviar</button>
                             </div>
                         </div>
                         <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
