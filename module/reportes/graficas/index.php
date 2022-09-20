@@ -16,12 +16,11 @@ require_once "conexion.php";
 	$datosY=json_encode($valoresY);
 ?>
 <head>
-	<link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
-	<script src="librerias/jquery-3.3.1.min.js"></script>
+    	<script src="librerias/jquery-3.3.1.min.js"></script>
 	<script src="librerias/plotly-latest.min.js"></script>
 </head>
 <div id="graficaBarras"></div>
-
+<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>
 <script type="text/javascript">
 	function crearCadenaBarras(json){
 		var parsed = JSON.parse(json);
@@ -33,18 +32,30 @@ require_once "conexion.php";
 	}
 </script>
 
+
 <script type="text/javascript">
 
 	datosX=crearCadenaBarras('<?php echo $datosX ?>');
 	datosY=crearCadenaBarras('<?php echo $datosY ?>');
 
-	var data = [
-		{
-			x: datosX,
-			y: datosY,
-			type: 'bar'
-		}
-	];
+	var trace1 = {
+        
+        type: 'bar',
+		x: datosX,
+		y: datosY,
+        marker: {
+      color: '#339999',
+      line: {
+          width: 1.5
+      }}
+	};
 
-	Plotly.newPlot('graficaBarras', data);
+	var data = [trace1];
+    var layout = { 
+  title: 'Cantidad de Productos',
+  font: {size: 16}
+};
+var config = {responsive: true}
+
+	Plotly.newPlot('graficaBarras', data, layout, config);
 </script>
