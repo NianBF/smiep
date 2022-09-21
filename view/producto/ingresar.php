@@ -38,162 +38,167 @@ if (
 
 	</head>
 
-	<header>
-		<?php include_once("../plantillas/header.html"); ?>
-	</header>
-	<section class="initForm">
+	<body>
 
-		<div class="btnMos">
-			<a href='../producto/mostrarProd.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
-		</div>
-		<div class="contForm">
-			<form action='../../controller/productoCtrl.php' id="formulario" name="formulario" method='post'>
+		<header>
+			<?php include_once("../plantillas/header.html"); ?>
+		</header>
+		<section class="initForm">
 
-				<fieldset class="anuncio movAds">
-					<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
+			<div class="btnMos">
+				<a href='../producto/mostrarProd.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+			</div>
+			<div class="contForm">
+				<form action='../../controller/productoCtrl.php' id="formulario" name="formulario" method='post'>
 
-					<legend>Advertencia</legend>
-					<div>
-						<article>
-							<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
-								correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-							<p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
-								consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
-							</br>
-							<p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
-								igual a las ya existentes.</p>
-						</article>
-					</div>
-				</fieldset>
+					<fieldset class="anuncio movAds">
+						<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
 
-				<fieldset class="contact-form">
-					<legend>Agregar Productos</legend>
-
-					<?php include_once("../plantillas/progres_bar.html"); ?>
-
-					<section class="formularios">
-						<div class="slide-page formPage">
-							<h4 class="titleSect">Producto</h4>
-
-							<div class="userBox">
-								<input type='number' id='id_prod' name='id_prod' placeholder=" " required>
-								<label for="id_prod">ID Producto</label>
-							</div>
-
-							<div class="userBox">
-								<input type='text' id="prod" name='nombreProd' placeholder=" " required>
-								<label for="prod">Producto</label>
-							</div>
-
-							<div class="userBox">
-								<input type='text' id="img" name='imgProd' placeholder=" " value="https://i.ibb.co/2s4D1rc/bags-SMIEP.png">
-								<label for="img">imagen</label>
-							</div>
-							<div class="btn">
-								<button class="firstNext next">Siguiente</button>
-							</div>
+						<legend>Advertencia</legend>
+						<div>
+							<article>
+								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+									correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
+								<p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
+									consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+								</br>
+								<p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
+									igual a las ya existentes.</p>
+							</article>
 						</div>
+					</fieldset>
 
-						<div class="page formPage">
-							<h4 class="titleSect">Precio Disponibilidad</h4>
-							<div class="userBox">
-								<input type='number' id="precio" name='precio' placeholder=" " required>
-								<label for="precio">Precio</label>
+					<fieldset class="contact-form">
+						<legend>Agregar Productos</legend>
+
+						<?php include_once("../plantillas/progres_bar.html"); ?>
+
+						<section class="formularios">
+							<div class="slide-page formPage">
+								<h4 class="titleSect">Producto</h4>
+
+								<div class="userBox">
+									<input type='number' id='id_prod' name='id_prod' placeholder=" " required>
+									<label for="id_prod">ID Producto</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="prod" name='nombreProd' placeholder=" " required>
+									<label for="prod">Producto</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="img" name='imgProd' placeholder=" " value="https://i.ibb.co/2s4D1rc/bags-SMIEP.png">
+									<label for="img">imagen</label>
+								</div>
+								<div class="btn">
+									<button class="firstNext next">Siguiente</button>
+								</div>
 							</div>
-							<div class="userBox">
-								<input type='number' id="cantMin" name='cantidadMin' placeholder=" " value="1" readonly>
-								<label for="cantMin">cantidad minima</label>
-							</div>
 
-							<div class="userBox">
-								<input type='number' id="cantDisp" name='cantidadDisp' placeholder=" " required>
-								<label for="cantDisp">cantidad Disponible</label>
-							</div>
+							<div class="page formPage">
+								<h4 class="titleSect">Precio Disponibilidad</h4>
+								<div class="userBox">
+									<input type='number' id="precio" name='precio' placeholder=" " required>
+									<label for="precio">Precio</label>
+								</div>
+								<div class="userBox">
+									<input type='text' id="priceArrive" name='priceArrive' placeholder=" " required>
+									<label for="priceArrive">Precio de llegada</label>
+								</div>
+								<div class="userBox">
+									<input type='number' id="cantMin" name='cantidadMin' placeholder=" " value="1" readonly>
+									<label for="cantMin">cantidad minima</label>
+								</div>
+
+								<div class="userBox">
+									<input type='number' id="cantDisp" name='cantidadDisp' placeholder=" " value='<?php echo $Producto->getCantidadDisp() ?>' required>
+									<label for="cantDisp">cantidad Disponible</label>
+								</div>
 
 
-							<div class="btn">
-								<button class="prev-1 prev">Atrás</button>
-								<button class="next-1 next">Siguiente</button>
-							</div>
-						</div>
-						<div class="page page1 formPage">
-
-
-							<div class="userBox">
-								<input type='text' id="Presentacion" name='tipoPresentacion' placeholder=" ">
-								<label for="apellido2">Presentacion</label>
-							</div>
-
-							<div class="userBox">
-								<input type='text' id="descrip" name='descripcion' placeholder=" ">
-								<label for="descrip">Descripcion</label>
+								<div class="btn">
+									<button class="prev-1 prev">Atrás</button>
+									<button class="next-1 next">Siguiente</button>
+								</div>
 							</div>
 							
-							<div class="userBox">
-								<input type='text' id="codBar" name='codBar' placeholder=" ">
-								<label for="codBar">Cod Barras</label>
+							<div class="page page1 formPage">
+								<div class="userBox">
+									<input type='text' id="Presentacion" name='tipoPresentacion' placeholder=" ">
+									<label for="apellido2">Presentacion</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="descrip" name='descripcion' placeholder=" ">
+									<label for="descrip">Descripcion</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="codBar" name='codBar' placeholder=" ">
+									<label for="codBar">Cod Barras</label>
+								</div>
+
+								<div class="btn">
+									<button class="prev-2 prev">Atrás</button>
+									<button class="next-2 next">Siguiente</button>
+								</div>
 							</div>
+							<div class="page infTi">
 
-							<div class="btn">
-								<button class="prev-2 prev">Atrás</button>
-								<button class="next-2 next">Siguiente</button>
+								<h4 class="titleSect">Usuario Categoria</h4>
+								<div class="userBox">
+									<input type='number' id="id_docUsu" name='id_docUsu' placeholder=" " required>
+									<label for="userName">Id Usuario</label>
+								</div>
+
+								<div class="userBox">
+									<!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
+									<label for="id_cat" class="lSel">Categoria</label><br>
+									<select id="id_cat" name='id_cat' required>
+										<optgroup label="Categoria">
+											<option value="0">Elige una opción</option>
+											<?php foreach ($listaCategoria as $Categoria) { ?>
+												<option value="<?php echo $Categoria->getid_Cat(); ?>">
+													<?php echo $Categoria->getnCategoria(); ?></option>
+											<?php } ?>
+										</optgroup>
+									</select>
+								</div>
+
+								<div class="userBox">
+									<label for="id_estado" class="lSel">Estado</label><br>
+									<select name="id_estado" id="estado" required>
+										<optgroup label="Estado">
+											<option selected value="0">Elige una opción</option>
+											<option value="2">Disponible</option>
+											<option value="3">No Disponible</option>
+										</optgroup>
+									</select>
+								</div>
+
+								<input type='hidden' name='insertar' value='insertar'>
+
+								<div class="btn">
+									<button class="prev-3 prev">Atrás</button>
+									<button type="submit" class="submit" id="btn-enviar">Enviar</button>
+								</div>
 							</div>
-						</div>
-						<div class="page infTi">
+							<figure class="info add"><i class="fa-duotone fa-question"></i></figure>
 
-							<h4 class="titleSect">Usuario Categoria</h4>
-							<div class="userBox">
-								<input type='text' id="id_docUsu" name='id_docUsu' placeholder=" " required>
-								<label for="userName">Id Usuario</label>
-							</div>
+						</section>
+					</fieldset>
+				</form>
+			</div>
 
-							<div class="userBox">
-								<!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
-								<label for="id_cat" class="lSel">Categoria</label><br>
-								<select id="id_cat" name='id_cat' required>
-									<optgroup label="Categoria">
-										<option selected value="0">Elige una opción</option>
-										<?php foreach ($listaCategoria as $Categoria) { ?>
-											<option value="<?php $Categoria->getid_Cat(); ?>">
-												<?php echo $Categoria->getnCategoria(); ?></option>
-										<?php } ?>
-									</optgroup>
-								</select>
-							</div>
+		</section>
+		<footer>
 
-							<div class="userBox">
-								<label for="id_estado" class="lSel">Estado</label><br>
-								<select name="id_estado" id="estado" required>
-									<optgroup label="Estado">
-										<option selected value="0">Elige una opción</option>
-										<option value="2">Disponible</option>
-										<option value="3">No Disponible</option>
-									</optgroup>
-								</select>
-							</div>
-
-							<input type='hidden' name='insertar' value='insertar'>
-
-							<div class="btn">
-								<button class="prev-3 prev">Atrás</button>
-								<button type="submit" class="submit" id="btn-enviar">Enviar</button>
-							</div>
-						</div>
-						<figure class="info add"><i class="fa-duotone fa-question"></i></figure>
-
-					</section>
-				</fieldset>
-			</form>
-		</div>
-
-	</section>
-	<footer>
-
-		<?php include_once("../plantillas/footer.html"); ?>
-	</footer>
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="../../public/js/producto/stepsFormProd.js"></script>
-	<script src="../../public/js/producto/validarDatosProd.js"></script>
+			<?php include_once("../plantillas/footer.html"); ?>
+		</footer>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="../../public/js/producto/stepsFormProd.js"></script>
+		<script src="../../public/js/producto/validarDatosProd.js"></script>
 	</body>
 
 	</html>
