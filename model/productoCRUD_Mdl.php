@@ -72,7 +72,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 		// método para buscar un producto, recibe como parámetro el id del producto
 		public function obtenerProducto($id_prod)
 		{
-			$select = $this->db->prepare('SELECT * FROM producto WHERE id_prod=:id_prod');
+			$select = $this->db->prepare('SELECT producto.*, categoria.nCategoria FROM producto INNER JOIN categoria ON producto.id_cat=categoria.id_cat WHERE id_prod=:id_prod ');
 			$select->bindValue('id_prod', $id_prod);
 			$select->execute();
 			$Producto = $select->fetch();
@@ -91,6 +91,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 			$myProducto->setId_Estado($Producto['id_estado']);
 			$myProducto->setPriceArrive($Producto['priceArrive']);
 			$myProducto->setEstado($Producto['tEstado']);
+			$myProducto->setnCategoria($Producto['nCategoria']);
 
 
 			return $myProducto;

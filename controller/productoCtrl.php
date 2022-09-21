@@ -38,6 +38,7 @@ $Producto->setId_cat($_POST['id_cat']);
 $Producto->setId_estado($_POST['id_estado']);
 $Producto->setPriceArrive($_POST['priceArrive']);
 $Producto->setEstado($_POST['tEstado']);
+$Producto->setnCategoria($_POST	['nCategoria']);
 
 if (isset($_POST['insertar']))
 {
