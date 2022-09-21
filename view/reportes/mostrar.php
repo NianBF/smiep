@@ -52,7 +52,7 @@ else
                         <img src="../../img/other/grphVect.png" alt="Gráfico_icon">
                         <h3>Reportes gráficos</h3>
                         <p>Generar reportes con gráficos</p>
-                        <a href="pyscript/grafico/test.php" class="goRep">Generar Gráfico</a>
+                        <a href="mostrarGraph.php" class="goRep">Generar Gráfico</a>
                     </div>
                 </div>
             </div>
