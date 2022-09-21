@@ -36,7 +36,7 @@ if (
 
 	</head>
 
-	<>
+	<body>
 		<header>
 			<?php include_once("../plantillas/header.html"); ?>
 		</header>
@@ -145,7 +145,7 @@ if (
 		<script src="../../public/js/tienda/stepsFormTi.js"></script>
 		<script src="../../public/js/tienda/validarDatosTi.js"></script>
 
-		</body>
+	</body>
 
 	</html>
 <?php

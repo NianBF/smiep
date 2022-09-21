@@ -111,10 +111,10 @@ if (
 									<input type='text' value='<?php echo $Producto->getPriceArrive(); ?>' id="priceArrive" name='priceArrive' placeholder=" " required>
 									<label for="priceArrive">Precio de llegada</label>
 								</div>
-								<div class="userBox">
+								<!-- <div class="userBox">
 									<input type='number' id="cantMin" name='cantidadMin' placeholder=" " value="1" readonly>
 									<label for="cantMin">cantidad minima</label>
-								</div>
+								</div> -->
 
 								<div class="userBox">
 									<input type='number' id="cantDisp" name='cantidadDisp' placeholder=" " value="<?php echo $Producto->getCantidadDisp(); ?>" required>
@@ -158,17 +158,14 @@ if (
 								</div>
 
 								<div class="userBox">
-									
+
 									<label for="id_cat" class="lSel">Categoria</label><br>
 									<select id="id_cat" name='id_cat' required>
 										<optgroup label="Seleccionado">
 											<option value='<?php echo $Producto->getId_cat(); ?>' selected>
-											<?php switch($Producto->getId_cat()){
-												case $Producto->getId_cat():
-													echo $Producto->getnCategoria();
-													break;
-											}?></option>
-											
+												<?php echo $Producto->getnCategoria();?>
+											</option>
+
 										</optgroup>
 										<optgroup label="Categoria">
 											<option value="0">Elige una opción</option>

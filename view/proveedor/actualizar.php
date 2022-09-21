@@ -23,101 +23,162 @@ else
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-	<title>Actualizar Proveedor</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/agregar.css">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+		<!--Color para navegador móvil-->
+		<meta name="theme-color" content="#339999">
+		<title>SMIEP</title>
+		<link rel="stylesheet" href="../../public/css/formularios.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-</head>
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-<body>
-	<div class="contenedor">
-		<span class="icon">
-			<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="170px"></figure>
-		</span>
-		<div class="contact-wrapper animated bounceInUp">
-			<div class="contact-form">
-				<h3>Cambia los datos del Proveedor</h3>
+	</head>
+
+	<body>
+		<header>
+			<?php include_once("../plantillas/header.html"); ?>
+		</header>
+		<section class="initForm">
+
+			<div class="btnMos">
+				<a href='../proveedor/mostrarProv.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+			</div>
+			<div class="contForm">
 				<form action='../../controller/ProveedorCtrl.php' id="formulario" name="formulario" method='post'>
-					<p>
-						<label for="nombProv1">Primer Nombre</label>
-						<input type='hidden' name='id_DocProv' value='<?php echo $Proveedor->getId_DocProv()?>'>
-						<input type='text' placeholder="Primer Nombre" name='nombProv1' id="nombProv1"
-							value='<?php echo $Proveedor->getNombProv1()?>'>
-					</p>
-					<p>
-						<label for="nombProv2">Segundo Nombre</label>
-						<input type='text' placeholder="Segundo Nombre" id="nombProv2" name='nombProv2'
-							value='<?php echo $Proveedor->getNombProv2()?>'>
-					</p>
-					<p>
-						<label for="apeProv1">Primer Apellido</label>
-						<input type='text' placeholder="Primer Apellido" id="apeProv1" name='apeProv1'
-							value='<?php echo $Proveedor->getApeProv1()?>'>
-					</p>
-					<p>
-						<label for="apeProv2">Segundo Nombre</label>
-						<input type='text' placeholder="Segundo Apellido" id="apeProv2" name='apeProv2'
-							value='<?php echo $Proveedor->getApeProv2()?>'>
-					</p>
-					<p>
-						<label for="empresa">Empresa</label>
-						<input type='text' placeholder="Empresa" id="empresa" name='empresa'
-							value='<?php echo $Proveedor->getEmpresa()?>'>
-					</p>
-					<p>
-						<label for="direc">Dirección</label>
-						<input type='text' placeholder="Dirección" id="direc" name='direccion1'
-							value='<?php echo $Proveedor->getDireccion1()?>'>
-					</p>
-					<p>
-						<label for=" direc2">Dirección Opc</label>
-						<input type='text' placeholder="(Opcional)" id="direc2" name='direccion2'
-							value='<?php echo $Proveedor->getDireccion2()?>'>
-					</p>
-					<p>
-						<label for="tel">Telefono</label>
-						<input type='tel' placeholder="Telefono" id="tel" name='numTel1'
-							value='<?php echo $Proveedor->getNumTel1()?>'>
-					</p>
-					<p>
-						<label for="tel2">Telefono Opc</label>
-						<input type='tel' placeholder="(Opcional)" id="tel2" name='numTel2'
-							value='<?php echo $Proveedor->getNumTel2()?>'>
-					</p>
-					<p>
-						<label for="email">Correo</label>
-						<input type='email' placeholder="ejemplo@smiep.com.co" id="email" name='email1'
-							value='<?php echo $Proveedor->getEmail1()?>'>
-					</p>
-					<p class='block'>
-						<label for="email2">Correo Opc</label>
-						<input type='email' placeholder="(Opcional)" name='email2' id='email2'
-							value='<?php echo $Proveedor->getEmail2()?>'>
-					</p>
 
-					<input type='hidden' name='actualizar' value='Actualizar'>
+					<fieldset class="anuncio movAds">
+						<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
 
-					<p class='block'>
-						<button type='submit' id="btn" name="btn" value='Guardar'>
-							Guardar
-						</button>
-					</p>
-					<p class='block'>
-						<a href="mostrarProv.php"><button type="button">Volver</button></a>
-					</p>
+						<legend>Advertencia</legend>
+						<div>
+							<article>
+								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+									correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
+								<p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
+									consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+								</br>
+								<p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
+									igual a las ya existentes.</p>
+							</article>
+						</div>
+					</fieldset>
 
+					<fieldset class="contact-form">
+						<legend>Agregar Proveedor</legend>
+
+						<?php include_once("../plantillas/progres_bar.html"); ?>
+
+						<section class="formularios">
+							<div class="slide-page formPage">
+								<h4 class="titleSect">Documento de Identidad</h4>
+								<div class="userBox">
+									<input type='number' name='id_DocProv' id="id_Prov" placeholder=" " value='<?php echo $Proveedor->getId_DocProv()?>' readonly>
+									<label for="id_doc">ID Usuario</label>
+								</div>
+								<div class="btn">
+									<button class="firstNext next">Siguiente</button>
+								</div>
+							</div>
+							<div class="page formPage">
+								<h4 class="titleSect">Nombres y Apellidos</h4>
+								<div class="userBox">
+									<input type='text' id="nombProv1" name='nombProv1' placeholder=" " value='<?php echo $Proveedor->getNombProv1()?>' required>
+									<label for="nombre1">Primer Nombre</label>
+								</div>
+								<div class="userBox">
+									<input type='text' id="nombProv2" name='nombProv2' placeholder=" " value='<?php echo $Proveedor->getNombProv2()?>'>
+									<label for="nombre2">Segundo Nombre</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="apeProv1" name='apeProv1' placeholder=" " value='<?php echo $Proveedor->getApeProv1()?>' required>
+									<label for="apellido1">Primer Apellido</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="apeProv2" name='apeProv2' placeholder=" " value='<?php echo $Proveedor->getApeProv2()?>'>
+									<label for="apellido2">Segundo Apellido</label>
+								</div>
+								<div class="btn">
+									<button class="prev-1 prev">Atrás</button>
+									<button class="next-1 next">Siguiente</button>
+								</div>
+							</div>
+							<div class="page page1 formPage">
+								<h4 class="titleSect">Información Empresa</h4>
+								<div class="userBox">
+									<input type='text' name='empresa' id="empresa" placeholder=" " value='<?php echo $Proveedor->getEmpresa()?>' required>
+									<label for="userName">Empresa</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="img" name='imgEmpresa' placeholder=" " value='<?php echo $Proveedor->getImgEmpresa()?>'>
+									<label for="email">Imagen Empresa</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="direc" name='direccion1' placeholder=" " value='<?php echo $Proveedor->getDireccion1()?>' required>
+									<label for="direc">Direccion</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' name='direccion2' placeholder=" " value='<?php echo $Proveedor->getDireccion2()?>'>
+									<label for="direccion">Direccion (opcional)</label>
+								</div>
+								<div class="btn">
+									<button class="prev-2 prev">Atrás</button>
+									<button class="next-2 next">Siguiente</button>
+								</div>
+							</div>
+							<div class="page infTi">
+								<h4 class="titleSect">Información Empresa</h4>
+								
+								<div class="userBox">
+									<input type='tel' id="tel" name='numTel1' placeholder=" " value='<?php echo $Proveedor->getNumTel1()?>' required>
+									<label for="direc">Telefono</label>
+								</div>
+
+								<div class="userBox">
+									<input type='tel' id="" name='numTel2' placeholder=" " value='<?php echo $Proveedor->getNumTel2()?>'>
+									<label for="direccion">Telefono (opcional)</label>
+								</div>
+					
+								<div class="userBox">
+									<input type='email' id="email" name='email1' placeholder=" " value='<?php echo $Proveedor->getEmail1()?>' required>
+									<label for="direc">correo</label>
+								</div>
+
+								<div class="userBox">
+									<input type='email' id="" name='email2' placeholder=" " value='<?php echo $Proveedor->getEmail2()?>'>
+									<label for="direccion">correo (opcional)</label>
+								</div>
+								<input type='hidden' name='actualizar' value='Actualizar'>
+
+								<div class="btn">
+									<button class="prev-3 prev">Atrás</button>
+									<button type="submit" class="submit" id="btn-enviar">Enviar</button>
+								</div>
+							</div>
+							<figure class="info add"><i class="fa-duotone fa-question"></i></figure>
+
+						</section>
+					</fieldset>
 				</form>
 			</div>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script src="../../public/js/proveedor/actualizarProveedor.js"></script>
 
+		</section>
+		<footer>
 
-
-</body>
+			<?php include_once("../plantillas/footer.html"); ?>
+		</footer>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="../../public/js/proveedor/stepsFormProv.js"></script>
+		<script src="../../public/js/proveedor/validarDatosProv.js"></script>
+	</body>
 
 </html>
 <?php
