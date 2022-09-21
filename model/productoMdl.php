@@ -15,6 +15,7 @@ class Producto
 	private $id_cat;
 	private $id_estado;
 	private $estado;
+	private $nCategoria;
 
 
 	function __construct()
@@ -167,5 +168,12 @@ class Producto
 
 	public function setPriceArrive($priceArray){
 		$this->priceArrive = $priceArray;
+	}
+	public function getnCategoria(){
+		return $this->nCategoria;
+	}
+
+	public function setnCategoria($nCategoria){
+		$this->nCategoria=$nCategoria;
 	}
 }

@@ -13,30 +13,20 @@ else
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-    <!--Color para navegador móvil-->
-    <meta name="theme-color" content="#339999">
-    <title>SMIEP</title>
-    <link rel="stylesheet" href="stepsForm.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/forms.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
-    <link rel="stylesheet" href="../../public/css/tablas.css">
-    <link rel="stylesheet" href="../../public/css/fonts.css">
-    <link rel="stylesheet" href="../../public/css/variables.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+		<!--Color para navegador móvil-->
+		<meta name="theme-color" content="#339999">
+		<title>SMIEP</title>
+		<link rel="stylesheet" href="../../public/css/formularios.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-	
-</head>
+	</head>
 
 <body>
 	<header>
@@ -111,7 +101,7 @@ else
                         <div class="slide-page formPage">
                             <h4 class="titleSect">Documento de Identidad</h4>
                             <div class="userBox">
-                                <input type='text' id="id_cat" name='id_cat' placeholder=" ">
+                                <input type='text' id="doc" name='id_cliDoc' placeholder=" ">
                                 <label for="id_cat">ID Usuario</label>
                             </div>
                             <div class="btn">
@@ -173,7 +163,7 @@ else
 						<div class="page infTi">
                             <h4 class="titleSect">Información de Tienda</h4>
                             <div class="userBox">
-                                <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
+                                
                                 <label for="selTi" class="lSel">Tienda</label>
                                 <select name="selTi">
                                     <optgroup label="Tienda">

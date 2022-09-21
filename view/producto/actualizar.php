@@ -158,14 +158,16 @@ if (
 								</div>
 
 								<div class="userBox">
-									<!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
+									
 									<label for="id_cat" class="lSel">Categoria</label><br>
 									<select id="id_cat" name='id_cat' required>
 										<optgroup label="Seleccionado">
 											<option value='<?php echo $Producto->getId_cat(); ?>' selected>
-											<?php echo $Producto->getId_cat();
-											
-											?></option>
+											<?php switch($Producto->getId_cat()){
+												case $Producto->getId_cat():
+													echo $Producto->getnCategoria();
+													break;
+											}?></option>
 											
 										</optgroup>
 										<optgroup label="Categoria">
