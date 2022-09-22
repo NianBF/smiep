@@ -109,7 +109,7 @@ if (
                                 </div>
 
                                 <div class="userBox">
-                                    <input type='password' id="pass" name='pass' placeholder=" " required>
+                                    <input type='password' id="pass" name='pass' placeholder=" " required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,18}$">
                                     <label for="pass">Contraseña</label>
                                 </div>
                                 <div class="btn">
