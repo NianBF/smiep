@@ -28,9 +28,9 @@ $_SESSION["pass"] == null ){
 	while($row = $resultado->fetch(PDO::FETCH_ASSOC))
 	{
         $pdf->Cell(20,6,$row['id_orden'],1,0,'C');
-        $pdf->Cell(20,6,$row['Cliente'],1,0,'C');
+        $pdf->Cell(30,6,$row['Cliente'],1,0,'C');
         $pdf->Cell(30,6,$row['total'],1,0,'C');
-        $pdf->Cell(33,6,$row['Usuario'],1,0,'C');
+        $pdf->Cell(30,6,$row['Usuario'],1,0,'C');
 		$pdf->Cell(40,6,$row['creadoEn'],1,1,'C');
 	}
 	$pdf->Output();
