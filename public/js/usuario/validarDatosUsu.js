@@ -4,6 +4,7 @@ var secondpage = document.querySelector(".next-1")
 var Thirdpage = document.querySelector(".next-2")
 var btn_enviar = document.querySelector("#btn-enviar")
 
+
 firstpage.addEventListener("click", function(e){
  if (formulario.id_doc.value ==0) {
       swal.fire({
@@ -39,6 +40,9 @@ secondpage.addEventListener("click", function (e){
 })
 
 Thirdpage.addEventListener("click",function(e){
+
+  let regExpPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]{2})(?=.*[@!+*?=#$|&~:;_-]).{6,18}$/g;
+  let regExpEmail = /(@smiep.com)$/g;
   
   if (formulario.userName.value == 0) {
     swal.fire({
@@ -46,15 +50,15 @@ Thirdpage.addEventListener("click",function(e){
     });
     e.preventDefault();
   }
-  else  if (formulario.email.value == 0) {
+  else  if (regExpEmail.test(formulario.email.value) == false) {
     swal.fire({
-      title: "completa el campo correo",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+      title: "Por favor ingrese el correo institucional",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
     });
     e.preventDefault();
   }
-  else  if (formulario.pass.value == 0) {
+  else  if (regExpPass.test(formulario.pass.value)  == false) {
     swal.fire({
-      title: "completa el campo contraseña",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+      title: "La contraseña debe tener entre 6 a 18 caracteres y debe contener 1 mayuscula, 1 minuscula, 2 numeros, 1 caracter especial",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
     });
     e.preventDefault();
   }

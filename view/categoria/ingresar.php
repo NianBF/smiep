@@ -32,7 +32,7 @@ if (
         </header>
         <section class="initForm">
             <div class="btnMos">
-                <a href='../usuario/mostrarUsu.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+                <a href='../categoria/mostrarCat.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
 
             <div class="contForm">
@@ -66,9 +66,9 @@ if (
                         <input type='hidden' name='insertar' value='insertar'>
 
                         <div class="btn">
-                                
-                                <button type="submit" class="submit" id="btn-enviar">Enviar</button>
-                            </div>
+
+                            <button type="submit" class="submit" id="btn-enviar">Enviar</button>
+                        </div>
                         <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
                     </fieldset>
                 </form>

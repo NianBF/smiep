@@ -1,105 +1,173 @@
 <?php
 session_start();
-if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
-$_SESSION["pass"] == null)
-{
+if (
+	$_SESSION['email'] == null or $_SESSION["userName"] == null or
+	$_SESSION["pass"] == null
+) {
 	header("location:../../index.php");
-}
-else
-{
+} else {
 ?>
-<!DOCTYPE html>
-<html lang="en">
+	<!DOCTYPE html>
+	<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+		<!--Color para navegador móvil-->
+		<meta name="theme-color" content="#339999">
+		<title>SMIEP</title>
+		<link rel="stylesheet" href="../../public/css/formularios.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-	<title>Ingresar Proveedor</title>
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-	<link rel="stylesheet" href="../../public/css/agregar.css">
-</head>
-<div class="contenedor">
-	<span class="icon">
-		<figure class=""><img src="../../img/favicon.png" alt="Logo SMIEP" width="200rem"></figure>
-	</span>
-	<div class="contact-wrapper animated bounceInUp">
-		<div class="contact-form">
-			<h3>Agregar Proveedor</h3>
-			<form action='../../controller/ProveedorCtrl.php' name="formulario" method='post'>
-				<p>
-					<label for="id_Prov">ID Proveedor</label>
-					<input type='text' name='id_DocProv' id="id_Prov" placeholder="ID Proveedor">
-				</p>
-				<p>
-					<label for="empresa">Empresa</label>
-					<input type='text' name='empresa' id="empresa" placeholder="Empresa">
-				</p>
-				<p>
-					<label for="imgEmpresa">IMG Empresa</label>
-					<input type='file' id="imgEmpresa" name='IMG Empresa'>
-				</p>
-				<p>
-					<label for="nombProv1">Primer Nombre</label>
-					<input type='text' placeholder="Primer Nombre" id="nombProv1" name='nombProv1'>
-				</p>
-				<p>
-					<label for="nombProv2">Segundo Nombre</label>
-					<input type='text' placeholder="Segundo Nombre" id="nombProv2" name='nombProv2'>
-				</p>
-				<p>
-					<label for="apeProv1">Primer Apellido</label>
-					<input type='text' placeholder="Primer Apellido" id="apeProv1" name='apeProv1'>
-				</p>
-				<p>
-					<label for="apeProv2">Segundo Nombre</label>
-					<input type='text' placeholder="Segundo Apellido" id="apeProv2" name='apeProv2'>
-				</p>
-				<p>
-					<label for="direc">Dirección</label>
-					<input type='text' placeholder="Dirección" id="direc" name='direccion1'>
-				</p>
-				<p>
-					<label for="direccion2">Dirección Opc</label>
-					<input type='text' placeholder="(Opcional)" name='direccion2'>
-				</p>
-				<p>
-					<label for="tel">Telefono</label>
-					<input type='tel' placeholder="Telefono" id="tel" name='numTel1'>
-				</p>
-				<p>
-					<label for="tel2">Telefono Opc</label>
-					<input type='tel' id="tel2" placeholder="(Opcional)" name='numTel2'>
-				</p>
-				<p>
-					<label for="email">Correo</label>
-					<input type='email' placeholder="ejemplo@smiep.com.co" id="email" name='email1'>
-				</p>
-				<p class='block'>
-					<label for="email2">Correo Opc</label>
-					<input type='email' placeholder="(Opcional)" id="email2" name='email2'>
-				</p>
+	</head>
 
-				<input type='hidden' name='insertar' value='insertar'>
+	<body>
+		<header>
+			<?php include_once("../plantillas/header.html"); ?>
+		</header>
+		<section class="initForm">
 
-				<p class='block'>
-					<button type='submit' id="btn" name="btn" value='Guardar'>
-						Guardar
-					</button>
-				</p>
-				<p class='block'>
-					<a href='mostrarProv.php'><button type="button">Volver</button></a>
-				</p>
-			</form>
-		</div>
-	</div>
+			<div class="btnMos">
+				<a href='../proveedor/mostrarProv.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+			</div>
+			<div class="contForm">
+				<form action='../../controller/ProveedorCtrl.php' id="formulario" name="formulario" method='post'>
 
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="../../public/js/proveedor/ingresarProveedor.js"></script>
+					<fieldset class="anuncio movAds">
+						<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
+
+						<legend>Advertencia</legend>
+						<div>
+							<article>
+								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+									correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
+								<p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
+									consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+								</br>
+								<p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
+									igual a las ya existentes.</p>
+							</article>
+						</div>
+					</fieldset>
+
+					<fieldset class="contact-form">
+						<legend>Agregar Proveedor</legend>
+
+						<?php include_once("../plantillas/progres_bar.html"); ?>
+
+						<section class="formularios">
+							<div class="slide-page formPage">
+								<h4 class="titleSect">Documento de Identidad</h4>
+								<div class="userBox">
+									<input type='number' name='id_DocProv' id="id_Prov" placeholder=" " required>
+									<label for="id_doc">ID Usuario</label>
+								</div>
+								<div class="btn">
+									<button class="firstNext next">Siguiente</button>
+								</div>
+							</div>
+							<div class="page formPage">
+								<h4 class="titleSect">Nombres y Apellidos</h4>
+								<div class="userBox">
+									<input type='text' id="nombProv1" name='nombProv1' placeholder=" " required>
+									<label for="nombre1">Primer Nombre</label>
+								</div>
+								<div class="userBox">
+									<input type='text' id="nombProv2" name='nombProv2' placeholder=" ">
+									<label for="nombre2">Segundo Nombre</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="apeProv1" name='apeProv1' placeholder=" " required>
+									<label for="apellido1">Primer Apellido</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="apeProv2" name='apeProv2' placeholder=" ">
+									<label for="apellido2">Segundo Apellido</label>
+								</div>
+								<div class="btn">
+									<button class="prev-1 prev">Atrás</button>
+									<button class="next-1 next">Siguiente</button>
+								</div>
+							</div>
+							<div class="page page1 formPage">
+								<h4 class="titleSect">Información Empresa</h4>
+								<div class="userBox">
+									<input type='text' name='empresa' id="empresa" placeholder=" " required>
+									<label for="userName">Empresa</label>
+								</div>
+
+								<div class="userBox">
+									<input type='file' id="img" name='imgEmpresa' placeholder=" ">
+									<label for="email">Imagen Empresa</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' id="direc" name='direccion1' placeholder=" " required>
+									<label for="direc">Direccion</label>
+								</div>
+
+								<div class="userBox">
+									<input type='text' name='direccion2' placeholder=" " >
+									<label for="direccion">Direccion (opcional)</label>
+								</div>
+								<div class="btn">
+									<button class="prev-2 prev">Atrás</button>
+									<button class="next-2 next">Siguiente</button>
+								</div>
+							</div>
+							<div class="page infTi">
+								<h4 class="titleSect">Información Empresa</h4>
+								
+								<div class="userBox">
+									<input type='tel' id="tel" name='numTel1' placeholder=" " required>
+									<label for="direc">Telefono</label>
+								</div>
+
+								<div class="userBox">
+									<input type='tel' id="" name='numTel2' placeholder=" " >
+									<label for="direccion">Telefono (opcional)</label>
+								</div>
+					
+								<div class="userBox">
+									<input type='email' id="email" name='email1' placeholder=" " required>
+									<label for="direc">correo</label>
+								</div>
+
+								<div class="userBox">
+									<input type='email' id="" name='email2' placeholder=" " >
+									<label for="direccion">correo (opcional)</label>
+								</div>
+								<input type='hidden' name='insertar' value='insertar'>
+
+								<div class="btn">
+									<button class="prev-3 prev">Atrás</button>
+									<button type="submit" class="submit" id="btn-enviar">Enviar</button>
+								</div>
+							</div>
+							<figure class="info add"><i class="fa-duotone fa-question"></i></figure>
+
+						</section>
+					</fieldset>
+				</form>
+			</div>
+
+		</section>
+		<footer>
+
+			<?php include_once("../plantillas/footer.html"); ?>
+		</footer>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="../../public/js/proveedor/stepsFormProv.js"></script>
+		<script src="../../public/js/proveedor/validarDatosProv.js"></script>
 	</body>
 
-</html>
+	</html>
 <?php
-}?>
+} ?>

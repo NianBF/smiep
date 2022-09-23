@@ -106,10 +106,10 @@ if (
 									<input type='text' id="priceArrive" name='priceArrive' placeholder=" " required>
 									<label for="priceArrive">Precio de llegada</label>
 								</div>
-								<div class="userBox">
+								<!-- <div class="userBox">
 									<input type='number' id="cantMin" name='cantidadMin' placeholder=" " value="1" readonly>
 									<label for="cantMin">cantidad minima</label>
-								</div>
+								</div> -->
 
 								<div class="userBox">
 									<input type='number' id="cantDisp" name='cantidadDisp' placeholder=" " value='<?php echo $Producto->getCantidadDisp() ?>' required>
@@ -122,7 +122,7 @@ if (
 									<button class="next-1 next">Siguiente</button>
 								</div>
 							</div>
-							
+
 							<div class="page page1 formPage">
 								<div class="userBox">
 									<input type='text' id="Presentacion" name='tipoPresentacion' placeholder=" ">
