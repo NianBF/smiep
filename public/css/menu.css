@@ -15,6 +15,9 @@
 }
 /*Información OS y Browser*/
 
+body {
+  margin-left: 6rem;
+}
 body main article div.infCont{
   display: grid;
   place-items: end;

@@ -26,11 +26,13 @@ else
     <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/footer.css">
     <!--//Estilos para plantilla navBar\\-->
     <link rel="stylesheet" href="../../public/css/plantillas/navBar1.css">
+    <link rel="stylesheet" href="../plantillas/asideBar.css">
     <!--//Estilos únicos del menú\\-->
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
     <!--//Estilos para preloader\\-->
     <link rel="stylesheet" href="../../public/css/plantillas/preloader.css">
-    <link rel="stylesheet" href="../../public/css/plantillas/smiep.css"> <!--Trae estilos de plantilla SMIEP para preloader-->
+    <link rel="stylesheet" href="../../public/css/plantillas/smiep.css">
+    <!--Trae estilos de plantilla SMIEP para preloader-->
     <!--//Estilos donde se declara fuentes para uso general\\-->
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -38,14 +40,21 @@ else
 </head>
 
 <body>
+
+    <section>
+        <aside>
+            <?php include_once("../plantillas/asideBar.html"); ?>
+        </aside>
+    </section>
+    <section class="contentFirst">
     <header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>
-    <?php include_once("../plantillas/navBar.html"); ?>
+    <!-- /*<?php include_once("../plantillas/navBar.html"); ?>*/ -->
     <main>
         <article>
             <div class="infCont">
-                <h2>Sistema Operativo: <span id="osType"></span><br/>Navegador: <span id="browserType"></span></h2>
+                <h2>Sistema Operativo: <span id="osType"></span><br />Navegador: <span id="browserType"></span></h2>
             </div>
             <?php include_once("../plantillas/preloader.php"); ?>
             <h2>Smiep</h2>
@@ -58,6 +67,7 @@ else
                 instinto y sin ninguna herramienta plausible para la tarea.</p>
         </article>
     </main>
+    </section>
     <?php include_once("../plantillas/footer.html"); ?>
 
     <script type="text/javascript" src="../../public/js/detectSoft/detetctSoft.js"></script>
@@ -66,6 +76,9 @@ else
     <script src="../../public/js/main.js"></script>
     <script src="../../public/js/salir.js"></script>
     <script src="../../public/js/plantillas/preloader.js"></script>
+    <script src="../plantillas/asideBar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
