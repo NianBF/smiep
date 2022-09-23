@@ -25,10 +25,10 @@ else
     <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/header1.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/plantillas/footer.css">
     <!--//Estilos para plantilla navBar\\-->
-    <link rel="stylesheet" href="../../public/css/plantillas/navBar1.css">
-    <link rel="stylesheet" href="../plantillas/asideBar.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/asideBar.css">
     <!--//Estilos únicos del menú\\-->
     <link rel="stylesheet" type="text/css" href="../../public/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/variables.css">
     <!--//Estilos para preloader\\-->
     <link rel="stylesheet" href="../../public/css/plantillas/preloader.css">
     <link rel="stylesheet" href="../../public/css/plantillas/smiep.css">
@@ -50,7 +50,6 @@ else
     <header>
         <?php include_once("../plantillas/header.html"); ?>
     </header>
-    <!-- /*<?php include_once("../plantillas/navBar.html"); ?>*/ -->
     <main>
         <article>
             <div class="infCont">
@@ -76,7 +75,7 @@ else
     <script src="../../public/js/main.js"></script>
     <script src="../../public/js/salir.js"></script>
     <script src="../../public/js/plantillas/preloader.js"></script>
-    <script src="../plantillas/asideBar.js"></script>
+    <script src="../../public/js/asideBar.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
