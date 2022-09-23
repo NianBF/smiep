@@ -5,7 +5,14 @@ if (
 	$_SESSION["pass"] == null
 ) {
 	header("location:../../index.php");
-} else {?>
+} else {
+	require_once('../../model/proveedorCrud_Mdl.php');
+	require_once('../../model/proveedorMdl.php');
+	$crud = new CrudProveedor();
+	$Proveedor = new Proveedor();
+	$listaProveedor = $crud->mostrar();
+?>
+
 
 <!DOCTYPE html>
 	<html lang="es">
@@ -102,16 +109,23 @@ if (
 							</div>
 
 							<div class="page formPage">
-								<h4 class="titleSect">Pedido</h4>
+								<h4 class="titleSect">Documento Usuario</h4>
 								<div class="userBox">
 									<input type='number' id="docUsu" name='docUsu' value="<?php echo $_SESSION['docUsu']; ?>" required readonly>
-									<label for="priceArrive">Documento Usuario</label>
+									<label for="docUsu"><?php echo $_SESSION['userName'] ?></label>
 								</div>
 
-								<div class="userBox">
-									<input type='number' id="docProv" name='docProv' placeholder=" " required>
-									<label for="cantDisp">Documento Proveedor</label>
-								</div>
+							<div class="userBox">
+							<label for="docProv" class="lSel">Documento Proveedor</label><br>
+								<select id="docProv" name='docProv' required>
+									<optgroup label="Proveedor">
+										<option value="0">Elige una opción</option>
+										<?php foreach ($listaProveedor as $Proveedor) { ?>
+											<option value="<?php echo $Proveedor->getId_docProv(); ?>"><?php echo $Proveedor->getId_docProv()." ".$Proveedor->getEmpresa(); ?></option>
+										<?php } ?>
+									</optgroup>
+								</select>
+							</div>
 
 								<input type='hidden' name='insertar' value='insertar'>
 
