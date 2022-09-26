@@ -93,7 +93,7 @@ if (
 						<section class="formularios">
 							<div class="slide-page formPage">
 								<div class="userBox">
-									<input list="id_compra" name="id_compra" placeholder=" " required>
+									<input list="id_compra" name="id_compra" placeholder=" " required autofocus>
 									<label for="id_compra">ID Compra</label>
 								<datalist id="id_compra" >
 									<?php foreach ($listaCompra as $Compra) { ?>
