@@ -23,4 +23,20 @@ class CompraC_Mdl{
         $insert->bindValue('creadoEn',$Compra->getCreadoEn());
         $insert->execute();
     }
+    public function mostrar(){
+		$listaCompra = [];
+		$select = $this->db->query('SELECT * FROM compra');
+
+		foreach ($select->fetchAll() as $Compra){
+			$thCompra = new CompraMdl;
+			$thCompra->setId_compra($Compra['id_compra']);
+			$thCompra->setCantidadCP($Compra['cantidadCP']);
+			$thCompra->setDescripcion($Compra['descripcionVT']);
+			$thCompra->setId_doc($Compra['id_doc']);
+			$thCompra->setId_docProv($Compra['id_docPov']);
+			$thCompra->setCreadoEn($Compra['creadoEn']);
+			$listaCompra[] = $thCompra;
+		}
+		return $listaCompra;
+	}
 }
