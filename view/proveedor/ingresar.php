@@ -74,7 +74,7 @@ if (
 							<div class="page formPage">
 								<h4 class="titleSect">Nombres y Apellidos</h4>
 								<div class="userBox">
-									<input type='text' id="nombProv1" name='nombProv1' placeholder=" " required>
+									<input type='text' id="nombre1" name='nombProv1' placeholder=" " required>
 									<label for="nombre1">Primer Nombre</label>
 								</div>
 								<div class="userBox">

@@ -1,11 +1,14 @@
+
 /**
  * Variables de botoness, clases y pasos del formulario
  */
 const form = document.querySelector(".contact-form");
-const slidePage = document.querySelector(".slide-page");
-const page = document.querySelector(".page");
-const page1 = document.querySelector(".page1");
-const infTi = document.querySelector(".infTi");
+
+  const slidePage = document.querySelector(".slide-page");
+  const page = document.querySelector(".page");
+  const page1 = document.querySelector(".page1");
+  const infTi = document.querySelector(".infTi");
+  
 
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
@@ -14,12 +17,12 @@ const prevBtnThird = document.querySelector(".prev-2");
 const nextBtnThird = document.querySelector(".next-2");
 const prevBtnFourth = document.querySelector(".prev-3");
 const submitBtn = document.querySelector(".submit");
-
-const progressText = document.querySelectorAll(".step p");
-const progressCheck = document.querySelectorAll(".step .check");
-const bullet = document.querySelectorAll(".step .bullet");
-let current = 1;
-//Anuncio
+  
+  const progressText = document.querySelectorAll(".step p");
+  const progressCheck = document.querySelectorAll(".step .check");
+  const bullet = document.querySelectorAll(".step .bullet");
+  let current = 1;
+  //Anuncio
 const btninfo = document.querySelector(".info");
 const closeinfo = document.querySelector(".closer");
 const info = document.querySelector(".anuncio");
@@ -48,23 +51,6 @@ const nextStyleProgresBar = function (){
   current += 1;
 }
 
-
-nextBtnFirst.addEventListener("click", function(event){
-  if(formulario.id_doc.value>0){   
-    event.preventDefault();nextStyleProgresBar()
-  }
-});
-nextBtnSec.addEventListener("click", function(event){
-  if ((formulario.nombre1.value !=0) && (formulario.apellido1.value !=0)) {
-    
-    event.preventDefault();nextStyleProgresBar()
-  }
-});
-nextBtnThird.addEventListener("click", function(event){
-  if((formulario.userName.value !=0) && (formulario.email.value !=0) && (formulario.pass.value !=0)){
-      event.preventDefault();nextStyleProgresBar()
-    }
-});
 const backStyleProgresBar = function(){
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
@@ -91,3 +77,5 @@ prevBtnFourth.addEventListener("click", function(event){
   backStyleProgresBar()
 
 });
+
+export default nextStyleProgresBar

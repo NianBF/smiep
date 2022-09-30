@@ -74,7 +74,7 @@ if (
                             <div class="slide-page formPage">
                                 <h4 class="titleSect">Documento de Identidad</h4>
                                 <div class="userBox">
-                                    <input type='number' name='id_doc' placeholder=" " value='<?php echo $Usuario->getId_doc() ?>' readonly>
+                                    <input type='number' name='id' placeholder=" " value='<?php echo $Usuario->getId_doc() ?>' readonly>
                                     <label for="id_doc">ID Usuario</label>
 
                                 </div>

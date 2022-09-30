@@ -1,75 +1,80 @@
-var formulario = document.querySelector("form")
-var firstpage = document.querySelector(".firstNext")
-var secondpage = document.querySelector(".next-1")
-var Thirdpage = document.querySelector(".next-2")
-var btn_enviar = document.querySelector("#btn-enviar")
+import id from "../moduleValidar/id.js"
+import nomb1 from "../moduleValidar/nombre.js";
+import ape1 from "../moduleValidar/apellido.js";
+
+import nomUsu from "../moduleValidar/nomUsu.js"
+import correo from "../moduleValidar/emial.js"
+import passW from "../moduleValidar/passw.js"
 
 
-firstpage.addEventListener("click", function(e){
- if (formulario.id_doc.value ==0) {
-      swal.fire({
-        title: "completa el campo documento",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-      });
-    e.preventDefault();
-    }
-    else{
-      slidePage.style.display = "none";page.style.display = "block";
-    }
-})
+import nextStyleProgresBar from "./stepsForm.js"
+
+const slidePage = document.querySelector(".slide-page");
+const page = document.querySelector(".page");
+const page1 = document.querySelector(".page1");
+const infTi = document.querySelector(".infTi");
+
+const formulario = document.querySelector("form")
+const firstpage = document.querySelector(".firstNext")
+const secondpage = document.querySelector(".next-1")
+const Thirdpage = document.querySelector(".next-2")
+const btn_enviar = document.querySelector("#enviar")
 
 
-
-secondpage.addEventListener("click", function (e){
- if (formulario.nombre1.value == 0) {
-    swal.fire({
-      title: "completa el campo primer nombre",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
-  }
+firstpage.addEventListener("click", function(event){
   
-  else  if (formulario.apellido1.value == 0) {
-    swal.fire({
-      title: "completa el campo primer apellido",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
-  }
-  else{
-    page.style.display = "none";
-  page1.style.display = "block";
-  }
+  let regExp = /^[0-9]{3,10}$/g;
+  if ( regExp.test(formulario.id_doc.value) ==false) {
+  id();
+  event.preventDefault();
+}
+else{
+  slidePage.style.display = 'none'; 
+  page.style.display = 'block'; 
+  /* nextStyleProgresBar(); */
+}
 })
 
-Thirdpage.addEventListener("click",function(e){
+secondpage.addEventListener("click", function (event){
+  
+  if (formulario.nombre1.value == 0) {
+    nomb1();
+  event.preventDefault();
+}
+else   if (formulario.apellido1.value == 0) {
+  ape1();
+event.preventDefault();
+}
+else{
+  page.style.display = "none";
+  page1.style.display = "block";
+ /*  nextStyleProgresBar(); */
+}
+})
 
-  let regExpPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]{2})(?=.*[@!+*?=#$|&~:;_-]).{6,18}$/g;
+Thirdpage.addEventListener("click",function(event){
   let regExpEmail = /(@smiep.com)$/g;
+  let regExpPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]{2})(?=.*[@!+*?=#$|&~:;_-]).{6,18}$/g;
   
   if (formulario.userName.value == 0) {
-    swal.fire({
-      title: "completa el campo usuario",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
-  }
-  else  if (regExpEmail.test(formulario.email.value) == false) {
-    swal.fire({
-      title: "Por favor ingrese el correo institucional",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
-  }
-  else  if (regExpPass.test(formulario.pass.value)  == false) {
-    swal.fire({
-      title: "La contraseña debe tener entre 6 a 18 caracteres y debe contener 1 mayuscula, 1 minuscula, 2 numeros, 1 caracter especial",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
-  }
-  else{
+    nomUsu();
+    event.preventDefault();
+
+  }else if (regExpEmail.test(formulario.email.value) == false) {
+    correo();
+    event.preventDefault();
+
+  } else if (regExpPass.test(formulario.pass.value)  == false) {
+    passW()
+    event.preventDefault();
+  }else{
     page1.style.display = "none";
     infTi.style.display = "block";
+   /*  nextStyleProgresBar(); */
   }
-})
 
-btn_enviar.addEventListener("click", function (e) {
-  console.log("click")
+}) 
+btn_enviar.addEventListener("click", function (e){
   if (formulario.rol.value == 0) {
     swal.fire({
       title: "completa el campo ROL",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,

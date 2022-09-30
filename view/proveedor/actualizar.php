@@ -86,7 +86,7 @@ else
 							<div class="page formPage">
 								<h4 class="titleSect">Nombres y Apellidos</h4>
 								<div class="userBox">
-									<input type='text' id="nombProv1" name='nombProv1' placeholder=" " value='<?php echo $Proveedor->getNombProv1()?>' required>
+									<input type='text' id="nombre1" name='nombProv1' placeholder=" " value='<?php echo $Proveedor->getNombProv1()?>' required>
 									<label for="nombre1">Primer Nombre</label>
 								</div>
 								<div class="userBox">
