@@ -11,6 +11,11 @@ if (
 	$crud = new CrudProveedor();
 	$Proveedor = new Proveedor();
 	$listaProveedor = $crud->mostrar();
+	require_once('../../model/compraMdl.php');
+	require_once('../../model/compraC_Mdl.php');
+	$consulta = new CompraC_Mdl();
+	$Compra = new CompraMdl();
+	$listaCompra = $consulta->mostrar();
 ?>
 
 
@@ -58,7 +63,8 @@ if (
                                 la inicial de la empresa al principio (ej: Ramo-> R00001).</p>
 								</br>
 								<p><strong>Valor Total:</strong> Ingrese el Total de la factura.</p></br>
-								<p><strong>Descripcion:</strong> Ingrese el nombre de los productos que llegaron en el pedido.</p>
+								<p><strong>Descripcion:</strong> Ingrese el nombre de los productos que llegaron en el pedido.</p></br>
+								<p><strong>Documento Proveedor:</strong> Digite el documento del proveedor y verifique que corresponda a la empresa.</p>
 							</article>
 						</div>
 					</fieldset>
@@ -86,11 +92,14 @@ if (
                         </section>
 						<section class="formularios">
 							<div class="slide-page formPage">
-								<h4 class="titleSect">Pedido</h4>
-
 								<div class="userBox">
-									<input type='text' id='id_compra' name='id_compra' placeholder=" " required>
+									<input list="id_compra" name="id_compra" placeholder=" " required autofocus>
 									<label for="id_compra">ID Compra</label>
+								<datalist id="id_compra" >
+									<?php foreach ($listaCompra as $Compra) { ?>
+											<option value="<?php echo $Compra->getId_compra(); ?>"></option>
+										<?php } ?>
+								</datalist>
 								</div>
 
 								<div class="userBox">
@@ -116,15 +125,13 @@ if (
 								</div>
 
 							<div class="userBox">
-							<label for="docProv" class="lSel">Documento Proveedor</label><br>
-								<select id="docProv" name='docProv' required>
-									<optgroup label="Proveedor">
-										<option value="0">Elige una opción</option>
-										<?php foreach ($listaProveedor as $Proveedor) { ?>
-											<option value="<?php echo $Proveedor->getId_docProv(); ?>"><?php echo $Proveedor->getId_docProv()." ".$Proveedor->getEmpresa(); ?></option>
+								<input list="docProv" name="docProv" placeholder=" " required>
+								<label for="docProv">Documento Proveedor</label><br>
+								<datalist id="docProv" name='docProv'>
+									<?php foreach ($listaProveedor as $Proveedor) { ?>
+											<option value="<?php echo $Proveedor->getId_docProv(); ?>"> <?php echo $Proveedor->getEmpresa(); ?></option>
 										<?php } ?>
-									</optgroup>
-								</select>
+								</datalist>
 							</div>
 
 								<input type='hidden' name='insertar' value='insertar'>
