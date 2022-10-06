@@ -3,9 +3,11 @@
  * mensaje de alerta que se utilizara pera todos aquellos 
  * que sean primer nombre
  * */
- const nomb1 = function (){
+export const nombre = function (event){
   swal.fire({
-    title: "completa el campo primer nombre",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+    title: "completa el campo primer nombre",
+    toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
   });     
+  event.preventDefault();
 }
-export default nomb1
+export default nombre

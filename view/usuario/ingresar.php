@@ -64,8 +64,8 @@ if (
                             <div class="slide-page formPage">
                                 <h4 class="titleSect">Documento de Identidad</h4>
                                 <div class="userBox">
-                                    <input type='number' id="id_doc" name='id_doc' placeholder=" " >
-                                    <label for="id">ID Usuario</label>
+                                    <input type='number' id="id_doc" name='id_doc' placeholder=" " required>
+                                    <label for="id_doc">ID Usuario</label>
                                 </div>
                                 <div class="btn">
                                     <button class="firstNext next">Siguiente</button>
@@ -74,16 +74,16 @@ if (
                             <div class="page formPage">
                                 <h4 class="titleSect">Nombres y Apellidos</h4>
                                 <div class="userBox">
-                                    <input type='text' id="nombre1" name='nombre1' placeholder=" " >
+                                    <input type='text' id="nombre1" name='nombre1' placeholder=" " required>
                                     <label for="nombre1">Primer Nombre</label>
                                 </div>
                                 <div class="userBox">
-                                    <input type='text' id="nombre2" name='nombre2' placeholder=" " >
+                                    <input type='text' id="nombre2" name='nombre2' placeholder=" ">
                                     <label for="nombre2">Segundo Nombre</label>
                                 </div>
 
                                 <div class="userBox">
-                                    <input type='text' id="apellido1" name='apellido1' placeholder=" " >
+                                    <input type='text' id="apellido1" name='apellido1' placeholder=" " required>
                                     <label for="apellido1">Primer Apellido</label>
                                 </div>
 
@@ -104,12 +104,12 @@ if (
                                 </div>
 
                                 <div class="userBox">
-                                    <input type='email' id="email" name='email' placeholder=" " >
+                                    <input type='email' id="email" name='email' placeholder=" " required>
                                     <label for="email">Correo</label>
                                 </div>
 
                                 <div class="userBox">
-                                    <input type='password' id="pass" name='pass' placeholder=" "  >
+                                    <input type='password' id="pass" name='pass' placeholder=" " required>
                                     <label for="pass">Contraseña</label>
                                 </div>
                                 <div class="btn">
@@ -120,19 +120,19 @@ if (
                             <div class="page infTi">
                                 <h4 class="titleSect">Información de Tienda</h4>
                                 <div class="userBox">
-                                    
+
                                     <label for="rol" class="lSel">Rol</label><br>
-                                    <select name="rol" id="rol"required >
+                                    <select name="rol" id="rol" required>
                                         <optgroup label="Rol" >
                                             <option selected value="0">Elige una opción</option>
-                                            <option value="Administrador">Administrador</option>
-                                            <option value="Empleado">Empleado</option>
+                                            <option  value="Administrador">Administrador</option>
+                                            <option  value="Empleado">Empleado</option>
                                         </optgroup>
                                     </select>
                                 </div>
 
                                 <div class="userBox">
-                                    <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
+                                    
                                     <label for="estado" class="lSel">Estado</label><br>
                                     <select name="id_estado" id="estado" required>
                                         <optgroup label="Estado">
@@ -144,7 +144,7 @@ if (
                                 </div>
 
                                 <div class="userBox">
-                                    <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
+                                   
                                     <label for="idti" class="lSel">Tienda</label><br>
                                     <select name="id_ti" id="idTi" required>
                                         <optgroup label="Tienda">
@@ -158,7 +158,7 @@ if (
 
                                 <div class="btn">
                                     <button class="prev-3 prev">Atrás</button>
-                                    <button type="submit" class="submit btn" id="enviar" value="guardar">Enviar</button>
+                                    <button type="submit" class="submit btn" id="enviar">Enviar</button>
                                 </div>
                             </div>
                             <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
@@ -169,14 +169,14 @@ if (
             </div>
 
         </section>
-        
-        <footer>
 
+        <footer>
             <?php include_once("../plantillas/footer.html"); ?>
         </footer>
+        
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- <script type="module" src="../../public/js/usuario/stepsForm.js"></script> -->
-        <script type="module" src="../../public/js/usuario/validarDatosUsu.js"></script>
+        <script src="../../public/js/usuario/stepsFormusu.js"></script>
+        <script src="../../public/js/usuario/validarDatosUsu.js"></script>
     </body>
 
     </html>
