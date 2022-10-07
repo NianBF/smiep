@@ -64,7 +64,7 @@ if (
                             <div class="slide-page formPage">
                                 <h4 class="titleSect">Documento de Identidad</h4>
                                 <div class="userBox">
-                                    <input type='number' id="id_doc" name='id_doc' placeholder=" " required>
+                                    <input type='number' id="id_doc" name='id_doc' placeholder=" " >
                                     <label for="id_doc">ID Usuario</label>
                                 </div>
                                 <div class="btn">
@@ -74,7 +74,7 @@ if (
                             <div class="page formPage">
                                 <h4 class="titleSect">Nombres y Apellidos</h4>
                                 <div class="userBox">
-                                    <input type='text' id="nombre1" name='nombre1' placeholder=" " required>
+                                    <input type='text' id="nombre1" name='nombre1' placeholder=" " >
                                     <label for="nombre1">Primer Nombre</label>
                                 </div>
                                 <div class="userBox">
@@ -83,7 +83,7 @@ if (
                                 </div>
 
                                 <div class="userBox">
-                                    <input type='text' id="apellido1" name='apellido1' placeholder=" " required>
+                                    <input type='text' id="apellido1" name='apellido1' placeholder=" " >
                                     <label for="apellido1">Primer Apellido</label>
                                 </div>
 
@@ -99,17 +99,17 @@ if (
                             <div class="page page1 formPage">
                                 <h4 class="titleSect">Información de Usuario</h4>
                                 <div class="userBox">
-                                    <input type='text' id="userName" name='userName' placeholder=" " required>
+                                    <input type='text' id="userName" name='userName' placeholder=" " >
                                     <label for="userName">Nombre de Usuario</label>
                                 </div>
 
                                 <div class="userBox">
-                                    <input type='email' id="email" name='email' placeholder=" " required>
+                                    <input type='email' id="email" name='email' placeholder=" " >
                                     <label for="email">Correo</label>
                                 </div>
 
                                 <div class="userBox">
-                                    <input type='password' id="pass" name='pass' placeholder=" " required>
+                                    <input type='password' id="pass" name='pass' placeholder=" " >
                                     <label for="pass">Contraseña</label>
                                 </div>
                                 <div class="btn">
@@ -176,7 +176,7 @@ if (
         
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../../public/js/usuario/stepsFormusu.js"></script>
-        <script src="../../public/js/usuario/validarDatosUsu.js"></script>
+        <script type="module" src="../../public/js/usuario/validarDatosUsu.js"></script>
     </body>
 
     </html>

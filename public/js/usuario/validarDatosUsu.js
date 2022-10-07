@@ -1,11 +1,16 @@
 /**
- * paginacion
+ * importacion de modulos 
  */
-/* const slidePage = document.querySelector(".slide-page");
-const page = document.querySelector(".page");
-const page1 = document.querySelector(".page1");
-const infTi = document.querySelector(".infTi"); */
-
+import { apellido } from "../moduleValidar/apellido.js"
+import { email } from "../moduleValidar/emial.js"
+import { estado } from "../moduleValidar/estado.js"
+import { id } from "../moduleValidar/id.js"
+import { registroOK } from "../moduleValidar/msgOK.js"
+import nombre from "../moduleValidar/nombre.js"
+import { nomUsu } from "../moduleValidar/nomUsu.js"
+import { passW } from "../moduleValidar/passw.js"
+import { rol } from "../moduleValidar/rol.js"
+import { selectTi } from "../moduleValidar/selectTi.js"
 
 const formulario = document.querySelector("form")
 
@@ -17,21 +22,10 @@ const secondpage = document.querySelector(".next-1")
 const Thirdpage = document.querySelector(".next-2")
 const btn_enviar = document.querySelector(".submit")
 
-/**
- * expreciones regulares 
- */
-let regExp = /^[0-9]{3,10}$/g;
-let regExpEmail = /(@smiep.com)$/g;
-let regExpPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]{2})(?=.*[@!+*?=#$|&~:;_-]).{6,18}$/g;
-
-
 firstpage.addEventListener("click", function(event){
+  let regExp = /^[0-9]{3,10}$/g;
 if( regExp.test(formulario.id_doc.value) == false) {
-  swal.fire({
-    title: "completa el campo, solo ingrese numeros",
-    toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-  });
-  event.preventDefault();
+  id(event);
 }
 else{
   slidePage.style.display = 'none'; 
@@ -40,19 +34,11 @@ else{
 });
 
 secondpage.addEventListener("click", function(event){
-  if((formulario.nombre1.value) == false) {
-    swal.fire({
-      title: "completa el campo primer nombre",
-      toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });     
-    event.preventDefault();
+  if(formulario.nombre1.value == 0) {
+    nombre(event)
   }
-else if((formulario.apellido1.value)==false) {
-  swal.fire({
-    title: "completa el campo primer apellido",
-    toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-  });
-  event.preventDefault();
+else if(formulario.apellido1.value ==0 ) {
+  apellido(event)
 }
 else{
   page.style.display = "none";
@@ -61,27 +47,17 @@ else{
 });
 
 Thirdpage.addEventListener("click", function(event){
- 
+  let regExpEmail = /(@smiep.com)$/g;
+  let regExpPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]{2})(?=.*[@!+*?=#$|&~:;_-]).{6,18}$/g;
+
   if(formulario.userName.value == 0) {
-    swal.fire({
-      title: "completa el campo usuario",toast: true,
-      position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    event.preventDefault();
+    nomUsu(event)
 
   }else if(regExpEmail.test(formulario.email.value) == false) {
-    swal.fire({
-      title: "Por favor ingrese el correo institucional",
-      toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    event.preventDefault();
+    email(event)
     
   } else if(regExpPass.test(formulario.pass.value)  == false) {
-    swal.fire({
-      title: "La contraseña debe tener entre 6 a 18 caracteres y debe contener 1 mayuscula, 1 minuscula, 2 numeros, 1 caracter especial",
-      toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    event.preventDefault();
+    passW(event)
   }
   else{
     page1.style.display = "none";
@@ -91,30 +67,15 @@ Thirdpage.addEventListener("click", function(event){
 
 btn_enviar.addEventListener("click", function (event){
   if((formulario.rol.value) == 0) {
-    swal.fire({
-      title: "selecciona un rol",
-      toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    event.preventDefault();
+    rol(event)
   }
   else if(formulario.estado.value == 0) {
-    swal.fire({
-      title: "selecciona un estado",
-      toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    event.preventDefault();
+    estado(event)
   }
   else if(formulario.idTi.value == 0) {
-    swal.fire({
-      title: "seleccione una tienda",
-      toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    event.preventDefault();
+    selectTi(event)
   }
   else{
-    swal.fire({
-      title: "registro cargado con exito",
-      timer: 90000,timerProgressBar: true,confirmButtonText: "Aceptar",
-    });   
+    registroOK()  
   }
 });
