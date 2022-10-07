@@ -214,7 +214,7 @@ if (
         </footer>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../../public/js/usuario/stepsFormusu.js"></script>
-        <script src="../../public/js/usuario/validarDatosUsu.js"></script>
+        <script type="module" src="../../public/js/usuario/validarDatosUsu.js"></script>
     </body>
 
     </html>

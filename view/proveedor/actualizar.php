@@ -177,7 +177,7 @@ else
 		</footer>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="../../public/js/proveedor/stepsFormProv.js"></script>
-		<script src="../../public/js/proveedor/validarDatosProv.js"></script>
+		<script type="module" src="../../public/js/proveedor/validarDatosProv.js"></script>
 	</body>
 
 </html>
