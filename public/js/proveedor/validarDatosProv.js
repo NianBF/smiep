@@ -1,9 +1,11 @@
 import { apellido } from "../moduleValidar/apellido.js"
 import { direccion } from "../moduleValidar/direccion.js"
 import { email } from "../moduleValidar/emial.js"
+import empresa from "../moduleValidar/empresa.js"
 import { id } from "../moduleValidar/id.js"
 import { registroOK } from "../moduleValidar/msgOK.js"
 import nombre from "../moduleValidar/nombre.js"
+import telefono from "../moduleValidar/telefono.js"
 
 var formulario = document.querySelector("form")
 var firstpage = document.querySelector(".firstNext")
@@ -31,7 +33,7 @@ secondpage.addEventListener("click", function (event){
 
 Thirdpage.addEventListener("click",function(event){
   if (formulario.empresa.value == 0) {
-    swal.fire({  title: "completa el campo empresa",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+    empresa(event)
   }
   else if (formulario.direc.value == 0) {
     direccion(event)
@@ -40,10 +42,12 @@ Thirdpage.addEventListener("click",function(event){
 })
 
 btn_enviar.addEventListener("click", function (event) {
+  let regExpEmail = /(@)(.*[a-z])([.])(.*[a-z])/g;
+
   if (formulario.tel.value == 0) {
-    swal.fire({  title: "completa el campo numero de telefonico",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+    telefono(event)
   }
-  else if (formulario.email.value == 0) {
+  else if (regExpEmail.test(formulario.email.value) == false) {
     email(event)
   }
   else{
