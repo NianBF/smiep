@@ -112,7 +112,7 @@ else
     </section>
     <?php include_once("../plantillas/footer.html"); ?>
     <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
-    <script src="../../public/js/categoria/filtrarCategoria.js"></script>
+    <script type="module" src="../../public/js/categoria/filtrarCategoria.js"></script>
 </body>
 
 </html>

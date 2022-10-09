@@ -131,7 +131,7 @@ else
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
     
-    <script src="../../public/js/cliente/filtrarCliente.js"></script>
+    <script type="module" src="../../public/js/cliente/filtrarCliente.js"></script>
     <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
 </body>
 </html>
