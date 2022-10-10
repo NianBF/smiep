@@ -143,7 +143,7 @@ if (
 		</footer>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="../../public/js/tienda/stepsFormTi.js"></script>
-		<script src="../../public/js/tienda/validarDatosTi.js"></script>
+		<script type="module" src="../../public/js/tienda/validarDatosTi.js"></script>
 
 	</body>
 

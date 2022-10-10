@@ -1,48 +1,38 @@
+import { id, nombti } from "../moduleValidar/CatTiProd.js"
+import { direccion, email, telefono } from "../moduleValidar/datosPersonales.js"
+import msgInf from "../moduleValidar/msgInf.js"
+import { registroOK } from "../moduleValidar/msgOK.js"
+
 var formulario = document.querySelector("form")
 var firstpage = document.querySelector(".firstNext")
 var btn_enviar = document.querySelector("#btn-enviar")
 
-firstpage.addEventListener("click", function(e){
+msgInf()
+
+firstpage.addEventListener("click", function(event){
  if (formulario.id_ti.value ==0) {
-      swal.fire({
-        title: "completa el campo id tienda",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-      });
-    e.preventDefault();
+    id(event)
     }
     else{
       slidePage.style.display = "none";page.style.display = "block";
     }
 })
 
-btn_enviar.addEventListener("click", function (e) {
+btn_enviar.addEventListener("click", function (event) {
   
   if (formulario.nombTi.value == 0) {
-    swal.fire({
-      title: "completa el campo nombre tienda",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+    nombti(event)
   }
   else if (formulario.direc.value == 0) {
-    swal.fire({
-      title: "completa el campo direccion",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+   direccion(event)
   }
   else if (formulario.tel.value == 0) {
-    swal.fire({
-      title: "completa el campo telefono",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+   telefono(event)
   }
   else if (formulario.email.value == 0) {
-    swal.fire({
-      title: "completa el campo correo",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+    email(event)
   }
   else{
-    swal.fire({
-      title: "registro cargado con exito",timer: 90000,timerProgressBar: true,confirmButtonText: "Aceptar",
-    });
+    registroOK()
   }
 })

@@ -1,16 +1,12 @@
 /**
  * importacion de modulos 
  */
-import { apellido } from "../moduleValidar/apellido.js"
-import { email } from "../moduleValidar/emial.js"
-import { estado } from "../moduleValidar/estado.js"
-import { id } from "../moduleValidar/id.js"
+
+import { documento,nombre,apellido,nomUsu,email,passW } from "../moduleValidar/datosPersonales.js"
+import { rol,estado,selectTi } from "../moduleValidar/CatTiProd.js"
 import { registroOK } from "../moduleValidar/msgOK.js"
-import nombre from "../moduleValidar/nombre.js"
-import { nomUsu } from "../moduleValidar/nomUsu.js"
-import { passW } from "../moduleValidar/passw.js"
-import { rol } from "../moduleValidar/rol.js"
-import { selectTi } from "../moduleValidar/selectTi.js"
+import msgInf from "../moduleValidar/msgInf.js"
+
 
 const formulario = document.querySelector("form")
 
@@ -22,10 +18,11 @@ const secondpage = document.querySelector(".next-1")
 const Thirdpage = document.querySelector(".next-2")
 const btn_enviar = document.querySelector(".submit")
 
+msgInf()
 firstpage.addEventListener("click", function(event){
   let regExp = /^[0-9]{3,10}$/g;
 if( regExp.test(formulario.id_doc.value) == false) {
-  id(event);
+  documento(event);
 }
 else{
   slidePage.style.display = 'none'; 
@@ -76,6 +73,6 @@ btn_enviar.addEventListener("click", function (event){
     selectTi(event)
   }
   else{
-    registroOK()  
+    registroOK()
   }
 });

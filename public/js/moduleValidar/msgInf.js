@@ -1,6 +1,5 @@
 const msgInf = function () {
-    const form = document.querySelector(".contact-form");
-
+const form = document.querySelector(".contact-form");
 const btninfo = document.querySelector(".info");
 const closeinfo = document.querySelector(".closer");
 const info = document.querySelector(".anuncio");

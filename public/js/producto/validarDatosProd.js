@@ -1,71 +1,56 @@
+import { cantDisp, codBar, descrip, estado, id, imagen, nombCat, precio, presentacion, priceArrive, producto } from "../moduleValidar/CatTiProd.js"
+import { documento } from "../moduleValidar/datosPersonales.js"
+import msgInf from "../moduleValidar/msgInf.js"
+import { registroOK } from "../moduleValidar/msgOK.js"
+
 var formulario = document.querySelector("form")
 var firstpage = document.querySelector(".firstNext")
 var secondpage = document.querySelector(".next-1")
 var Thirdpage = document.querySelector(".next-2")
 var btn_enviar = document.querySelector("#btn-enviar")
 
-firstpage.addEventListener("click", function(e){
+msgInf()
+firstpage.addEventListener("click", function(event){
  if (formulario.id_prod.value ==0) {
-      swal.fire({
-        title: "completa el campo id producto",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-      });
-    e.preventDefault();
+      id(event)
     }
     else if (formulario.prod.value ==0) {
-      swal.fire({
-        title: "completa el campo producto",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-      });
-    e.preventDefault();
+      producto(event)
     }
     else if (formulario.img.value ==0) {
-      swal.fire({
-        title: "completa el campo imagen producto",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-      });
-    e.preventDefault();
+      imagen(event)
     }
     else{
       slidePage.style.display = "none";page.style.display = "block";
     }
 })
 
-secondpage.addEventListener("click", function (e){
+secondpage.addEventListener("click", function (event){
  if (formulario.precio.value == 0) {
-    swal.fire({
-      title: "completa el campo precio",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+    precio(event)
+  }
+  else if(formulario.priceArrive.value ==0){
+    priceArrive(event)
   }
   
   else  if (formulario.cantDisp.value == 0) {
-    swal.fire({
-      title: "completa el campo cantidad disponible",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+    cantDisp(event)
   }
   else{
     page.style.display = "none";page1.style.display = "block";
   }
 })
 
-Thirdpage.addEventListener("click",function(e){
+Thirdpage.addEventListener("click",function(event){
   
   if (formulario.Presentacion.value == 0) {
-    swal.fire({
-      title: "completa el campo tipo de presentacion",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+   presentacion(event)
   }
   else  if (formulario.descrip.value == 0) {
-    swal.fire({
-      title: "completa el campo descripcion",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+    descrip(event)
   }
   else  if (formulario.codBar.value == 0) {
-    swal.fire({
-      title: "completa el campo codigo de barras",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+   codBar(event)
   }
   else{
     page1.style.display = "none";
@@ -73,29 +58,18 @@ Thirdpage.addEventListener("click",function(e){
   }
 })
 
-btn_enviar.addEventListener("click", function (e) {
+btn_enviar.addEventListener("click", function (event) {
   
   if (formulario.id_docUsu.value == 0) {
-    swal.fire({
-      title: "completa el campo identificacion usuario",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+    documento(event)
   }
   else if (formulario.id_cat.value == 0) {
-    swal.fire({
-      title: "completa el campo categoria",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+   nombCat(event)
   }
   else if (formulario.estado.value == 0) {
-    swal.fire({
-      title: "completa el campo estado",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
-    });
-    e.preventDefault();
+    estado(event)
   }
   else{
-    swal.fire({
-      title: "registro cargado con exito",timer: 90000,timerProgressBar: true,confirmButtonText: "Aceptar",
-    });
+   registroOK()
   }
 })

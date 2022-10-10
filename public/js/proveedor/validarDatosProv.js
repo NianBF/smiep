@@ -1,22 +1,19 @@
-import { apellido } from "../moduleValidar/apellido.js"
-import { direccion } from "../moduleValidar/direccion.js"
-import { email } from "../moduleValidar/emial.js"
-import empresa from "../moduleValidar/empresa.js"
-import { id } from "../moduleValidar/id.js"
+import { documento,nombre,apellido,direccion,telefono,email } from "../moduleValidar/datosPersonales.js"
+import { empresa } from "../moduleValidar/CatTiProd.js"
 import { registroOK } from "../moduleValidar/msgOK.js"
-import nombre from "../moduleValidar/nombre.js"
-import telefono from "../moduleValidar/telefono.js"
+import msgInf from "../moduleValidar/msgInf.js"
+
 
 var formulario = document.querySelector("form")
 var firstpage = document.querySelector(".firstNext")
 var secondpage = document.querySelector(".next-1")
 var Thirdpage = document.querySelector(".next-2")
 var btn_enviar = document.querySelector("#btn-enviar")
-
+msgInf()
 firstpage.addEventListener("click", function(event){
   let regExp = /^[0-9]{3,10}$/g;
   if (regExp.test( formulario.id_Prov.value) == false) {
-   id(event)
+   documento(event)
   }  
   else{ slidePage.style.display = "none";page.style.display = "block";}
 })
@@ -51,6 +48,6 @@ btn_enviar.addEventListener("click", function (event) {
     email(event)
   }
   else{
-    registroOK()
+   registroOK()
   }
 })
