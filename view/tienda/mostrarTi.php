@@ -141,7 +141,7 @@ else
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
 	
-	<script src="../../public/js/tienda/filtrarTienda.js"></script>
+	<script type="module" src="../../public/js/tienda/filtrarTienda.js"></script>
 </body>
 
 </html>

@@ -75,7 +75,7 @@ if (
             </div>
         </section>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="../../public/js/categoria/validarCat.js"></script>
+        <script type="module" src="../../public/js/categoria/validarCat.js"></script>
     </body>
 
     </html>

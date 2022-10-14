@@ -1,41 +1,53 @@
+import { documento,nombre,apellido,direccion,telefono,email } from "../moduleValidar/datosPersonales.js"
+import { empresa } from "../moduleValidar/CatTiProd.js"
+import { registroOK } from "../moduleValidar/msgOK.js"
+import msgInf from "../moduleValidar/msgInf.js"
+
+
 var formulario = document.querySelector("form")
 var firstpage = document.querySelector(".firstNext")
 var secondpage = document.querySelector(".next-1")
 var Thirdpage = document.querySelector(".next-2")
 var btn_enviar = document.querySelector("#btn-enviar")
-
-firstpage.addEventListener("click", function(e){
-  if (formulario.id_Prov.value == 0) {
-    swal.fire({title: "completa el campo id proveedor",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+msgInf()
+firstpage.addEventListener("click", function(event){
+  let regExp = /^[0-9]{3,10}$/g;
+  if (regExp.test( formulario.id_Prov.value) == false) {
+   documento(event)
   }  
   else{ slidePage.style.display = "none";page.style.display = "block";}
 })
-secondpage.addEventListener("click", function (e){
+
+secondpage.addEventListener("click", function (event){
   if (formulario.nombProv1.value == 0) {
-    swal.fire({  title: "completa el campo primer nombre",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+    nombre(event)
   }
   else  if (formulario.apeProv1.value == 0) {
-    swal.fire({  title: "completa el campo primer apellido",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+    apellido(event)
   }
   else{ page.style.display = "none";page1.style.display = "block";}
 })
-Thirdpage.addEventListener("click",function(e){
+
+Thirdpage.addEventListener("click",function(event){
   if (formulario.empresa.value == 0) {
-    swal.fire({  title: "completa el campo empresa",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+    empresa(event)
   }
   else if (formulario.direc.value == 0) {
-    swal.fire({  title: "completa el campo direccion",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+    direccion(event)
   }
   else{ page1.style.display = "none";infTi.style.display = "block";}
 })
-btn_enviar.addEventListener("click", function (e) {
+
+btn_enviar.addEventListener("click", function (event) {
+  let regExpEmail = /(@)(.*[a-z])([.])(.*[a-z])/g;
+
   if (formulario.tel.value == 0) {
-    swal.fire({  title: "completa el campo numero de telefonico",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+    telefono(event)
   }
-  else if (formulario.email.value == 0) {
-    swal.fire({  title: "completa el campo correo",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,});e.preventDefault();
+  else if (regExpEmail.test(formulario.email.value) == false) {
+    email(event)
   }
   else{
-    swal.fire({  title: "registro cargado con exito",timer: 90000,timerProgressBar: true,confirmButtonText: "Aceptar",});
+   registroOK()
   }
 })

@@ -143,7 +143,7 @@ else
     <footer>
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-    <script src="../../public/js/usuario/filtrarUsuarios.js"></script>
+    <script type="module" src="../../public/js/usuario/filtrarUsuarios.js"></script>
 	<script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
 </body>
 

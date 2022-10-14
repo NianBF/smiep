@@ -86,7 +86,7 @@ else
 							<div class="page formPage">
 								<h4 class="titleSect">Nombres y Apellidos</h4>
 								<div class="userBox">
-									<input type='text' id="nombProv1" name='nombProv1' placeholder=" " value='<?php echo $Proveedor->getNombProv1()?>' required>
+									<input type='text' id="nombre1" name='nombProv1' placeholder=" " value='<?php echo $Proveedor->getNombProv1()?>' required>
 									<label for="nombre1">Primer Nombre</label>
 								</div>
 								<div class="userBox">
@@ -177,7 +177,7 @@ else
 		</footer>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="../../public/js/proveedor/stepsFormProv.js"></script>
-		<script src="../../public/js/proveedor/validarDatosProv.js"></script>
+		<script type="module" src="../../public/js/proveedor/validarDatosProv.js"></script>
 	</body>
 
 </html>

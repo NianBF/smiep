@@ -142,7 +142,7 @@ else
 	<footer>
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-	<script src="../../public/js/proveedor/filtrarProveedor.js"></script>
+	<script type="module" src="../../public/js/proveedor/filtrarProveedor.js"></script>
 </body>
 
 </html>

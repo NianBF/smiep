@@ -166,7 +166,7 @@ else
     </footer>
     
 
-    <script src="../../public/js/producto/filtrarProducto.js"></script>
+    <script type="module" src="../../public/js/producto/filtrarProducto.js"></script>
 </body>
 
 </html>
