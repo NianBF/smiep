@@ -12,6 +12,8 @@ else
     $crud = new CrudProducto();
     $Producto = new Producto();
     $listaProducto = $crud->mostrar();
+    $state = $crud->UpdState();
+    $state = $crud->UpdStateU();
 ?>
 
 <!DOCTYPE html>

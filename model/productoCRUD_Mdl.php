@@ -59,7 +59,17 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 				$listaProducto[] = $myProducto;
 			}
 			return $listaProducto;
+			
 		}
+
+		public function UpdState(){
+			$select = $this->db->query('UPDATE producto SET id_estado=3 WHERE cantidadDisp<=1');
+		}
+
+		public function UpdStateU(){
+			$select = $this->db->query('UPDATE producto SET id_estado=2 WHERE cantidadDisp>=2');
+		}
+
 
 		// método para eliminar un producto, recibe como parámetro el id del producto
 		public function eliminar($id_prod)
