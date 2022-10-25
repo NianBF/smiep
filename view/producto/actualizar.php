@@ -177,7 +177,7 @@ if (
 									</select>
 								</div>
 
-								<div class="userBox">
+<!-- 								<div class="userBox">
 									<label for="id_estado" class="lSel">Estado</label><br>
 									<select name="id_estado" id="estado" required>
 										<optgroup label="Seleccionado">
@@ -197,7 +197,7 @@ if (
 											<option value="3">No Disponible</option>
 										</optgroup>
 									</select>
-								</div>
+								</div> -->
 
 								<input type='hidden' name='actualizar' value='actualizar'>
 

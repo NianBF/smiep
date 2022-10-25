@@ -37,6 +37,8 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 		public function mostrar()
 		{
 			$listaProducto = [];
+			CrudProducto::UpdState();
+			CrudProducto::UpdStateU();
 			$select = $this->db->query('SELECT *,tEstado FROM producto INNER JOIN estado ON estado.id_estado=producto.id_estado');
 
 			foreach ($select->fetchAll() as $Producto) {
@@ -82,6 +84,8 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 		// método para buscar un producto, recibe como parámetro el id del producto
 		public function obtenerProducto($id_prod)
 		{
+			CrudProducto::UpdState();
+			CrudProducto::UpdStateU();
 			$select = $this->db->prepare('SELECT producto.*, categoria.nCategoria FROM producto INNER JOIN categoria ON producto.id_cat=categoria.id_cat WHERE id_prod=:id_prod ');
 			$select->bindValue('id_prod', $id_prod);
 			$select->execute();
@@ -113,7 +117,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 			$actualizar = $this->db->prepare('UPDATE producto 
 			SET imgProd=:imgProd, nombreProd=:nombreProd, descripcion=:descripcion,
 			precio=:precio, cantidadDisp=:cantidadDisp, codBar=:codBar,
-			tipoPresentacion=:tipoPresentacion, id_cat=:id_cat, id_estado=:id_estado, priceArrive=:priceArrive, modificadoEn=:modificadoEn, id_docUsu=:id_docUsu
+			tipoPresentacion=:tipoPresentacion, id_cat=:id_cat, /* id_estado=:id_estado, */ priceArrive=:priceArrive, modificadoEn=:modificadoEn, id_docUsu=:id_docUsu
 			WHERE id_prod=:id_prod ');
 			$actualizar->bindValue('id_prod', $producto->getId_prod());
 			$actualizar->bindValue('imgProd', $producto->getImgProd());
@@ -125,8 +129,8 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 			$actualizar->bindValue('tipoPresentacion', $producto->getTipoPresentacion());
 			$actualizar->bindValue('id_docUsu', $producto->getId_docUsu());
 			$actualizar->bindValue('id_cat', $producto->getId_cat());
-			$actualizar->bindValue('id_estado', $producto->getId_estado());
-			$actualizar->bindValue('priceArrive', $producto->getPriceArrive());
+/* 			$actualizar->bindValue('id_estado', $producto->getId_estado());
+ */			$actualizar->bindValue('priceArrive', $producto->getPriceArrive());
 			$actualizar->bindValue('modificadoEn', $producto->getCreadoEn());
 
 			$actualizar->execute();
