@@ -52,3 +52,11 @@ Modificación en «~/model/proveedorCrud_Mdl.php» en los nombres de las columna
 (08/08/2022)NB: Se actualiza estilos de login y se crea link para ir a recuperar contraseña(no funciona)
 
 (24/08/2022 11:31)NB: Se actualiza código de Inicio de sesión para lograr el acceso con roles, falta corregir parámetros de seguridad.
+
+/**
+*
+*   Gestión de calidad SMIEP
+*
+*/
+
+(21/10/2022 16:09)NP, JE, NB: Actualización BD trazabilidad.
