@@ -81,13 +81,13 @@ DROP TABLE IF EXISTS `cliente`;
 CREATE TABLE `cliente` (
   `id_cliDoc` varchar NOT NULL COMMENT 'Campo para cédula de cliente',
   `nombreCli1` varchar(50) NOT NULL COMMENT 'Primer nombre Obligatorio',
-  `nombreCli2` varchar(50) DEFAULT NULL,
-  `apellidoCli1` varchar(50) NOT NULL,
-  `apellidoCli2` varchar(50) DEFAULT NULL,
-  `direccionCli` varchar(100) NOT NULL,
-  `telCli` int(20) NOT NULL,
-  `emailCli` varchar(100) NOT NULL,
-  `fechaNac` date DEFAULT NULL,
+  `nombreCli2` varchar(50) DEFAULT NULL COMMENT 'Segundo nombre opcional',
+  `apellidoCli1` varchar(50) NOT NULL COMMENT 'Primer apellido obligatorio',
+  `apellidoCli2` varchar(50) DEFAULT NULL COMMENT 'Segundo apellido opcional',
+  `direccionCli` varchar(100) NOT NULL COMMENT 'Dirección del cliente para domicilios',
+  `telCli` bigint NOT NULL COMMENT 'Teléfono celular del cliente se deja bigint para precisar el número',
+  `emailCli` varchar(100) NOT NULL COMMENT 'Correo electrónico',
+  `fechaNac` date DEFAULT NULL COMMENT '',
   PRIMARY KEY (`id_cliDoc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -98,25 +98,25 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (1000145236,'Jose','','Fina','','Ak 98-98',2147483647,'josefina@smiep.com.co','2001-03-07');
+INSERT INTO `cliente` VALUES (1000145236,'Jose','','Fina','','Ak 98-98',3203568595,'josefina@smiep.com.co','2001-03-07');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `compra`
+-- Table structure for table `pedido`
 --
 
-DROP TABLE IF EXISTS `compra`;
+DROP TABLE IF EXISTS `pedido`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `compra` (
-  `id_compra` varchar(250) NOT NULL,
-  `totalPrice` double(16,4) NOT NULL,
-  `id_doc` int(100) NOT NULL,
-  `id_docPov` int(100) NOT NULL,
-  `creadoEn` date,
+CREATE TABLE `pedido` (
+  `id_pedido` varchar(250) NOT NULL COMMENT 'Número de factura mas un caracter identificando la empresa',
+  `totalPrice` double(16,4) NOT NULL COMMENT 'Precio total de la factura',
+  `id_doc` int(100) NOT NULL COMMENT 'Identificador del usuario quien recibió el pedido',
+  `id_docPov` int(100) NOT NULL COMMENT 'Identificador del proveedor',
+  /*`creadoEn` date, */
   `modificadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_compra`),
+  PRIMARY KEY (`id_pedido`),
   KEY `id_doc` (`id_doc`),
   KEY `id_docPov` (`id_docPov`),
   CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`id_doc`) REFERENCES `usuario` (`id_doc`),
@@ -128,10 +128,10 @@ CREATE TABLE `compra` (
 -- Dumping data for table `compra`
 --
 
-LOCK TABLES `compra` WRITE;
-/*!40000 ALTER TABLE `compra` DISABLE KEYS */;
-INSERT INTO `compra` VALUES ('10025',250800.0000,'Galletas ',123456789,78524635,'2022-09-23 11:37:04'),('A10023',55300.0000,'N/A',100837029,52456454,'2022-09-23 10:07:45'),('B10023',350000.0000,'Galletas Festival',123456789,78524635,'2022-09-23 10:36:42');
-/*!40000 ALTER TABLE `compra` ENABLE KEYS */;
+LOCK TABLES `pedido` WRITE;
+/*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
+INSERT INTO `pedido` VALUES ('10025',250800.0000,'Galletas ',123456789,78524635,'2022-09-23 11:37:04'),('A10023',55300.0000,'N/A',100837029,52456454,'2022-09-23 10:07:45'),('B10023',350000.0000,'Galletas Festival',123456789,78524635,'2022-09-23 10:36:42');
+/*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -142,8 +142,8 @@ DROP TABLE IF EXISTS `estado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `estado` (
-  `id_estado` int(100) NOT NULL,
-  `tEstado` varchar(25) NOT NULL,
+  `id_estado` int(100) NOT NULL COMMENT 'Identificador para relaciones de tablas',
+  `tEstado` varchar(25) NOT NULL COMMENT 'Descripción del estado (Disponible ó No Disponible)',
   PRIMARY KEY (`id_estado`),
   UNIQUE KEY `tEstado` (`tEstado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -155,7 +155,7 @@ CREATE TABLE `estado` (
 
 LOCK TABLES `estado` WRITE;
 /*!40000 ALTER TABLE `estado` DISABLE KEYS */;
-INSERT INTO `estado` VALUES (2,'Disponible'),(3,'No Disponible');
+INSERT INTO `estado` VALUES (1,'Disponible'),(2,'No Disponible');
 /*!40000 ALTER TABLE `estado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -173,7 +173,7 @@ CREATE TABLE `initsession` (
   PRIMARY KEY (`id_sesion`),
   KEY `fk_docUsuSes` (`id_doc`),
   CONSTRAINT `fk_docUsuSes` FOREIGN KEY (`id_doc`) REFERENCES `usuario` (`id_doc`)
-) ENGINE=InnoDB AUTO_INCREMENT=2424 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
