@@ -17,7 +17,7 @@ class CrudCliente
 	{
 		$insert = $this->db->prepare('INSERT INTO cliente 
 			values(:id_cliDoc,:nombreCli1,:nombreCli2,:apellidoCli1,:apellidoCli2,
-			:direccionCli,:telCli,:emailCli,:fechaNac)');
+			:direccionCli,:telCli,:emailCli)');
 		$insert->bindValue('id_cliDoc', $Cliente->getId_cliDoc());
 		$insert->bindValue('nombreCli1', $Cliente->getNombreCli1());
 		$insert->bindValue('nombreCli2', $Cliente->getNombreCli2());
@@ -26,7 +26,6 @@ class CrudCliente
 		$insert->bindValue('direccionCli', $Cliente->getDireccionCli());
 		$insert->bindValue('telCli', $Cliente->getTelCli());
 		$insert->bindValue('emailCli', $Cliente->getEmailCli());
-		$insert->bindValue('fechaNac', $Cliente->getFechaNac());
 		$insert->execute();
 
 	}
@@ -48,7 +47,6 @@ class CrudCliente
 			$myCliente->setDireccionCli($Cliente['direccionCli']);
 			$myCliente->setTelCli($Cliente['telCli']);
 			$myCliente->setEmailCli($Cliente['emailCli']);
-			$myCliente->setFechaNac($Cliente['fechaNac']);
 			$listaCliente[] = $myCliente;
 		}
 		return $listaCliente;
@@ -78,16 +76,13 @@ class CrudCliente
 		$myCliente->setDireccionCli($Cliente['direccionCli']);
 		$myCliente->setTelCli($Cliente['telCli']);
 		$myCliente->setEmailCli($Cliente['emailCli']);
-		$myCliente->setFechaNac($Cliente['fechaNac']);
-
-
 		return $myCliente;
 	}
 
 	// método para actualizar un cliente, recibe como parámetro el cliente
 	public function actualizar($Cliente)
 	{
-		$actualizar = $this->db->prepare('UPDATE cliente SET nombreCli1=:nombreCli1,nombreCli2=:nombreCli2, apellidoCli1=:apellidoCli1,apellidoCli2=:apellidoCli2,direccionCli=:direccionCli,telCli=:telCli,emailCli=:emailCli,fechaNac=:fechaNac WHERE id_cliDoc=:id_cliDoc');
+		$actualizar = $this->db->prepare('UPDATE cliente SET nombreCli1=:nombreCli1,nombreCli2=:nombreCli2, apellidoCli1=:apellidoCli1,apellidoCli2=:apellidoCli2,direccionCli=:direccionCli,telCli=:telCli,emailCli=:emailCli WHERE id_cliDoc=:id_cliDoc');
 		$actualizar->bindValue('id_cliDoc', $Cliente->getId_cliDoc());
 		$actualizar->bindValue('nombreCli1', $Cliente->getNombreCli1());
 		$actualizar->bindValue('nombreCli2', $Cliente->getNombreCli2());
@@ -96,7 +91,6 @@ class CrudCliente
 		$actualizar->bindValue('direccionCli', $Cliente->getDireccionCli());
 		$actualizar->bindValue('telCli', $Cliente->getTelCli());
 		$actualizar->bindValue('emailCli', $Cliente->getEmailCli());
-		$actualizar->bindValue('fechaNac', $Cliente->getFechaNac());
 		$actualizar->execute();
 	}
 }

@@ -9,7 +9,7 @@
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40103 SET TIME_ZONE='-05:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
@@ -79,7 +79,7 @@ DROP TABLE IF EXISTS `cliente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cliente` (
-  `id_cliDoc` varchar NOT NULL COMMENT 'Campo para cédula de cliente',
+  `id_cliDoc` varchar(255) NOT NULL COMMENT 'Campo para cédula de cliente',
   `nombreCli1` varchar(50) NOT NULL COMMENT 'Primer nombre Obligatorio',
   `nombreCli2` varchar(50) DEFAULT NULL COMMENT 'Segundo nombre opcional',
   `apellidoCli1` varchar(50) NOT NULL COMMENT 'Primer apellido obligatorio',
@@ -111,15 +111,15 @@ DROP TABLE IF EXISTS `pedido`;
 CREATE TABLE `pedido` (
   `id_pedido` varchar(250) NOT NULL COMMENT 'Número de factura mas un caracter identificando la empresa',
   `totalPrice` double(16,4) NOT NULL COMMENT 'Precio total de la factura',
-  `id_doc` int(100) NOT NULL COMMENT 'Identificador del usuario quien recibió el pedido',
-  `id_docPov` int(100) NOT NULL COMMENT 'Identificador del proveedor',
+  `id_docUsu` int(100) NOT NULL COMMENT 'Identificador del usuario quien recibió el pedido',
+  `id_docProv` int(100) NOT NULL COMMENT 'Identificador del proveedor',
   `creadoEn` date COMMENT 'Fecha en la que llega el pedio (Fecha de la factura)',
-  `modificadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '',
+  `modificadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Cuando el usuario el usuario ingresa la factura',
   PRIMARY KEY (`id_pedido`),
-  KEY `id_doc` (`id_doc`),
-  KEY `id_docPov` (`id_docPov`),
-  CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`id_doc`) REFERENCES `usuario` (`id_doc`),
-  CONSTRAINT `compra_ibfk_2` FOREIGN KEY (`id_docPov`) REFERENCES `proveedor` (`id_docPov`)
+  KEY `id_docUsu` (`id_docUsu`),
+  KEY `id_docProv` (`id_docProv`),
+  CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id_docUsu`) REFERENCES `usuario` (`id_doc`),
+  CONSTRAINT `pedido_ibfk_2` FOREIGN KEY (`id_docProv`) REFERENCES `proveedor` (`id_docProv`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -166,9 +166,9 @@ DROP TABLE IF EXISTS `initsession`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `initsession` (
-  `id_sesion` int(100) NOT NULL AUTO_INCREMENT,
-  `dateSess` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `id_doc` int(100) NOT NULL,
+  `id_sesion` int(255) NOT NULL AUTO_INCREMENT=1 COMMENT 'Identificador de la sesión',
+  `dateSess` timestamp NOT NULL COMMENT 'Fecha con hora del inicio de sesión',
+  `id_doc` int(100) NOT NULL COMMENT 'Documento del usuario quien inicia sesión',
   PRIMARY KEY (`id_sesion`),
   KEY `fk_docUsuSes` (`id_doc`),
   CONSTRAINT `fk_docUsuSes` FOREIGN KEY (`id_doc`) REFERENCES `usuario` (`id_doc`)
@@ -189,18 +189,17 @@ UNLOCK TABLES;
 -- Table structure for table `orden`
 --
 
-DROP TABLE IF EXISTS `orden`;
+DROP TABLE IF EXISTS `venta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `orden` (
-  `id_orden` int(100) NOT NULL AUTO_INCREMENT,
-  `id_cliDoc` int(100) NOT NULL,
-  `total` float(10,2) NOT NULL,
-  `creadoEn` datetime NOT NULL,
-  `modificadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `id_doc` int(100) NOT NULL,
-  `id_caja` int(100) NOT NULL,
-  PRIMARY KEY (`id_orden`),
+CREATE TABLE `venta` (
+  `id_venta` int(100) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de la venta que se realiza',
+  `id_cliDoc` int(100) COMMENT 'Documento del cliente que compra (Nulo)',
+  `total` float(10,2) NOT NULL COMMENT 'Valor total de la venta que se hizo',
+  `modificadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Fecha en la que se realiza la venta',
+  `id_doc` int(100) NOT NULL COMMENT 'Documento del usuario quien hizo la venta',
+  `id_caja` int(100) NOT NULL COMMENT 'Caja en la que se realizó la venta',
+  PRIMARY KEY (`id_venta`),
   KEY `fk_id_cliDoc` (`id_cliDoc`),
   KEY `fk_id_doc` (`id_doc`),
   KEY `fk_id_caja` (`id_caja`),
@@ -214,10 +213,10 @@ CREATE TABLE `orden` (
 -- Dumping data for table `orden`
 --
 
-LOCK TABLES `orden` WRITE;
+LOCK TABLES `venta` WRITE;
 /*!40000 ALTER TABLE `orden` DISABLE KEYS */;
-INSERT INTO `orden` VALUES (1,1000145236,12000.00,'0000-00-00 00:00:00','0000-00-00 00:00:00',123456789,1001);
-/*!40000 ALTER TABLE `orden` ENABLE KEYS */;
+INSERT INTO `venta` VALUES (1,1000145236,12000.00,'0000-00-00 00:00:00',123456789,1001);
+/*!40000 ALTER TABLE `venta` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -228,25 +227,18 @@ DROP TABLE IF EXISTS `producto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `producto` (
-  `id_prod` int(100) NOT NULL,
-  `imgProd` varchar(255) NOT NULL DEFAULT 'https://i.ibb.co/2s4D1rc/bags-SMIEP.png',
-  `codBar` varchar(50) NOT NULL,
-  `nombreProd` varchar(50) NOT NULL,
-  `descripcion` text,
-  `precio` double(10,2) NOT NULL,
-  `cantidadDisp` int(11) NOT NULL DEFAULT '1',
-  `tipoPresentacion` varchar(50) NOT NULL,
-  `modificadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `id_docUsu` int(100) NOT NULL,
-  `id_cat` int(100) NOT NULL,
-  `id_estado` int(100) NOT NULL,
-  `priceArrive` double(16,2) DEFAULT '0.00' COMMENT 'Campo para el precio de llegada de cada producto',
+  `id_prod` int(255) NOT NULL COMMENT 'Identificador único del producto',
+  `imgProd` varchar(255) NOT NULL DEFAULT 'https://i.ibb.co/2s4D1rc/bags-SMIEP.png' COMMENT 'Imagen del producto',
+  `codBar` varchar(100) COMMENT 'Código de barras del producto ingresado',
+  `nombreProd` TEXT NOT NULL COMMENT 'Nombre del producto',
+  `precio` double(10,2) NOT NULL COMMENT 'Valor del producto a la venta del público',
+  `cantidadDisp` int(11) NOT NULL DEFAULT '0' COMMENT 'Cantidad mínima disponible',
+  `id_cat` int(100) NOT NULL COMMENT 'Relación con tabla categoria',
+  `id_estado` int(100) NOT NULL COMMENT 'Relación con la tabla producto (Disponible o No disponible)',
   PRIMARY KEY (`id_prod`),
   UNIQUE KEY `codBar` (`codBar`),
-  KEY `id_docUsu` (`id_docUsu`),
   KEY `id_cat` (`id_cat`),
   KEY `id_estado` (`id_estado`),
-  CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_docUsu`) REFERENCES `usuario` (`id_doc`),
   CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`id_cat`) REFERENCES `categoria` (`id_cat`),
   CONSTRAINT `producto_ibfk_3` FOREIGN KEY (`id_estado`) REFERENCES `estado` (`id_estado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -258,7 +250,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (2045,'https://citymercao.com/wp-content/uploads/2020/08/MAIZ-PIRA-DIANA-500G-.png','85889658585','MaÃ­z para crispetas','MaÃ­z para crispetas',1750.00,1,'Bolsa','2022-10-15 00:42:57',123456789,12,3,1500.00),(4020,'https://images.rappi.com/products/7e1f0c60-c5f0-4931-9cf0-b4bcfa449e9e-1604359962150.png','7705686512124','Coca-Cola','Coca-Cola',1500.00,1,'Botella plastica','2022-10-14 20:37:12',100837029,13,3,1000.00),(4022,'https://www.oreo-la.com/assets/site/images/home/celebra/product-celebra-1.png','7705686512144','Oreo','Oreo',800.00,60,'Paquete pequeÃ±o','2022-10-20 15:36:57',123456789,19,2,500.00),(4023,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','7705686512154','Big-Cola','Sin detalles',2500.00,13,'Botella plastica','2022-02-17 00:00:00',1000257220,13,2,0.00),(4025,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','7705686512174','Gol','Sin detalles',1000.00,1,'Individual','2022-10-14 20:37:12',1000257220,17,3,0.00),(4026,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','7705686512184','Lapiz 9B','Lapiz 9B',1500.00,2,'Individual','2022-10-14 20:54:41',100837029,100,2,0.00),(4027,'https://www.merkadomi.com/wp-content/uploads/2020/07/7705326077387.jpg','7705686512194','Bimbo','Sin detalles',4000.00,1,'Bolsa grande','2022-10-14 20:37:12',1000257220,16,3,3500.00),(4028,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','7705686512204','Duraznos','Duraznos',8000.00,7,'Lata','2022-10-14 21:48:09',100837029,20,2,5000.00),(4029,'https://jumbocolombiaio.vtexassets.com/arquivos/ids/186382/7702116000020.jpg?v=637813982026300000','7705686512214','Aceite Gourmet','Sin detalles',49000.00,1,'Botella plastica','2022-02-17 00:00:00',1000257220,15,3,0.00),(4040,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','5236987412','Agua Cristal','250ml',1200.00,3,'Botella plastica','2022-06-14 00:00:00',100837029,13,2,0.00),(25516,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','856435654658','TUTI FRUTTI','TUTI FRUTTI',2500.00,1,'Botella','2022-10-14 20:59:47',100837029,13,3,2000.00),(349559,'https://www.pngitem.com/pimgs/m/747-7475670_cerveza-corona-png-transparent-png.png','78444658885221','Cerveza Corona','Sin detalles',7000.00,10,'Vidrio','0000-00-00 00:00:00',1000257220,13,2,0.00),(1234566543,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','llll','llll','llll',99.00,3,'lll','2022-10-14 21:11:15',100837029,16,2,159999.00);
+INSERT INTO `producto` VALUES (2045,'https://citymercao.com/wp-content/uploads/2020/08/MAIZ-PIRA-DIANA-500G-.png','85889658585','Mai­z para crispetas',1750.00,1,2,1),(4020,'https://images.rappi.com/products/7e1f0c60-c5f0-4931-9cf0-b4bcfa449e9e-1604359962150.png','7705686512124','Coca-Cola',1500.00,1,3,1),(4022,'https://www.oreo-la.com/assets/site/images/home/celebra/product-celebra-1.png','7705686512144','Oreo de 4',800.00,60,9,1),(4023,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','7705686512154','Big-Cola',2500.00,13,3,1),(4025,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','7705686512174','Gol',1000.00,1,7,1),(4026,'https://i.ibb.co/2s4D1rc/bags-SMIEP.png','7705686512184','Lapiz 9B',1500.00,2,100,1);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -270,21 +262,21 @@ DROP TABLE IF EXISTS `proveedor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `proveedor` (
-  `id_docPov` int(100) NOT NULL,
-  `imgEmpresa` varchar(255) DEFAULT NULL,
-  `nombProv1` varchar(50) NOT NULL,
-  `nombProv2` varchar(50) DEFAULT NULL,
-  `appelProv1` varchar(50) NOT NULL,
-  `apellProv2` varchar(50) DEFAULT NULL,
-  `empresa` varchar(50) NOT NULL,
-  `direccion1` varchar(100) NOT NULL,
-  `direccion2` varchar(100) DEFAULT NULL,
-  `numTel2` varchar(30) DEFAULT NULL COMMENT 'Numero de telefono del proveedor en campo varchar para recibir a precision los datos',
-  `email1` varchar(100) NOT NULL,
-  `email2` varchar(100) DEFAULT NULL,
-  `creadoEn` date DEFAULT NULL,
-  `numTel1` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`id_docPov`)
+  `id_docProv` int(100) NOT NULL COMMENT 'Identificador del usuario (Numero de documento)',
+  `imgEmpresa` varchar(255) DEFAULT NULL COMMENT 'Imagen de la empresa del proveedor',
+  `nombProv1` varchar(50) NOT NULL COMMENT 'Primer nombre obligatorio',
+  `nombProv2` varchar(50) DEFAULT NULL COMMENT 'Segundo nombre opcional',
+  `apellidoProv1` varchar(50) NOT NULL COMMENT 'Primer apellido obligatorio',
+  `apellidoProv2` varchar(50) DEFAULT NULL COMMENT 'Segundo apellido opcional',
+  `empresa` varchar(50) NOT NULL COMMENT 'Nombre de la empresa a la que pertenece',
+  `direccion1` varchar(100) NOT NULL COMMENT 'Dirección principal de la empresa',
+  `direccion2` varchar(100) DEFAULT NULL COMMENT 'Dirección de una sede de la empresa',
+  `numTel1` bigint DEFAULT NULL COMMENT 'Número de teléfono del proveedor',
+  `numTel2` bigint DEFAULT NULL COMMENT 'Numero de telefono del proveedor en campo varchar para recibir a precision los datos',
+  `email1` varchar(100) NOT NULL COMMENT 'Correo corporativo',
+  `email2` varchar(100) DEFAULT NULL COMMENT 'Correo personal si el proveedor lo brinda',
+  `creadoEn` date DEFAULT NULL COMMENt 'Fecha de vinculación del proveedor',
+  PRIMARY KEY (`id_docProv`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -306,11 +298,11 @@ DROP TABLE IF EXISTS `tienda`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tienda` (
-  `id_ti` int(100) NOT NULL,
-  `nombreTienda` varchar(50) NOT NULL,
-  `direccionTi` varchar(100) NOT NULL,
-  `telTi` int(20) NOT NULL,
-  `emailTi` varchar(50) NOT NULL,
+  `id_ti` int(100) NOT NULL COMMENT 'Identificador de la tienda',
+  `nombreTienda` varchar(50) NOT NULL COMMENT 'Nombre de la tienda en la que está',
+  `direccionTi` varchar(100) NOT NULL COMMENT 'Ubicación de la tienda',
+  `telTi` bigint NOT NULL COMMENT 'Número telefónico de la tienda',
+  `emailTi` varchar(50) NOT NULL COMMENT 'Correo de la tienda',
   PRIMARY KEY (`id_ti`),
   UNIQUE KEY `direccionTi` (`direccionTi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -322,7 +314,7 @@ CREATE TABLE `tienda` (
 
 LOCK TABLES `tienda` WRITE;
 /*!40000 ALTER TABLE `tienda` DISABLE KEYS */;
-INSERT INTO `tienda` VALUES (1,'Tienda Express','Bosa, BogotÃ¡',32949493,'expressmarket@smiep.com.co');
+INSERT INTO `tienda` VALUES (1,'Tienda Express','Bosa, Bogota',32949493,'expressmarket@smiep.com.co');
 /*!40000 ALTER TABLE `tienda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -334,22 +326,23 @@ DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario` (
-  `id_doc` int(100) NOT NULL,
-  `nombre1` varchar(50) NOT NULL,
-  `nombre2` varchar(50) DEFAULT NULL,
-  `apellido1` varchar(50) NOT NULL,
-  `apellido2` varchar(50) DEFAULT NULL,
-  `userName` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `rol` varchar(20) NOT NULL,
-  `creadoEn` date DEFAULT NULL,
-  `id_ti` int(100) NOT NULL,
-  `id_estado` int(100) NOT NULL,
+  `id_doc` int(100) NOT NULL COMMENT 'Identificador del usuario (Documento de identidad)',
+  `nombre1` varchar(50) NOT NULL COMMENT 'Primer nombre obligatorio',
+  `nombre2` varchar(50) DEFAULT NULL COMMENT 'Segundo nombre opcional',
+  `apellido1` varchar(50) NOT NULL COMMENT 'Primer apellido obligatori<o',
+  `apellido2` varchar(50) DEFAULT NULL COMMENT 'Segundo apellido opcional',
+  `userName` varchar(50) NOT NULL COMMENt 'Apodo del usuario dentro de la tienda',
+  `email` varchar(100) NOT NULL COMMENT 'Correo, en preferencia para usuario @smiep.com.co',
+  `password` varchar(255) NOT NULL COMMENT 'Contraseña para iniciar sesión en el sistema',
+  `rol` varchar(20) NOT NULL COMMENT 'Rol dentro de la empresa (Administrador ó Empleado)',
+  `creadoEn` date DEFAULT NULL COMMENT 'Fecha de incorporación',
+  `id_ti` int(100) NOT NULL COMMENT 'Relación con la tabla tienda',
+  `id_estado` int(100) NOT NULL COMMENT 'Si se encuentra vinculado o no en la tienda',
   `id_sec` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Creación de campo para relacionar trazabilidad de usuario',
   PRIMARY KEY (`id_doc`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `id_sec` (`id_sec`),
+  UNIQUE KEY `userName` (`userName`),
   KEY `id_ti` (`id_ti`),
   KEY `id_estado` (`id_estado`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_ti`) REFERENCES `tienda` (`id_ti`),
@@ -367,6 +360,49 @@ INSERT INTO `usuario` VALUES (456321,'Sebastian','','Beltran','','sebel','sebel@
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+--
+-- Table structure for table `usuario`
+--
+
+DROP TABLE IF EXISTS `prodPedido`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `prodPedido` (
+  `id_prodPedido` int(255) NOT NULL AUTO_INCREMENT,
+  `cantidad` int(255) NOT NULL,
+  `priceArrive` double(16,2) NOT NULL,
+  `id_pedido` varchar(250) NOT NULL,
+  `id_prod` int(255) NOT NULL,
+  PRIMARY KEY (`id_prodPedido`),
+  KEY `id_pedido` (`id_pedido`),
+  KEY `id_prod` (`id_prod`),
+  CONSTRAINT `prodPedido_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedido` (`id_pedido`),
+  CONSTRAINT `prodPedido_ibfk_2` FOREIGN KEY (`id_prod`) REFERENCES `producto` (`id_prod`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `usuario`
+--
+
+DROP TABLE IF EXISTS `tzProd`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tzProd` (
+  `id_tzProd` int(255) NOT NULL AUTO_INCREMENT,
+  `cantidadDisp` int(255) NOT NULL,
+  `cantidadNew` int(255) NOT NULL,
+  `modificadoEn` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `id_prod` int(255) NOT NULL,
+  `id_docUsu` int(100) NOT NULL,
+  PRIMARY KEY (`id_tzProd`),
+  KEY `id_prod` (`id_prod`),
+  KEY `id_docUsu` (`id_docUsu`),
+  CONSTRAINT `tzProd_ibfk_2` FOREIGN KEY (`id_prod`) REFERENCES `producto` (`id_prod`),
+  CONSTRAINT `tzProd_ibfk_1` FOREIGN KEY (`id_docUsu`) REFERENCES `usuario` (`id_doc`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

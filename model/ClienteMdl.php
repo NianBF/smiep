@@ -9,8 +9,7 @@ class Cliente
 	private $direccionCli;
 	private $telCli;
 	private $emailCli;
-	private $fechaNac;
-
+	
 	function __construct()
 	{
 	}
@@ -102,16 +101,5 @@ class Cliente
 	{
 		$this->emailCli = $emailCli;
 	}
-	//fechaNac
-	public function getFechaNac()
-	{
-		return $this->fechaNac;
-	}
-
-	public function setFechaNac($fechaNac)
-	{
-		$this->fechaNac = $fechaNac;
-	}
-
 }
 ?>

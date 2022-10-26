@@ -44,7 +44,7 @@ else{
 });
 
 Thirdpage.addEventListener("click", function(event){
-  let regExpEmail = /(@smiep.com)$/g;
+  let regExpEmail = /(@smiep.com.co)$/g;
   let regExpPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]{2})(?=.*[@!+*?=#$|&~:;_-]).{6,18}$/g;
 
   if(formulario.userName.value == 0) {

@@ -13,7 +13,7 @@ class Usuario
 	private $creadoEn;
 	private $id_estado;
 	private $id_ti;
-	private $docChange;
+	private $id_sec;
 
 
 	function __construct()
@@ -140,14 +140,14 @@ class Usuario
 	{
 		$this->id_ti = $id_ti;
 	}
-	public function getDocChange()
+	public function getId_sec()
 	{
-		return $this->docChange;
+		return $this->id_sec;
 	}
 
-	public function setDocChange($docChan)
+	public function setId_sec($id_sec)
 	{
-		$this->docChange = $docChan;
+		$this->id_sec = $id_sec;
 	}
 
 }

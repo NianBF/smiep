@@ -151,10 +151,6 @@ if (
                                     <label for="tel">Correo</label>
                                 </div>
 
-                                <div class="userBox">
-                                    <input type='date' id="FecNac" name='fechaNac' placeholder=" " value='<?php echo $Cliente->getFechaNac() ?>'>
-                                    <label for="FecNac">Fecha de Nacimiento</label>
-                                </div>
 
                                 <input type='hidden' name='actualizar' value='actualizar'>
                                 <div class="btn">

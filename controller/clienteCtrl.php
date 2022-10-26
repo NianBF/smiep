@@ -29,7 +29,7 @@ $Cliente->setApellidoCli2($_POST['apellidoCli2']);
 $Cliente->setDireccionCli($_POST['direccionCli']);
 $Cliente->setTelCli($_POST['telCli']);
 $Cliente->setEmailCli($_POST['emailCli']);
-$Cliente->setFechaNac($_POST['fechaNac']);
+
 
 if (isset($_POST['insertar'])){ //Si se obtiene 'insertar' del $_POST llama a la función de insertar del CRUD
 	$crud->insertar($Cliente);

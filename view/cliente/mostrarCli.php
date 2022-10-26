@@ -84,7 +84,6 @@ else
                         <th>Nombre</th>
                         <th>Telefono</th>
                         <th>Correo</th>
-                        <th>Fecha de Nacimiento</th>
                         <th class="opcTitle">Opciones</th>
                     </tr>
                 </thead>
@@ -104,9 +103,7 @@ else
                     <td class="emailCli">
                         <?php echo $Cliente->getEmailCli(); ?>
                     </td>
-                    <td class="fechNacCli">
-                        <?php echo $Cliente->getFechaNac(); ?>
-                    </td>
+               
 
                     <td class="btnOpt">
                         <a class="delete btnOptDel" type="submit"

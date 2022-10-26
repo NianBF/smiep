@@ -14,17 +14,17 @@ class CrudProveedor
 
 	public function insertar($Proveedor)
 	{
-		$insert = $this->db->prepare('INSERT INTO proveedor (id_docPov,empresa,imgEmpresa,nombProv1,
-			nombProv2,appelProv1,apellProv2,direccion1,direccion2,numTel1,numTel2,email1,email2,creadoEn)
-			values(:id_docPov,:empresa,:imgEmpresa,:nombProv1,:nombProv2,:appelProv1,:apellProv2,
+		$insert = $this->db->prepare('INSERT INTO proveedor (id_docProv,empresa,imgEmpresa,nombProv1,
+			nombProv2,apellidoProv1,apellidoProv2,direccion1,direccion2,numTel1,numTel2,email1,email2,creadoEn)
+			values(:id_docProv,:empresa,:imgEmpresa,:nombProv1,:nombProv2,:apellidoProv1,:apellidoProv2,
 			:direccion1,:direccion2,:numTel1,:numTel2,:email1,:email2,:creadoEn)');
-		$insert->bindValue('id_docPov', $Proveedor->getId_DocProv());
+		$insert->bindValue('id_docProv', $Proveedor->getId_DocProv());
 		$insert->bindValue('empresa', $Proveedor->getEmpresa());
 		$insert->bindValue('imgEmpresa', $Proveedor->getImgEmpresa());
 		$insert->bindValue('nombProv1', $Proveedor->getNombProv1());
 		$insert->bindValue('nombProv2', $Proveedor->getNombProv2());
-		$insert->bindValue('appelProv1', $Proveedor->getApeProv1());
-		$insert->bindValue('apellProv2', $Proveedor->getApeProv2());
+		$insert->bindValue('apellidoProv1', $Proveedor->getApellidoProv1());
+		$insert->bindValue('apellidoProv2', $Proveedor->getApellidoProv2());
 		$insert->bindValue('direccion1', $Proveedor->getDireccion1());
 		$insert->bindValue('direccion2', $Proveedor->getDireccion2());
 		$insert->bindValue('numTel1', $Proveedor->getNumTel1());
@@ -46,12 +46,12 @@ class CrudProveedor
 		foreach ($select->fetchAll() as $Proveedor)
 		{
 			$myProveedor = new Proveedor();
-			$myProveedor->setId_DocProv($Proveedor['id_docPov']);
+			$myProveedor->setId_DocProv($Proveedor['id_docProv']);
 			$myProveedor->setImgEmpresa($Proveedor['imgEmpresa']);
 			$myProveedor->setNombProv1($Proveedor['nombProv1']);
 			$myProveedor->setNombProv2($Proveedor['nombProv2']);
-			$myProveedor->setApeProv1($Proveedor['appelProv1']);
-			$myProveedor->setApeProv2($Proveedor['apellProv2']);
+			$myProveedor->setApeProv1($Proveedor['apellidoProv1']);
+			$myProveedor->setApeProv2($Proveedor['apellidoProv2']);
 			$myProveedor->setEmpresa($Proveedor['empresa']);
 			$myProveedor->setDireccion1($Proveedor['direccion1']);
 			$myProveedor->setDireccion2($Proveedor['direccion2']);
@@ -69,26 +69,26 @@ class CrudProveedor
 
 	public function eliminar($id_DocProv)
 	{
-		$eliminar = $this->db->prepare('DELETE FROM proveedor WHERE id_docPov=:id_docPov');
+		$eliminar = $this->db->prepare('DELETE FROM proveedor WHERE id_docProv=:id_docProv');
 		$eliminar->bindValue('id_docPov', $id_DocProv);
 		$eliminar->execute();
 	}
 
 	public function obtenerProveedor($id_DocProv)
 	{
-		$select = $this->db->prepare('SELECT * FROM proveedor WHERE id_docPov=:id_docPov');
-		$select->bindValue('id_docPov', $id_DocProv);
+		$select = $this->db->prepare('SELECT * FROM proveedor WHERE id_docProv=:id_docProv');
+		$select->bindValue('id_docProv', $id_DocProv);
 		$select->execute();
 		$Proveedor = $select->fetch();
 		$myProveedor = new Proveedor();
 
-		$myProveedor->setId_DocProv($Proveedor['id_docPov']);
+		$myProveedor->setId_DocProv($Proveedor['id_docProv']);
 
 		$myProveedor->setImgEmpresa($Proveedor['imgEmpresa']);
 		$myProveedor->setNombProv1($Proveedor['nombProv1']);
 		$myProveedor->setNombProv2($Proveedor['nombProv2']);
-		$myProveedor->setApeProv1($Proveedor['appelProv1']);
-		$myProveedor->setApeProv2($Proveedor['apellProv2']);
+		$myProveedor->setApeProv1($Proveedor['apellidoProv1']);
+		$myProveedor->setApeProv2($Proveedor['apellidoProv2']);
 		$myProveedor->setEmpresa($Proveedor['empresa']);
 		$myProveedor->setDireccion1($Proveedor['direccion1']);
 		$myProveedor->setDireccion2($Proveedor['direccion2']);
@@ -104,17 +104,17 @@ class CrudProveedor
 	{
 		$db = Db::conectar();
 		$actualizar = $db->prepare('UPDATE proveedor 
-			SET  id_docPov=:id_docPov,empresa=:empresa, nombProv1=:nombProv1, nombProv2=:nombProv2,
-			appelProv1=:appelProv1, apellProv2=:apellProv2, direccion1=:direccion1, direccion2=:direccion2,
+			SET  id_docProv=:id_docProv,empresa=:empresa, nombProv1=:nombProv1, nombProv2=:nombProv2,
+			apellidoProv1=:apellidoProv1, apellidoProv2=:apellidoProv2, direccion1=:direccion1, direccion2=:direccion2,
 			numTel1=:numTel1, numTel2=:numTel2, email1=:email1, email2=:email2
-			WHERE id_docPov=:id_docPov');
-		$actualizar->bindValue('id_docPov', $Proveedor->getId_DocProv());
+			WHERE id_docProv=:id_docProv');
+		$actualizar->bindValue('id_docProv', $Proveedor->getId_DocProv());
 		$actualizar->bindValue('empresa', $Proveedor->getEmpresa());
 		$actualizar->bindValue('imgEmpresa', $Proveedor->getImgEmpresa());
 		$actualizar->bindValue('nombProv1', $Proveedor->getNombProv1());
 		$actualizar->bindValue('nombProv2', $Proveedor->getNombProv2());
-		$actualizar->bindValue('appelProv1', $Proveedor->getApeProv1());
-		$actualizar->bindValue('apellProv2', $Proveedor->getApeProv2());
+		$actualizar->bindValue('apellidoProv1', $Proveedor->getApeProv1());
+		$actualizar->bindValue('apellidoProv2', $Proveedor->getApeProv2());
 		$actualizar->bindValue('direccion1', $Proveedor->getDireccion1());
 		$actualizar->bindValue('direccion2', $Proveedor->getDireccion2());
 		$actualizar->bindValue('numTel1', $Proveedor->getNumTel1());
