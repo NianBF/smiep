@@ -166,8 +166,8 @@ DROP TABLE IF EXISTS `initsession`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `initsession` (
-  `id_sesion` int(255) NOT NULL AUTO_INCREMENT=1 COMMENT 'Identificador de la sesión',
-  `dateSess` timestamp NOT NULL COMMENT 'Fecha con hora del inicio de sesión',
+  `id_sesion` int(255) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de la sesión',
+  `dateSess` timestamp COMMENT 'Fecha con hora del inicio de sesión',
   `id_doc` int(100) NOT NULL COMMENT 'Documento del usuario quien inicia sesión',
   PRIMARY KEY (`id_sesion`),
   KEY `fk_docUsuSes` (`id_doc`),
@@ -194,7 +194,7 @@ DROP TABLE IF EXISTS `venta`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venta` (
   `id_venta` int(100) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de la venta que se realiza',
-  `id_cliDoc` int(100) COMMENT 'Documento del cliente que compra (Nulo)',
+  `id_cliDoc` varchar(255) COMMENT 'Documento del cliente que compra (Nulo)',
   `total` float(10,2) NOT NULL COMMENT 'Valor total de la venta que se hizo',
   `modificadoEn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Fecha en la que se realiza la venta',
   `id_doc` int(100) NOT NULL COMMENT 'Documento del usuario quien hizo la venta',
@@ -206,15 +206,15 @@ CREATE TABLE `venta` (
   CONSTRAINT `fk_id_caja` FOREIGN KEY (`id_caja`) REFERENCES `caja` (`id_caja`) ON UPDATE CASCADE,
   CONSTRAINT `fk_id_cliDoc` FOREIGN KEY (`id_cliDoc`) REFERENCES `cliente` (`id_cliDoc`) ON UPDATE CASCADE,
   CONSTRAINT `fk_id_doc` FOREIGN KEY (`id_doc`) REFERENCES `usuario` (`id_doc`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `orden`
+-- Dumping data for table `venta`
 --
 
 LOCK TABLES `venta` WRITE;
-/*!40000 ALTER TABLE `orden` DISABLE KEYS */;
+/*!40000 ALTER TABLE `venta` DISABLE KEYS */;
 INSERT INTO `venta` VALUES (1,1000145236,12000.00,'0000-00-00 00:00:00',123456789,1001);
 /*!40000 ALTER TABLE `venta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -369,11 +369,11 @@ DROP TABLE IF EXISTS `prodPedido`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `prodPedido` (
-  `id_prodPedido` int(255) NOT NULL AUTO_INCREMENT,
-  `cantidad` int(255) NOT NULL,
-  `priceArrive` double(16,2) NOT NULL,
-  `id_pedido` varchar(250) NOT NULL,
-  `id_prod` int(255) NOT NULL,
+  `id_prodPedido` int(255) NOT NULL AUTO_INCREMENT COMMENT 'Identificador consecutivo para la trazabilidad de los pedidos',
+  `cantidad` int(255) NOT NULL COMMENT 'Cantidad de unidades del producto que se recibieron',
+  `priceArrive` double(16,2) NOT NULL COMMENT 'Precio al que llega el producto',
+  `id_pedido` varchar(250) NOT NULL COMMENT 'Foranea con la factura del pedido',
+  `id_prod` int(255) NOT NULL COMMENT 'Identificador del producto que llega',
   PRIMARY KEY (`id_prodPedido`),
   KEY `id_pedido` (`id_pedido`),
   KEY `id_prod` (`id_prod`),
@@ -390,16 +390,19 @@ DROP TABLE IF EXISTS `tzProd`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tzProd` (
-  `id_tzProd` int(255) NOT NULL AUTO_INCREMENT,
-  `cantidadDisp` int(255) NOT NULL,
-  `cantidadNew` int(255) NOT NULL,
-  `modificadoEn` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `id_prod` int(255) NOT NULL,
-  `id_docUsu` int(100) NOT NULL,
+  `id_tzProd` int(255) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único para trazabilidad',
+  `cantidadDisp` int(255) NOT NULL COMMENT 'Se inserta la cantidad del producto antes de la modificación',
+  `cantidadNew` int(255) NOT NULL COMMENT 'Se inserta la cantidad a la que se actualizó',
+  `modificadoEn` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Fecha en la que se modificó el producto',
+  `id_prod` int(255) NOT NULL COMMENT 'El producto que se modifica',
+  `id_docUsu` int(100) NOT NULL COMMENT 'Documento del usuario que modifica el producto',
+  `id_venta` int(100) NOT NULL COMMENT 'Identificador de la venta en la que se modifica el producto',
   PRIMARY KEY (`id_tzProd`),
+  KEY (`id_venta`),
   KEY `id_prod` (`id_prod`),
   KEY `id_docUsu` (`id_docUsu`),
   CONSTRAINT `tzProd_ibfk_2` FOREIGN KEY (`id_prod`) REFERENCES `producto` (`id_prod`),
+  CONSTRAINT `tzProd_ibfk_3` FOREIGN KEY (`id_venta`) REFERENCES `venta` (`id_venta`),
   CONSTRAINT `tzProd_ibfk_1` FOREIGN KEY (`id_docUsu`) REFERENCES `usuario` (`id_doc`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
