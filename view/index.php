@@ -2,14 +2,14 @@
 $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
 error_reporting(0);
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/favicon.png" sizes="any">
     <title>SMIEP</title>
     <link rel="stylesheet" type="text/css" href="public/css/stylesIndex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -17,25 +17,24 @@ error_reporting(0);
 
 <body>
     <main class="contenedor">
-        <span class="icon">
-            <figure class=""><img src="img/favicon.png" alt="Logo SMIEP" width="230px"></figure>
-        </span>
-        <div class="title">
-            <section>
-                <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
-            </section>
-        </div>
-        <div class="cup">
-            <div class="inf">¡BIENVENIDOS!</div>
-            <p>De clic sobre el botón que dice ingresar.</p>
-            <a class="ingBot" href="view/login/login.php"><strong>Ingresar</strong></a>
+        <div class="contenedor__principal">
+            <span class="icon">
+                <figure><img src="img/favicon.png" alt=""></figure>
+            </span>
+            <div class="title">
+                <p class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</p>
+            </div>
+           
+                <p class="inf">¡BIENVENIDOS!</p>
+                <p>De clic sobre el botón que dice ingresar.</p>
+                <a href="view/login/login.php" class="ingBot"><strong>Ingresar</strong></a>
+           
         </div>
     </main>
     <footer class="footer">
-        <div>© S.M.I.E.P | 2022 <a href="view/about/about.php">Acerca de S.M.I.E.P</a></div>
+        <p>© S.M.I.E.P | 2022 <a href="view/about/about.php">Acerca de S.M.I.E.P</a></p>
         <a id="mod" class="mod" onclick="cambiarModo()"><span id="id-moon" class="btn-mode moon"><i class="fas fa-sun"></i></span>/<span id="id-sun" class="btn-mode sun active"><i class="fas fa-moon"></i></span></a>
     </footer>
     <script type="text/javascript" src="public/js/darkMode/darkMode.js"></script>
 </body>
-
 </html>
