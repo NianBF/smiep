@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 $_SESSION["pass"] == null)

@@ -61,7 +61,7 @@ if (isset($_POST['insertar'])){
 			
 			 $.ajax({
 				 type: 'GET',
-				 url: '../controller/proveedorCtrl.php?id_DocProv=" . $idDelete . "&accion=eliminar',
+				 url: '../controller/ProveedorCtrl.php?id_DocProv=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
 					window.location.href = '../view/proveedor/mostrarProv.php';					

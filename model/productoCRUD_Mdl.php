@@ -47,15 +47,12 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 				$myProducto->setImgProd($Producto['imgProd']);
 				$myProducto->setCodBar($Producto['codBar']);
 				$myProducto->setNombreProd($Producto['nombreProd']);
-				$myProducto->setDescripcion($Producto['descripcion']);
 				$myProducto->setPrecio($Producto['precio']);
 				$myProducto->setCantidadDisp($Producto['cantidadDisp']);
-				$myProducto->setTipoPresentacion($Producto['tipoPresentacion']);
 				$myProducto->setCreadoEn($Producto['modificadoEn']);
 				$myProducto->setId_docUSu($Producto['id_docUsu']);
 				$myProducto->setId_cat($Producto['id_cat']);
 				$myProducto->setId_estado($Producto['id_estado']);
-				$myProducto->setPriceArrive($Producto['priceArrive']);
 				$myProducto->setEstado($Producto['tEstado']);
 
 				$listaProducto[] = $myProducto;
@@ -65,11 +62,11 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 		}
 
 		public function UpdState(){
-			$select = $this->db->query('UPDATE producto SET id_estado=3 WHERE cantidadDisp<=1');
+			$select = $this->db->query('UPDATE producto SET id_estado=2 WHERE cantidadDisp<=1');
 		}
 
 		public function UpdStateU(){
-			$select = $this->db->query('UPDATE producto SET id_estado=2 WHERE cantidadDisp>=2');
+			$select = $this->db->query('UPDATE producto SET id_estado=1 WHERE cantidadDisp>=2');
 		}
 
 
@@ -95,15 +92,12 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 			$myProducto->setImgProd($Producto['imgProd']);
 			$myProducto->setCodBar($Producto['codBar']);
 			$myProducto->setNombreProd($Producto['nombreProd']);
-			$myProducto->setDescripcion($Producto['descripcion']);
 			$myProducto->setPrecio($Producto['precio']);
 			$myProducto->setCantidadDisp($Producto['cantidadDisp']);
 			$myProducto->setTipoPresentacion($Producto['tipoPresentacion']);
-			$myProducto->setCreadoEn($Producto['creadoEn']);
 			$myProducto->setId_docUSu($Producto['id_docUsu']);
 			$myProducto->setId_cat($Producto['id_cat']);
 			$myProducto->setId_Estado($Producto['id_estado']);
-			$myProducto->setPriceArrive($Producto['priceArrive']);
 			$myProducto->setEstado($Producto['tEstado']);
 			$myProducto->setnCategoria($Producto['nCategoria']);
 
@@ -115,23 +109,15 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pas
 		public function actualizar($producto)
 		{
 			$actualizar = $this->db->prepare('UPDATE producto 
-			SET imgProd=:imgProd, nombreProd=:nombreProd, descripcion=:descripcion,
-			precio=:precio, cantidadDisp=:cantidadDisp, codBar=:codBar,
-			tipoPresentacion=:tipoPresentacion, id_cat=:id_cat, /* id_estado=:id_estado, */ priceArrive=:priceArrive, modificadoEn=:modificadoEn, id_docUsu=:id_docUsu
-			WHERE id_prod=:id_prod ');
+			SET imgProd=:imgProd, nombreProd=:nombreProd,precio=:precio, cantidadDisp=:cantidadDisp, codBar=:codBar, id_cat=:id_cat, id_docUsu=:id_docUsu WHERE id_prod=:id_prod ');
 			$actualizar->bindValue('id_prod', $producto->getId_prod());
 			$actualizar->bindValue('imgProd', $producto->getImgProd());
 			$actualizar->bindValue('codBar', $producto->getCodBar());
 			$actualizar->bindValue('nombreProd', $producto->getNombreProd());
-			$actualizar->bindValue('descripcion', $producto->getDescripcion());
 			$actualizar->bindValue('precio', $producto->getPrecio());
 			$actualizar->bindValue('cantidadDisp', $producto->getCantidadDisp());
-			$actualizar->bindValue('tipoPresentacion', $producto->getTipoPresentacion());
 			$actualizar->bindValue('id_docUsu', $producto->getId_docUsu());
 			$actualizar->bindValue('id_cat', $producto->getId_cat());
-/* 			$actualizar->bindValue('id_estado', $producto->getId_estado());
- */			$actualizar->bindValue('priceArrive', $producto->getPriceArrive());
-			$actualizar->bindValue('modificadoEn', $producto->getCreadoEn());
 
 			$actualizar->execute();
 		}

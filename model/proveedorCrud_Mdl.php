@@ -70,7 +70,7 @@ class CrudProveedor
 	public function eliminar($id_DocProv)
 	{
 		$eliminar = $this->db->prepare('DELETE FROM proveedor WHERE id_docProv=:id_docProv');
-		$eliminar->bindValue('id_docPov', $id_DocProv);
+		$eliminar->bindValue('id_docProv', $id_DocProv);
 		$eliminar->execute();
 	}
 
