@@ -12,7 +12,7 @@ if (
 	$Proveedor = new Proveedor();
 	$listaProveedor = $crud->mostrar();
 	require_once('../../model/PedidoMdl.php');
-	require_once('../../model/Pedido_Mdl.php');
+	require_once('../../model/PedidoCRUD_Mdl.php');
 	$consulta = new PedidoCrud_Mdl();
 	$Compra = new PedidoMdl();
 	$listaCompra = $consulta->mostrar();
@@ -49,7 +49,7 @@ if (
 				<a href='../inicio/menu.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
 			</div>
 			<div class="contForm">
-				<form action='../../controller/compraCtrl.php' id="formulario" name="formulario" method='post'>
+				<form action='../../controller/pedidoCtrl.php' id="formulario" name="formulario" method='post'>
 
 					<fieldset class="anuncio movAds">
 						<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
