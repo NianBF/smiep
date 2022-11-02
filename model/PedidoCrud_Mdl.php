@@ -30,8 +30,8 @@ class PedidoCrud_Mdl{
 		foreach ($select->fetchAll() as $pedido){
 			$thpedido = new PedidoMdl;
 			$thpedido->setId_pedido($pedido['id_pedido']);
-			$thpedido->setId_doc($pedido['id_doc']);
-			$thpedido->setId_docProv($pedido['id_docPov']);
+			$thpedido->setId_doc($pedido['id_docUsu']);
+			$thpedido->setId_docProv($pedido['id_docProv']);
 			$thpedido->setTotalPrice($pedido['totalPrice']);
 			$thpedido->setCreadoEn($pedido['creadoEn']);
 			$thpedido->setModificadoEn($pedido['modificadoEn']);

@@ -21,14 +21,14 @@ if (
     $Compra= new PedidoMdl();
     $create= new PedidoCrud_Mdl();
     date_default_timezone_set("America/Bogota");
-    $Compra->setId_Pedido($_POST['id_compra']);
+    $Compra->setId_Pedido($_POST['id_compra']);/* 
     $Compra->setCantidadCP($_POST['cantidadCP']);
-    $Compra->setDescripcion($_POST['descr']);
+    $Compra->setDescripcion($_POST['descr']); */
     $Compra->setId_doc($_POST['docUsu']);
     $Compra->setId_docProv($_POST['docProv']);
     $Compra->setCreadoEn(date("Y-m-d H:i:s"));
 
-    if((isset($_POST['insertar'])) && ($create->verificacion($Compra->getId_compra()))==0){
+    if((isset($_POST['insertar'])) && ($create->verificacion($Compra->getId_pedido()))==0){
         $create->insertar($Compra);
         echo "<script>
             Swal.fire({
@@ -55,7 +55,7 @@ if (
                 confirmButtonText: 'Ok'
              }).then((result) => {
                 if (result.isConfirmed) {
-                        window.location.href = '../view/compra/Form.php';					
+                        window.location.href = '../view/pedido/Form.php';					
                         }
                     });
              </script>";
