@@ -1,0 +1,17 @@
+.principal{
+    display: inline;
+}
+.principal main{
+    max-width: 95%;
+}
+.principal aside{
+    position: absolute;
+    border-radius: var(--radiousBtn) 5px;
+    padding: var(--radiousBtn);
+    text-align: center;
+    margin: 0 1rem 0 0;
+    max-width: 20%;
+    right: 0;
+    top: 25vh;
+    margin-left: auto;
+}

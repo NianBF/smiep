@@ -1,0 +1,47 @@
+div.icon{
+    cursor: pointer;
+    border: solid 3px var(--colorSmiep);
+    padding: 1px 1px 0px 1px;
+    border-radius: var(--radiousBtn);
+    max-width: max-content;
+    margin: auto;
+}
+div.icon:hover{
+    border: solid 3px #3399;
+}
+ion-icon {
+    cursor: pointer;
+}
+ion-icon:hover {
+    color: var(--colorSmiep);
+}
+.close-circle-sharp {
+    color: crimson;
+}
+.close-circle-sharp, .trash {
+    margin: 2px 3px 0 3px;
+}
+.modal-footer div {
+    margin: 7px 5px 0 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+.modal-footer div:hover {
+    color: var(--colorSmiep);
+}
+.modal {
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    width: 20rem;
+    display: none;
+    border:solid 2px #3399;
+    border-radius: 10px 8px;
+    z-index: 100;
+    background: #f0f0f0;
+    box-shadow: .2rem .2rem .5rem #3a3a3a;
+}
+.prodCar {
+    list-style: none;
+}

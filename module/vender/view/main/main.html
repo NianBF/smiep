@@ -1,0 +1,33 @@
+<?php foreach ($Product as $Producto) { ?>
+<section class="prodVen">
+    <figure><img src="<?php echo $Producto->getImgProd(); ?>" alt="Producto"></figure>
+    <p class="codeProd" id="<?php echo $Producto->getId_Prod(); ?>">
+        <sub><i><b>Codigo: </b>
+                <?php echo $Producto->getCodBar(); ?>
+            </i></sub>
+    </p>
+    <p class="nameProd" id="<?php echo $Producto->getId_Prod(); ?>N">
+        <strong>
+            <?php echo $Producto->getNombreProd(); ?>
+        </strong>
+    </p>
+    <p class="priceProd" id="<?php echo $Producto->getId_Prod(); ?>P">
+        $
+        <?php echo $Producto->getPrecio(); ?> COP
+    </p>
+    <p class="qtyProd">
+        <sub><i>Disponible: </i>
+            <?php echo $Producto->getCantidadDisp(); ?>
+        </sub>
+    </p>
+    <div class="btnAdd">
+            <input type="hidden" name="id" id="id" value="<?php echo $Producto->getId_Prod(); ?>">
+            <a href="?action=add" id="add"
+                onclick="envia_carrito($('#ref<?php echo $Producto->getId_Prod(); ?>').val(),$('#titulo<?php echo $Producto->getId_Prod(); ?>').val(),$('#precio<?php echo $Producto->getId_Prod(); ?>').val(),$('#cantidad<?php echo $Producto->getId_Prod(); ?>').val());"><button>Agregar</button></a>
+                <input name="ref" type="hidden" id="ref<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getId_Prod(); ?>" />                           
+                <input name="precio" type="hidden" id="precio<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getPrecio(); ?>" />
+                <input name="titulo" type="hidden" id="titulo<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getNombreProd(); ?>" />
+                <input name="cantidad" type="hidden" id="cantidad<?php echo $Producto->getId_Prod(); ?>" value="1" class="pl-2" />
+    </div>
+</section>
+<?php } ?>
