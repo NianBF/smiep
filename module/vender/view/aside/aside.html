@@ -1,39 +1,38 @@
 <section>
-    <div class="icon">
-        <ion-icon name="cart" size="large" onclick="consultar_carrito();"></ion-icon>
-    </div>
-    <div class="modal fade" id="modal_cart" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Mi carrito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <div class="p-2">
-
-
-                            <div id="mi_carrito"></div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div onclick="closeModal()">
-                        <ion-icon class="close-circle-sharp" name="close-circle-sharp" size="large"></ion-icon>
-                        <legend>Close</legend>
-                    </div>
-                    <div onclick="borrar_carrito()">
-                        <ion-icon class="trash" name="trash" size="large"></ion-icon>
-                        <legend>Clean</legend>
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-            </div>
+  <div class="icon">
+    <ion-icon name="cart" size="large" onclick="consultar_carrito();"></ion-icon>
+  </div>
+  <div class="modal fade" id="modal_cart" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mi carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <div>
+            <div class="p-2">
+              <div id="mi_carrito"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div onclick="closeModal()" class="close-circle-sharp">
+            <ion-icon class="close-circle-sharp" name="close-circle-sharp" size="large"></ion-icon>
+            <legend class="close-circle-sharp">Close</legend>
+          </div>
+          <div onclick="borrar_carrito()">
+            <ion-icon class="trash" name="trash" size="large"></ion-icon>
+            <legend>Clean</legend>
+          </div>
+          <a href="?u=p&action=pay">
+            <div>
+              <ion-icon class="pay" name="chevron-forward-circle" size="large"></ion-icon>
+              <legend>Pay</legend>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

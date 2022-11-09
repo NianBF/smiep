@@ -1,3 +1,6 @@
 <?php session_start(); 
-unset($_SESSION['carrito']);
+/**
+ * Elimina datos en la variable global del carrito.
+ */
+unset($_SESSION['carrito']); #Elimina todo lo relacionado al carrito y productos que se estén agregando a este
 ?>

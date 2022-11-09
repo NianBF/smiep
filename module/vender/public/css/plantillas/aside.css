@@ -18,6 +18,9 @@ ion-icon:hover {
 .close-circle-sharp {
     color: crimson;
 }
+.close-circle-sharp:hover {
+    color: #3399;
+}
 .close-circle-sharp, .trash {
     margin: 2px 3px 0 3px;
 }
@@ -44,4 +47,13 @@ ion-icon:hover {
 }
 .prodCar {
     list-style: none;
+}
+li.cart{
+    padding: 4px;
+    border: solid 1px #3a3a3a;
+    border-radius: 4px;
+    margin: 2px 3px 0 0;
+}
+.modal-footer div {
+    width: 5rem;
 }

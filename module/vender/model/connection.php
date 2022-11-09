@@ -1,4 +1,7 @@
 <?php
+/**
+ * Conexión a la DB del sistema.
+ */
 class Conection
 {
     public static function getConection()
