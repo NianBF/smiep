@@ -106,7 +106,6 @@ else
                         <th>ID</th>
                         <th>Codigo de Barras</th>
                         <th>Nombre</th>
-                        <th>Descripción</th>
                         <th>precio</th>
                         <th>Disponible</th>
                         <th>Estado</th>
@@ -129,9 +128,6 @@ else
                     </td>
                     <td class="nombProd">
                         <?php echo $Producto->getNombreProd() ?>
-                    </td>
-                    <td class="descripcion">
-                        <?php echo $Producto->getDescripcion() ?>
                     </td>
                     <td class="precio">
                         <?php echo $Producto->getPrecio() ?> COP

@@ -1,4 +1,4 @@
-import { cantDisp, codBar, descrip, estado, id, imagen, nombCat, precio, presentacion, priceArrive, producto } from "../moduleValidar/CatTiProd.js"
+import { cantDisp, codBar, estado, id, imagen, nombCat, precio, producto } from "../moduleValidar/CatTiProd.js"
 import { documento } from "../moduleValidar/datosPersonales.js"
 import msgInf from "../moduleValidar/msgInf.js"
 import { registroOK } from "../moduleValidar/msgOK.js"
@@ -28,11 +28,7 @@ firstpage.addEventListener("click", function(event){
 secondpage.addEventListener("click", function (event){
  if (formulario.precio.value == 0) {
     precio(event)
-  }
-  else if(formulario.priceArrive.value ==0){
-    priceArrive(event)
-  }
-  
+  }  
   else  if (formulario.cantDisp.value == 0) {
     cantDisp(event)
   }
@@ -43,14 +39,11 @@ secondpage.addEventListener("click", function (event){
 
 Thirdpage.addEventListener("click",function(event){
   
-  if (formulario.Presentacion.value == 0) {
-   presentacion(event)
-  }
-  else  if (formulario.descrip.value == 0) {
-    descrip(event)
-  }
-  else  if (formulario.codBar.value == 0) {
+ if (formulario.codBar.value == 0) {
    codBar(event)
+  }
+  else if (formulario.id_cat.value == 0) {
+   nombCat(event)
   }
   else{
     page1.style.display = "none";
@@ -62,12 +55,6 @@ btn_enviar.addEventListener("click", function (event) {
   
   if (formulario.id_docUsu.value == 0) {
     documento(event)
-  }
-  else if (formulario.id_cat.value == 0) {
-   nombCat(event)
-  }
-  else if (formulario.estado.value == 0) {
-    estado(event)
   }
   else{
    registroOK()
