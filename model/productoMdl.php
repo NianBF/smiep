@@ -5,13 +5,8 @@ class Producto
 	private $imgProd;
 	private $codBar;
 	private $nombreProd;
-	private $descripcion;
 	private $precio;
-	private $priceArrive;
 	private $cantidadDisp;
-	private $tipoPresentacion;
-	private $creadoEn;
-	private $id_docUsu;
 	private $id_cat;
 	private $id_estado;
 	private $estado;
@@ -66,17 +61,6 @@ class Producto
 		$this->nombreProd = $nombreProd;
 	}
 
-	//descripcion
-	public function getDescripcion()
-	{
-		return $this->descripcion;
-	}
-
-	public function setDescripcion($descripcion)
-	{
-		$this->descripcion = $descripcion;
-	}
-
 	//precio
 	public function getPrecio()
 	{
@@ -97,39 +81,6 @@ class Producto
 	public function setCantidadDisp($cantidadDisp)
 	{
 		$this->cantidadDisp = $cantidadDisp;
-	}
-
-	//tipoPresentacion
-	public function getTipoPresentacion()
-	{
-		return $this->tipoPresentacion;
-	}
-
-	public function setTipoPresentacion($tipoPresentacion)
-	{
-		$this->tipoPresentacion = $tipoPresentacion;
-	}
-
-	//creadoEn =fecha de creacion Base de datos = modificadoEn
-	public function getCreadoEn()
-	{
-		return $this->creadoEn;
-	}
-
-	public function setCreadoEn($creadoEn)
-	{
-		$this->creadoEn = $creadoEn;
-	}
-
-	//idDocUsu = id documento usuario
-	public function getId_docUsu()
-	{
-		return $this->id_docUsu;
-	}
-
-	public function setId_docUsu($id_docUsu)
-	{
-		$this->id_docUsu = $id_docUsu;
 	}
 
 	//id_cat = id categoria
@@ -162,13 +113,7 @@ class Producto
 		$this->estado=$estado;
 	}
 
-	public function getPriceArrive(){
-		return $this->priceArrive;
-	}
-
-	public function setPriceArrive($priceArray){
-		$this->priceArrive = $priceArray;
-	}
+	
 	public function getnCategoria(){
 		return $this->nCategoria;
 	}

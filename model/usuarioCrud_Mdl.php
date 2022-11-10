@@ -14,7 +14,7 @@ class CrudUsuario
 
 	public function insertar($Usuario)
 	{
-		$insert = $this->db->prepare('INSERT INTO usuario (id_doc,nombre1,nombre2,apellido1, apellido2,userName,email,password,rol,id_estado,id_ti) values(:id_doc,:nombre1,:nombre2,:apellido1,:apellido2,:userName,:email,md5(:password),:rol,:id_estado,:id_ti)');
+		$insert = $this->db->prepare('INSERT INTO usuario (id_doc,nombre1,nombre2,apellido1, apellido2,userName,email,password,rol,id_estado,id_ti,creadoEn) values(:id_doc,:nombre1,:nombre2,:apellido1,:apellido2,:userName,:email,md5(:password),:rol,:id_estado,:id_ti,:creadoEn)');
 		$insert->bindValue('id_doc', $Usuario->getId_doc());
 		$insert->bindValue('nombre1', $Usuario->getNombre1());
 		$insert->bindValue('nombre2', $Usuario->getNombre2());
@@ -26,6 +26,7 @@ class CrudUsuario
 		$insert->bindValue('rol', $Usuario->getRol());
 		$insert->bindValue('id_estado', $Usuario->getId_estado());
 		$insert->bindValue('id_ti', $Usuario->getId_ti());
+		$insert->bindValue('creadoEn', $Usuario->getCreadoEn());
 
 		$insert->execute();
 

@@ -33,11 +33,10 @@ $Proveedor->setNumTel1($_POST['numTel1']);
 $Proveedor->setNumTel2($_POST['numTel2']);
 $Proveedor->setEmail1($_POST['email1']);
 $Proveedor->setEmail2($_POST['email2']);
+$Proveedor->setCreadoEn($_POST['creadoEn']);
 
 if (isset($_POST['insertar'])){
 	//llama a la función insertar definida en el crud
-	date_default_timezone_set("America/Bogota");
-	$Proveedor->setCreadoEn(date("Y-m-d"));
 	$crud->insertar($Proveedor);
 	header('Location: ../view/proveedor/mostrarProv.php');
 }elseif (isset($_POST['actualizar'])){

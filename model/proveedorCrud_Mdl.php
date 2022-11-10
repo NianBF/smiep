@@ -23,8 +23,8 @@ class CrudProveedor
 		$insert->bindValue('imgEmpresa', $Proveedor->getImgEmpresa());
 		$insert->bindValue('nombProv1', $Proveedor->getNombProv1());
 		$insert->bindValue('nombProv2', $Proveedor->getNombProv2());
-		$insert->bindValue('apellidoProv1', $Proveedor->getApellidoProv1());
-		$insert->bindValue('apellidoProv2', $Proveedor->getApellidoProv2());
+		$insert->bindValue('apellidoProv1', $Proveedor->getApeProv1());
+		$insert->bindValue('apellidoProv2', $Proveedor->getApeProv2());
 		$insert->bindValue('direccion1', $Proveedor->getDireccion1());
 		$insert->bindValue('direccion2', $Proveedor->getDireccion2());
 		$insert->bindValue('numTel1', $Proveedor->getNumTel1());
