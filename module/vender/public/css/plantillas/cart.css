@@ -1,0 +1,49 @@
+.contentList {
+    margin: 0 2.5rem;
+}
+.contentList .pagar {
+    padding: 2rem;
+    border: solid 1px var(--colorSmiep);
+    border-radius: 10px 5px;
+}
+.contentList .pagar legend {
+    font-size: 18px;
+}
+.pagarA {
+    margin: 2.5rem;
+}
+button.vender{
+    transition: .5s;
+    cursor: pointer;
+    color: #f0f0f0;
+    background-color: #993333;
+    border: none;
+    padding: .5rem .5rem .5rem 0;
+    border-radius: 4px;
+    font-size: xx-large;
+}
+button.vender:hover{
+    transition: .5s;
+    background-color: #682222;
+    -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+    -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+    box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+}
+button .iconito {
+    background-color: #641f1f;
+    padding: .5rem .5rem;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.btnBuy {
+    text-align: right;
+}
+.total {
+    font-size: larger;
+    margin-top: 2rem;
+    text-align: right;
+}
+.cart .row .prod .tiProd .imgProd {
+    width: 3rem;
+    height: 2rem;
+}

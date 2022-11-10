@@ -4,7 +4,24 @@ require_once("model/productoMdl.php");
 $prod = new Product();
 $getProduct = new ProductMdl();
 $Product = $prod->getProducts();
-require_once("view/index.html");
-if (empty($_GET["action"])) {
-    include_once("view/animation/banner.html");
+switch ($_GET["u"]) {
+    case "v":
+        require_once("view/index.html");
+        switch ($_GET["action"]) {
+            case "buy":
+                include_once("view/animation/banner.html");
+                break;
+            case "add":
+                include_once("view/animation/bannerAdd.html");
+                break;
+        }
+        break;
+    case "p":
+        include("view/pago/pago.html");
+        switch ($_GET["action"]) {
+            case "pay":
+                include_once("view/animation/bannerPay.html");
+                break;
+        }
+        break;
 }

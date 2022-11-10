@@ -48,3 +48,9 @@ main .prodVen{
     background-color: var(--hovSmiep);
     box-shadow: inset .1rem .2rem .5rem 0 #3a3a3a;
 }
+input.qty{
+    max-width: 2rem;
+    border: solid .5px var(--colorSmiep);
+    border-radius: 5px 10px;
+    padding-left: 5px;
+}

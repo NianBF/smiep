@@ -4,13 +4,15 @@
  * @param {string} titulo
  * @param {string} precio
  * @param {string} cantidad
+ * @param {string} imagen
  */
-function envia_carrito(ref, titulo, precio, cantidad) {
-  var parametros = {
+function envia_carrito(ref, titulo, precio, imagen, cantidad) {
+  let parametros = {
     //Parámetros recibidos generan un array para mostrar en el carrito
     ref: ref,
     titulo: titulo,
     precio: precio,
+    imagen: imagen,
     cantidad: cantidad,
   };
   $.ajax({
@@ -18,7 +20,7 @@ function envia_carrito(ref, titulo, precio, cantidad) {
     data: parametros,
     url: "model/cartMdl.php",
     type: "POST",
-    beforeSend: function () {},
+    beforeSend: function () { },
     success: function (response) {
       // todo ok
     },
@@ -34,7 +36,7 @@ function envia_carrito(ref, titulo, precio, cantidad) {
 const cart = document.querySelector(".modal");
 function consultar_carrito() {
   cart.style.display = "block";
-  var parametros = {}; //Parámetros => Productos almacenados anteriormente
+  let parametros = {}; //Parámetros => Productos almacenados anteriormente
   $.ajax({
     //Función AJAX
     data: parametros,
@@ -52,7 +54,7 @@ function closeModal() {
  * Elimina todos los datos que se encuentran en el carrito
  */
 function borrar_carrito() {
-  var parametros = {};
+  let parametros = {};
   $.ajax({
     data: parametros,
     type: "POST",
