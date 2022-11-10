@@ -42,7 +42,7 @@ class CrudCategoria
 
 	public function eliminar($id_Cat)
 	{
-		$eliminar = $this->db->prepare('DELETE FROM categoria WHERE id_Cat=:id_Cat');
+		$eliminar = $this->db->prepare('DELETE FROM categoria WHERE id_cat=:id_Cat');
 		$eliminar->bindValue('id_Cat', $id_Cat);
 		$eliminar->execute();
 	}
@@ -50,10 +50,10 @@ class CrudCategoria
 
 	public function obtenerCategoria($id_Cat)
 	{
-		$select = $this->db->prepare('SELECT * FROM categoria WHERE id_Cat=:id_Cat');
+		$select = $this->db->prepare('SELECT * FROM categoria WHERE id_cat=:id_Cat');
 		$select->bindValue('id_Cat', $id_Cat);
 		$select->execute();
-		$Categoria = $select->fetch();
+		//$Categoria = $select->fetch();
 		$myCategoria = new Categoria();
 
 		$myCategoria->setid_cat($Categoria['id_cat']);

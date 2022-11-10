@@ -11,6 +11,7 @@ if (
 	$crud = new CrudCategoria();
 	$Categoria = new Categoria();
 	$listaCategoria = $crud->mostrar();
+	
 	require_once('../../model/productoCRUD_Mdl.php');
 	require_once('../../model/productoMdl.php');
 	$crud = new CrudProducto();
@@ -102,17 +103,10 @@ if (
 									<input type='number' id="precio" name='precio' placeholder=" " required>
 									<label for="precio">Precio</label>
 								</div>
-								<div class="userBox">
-									<input type='text' id="priceArrive" name='priceArrive' placeholder=" " required>
-									<label for="priceArrive">Precio de llegada</label>
-								</div>
-								<!-- <div class="userBox">
-									<input type='number' id="cantMin" name='cantidadMin' placeholder=" " value="1" readonly>
-									<label for="cantMin">cantidad minima</label>
-								</div> -->
+							
 
 								<div class="userBox">
-									<input type='number' id="cantDisp" name='cantidadDisp' placeholder=" " value='<?php echo $Producto->getCantidadDisp() ?>' required>
+									<input type='number' id="cantDisp" name='cantidadDisp' placeholder=" " required>
 									<label for="cantDisp">cantidad Disponible</label>
 								</div>
 
@@ -124,15 +118,8 @@ if (
 							</div>
 
 							<div class="page page1 formPage">
-								<div class="userBox">
-									<input type='text' id="Presentacion" name='tipoPresentacion' placeholder=" ">
-									<label for="apellido2">Presentacion</label>
-								</div>
+								
 
-								<div class="userBox">
-									<input type='text' id="descrip" name='descripcion' placeholder=" ">
-									<label for="descrip">Descripcion</label>
-								</div>
 
 								<div class="userBox">
 									<input type='text' id="codBar" name='codBar' placeholder=" ">
@@ -146,14 +133,9 @@ if (
 							</div>
 							<div class="page infTi">
 
-								<h4 class="titleSect">Usuario Categoria</h4>
+								<h4 class="titleSect">Estado Categoria</h4>
 								<div class="userBox">
-									<input type='number' id="id_docUsu" name='id_docUsu' placeholder=" " required>
-									<label for="userName">Id Usuario</label>
-								</div>
-
-								<div class="userBox">
-									<!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
+									
 									<label for="id_cat" class="lSel">Categoria</label><br>
 									<select id="id_cat" name='id_cat' required>
 										<optgroup label="Categoria">
@@ -171,8 +153,8 @@ if (
 									<select name="id_estado" id="estado" required>
 										<optgroup label="Estado">
 											<option selected value="0">Elige una opción</option>
-											<option value="2">Disponible</option>
-											<option value="3">No Disponible</option>
+											<option value="1">Disponible</option>
+											<option value="2">No Disponible</option>
 										</optgroup>
 									</select>
 								</div>

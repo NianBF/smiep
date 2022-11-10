@@ -44,10 +44,12 @@
    }
  });
  nextBtnThird.addEventListener("click", function(event){
-   if((formulario.Presentacion.value !=0) && (formulario.descrip.value !=0) && (formulario.codBar.value !=0)){
+   if((formulario.codBar.value !=0)){
        event.preventDefault();nextStyleProgresBar()
      }
  });
+
+ 
  const backStyleProgresBar = function(){
    bullet[current - 2].classList.remove("active");
    progressCheck[current - 2].classList.remove("active");

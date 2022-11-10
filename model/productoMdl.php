@@ -112,8 +112,6 @@ class Producto
 	public function setEstado($estado){
 		$this->estado=$estado;
 	}
-
-	
 	public function getnCategoria(){
 		return $this->nCategoria;
 	}
