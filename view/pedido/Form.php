@@ -121,7 +121,7 @@ if (
 								<h4 class="titleSect">Documento Usuario</h4>
 								<div class="userBox">
 									<input type='number' id="docUsu" name='docUsu' value="<?php echo $_SESSION['docUsu']; ?>" required readonly>
-									<label for="docUsu"><?php echo $_SESSION['userName'] ?></label>
+									<label for="docUsu"><?php echo $_SESSION['userName']; ?></label>
 								</div>
 
 							<div class="userBox">
