@@ -1,8 +1,7 @@
 .footer {
-  width: 100%;
+  position: sticky;
   text-align: center;
   bottom: 0;
-  margin-bottom: 20px;
 }
 
 
