@@ -183,11 +183,10 @@
 
 .navigation ul li.active a .icon {
     color: #fff;
-    background: var(--color);
+    /* background: var(--color); */
 }
 .navigation ul li.active a .icon sub {
-    display: none;
-    font-size: 1rem;
+    font-size: .6rem;
 }
 
 .navigation ul li a .icon::before {
