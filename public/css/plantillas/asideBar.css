@@ -78,6 +78,45 @@
     cursor: pointer;
     transition: 0.5s;
 }
+.personas {
+    max-width: 2px;
+    font-size: 1.75em;
+    margin: 7rem 0 0 .8rem;
+    height: 8rem;
+}
+.navigation ul li .text.personas {
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 16px;
+    position: absolute;
+    top: -7rem;
+    left: 3.2rem;
+    transition: 0.5s;
+}
+.navigation.open ul li .text.personas {
+    opacity: 1;
+    visibility: visible;
+    font-size: 16px;
+    position: absolute;
+    top: -7rem;
+    left: 3.2rem;
+}
+.navigation ul li .icon sub {
+    position: relative;
+    left: -.8rem;
+    top: -2.2rem;
+    font-size: .7rem;
+}
+
+.navigation.open ul li .icon sub {
+    visibility: hidden;
+}
 
 .navigation ul li.active {
     transform: translateX(15px);
@@ -94,6 +133,7 @@
 }
 
 .navigation ul li a {
+    max-width: 2px;
     text-decoration: none;
     position: relative;
     display: flex;
@@ -103,7 +143,6 @@
 }
 
 .navigation ul li a .icon {
-    /* padding: .7rem; */
     position: relative;
     display: block;
     min-width: 55px;
@@ -144,11 +183,10 @@
 
 .navigation ul li.active a .icon {
     color: #fff;
-    background: var(--color);
+    /* background: var(--color); */
 }
 .navigation ul li.active a .icon sub {
-    display: none;
-    font-size: 1rem;
+    font-size: .6rem;
 }
 
 .navigation ul li a .icon::before {
@@ -184,6 +222,7 @@
 .navigation.open ul li a .text {
     opacity: 1;
     visibility: visible;
+    /* position: absolute; */
 }
 
 .navigation ul li.active a .text {
