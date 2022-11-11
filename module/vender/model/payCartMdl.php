@@ -50,7 +50,6 @@ if (!isset($totalcantidad)) {
           (<?php echo $carrito_mio[$i]['cantidad'] ?> ud.)
           —
           <?php echo $carrito_mio[$i]['titulo']; ?>
-          <?php echo $carrito_mio[$i]['ref']; ?>
         </h4>
         <sub>$
           <?php echo $carrito_mio[$i]['precio']; ?> c/u

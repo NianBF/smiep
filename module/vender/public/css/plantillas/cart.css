@@ -12,6 +12,9 @@
 .pagarA {
     margin: 2.5rem;
 }
+.invisiblesH {
+    text-align: right;
+}
 button.vender{
     transition: .5s;
     cursor: pointer;
