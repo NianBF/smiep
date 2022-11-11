@@ -31,7 +31,6 @@ $Usuario->setEmail($_POST['email']);
 $Usuario->setPass($_POST['pass']);
 $Usuario->setId_estado($_POST['id_estado']);
 $Usuario->setId_ti($_POST['id_ti']);
-$Usuario->setCreadoEn($_POST['creadoEn']);
 
 // si el elemento insertar no viene nulo llama al crud e inserta
 if (isset($_POST['insertar']))

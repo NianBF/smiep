@@ -129,7 +129,7 @@ if (
 								<label for="docProv">Documento Proveedor</label><br>
 								<datalist id="docProv" name='docProv'>
 									<?php foreach ($listaProveedor as $Proveedor) { ?>
-											<option value="<?php echo $Proveedor->getId_docProv(); ?>"> <?php echo $Proveedor->getEmpresa(); ?></option>
+											<option value="<?php echo $Proveedor->getId_DocProv(); ?>"> <?php echo $Proveedor->getEmpresa(); ?></option>
 										<?php } ?>
 								</datalist>
 							</div>
