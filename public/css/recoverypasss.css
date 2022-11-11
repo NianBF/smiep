@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos recuperar contraseña */
+.main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 18%;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.fieldsetAdvertencia{
+    font-family: "Montserrat";
+    background-color: #f0f0f0;
+    box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+    border-radius: 10px 13px;
+    padding: 2.5rem;
+    border: 2px solid #aa1132;
+    max-width: 40%;
+    width: 435px;
+    height: 421px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fieldsetAdvertencia legend{
+    border-radius: 10px 10px;
+    background-color: #f0f0f0;
+    font-family: "Montserrat-Bold";
+    padding: 0.3rem;
+    font-size: 20px;
+}
+
+.fieldsetFromulario{
+    font-family: "Montserrat";
+    background-color: #f0f0f0;
+    box-shadow: 11px 13px 38px 3px rgba(67, 89, 89, 1);
+    border: 2px solid ;
+    border-radius: 10px 13px;
+    padding: 2.5rem;
+    width: 434px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldsetFromulario legend{
+    border-radius: 10px 10px;
+    background: color #f0f0f0;;
+    font-family: "Montserrat-Bold";
+    padding: 0.3rem;
+    font-size: 20px;
+}
+
+.grupoInputs{
+    display: flex;
+    background-color: transparent;
+}
+
+.grupoInputs2{
+    display: flex;
+    background-color: transparent;
+}
+  
+.grupoInputs3{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
