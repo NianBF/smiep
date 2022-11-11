@@ -121,7 +121,7 @@ if (
 								<h4 class="titleSect">Documento Usuario</h4>
 								<div class="userBox">
 									<input type='number' id="docUsu" name='docUsu' value="<?php echo $_SESSION['docUsu']; ?>" required readonly>
-									<label for="docUsu"><?php echo $_SESSION['userName'] ?></label>
+									<label for="docUsu"><?php echo $_SESSION['userName']; ?></label>
 								</div>
 
 							<div class="userBox">
@@ -129,7 +129,7 @@ if (
 								<label for="docProv">Documento Proveedor</label><br>
 								<datalist id="docProv" name='docProv'>
 									<?php foreach ($listaProveedor as $Proveedor) { ?>
-											<option value="<?php echo $Proveedor->getId_docProv(); ?>"> <?php echo $Proveedor->getEmpresa(); ?></option>
+											<option value="<?php echo $Proveedor->getId_DocProv(); ?>"> <?php echo $Proveedor->getEmpresa(); ?></option>
 										<?php } ?>
 								</datalist>
 							</div>
