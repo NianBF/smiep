@@ -63,10 +63,18 @@ if (
                         <section class="formularios">
                             <div class="slide-page formPage">
                                 <h4 class="titleSect">Documento de Identidad</h4>
+
+                                <div class="userBox">
+                                    <input type='date' id="creadoEn" name='creadoEn' placeholder=" " >
+                                    <label for="id_doc">Fecha vinculación</label>
+                                </div>
+
                                 <div class="userBox">
                                     <input type='number' id="id_doc" name='id_doc' placeholder=" " >
                                     <label for="id_doc">ID Usuario</label>
                                 </div>
+
+                                
                                 <div class="btn">
                                     <button class="firstNext next">Siguiente</button>
                                 </div>

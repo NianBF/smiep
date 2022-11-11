@@ -2,12 +2,12 @@
 class Proveedor
 {
 	private $id_DocProv;
-	private $empresa;
 	private $imgEmpresa;
 	private $nombProv1;
 	private $nombProv2;
 	private $apeProv1;
 	private $apeProv2;
+	private $empresa;
 	private $direccion1;
 	private $direccion2;
 	private $numTel1;
