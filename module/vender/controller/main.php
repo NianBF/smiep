@@ -20,16 +20,18 @@ switch ($_GET["u"]) {
         include("view/pago/pago.html");
         switch ($_GET["action"]) {
             case "pay":
-                session_start();
-                if (
-                    $_SESSION['email'] == null or $_SESSION["userName"] == null or
-                    $_SESSION["pass"] == null
-                ) {
-                    header("location:../../index.php");
-                } else {
-                    include_once("view/animation/bannerPay.html");
-                }
+                include_once("view/animation/bannerPay.html");
                 break;
         }
         break;
+    case "e":
+        include("view/animation/great.html");
+        switch ($_GET["action"]) {
+            case "great":
+                include_once("view/animation/bannerGreat.html");
+                if (!empty($_SESSION['carrito'])) {
+                    unset($_SESSION['carrito']);
+                }
+                break;
+        }
 }

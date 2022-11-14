@@ -45,8 +45,9 @@ if (!isset($totalcantidad)) {
 
     <div class="invisiblesH">
     
-        <?php echo "<input type='hidden' name='qty' id='qty' value='" . $carrito_mio[$i]['cantidad'] . "'/>"; ?>
-        <?php echo "<input type='hidden' name='id_prod' id='id_prod' value='" . $carrito_mio[$i]['ref'] . "'/>"; ?>
+        <?php echo "<input type='hidden' name='qty[]' id='qty' value='" . $carrito_mio[$i]['cantidad'] . "'/>"; ?>
+        <?php echo "<input type='hidden' name='id_prod[]' id='id_prod' value='" . $carrito_mio[$i]['ref'] . "'/>"; ?>
+        <?php echo "<input type='hidden' name='qtyOld[]' id='qtyOld' value='" . $carrito_mio[$i]['qtyOld'] . "'/>"; ?>
       
         <?php
                   $total = $total + ($carrito_mio[$i]['precio'] * $carrito_mio[$i]['cantidad']);

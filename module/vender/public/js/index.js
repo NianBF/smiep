@@ -5,14 +5,16 @@
  * @param {string} precio
  * @param {string} cantidad
  * @param {string} imagen
+ * @param {string} qtyOld
  */
-function envia_carrito(ref, titulo, precio, imagen, cantidad) {
+function envia_carrito(ref, titulo, precio, imagen, qtyOld, cantidad) {
   let parametros = {
     //Parámetros recibidos generan un array para mostrar en el carrito
     ref: ref,
     titulo: titulo,
     precio: precio,
     imagen: imagen,
+    qtyOld: qtyOld,
     cantidad: cantidad,
   };
   $.ajax({

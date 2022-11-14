@@ -12,6 +12,7 @@ if (isset($_SESSION['carrito']) || isset($_POST['titulo'])) {
 			$cantidad = $_POST['cantidad'];
 			$ref = $_POST['ref'];
 			$imagen = $_POST['imagen'];
+			$qtyOld = $_POST['qtyOld'];
 			$donde = -1;
 			for ($i = 0; $i <= count($carrito_mio) - 1; $i++) {
 				if ($ref == $carrito_mio[$i]['ref']) {
@@ -19,9 +20,9 @@ if (isset($_SESSION['carrito']) || isset($_POST['titulo'])) {
 			}
 			if ($donde != -1) {
 				$cuanto = $carrito_mio[$donde]['cantidad'] + $cantidad;
-				$carrito_mio[$donde] = array("titulo" => $titulo, "precio" => $precio, "cantidad" => $cuanto, "ref" => $ref, "imagen" => $imagen);
+				$carrito_mio[$donde] = array("titulo" => $titulo, "precio" => $precio, "cantidad" => $cuanto, "ref" => $ref, "imagen" => $imagen, "qtyOld" => $qtyOld);
 			} else {
-				$carrito_mio[] = array("titulo" => $titulo, "precio" => $precio, "cantidad" => $cantidad, "ref" => $ref, "imagen" => $imagen);
+				$carrito_mio[] = array("titulo" => $titulo, "precio" => $precio, "cantidad" => $cantidad, "ref" => $ref, "imagen" => $imagen, "qtyOld" => $qtyOld);
 			}
 		}
 	} else {
@@ -30,7 +31,8 @@ if (isset($_SESSION['carrito']) || isset($_POST['titulo'])) {
 		$cantidad = $_POST['cantidad'];
 		$ref = $_POST['ref'];
 		$imagen = $_POST['imagen'];
-		$carrito_mio[] = array("titulo" => $titulo, "precio" => $precio, "cantidad" => $cantidad, "ref" => $ref, "imagen" => $imagen);
+		$qtyOld = $_POST['qtyOld'];
+		$carrito_mio[] = array("titulo" => $titulo, "precio" => $precio, "cantidad" => $cantidad, "ref" => $ref, "imagen" => $imagen, "qtyOld" => $qtyOld);
 	}
 	if (isset($_POST['cantidad'])) {
 		$id = $_POST['id'];

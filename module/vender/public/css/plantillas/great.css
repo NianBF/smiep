@@ -1,0 +1,61 @@
+.great {
+    background-color: #f0f0f0;
+}
+.greatA {
+    font-size: xx-large;
+    font-family: "Montserrat-BoldItalic";
+    text-transform: uppercase;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+}
+.greatA span {
+    position: relative;
+    z-index: 999;
+    color: #f0f0f0;
+}
+.greatA::before {
+    content: '';
+    background-color: #339999;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: 2s greatBefore infinite ease-in-out;
+}
+@keyframes greatBefore {
+    0% {transform: translateX(-14px);}
+    50% {transform: translateX(14px);}
+    100% {transform: translateX(-14px);}
+}
+.greatA::after {
+    content: '';
+    background: #3399;
+    width: 14px;
+    height: 120%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: .8;
+    animation: 2s greatAfter infinite ease-in-out;
+}
+@keyframes greatAfter {
+    0% {transform: translateX(-70px);}
+    50% {transform: translateX(70px);}
+    100% {transform: translateX(-70px);}
+}

@@ -5,9 +5,12 @@ if (isset($_POST['cliente']) && isset($_POST['box']) && isset($_POST['id_v']) &&
     $total = $_POST["total"];
     $user = $_POST["user"];
     $id_caja = $_POST["box"];
-    include_once("../model/finalBuyMdl.php");
+    $id_prod = $_POST["id_prod"];
+    $cantidadDisp = $_POST["qtyOld"];
+    $cantidadNew = $_POST["qty"];
+    require_once("../model/finalBuyMdl.php");
     $venta = new Venta();
-    $venta->venta($id_venta, $id_cliDoc, $total, $user, $id_caja);
+    $venta->venta($id_venta, $id_cliDoc, $total, $user, $id_caja, $cantidadDisp, $cantidadNew, $id_prod);
 }else {
-    header("Location:../?u=p&action=pay");
+    // header("Location:../?u=p&action=pay");
 }
