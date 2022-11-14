@@ -20,7 +20,15 @@ switch ($_GET["u"]) {
         include("view/pago/pago.html");
         switch ($_GET["action"]) {
             case "pay":
-                include_once("view/animation/bannerPay.html");
+                session_start();
+                if (
+                    $_SESSION['email'] == null or $_SESSION["userName"] == null or
+                    $_SESSION["pass"] == null
+                ) {
+                    header("location:../../index.php");
+                } else {
+                    include_once("view/animation/bannerPay.html");
+                }
                 break;
         }
         break;

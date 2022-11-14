@@ -39,9 +39,10 @@
                     <div class="btnBuy">
                         <?php 
                         $d=mt_rand(1,2000); 
-                        echo "<input type='hidden' name='id-v' id='id_v' value='" . $d. "'/>";
-                        echo "<input type='hidden' name='box' id='box' value='1'/>";
-                        require_once("model/buyMdl.php"); 
+                        echo "<input type='hidden' name='id_v' id='id_v' value='" . $d. "'/>";
+                        echo "<input type='hidden' name='box' id='box' value='1001'/>";
+                        echo "<input type='hidden' name='user' id='user' value='" . $_SESSION['docUsu'] . "'/>";
+                        require_once("model/buyMdl.php");  
                         ?>
                         <button type="submit" class="vender"><span class="iconito">
                                 <ion-icon name="bag-check-outline" size="large"></ion-icon>
