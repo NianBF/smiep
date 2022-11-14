@@ -153,24 +153,23 @@ if (
                                 </div>
 
                                 <div class="userBox">
-                                    <!-- <input type='text' id="nCategoria" name='nCategoria' placeholder=" "> -->
                                     <label for="id_estado" class="lSel">Estado</label><br>
                                     <select name="id_estado" id="estado" required>
                                         <optgroup label="Seleccionado">
                                             <option value='<?php echo $Usuario->getId_estado() ?>' selected>
                                                 <?php switch ($Usuario->getId_estado()) {
-                                                    case 2:
+                                                    case 1:
                                                         echo "Disponible";
                                                         break;
-                                                    case 3:
+                                                    case 2:
                                                         echo "No Disponible";
                                                         break;
                                                 } ?></option>
                                         </optgroup>
                                         <optgroup label="Estado">
                                             <option value="0">Elige una opción</option>
-                                            <option value="2">Disponible</option>
-                                            <option value="3">No Disponible</option>
+                                            <option value="1">Disponible</option>
+                                            <option value="2">No Disponible</option>
                                         </optgroup>
                                     </select>
                                 </div>

@@ -13,10 +13,20 @@
   text-decoration: none; 
   
 }
+iframe {
+  width: 100%;
+  height: 100%;
+}
 /*Información OS y Browser*/
 
 body {
   margin-left: 6rem;
+}
+article {
+  height: 50rem;
+}
+article section {
+  height: 100%;
 }
 body main article div.infCont{
   display: grid;

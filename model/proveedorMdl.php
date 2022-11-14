@@ -27,7 +27,7 @@ class Proveedor
 		return $this->id_DocProv;
 	}
 
-	public function setId_docProv($id_DocProv)
+	public function setId_DocProv($id_DocProv)
 	{
 		$this->id_DocProv = $id_DocProv;
 	}
