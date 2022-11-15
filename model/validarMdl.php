@@ -38,7 +38,7 @@ class Validar
                 if ($_SESSION["rol"] == "Administrador") {
                     header("location:view/inicio/menu.php");
                 }elseif ($_SESSION["rol"] == "Empleado") {
-                    header("location:../module/vender");
+                    header("location:module/vender/?u=v&action=buy");
                 }
 
             }
