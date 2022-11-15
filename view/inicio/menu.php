@@ -33,6 +33,7 @@ else
     <!--//Estilos para preloader\\-->
     <link rel="stylesheet" href="../../public/css/plantillas/preloader.css">
     <link rel="stylesheet" href="../../public/css/plantillas/smiep.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/btnManUsu.css">
     <!--Trae estilos de plantilla SMIEP para preloader-->
     <!--//Estilos donde se declara fuentes para uso general\\-->
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
@@ -61,6 +62,9 @@ else
                 <iframe src="../../module/reportes/graficas/graph.php?g=p" frameborder="0"></iframe>
             </section>
         </article>
+        <div class="btnManUsu">
+            <?php include_once("../plantillas/btnManUsu.html") ?>
+        </div>
     </main>
     </section>
     <?php include_once("../plantillas/footer.html"); ?>
