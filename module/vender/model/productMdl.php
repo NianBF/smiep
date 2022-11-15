@@ -14,6 +14,8 @@ class Product
     {
         try {
             $Product = [];
+			Product::UpdState();
+			Product::UpdStateU();
             $sql = "SELECT * from producto WHERE id_estado = 1";
             $query = $this->db->prepare($sql);
             $query->execute();
@@ -41,5 +43,12 @@ class Product
                 return $Product;
             }
         } catch (PDOException $e){}
+    }
+    public function UpdState(){
+        $select = $this->db->query('UPDATE producto SET id_estado=2 WHERE cantidadDisp<=0');
+    }
+
+    public function UpdStateU(){
+        $select = $this->db->query('UPDATE producto SET id_estado=1 WHERE cantidadDisp>=1');
     }
 }

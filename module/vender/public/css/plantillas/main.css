@@ -10,6 +10,7 @@ main .prodVen{
     padding: 2rem;
     border-radius: var(--radiousBtn);
     width: 8.5rem;
+    margin-top: 7px;
 }
 .prodVen figure img{
     max-width: 8rem;

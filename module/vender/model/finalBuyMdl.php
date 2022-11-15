@@ -30,23 +30,28 @@ class Venta
                             for ($i = 0; $i <= $prod - 1; $i++) {
                                 foreach ($id_prod as $key => $id_prod) {
                                     Venta::tzProdV($cantidadDisp[$key], $cantidadNew[$key], $id_prod, $user, $id_venta);
+                                    Venta::updateProd($cantidadDisp[$key], $cantidadNew[$key], $id_prod, $id_venta);
                                 }
                             }
                     }
                     break;
-                // case 1:
-                //     $d = mt_rand(1, 2000);
-                //     $sql = "INSERT INTO venta (id_venta, id_cliDoc, total, id_doc, id_caja) VALUES (:VENTA, :CLIENTE, :TOTAL, :USUARIO, :CAJA);";
-                //     $query = $this->db->prepare($sql);
-                //     $query->execute(array(":VENTA" => $d, ":CLIENTE" => $id_cliDoc, ":TOTAL" => $total, ":USUARIO" => $user, ":CAJA" => $id_caja));
-                //     $cantidad_resultado1 = $query->rowCount();
-
-                //     if ($cantidad_resultado1 == 1) {
-                //         header("Location: ../?u=v&action=buy");
-                //     } else {
-                //         header("Location: ../?u=p&action=pay");
-                //     }
-                //     break;
+                case 1:
+                    $dn = mt_rand(2001, 4000);
+                    $sql = "INSERT INTO venta (id_venta, id_cliDoc, total, id_doc, id_caja) VALUES (:VENTA, :CLIENTE, :TOTAL, :USUARIO, :CAJA);";
+                    $query = $this->db->prepare($sql);
+                    $query->execute(array(":VENTA" => $dn, ":CLIENTE" => $id_cliDoc, ":TOTAL" => $total, ":USUARIO" => $user, ":CAJA" => $id_caja));
+                    $cantidad_resultado1 = $query->rowCount();
+                    switch ($cantidad_resultado1) {
+                        case 1:
+                            $prod = count($id_prod);
+                            for ($i = 0; $i <= $prod - 1; $i++) {
+                                foreach ($id_prod as $key => $id_prod) {
+                                    Venta::tzProdV($cantidadDisp[$key], $cantidadNew[$key], $id_prod, $user, $dn);
+                                    Venta::updateProd($cantidadDisp[$key], $cantidadNew[$key], $id_prod, $id_venta);
+                                }
+                            }
+                    }
+                    break;
             }
         } catch (PDOException $e) {
             echo $e;
@@ -61,6 +66,21 @@ class Venta
             $query = $this->db->prepare($sql);
             $query->execute(array(":QTYOLD" => $qtyOld, ":QTYNEW" => $qtyNew, ":PRODUCTO" => $id_prod, ":USUARIO" => $id_docUsu, ":VENTA" => $id_venta));
             $cantidad_resultado = $query->rowCount();
+        } catch (PDOException $e) {
+            echo $e;
+        }
+
+    }
+    public function updateProd($qtyOld, $qtyNew, $id_prod, $id_venta)
+    {
+        try {
+            $qtyDisp = $qtyOld - $qtyNew;
+            $sql = null;
+            $cantidad_resultado = null;
+            $sql = "UPDATE producto SET cantidadDisp = :QTYDISP WHERE id_prod = :PRODUCTO";
+            $query = $this->db->prepare($sql);
+            $query->execute(array(":QTYDISP" => $qtyDisp, ":PRODUCTO" => $id_prod));
+            $cantidad_resultado = $query->rowCount();
             switch ($cantidad_resultado) {
                 case 1:
                     header("Location: ../?u=e&action=great&id=$id_venta");
@@ -69,11 +89,5 @@ class Venta
         } catch (PDOException $e) {
             echo $e;
         }
-
     }
 }
-// $prod = count($_GET['id_prod']);
-// echo $prod;
-// foreach($_GET['id_prod'] as $key => $id_prod) {
-//     echo "".$_GET['id_prod'][$key]."\n";   
-// }

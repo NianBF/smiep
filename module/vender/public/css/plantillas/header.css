@@ -36,6 +36,11 @@ span.logo {
   max-width: max-content;
 }
 .logo_imagen {
+  visibility: hidden;
+  width: 7rem;
+  height: 7rem;
+}
+.logo_imagenm {
   width: 7rem;
   height: 7rem;
 }
