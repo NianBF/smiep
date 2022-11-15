@@ -1,0 +1,8 @@
+.btnManUsu{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+.icon{
+    color: black;
+}
