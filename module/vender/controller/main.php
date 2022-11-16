@@ -34,4 +34,17 @@ switch ($_GET["u"]) {
                 }
                 break;
         }
+        break;
+    case "r":
+        include("view/graficas/graficas.html");
+        break;
+    case "cli":
+        include("");
+        break;
+    case "pedido":
+        header("Location: ../pedido/");
+        break;
+    case "exit":
+        header("Location: ../../controller/salirCtrl.php");
+        break;
 }
