@@ -66,7 +66,7 @@ else
                             Productos
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDell">
+                            <div class="btnagre">
                             <a type="button" href="../../module/reportes/graficas/index.php?type=1">
                                 <i class="fa-solid fa-eye"></i>
                             </a>

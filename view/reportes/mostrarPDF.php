@@ -44,7 +44,7 @@ else
         <fieldset>
             <legend>Listado de Reportes</legend>
             <div class="btnMos">
-                <a href='reportes/mostrar.php' class="back"><span><i
+                <a href='../reportes/mostrar.php' class="back"><span><i
                             class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
             <div class="searchNav">
@@ -66,7 +66,7 @@ else
                             Productos
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDell">
+                            <div class="btnagre">
                             <a class="eliminar" type="button" href="../../module/reportes/product.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
@@ -79,7 +79,7 @@ else
                             Categoria
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDel2">
+                            <div class="btnagre">
                             <a class="eliminar" type="button" href="../../module/reportes/categoria.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
@@ -92,7 +92,7 @@ else
                             Usuarios
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDel2">
+                            <div class="btnagre">
                             <a class="eliminar" type="button" href="../../module/reportes/usuario.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
@@ -105,7 +105,7 @@ else
                             Clientes
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDel2">
+                            <div class="btnagre">
                             <a class="eliminar" type="button" href="../../module/reportes/cliente.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
@@ -118,7 +118,7 @@ else
                             Proveedores
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDel2">
+                            <div class="btnagre">
                             <a class="eliminar" type="button" href="../../module/reportes/provee.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
@@ -131,7 +131,7 @@ else
                             Ventas
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDel2">
+                            <div class="btnagre">
                             <a class="eliminar" type="button" href="../../module/reportes/venta.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
