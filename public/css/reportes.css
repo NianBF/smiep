@@ -19,15 +19,17 @@ header {
   padding: 0px;
 }
 .logo img {
-  width: 190px;
-  height: 150px;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem 0 0 2rem;
+  max-width: max-content;
 }
 .title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 3rem;
-  margin-top: 7%;
-  margin-left: 20%;
-  font-size: 180%;
+  margin-top: -7%;
+  margin-left: 58%;
+  font-size: 311%;
   color: #4e635a;
 }
 .nameEmp2 {
@@ -35,10 +37,10 @@ header {
 }
 .nameEmp {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  left: 92px;
+  left: 950px;
   position: relative;
   padding: 1px;
-  font-size: 110%;
+  font-size: 160%;
   color: #4e635a;
 }
 table {
@@ -48,8 +50,18 @@ table {
   font-size: 18px;
   border-collapse: collapse;
   text-align: left;
-  width: 50%;
-  top: 1%;
+  width: 80%;
+  font-family: "Montserrat";
+  box-shadow: 1px 13px 18px 3px rgba(67, 89, 89, 1);
+  border: 144px ghostwhiten ;
+  border-radius: 18px 13px;
+  padding: 4.5rem;
+  height: max-content;
+  border-radius: 16px 16px;
+  background: color #f0f0f0;;
+  font-family: "Montserrat-Bold";
+  padding: 1.7rem;
+  font-size: 20px;
 }
 footer {
   padding: 2em 0;
