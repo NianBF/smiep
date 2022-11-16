@@ -44,7 +44,7 @@ else
         <fieldset>
             <legend>Listado de Gráficas</legend>
             <div class="btnMos">
-                <a href='../inicio/menu.php' class="back"><span><i
+                <a href='../reportes/mostrar.php' class="back"><span><i
                             class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
             <div class="searchNav">
@@ -66,8 +66,8 @@ else
                             Productos
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDel2">
-                            <a class="eliminar" type="button" href="../../module/reportes/graficas/index.php?type=1">
+                            <div class="btnOptDell">
+                            <a type="button" href="../../module/reportes/graficas/index.php?type=1">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             </div>

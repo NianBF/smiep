@@ -44,7 +44,7 @@ else
         <fieldset>
             <legend>Listado de Reportes</legend>
             <div class="btnMos">
-                <a href='../inicio/menu.php' class="back"><span><i
+                <a href='reportes/mostrar.php' class="back"><span><i
                             class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
             <div class="searchNav">
@@ -66,7 +66,7 @@ else
                             Productos
                         </div>
                         <div class="btnOpt">
-                            <div class="btnOptDel2">
+                            <div class="btnOptDell">
                             <a class="eliminar" type="button" href="../../module/reportes/product.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
