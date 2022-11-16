@@ -5,9 +5,8 @@ a {
  .menu-item {
     background: #EEEEEE;
     border-radius: 100%;
-    width: 2rem;
-    height: 2rem;
-    margin-left: -40px;
+    width: 4rem;
+    height: 4rem;
     position: absolute;
     color: #FFFFFF;
     text-align: center;
@@ -24,7 +23,6 @@ a {
     border-radius: 100%;
     width: 7rem;
     height: 7rem;
-    margin-left: -40px;
     position: absolute;
     color: #FFFFFF;
     text-align: center;
@@ -40,59 +38,12 @@ a {
  .menu-open {
     display: none;
  }
- 
- .lines {
-    width: 25px;
-    height: 3px;
-    background: #596778;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -12.5px;
-    margin-top: -1.5px;
-    -webkit-transition: -webkit-transform 200ms;
-    transition: -webkit-transform 200ms;
-    transition: transform 200ms;
-    transition: transform 200ms, -webkit-transform 200ms;
- }
- 
- .line-1 {
-    -webkit-transform: translate3d(0, -8px, 0);
-    transform: translate3d(0, -8px, 0);
- }
- 
- .line-2 {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
- }
- 
- .line-3 {
-    -webkit-transform: translate3d(0, 8px, 0);
-    transform: translate3d(0, 8px, 0);
- }
- 
- .menu-open:checked + .menu-open-button .line-1 {
-    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
-    transform: translate3d(0, 0, 0) rotate(45deg);
- }
- 
- .menu-open:checked + .menu-open-button .line-2 {
-    -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
-    transform: translate3d(0, 0, 0) scale(0.1, 1);
- }
- 
- .menu-open:checked + .menu-open-button .line-3 {
-    -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
-    transform: translate3d(0, 0, 0) rotate(-45deg);
- }
- 
  .menu {
     /* margin: auto; */
     position: absolute;
-    top: 0;
+    top: 1rem;
     bottom: 0;
-    left: 0;
+    left: 1rem;
     right: 0;
     width: 80px;
     height: 80px;
@@ -181,28 +132,28 @@ a {
     transition-duration: 180ms;
     -webkit-transition-duration: 180ms;
     -webkit-transform: translate3d(0.08361px, -104.99997px, 0);
-    transform: translate3d(0.08361px, -104.99997px, 0);
+    transform: translate3d(105.08361px, 8.99997px, 0);
  }
  
  .menu-open:checked ~ .menu-item:nth-child(4) {
     transition-duration: 280ms;
     -webkit-transition-duration: 280ms;
-    -webkit-transform: translate3d(90.9466px, -52.47586px, 0);
-    transform: translate3d(90.9466px, -52.47586px, 0);
+    -webkit-transform: translate3d(89.9466px, 76.47586px, 0);
+    transform: translate3d(89.9466px, 76.47586px, 0);
  }
  
  .menu-open:checked ~ .menu-item:nth-child(5) {
     transition-duration: 380ms;
     -webkit-transition-duration: 380ms;
-    -webkit-transform: translate3d(90.9466px, 52.47586px, 0);
-    transform: translate3d(90.9466px, 52.47586px, 0);
+    -webkit-transform: translate3d(20.9466px, 105.47586px, 0);
+    transform: translate3d(25.9466px, 105.47586px, 0);
  }
  
  .menu-open:checked ~ .menu-item:nth-child(6) {
     transition-duration: 480ms;
     -webkit-transition-duration: 480ms;
-    -webkit-transform: translate3d(0.08361px, 104.99997px, 0);
-    transform: translate3d(0.08361px, 104.99997px, 0);
+    -webkit-transform: translate3d(-40.08361px, 75.99997px, 0);
+    transform: translate3d(-40.08361px, 75.99997px, 0);
  }
  
  .menu-open:checked ~ .menu-item:nth-child(7) {

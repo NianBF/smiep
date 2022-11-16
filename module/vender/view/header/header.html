@@ -1,8 +1,10 @@
 <div class="header_superior">
 
     <span class="logo">
-        <img class="logo_imagen" src="../../img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP">
-        <?php include_once('view/menu/menu.html'); ?>
+        <?php if($_SESSION["rol"] != "Empleado"){ ?>
+            <img class="logo_imagenADM" src="../../img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP">
+        <?php }else{ 
+        include_once('view/menu/menu.html'); }?>
     </span>
 
     <span class="contenedor">

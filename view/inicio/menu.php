@@ -59,7 +59,7 @@ else
             </div>
             <?php include_once("../plantillas/preloader.php"); ?>
             <section>
-                <iframe src="../../module/reportes/graficas/graph.php?g=p" frameborder="0"></iframe>
+                <iframe src="../../module/reportes/graficas/g.php?g=p" frameborder="0"></iframe>
             </section>
         </article>
         <div class="btnManUsu">

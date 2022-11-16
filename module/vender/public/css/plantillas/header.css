@@ -24,6 +24,7 @@
 
 /***ESTILOS AL CONTENEDOR DEL HEADER***/
 .header_superior {
+  height: 7rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,6 +38,8 @@ span.logo {
 }
 .logo_imagen {
   visibility: hidden;
+}
+.logo_imagenADM {
   width: 7rem;
   height: 7rem;
 }

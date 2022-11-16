@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <?php foreach ($Product as $Producto) { ?>
 <section class="prodVen">
-    <figure><img src="<?php echo $Producto->getImgProd(); ?>" alt="Producto"></figure>
+    <figure><img src="<?php echo $Producto->getImgProd(); ?>" alt="<?php echo $Producto->getNombreProd(); ?>" title="<?php echo $Producto->getNombreProd(); ?>"></figure>
     <p class="codeProd" id="<?php echo $Producto->getId_Prod(); ?>">
         <sub><i><b>Codigo: </b>
                 <?php echo $Producto->getCodBar(); ?>
