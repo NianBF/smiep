@@ -85,7 +85,7 @@ button.info {
 /****---Estilos a los botones agregar---***/
 .btnMos a {
     position: relative;
-    left: 60%;
+    left: 65.5%;
     text-decoration: none;
     font-family: "Montserrat-Bold";
     color: var(--bgColor);
