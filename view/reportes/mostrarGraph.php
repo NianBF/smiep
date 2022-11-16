@@ -18,72 +18,70 @@ else
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-    <title>Reportes</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/reportes.css">
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!--Color para navegador móvil-->
+    <meta name="theme-color" content="#339999">
+    <title>SMIEP</title>
+    <!--Se llaman estilos para el documento-->
+    <link rel="stylesheet" href="../../public/css/categoria.css">
+    <!--Estilos generales para SMIEP-->
+    <link rel="stylesheet" href="../../public/css/plantillas/btns.css">
+    <link rel="stylesheet" href="../../public/css/mostrar.css">
+    <link rel="stylesheet" href="../../public/css/searchBar.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/footer.css">
+    <link rel="stylesheet" href="../../public/css/plantillas/header1.css">
+    <link rel="stylesheet" href="../../public/css/fonts.css">
+    <link rel="stylesheet" href="../../public/css/variables.css">
+    <!--Fuente de iconos-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<header>
-    <table>
+
+<body>
+    <header>
         <?php include_once("../plantillas/header.html"); ?>
-</header>
-<br>
-<hr>
-<br>
-<div id="main-container">
-    <thead>
-        <tr>
-            <th>Listado de Reportes</th>
-            <th><a colspan="2" class="bot1" href='mostrar.php'><button type="button" id="volver"><i
-                            class="fa-solid fa-arrow-rotate-left"></i> Volver</button></a></th>
-        </tr>
-        <tr>
-            <th>Nombre</th>
-            <th>Ver Reporte</th>
-        </tr>
-    </thead>
+    </header>
+    <section class="contentList">
+        <fieldset>
+            <legend>Listado de Gráficas</legend>
+            <div class="btnMos">
+                <a href='../inicio/menu.php' class="back"><span><i
+                            class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+            </div>
+            <div class="searchNav">
+                <div class="darkMode">
+                    <a id="mod" class="mod" onclick="cambiarModo()">
+                        <span id="id-moon" class="btn-mode moon">
+                            <i class="fas fa-sun"></i>
+                        </span>/
+                        <span id="id-sun" class="btn-mode sun active">
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <section class="listElements">
+                <div class="contentTable">
+                    <div class="row">
+                        <div class="colName">
+                            Productos
+                        </div>
+                        <div class="btnOpt">
+                            <div class="btnOptDel2">
+                            <a class="eliminar" type="button" href="../../module/reportes/graficas/index.php?type=1">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                            </div>
+                        </div>
+                    </div>                
+                
+            </section>
+        </fieldset>
+    </section>
 
-    <tr>
-        <td>Productos</td>
-        <td><a href='../../module/reportes/graficas/index.php?type=1' target="_BLANK"><button type="button"><i
-                        class="fa-solid fa-eye"></i></button></a></td>
-    </tr>
-    <tr>
-        <td>Categoria</td>
-        <td><a href='../../module/reportes/categoria.php' target="_BLANK"><button type="button"><i
-                        class="fa-solid fa-eye"></i></button></a></td>
-    </tr>
-    <tr>
-        <td>Usuarios</td>
-        <td><a href='../../module/reportes/usuario.php' target="_BLANK"><button type="button"><i
-                        class="fa-solid fa-eye"></i></button></a></td>
-    </tr>
-    <tr>
-        <td>Clientes</td>
-        <td><a href='../../module/reportes/cliente.php' target="_BLANK"><button type="button"><i
-                        class="fa-solid fa-eye"></i></button></a></td>
-    </tr>
-    <tr>
-        <td>Proveedores</td>
-        <td><a href='../../module/reportes/provee.php' target="_BLANK"><button type="button"><i
-                        class="fa-solid fa-eye"></i></button></a></td>
-    </tr>
-    <tr>
-        <td>Ventas</td>
-        <td><a href='../../module/reportes/venta.php' target="_BLANK"><button type="button"><i
-                        class="fa-solid fa-eye"></i></button></a></td>
-    </tr>
-</div>
-
-</table>
-<footer class="footer">
+    <footer class="footer">
     <p>© S.M.I.E.P | 2022</p>
-</footer>
+    </footer>
 </body>
-
 </html>
 <?php
 }?>

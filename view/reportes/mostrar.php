@@ -37,11 +37,12 @@ else
 <section class="contentList">
     <fieldset>
 
-        <legend>Listado de Productos</legend>
+        <legend>Listado de Reportes</legend>
         <div class="btnMos">
             <a href='../inicio/menu.php' class="back"><span><i
                         class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
         </div>
+        
         <div class="contTarget">
             <div class="reportCont">
                 <div class="target">
@@ -51,7 +52,7 @@ else
                     <div class="goTo">
                         <img src="../../img/other/grphVect.png" alt="Gráfico_icon">
                         <h3>Reportes gráficos</h3>
-                        <p>Generar reportes con gráficos</p>
+                        <p>Generar reportes con Gráficos</p>
                         <a href="mostrarGraph.php" class="goRep">Generar Gráfico</a>
                     </div>
                 </div>
@@ -65,7 +66,7 @@ else
                     <div class="goTo">
                         <img src="../../img/other/pdf.png" alt="PDF_icon">
                         <h3>Reportes PDF</h3>
-                        <p>Generar reportes en documentos PDF</p>
+                        <p>Generar reportes en PDF</p>
                         <a href="mostrarPDF.php" class="goRep">Generar PDF</a>
                     </div>
                 </div>
