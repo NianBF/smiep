@@ -17,9 +17,9 @@ firstpage.addEventListener("click", function(e){
       });
     e.preventDefault();
     }
-    else if (formulario.descr.value ==0) {
+    else if (formulario.creadoEn.value ==0) {
       swal.fire({
-        title: "Completa el campo descripción",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
+        title: "Completa el campo Fecha de Llegada",toast: true,position: "top-start",timer: 5000,timerProgressBar: true,
       });
     e.preventDefault();
     }
