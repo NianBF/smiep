@@ -153,6 +153,15 @@ div .btnOptDel {
     padding: 0.6rem;
 }
 
+div .btnOptDell {
+    border-radius: var(--radiousBtn);
+    height: 1rem;
+    width: 2rem;
+    background-color: var(--submitBtn);
+    text-align: center;
+    padding: 0.6rem;
+}
+
 div .btnOptUpd {
     border-radius: var(--radiousBtn);
     height: 1rem;
