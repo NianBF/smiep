@@ -65,7 +65,7 @@ else
                     <div class="goTo">
                         <img src="../../img/other/pdf.png" alt="PDF_icon">
                         <h3>Reportes PDF</h3>
-                        <p>Generar reportes en documentos PDF</p>
+                        <p>Generar reportes en PDF</p>
                         <a href="mostrarPDF.php" class="goRep">Generar PDF</a>
                     </div>
                 </div>
