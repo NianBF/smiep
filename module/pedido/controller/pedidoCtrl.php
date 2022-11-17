@@ -38,7 +38,7 @@ if (
                 confirmButtonText: 'Ok'
              }).then((result) => {
                 if (result.isConfirmed) {
-                        window.location.href = '../?action=insertProd';					
+                        window.location.href = '../view/insertProd.php?id_pedido=".$_POST['id_compra']."';					
                         }
                     });
              </script>";
@@ -53,7 +53,7 @@ if (
                 confirmButtonText: 'Ok'
              }).then((result) => {
                 if (result.isConfirmed) {
-                        window.location.href = '../index.php';					
+                        window.location.href = '../';					
                         }
                     });
              </script>";
