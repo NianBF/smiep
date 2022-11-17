@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../model/productMdl.php');
 require_once('../model/productoMdl.php');
 $crud = new Product();
@@ -22,15 +23,28 @@ $listaProducto = $crud->getProducts();
 
 <body>
     <header>
-        <?php include_once("../../../view/plantillas/header.html"); ?>
+        <?php
+        if ($_SESSION['rol'] == 'Administrador') {
+            include_once("../../../view/plantillas/header.html");
+        } else if ($_SESSION['rol'] == 'Empleado') {
+            include_once("../../vender/view/header/header.html");
+        } ?>
     </header>
     <div class="contForm">
         <section class="initForm">
-            <div class="btnMos">
-                <a href="../../vender/?u=v&action=buy" class="back"><span><i
-                            class="fa-solid fa-arrow-rotate-left"></i></span>Finalizar</a>
-            </div>
-
+            <?php
+            if ($_SESSION['rol'] == 'Administrador') {
+                echo "<div class='btnMos'>
+                <a href=''../../../view/inicion/menu.php' class='back'><span><i
+                            class='fa-solid fa-arrow-rotate-left'></i></span>Finalizar</a>
+            </div>";
+            }else if($_SESSION['rol'] == 'Empleado'){
+                echo "<div class='btnMos'>
+                <a href=''../../vender/?u=v&action=buy' class='back'><span><i
+                            class='fa-solid fa-arrow-rotate-left'></i></span>Finalizar</a>
+            </div>";
+            }
+            ?>
             <form action="../controller/prodCtrl.php" method="POST">
                 <fieldset class="anuncio movAds">
                     <div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
@@ -46,7 +60,8 @@ $listaProducto = $crud->getProducts();
                                 número que seleccionó, en caso de que no encuentre el producto en la lista desplegable,
                                 solicite a un Administrador que lo agregue como un nuevo producto)</p>
                             </br>
-                            <p><strong>Cantidad:</strong> Debe ingresar la cantidad de unidades que llegaron en el pedido.</p>
+                            <p><strong>Cantidad:</strong> Debe ingresar la cantidad de unidades que llegaron en el
+                                pedido.</p>
                         </article>
                     </div>
                 </fieldset>

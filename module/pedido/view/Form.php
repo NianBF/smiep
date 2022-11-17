@@ -41,14 +41,14 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 		</header>
 		<section class="initForm">
 		<?php
-		if($_SESSION['rol']=== 'Administrador'){
+		if($_SESSION['rol'] == 'Administrador'){
 			echo "<div class='btnMos'>
 			<a href='../../view/inicio/menu.php' class='back'><span><i class='fa-solid fa-arrow-rotate-left'></i></span>Volver</a>
 		</div>";
 		}			
 			?>
 			<div class="contForm">
-				<form action='controller/pedidoCtrl.php' id="formulario" name="formulario" method='post'>
+				<form action='controller/pedidoCtrl.php?action=insert' id="formulario" name="formulario" method='post'>
 
 					<fieldset class="anuncio movAds">
 						<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>

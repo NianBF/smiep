@@ -7,8 +7,7 @@ class Login
     public function validarDatos($email, $userName, $password)
     {
 
-        try
-        {
+        try {
             $con = null;
             $sql = null;
             $resultado = null;
@@ -18,8 +17,7 @@ class Login
             $con = Conexion::getConection();
 
             // Validación de error
-            if ($con == "ERROR")
-            {
+            if ($con == "ERROR") {
                 echo "<script>alert('Error en BD')</script>";
                 header("location:salirCtrl.php");
             }
@@ -29,42 +27,35 @@ class Login
 
             $resultado = $con->prepare($sql);
             $resultado->execute(array(":USERNAME" => $userName, ":EMAIL" => $email, ":PASS" => $password));
-//Almacenamiento de la consulta para crear sesiones
-            foreach($resultado->fetchAll() as $usuario){
-                $rol= $usuario["rol"];
-                $doc= $usuario["id_doc"];
+            //Almacenamiento de la consulta para crear sesiones
+            foreach ($resultado->fetchAll() as $usuario) {
+                $rol = $usuario["rol"];
+                $doc = $usuario["id_doc"];
             }
             $cantidad_resultado = $resultado->rowCount();
 
             session_start();
 
-            if ($cantidad_resultado === 1)
-            {
+            if ($cantidad_resultado === 1) {
                 $_SESSION["email"] = $email;
                 $_SESSION["userName"] = $userName;
                 $_SESSION["pass"] = $password;
                 $_SESSION["rol"] = $rol;
-//La sesión de docUsu será usada para el registro en la base de datos
+                //La sesión de docUsu será usada para el registro en la base de datos
                 $_SESSION["docUsu"] = $doc;
-//Se insertan los datos de sesión en la tabla correspondiente
-                $consu= $con->prepare("INSERT INTO initsession(id_doc) VALUES (".$doc.");");
+                //Se insertan los datos de sesión en la tabla correspondiente
+                $consu = $con->prepare("INSERT INTO initsession(id_doc) VALUES (" . $doc . ");");
                 $consu->execute();
-            }
-            else
-            {
+            } else {
                 $_SESSION["error"] = "ERROR";
 
             }
 
 
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
 
 
-        }
-        finally
-        {
+        } finally {
 
             $con = null;
             $sql = null;
