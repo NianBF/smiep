@@ -197,7 +197,19 @@ div .btnOpt a i {
  * Estilos para botones de formulario por pasos
  */
 
- button {
+ #boton {
+    /*padding: var(--paddingBtn);*/
+    display: block;
+      margin: auto;
+      font-family: "Montserrat-Bold";
+      color: var(--bgColor);
+      font-size: 18px;
+      letter-spacing: 0.17rem;
+      background-color: var(--colorSMIEP);
+      border: transparent;
+      border-radius: 10px;
+  }
+  #boton1 {
     padding: var(--paddingBtn);
     display: block;
       margin: auto;
@@ -209,11 +221,23 @@ div .btnOpt a i {
       border: transparent;
       border-radius: 10px;
   }
+  #boton:hover {
+    letter-spacing: 0.2rem;
+      background-color: var(--BtnHov);
+      cursor: pointer;
+      -webkit-box-shadow: 11px 13px 38px 3px var(--shadowColor);
+      -moz-box-shadow: 11px 13px 38px 3px var(--shadowColor);
+      box-shadow: 11px 13px 38px 3px var(--shadowColor);
+      transition: .2s;
+  }
   .prev {
     background-color: var(--backBtn);
   }
   .prev:hover {
     background-color: var(--backBtnHov);
+  }
+  #boton1.prev {
+    background-color: var(--backBtn);
   }
   
   button:hover {

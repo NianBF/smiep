@@ -54,7 +54,7 @@
     transition: width .5s;
 }
 .searchNav .buscarOne .searchBtn, .searchNav .buscarTwo .searchBtn, .searchNav .buscarThree .searchBtn {
-    width: 1.3rem;
+    width: 3.0rem;
     height: 1.3rem;
     display: grid;
     place-items: center;

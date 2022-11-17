@@ -66,7 +66,7 @@ if (
                     </fieldset>
 
                     <fieldset class="contact-form">
-                        <legend>Agregar Usuario</legend>
+                        <legend>Actualizar Usuario</legend>
 
                         <?php include_once("../plantillas/progres_bar.html"); ?>
 
