@@ -1,99 +1,110 @@
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat-Bold";
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat-Bold";
 }
+
 body {
-  background-color: #aabbc271;
+    background-color: #aabbc271;
 }
+
 main {
-  margin: 5rem 30px 30px 30px;
+    margin: 5rem 35px 30px 35px;
 }
+
 footer {
-  margin: 20px;
+    margin: 20px;
 }
+
 .contenedor_principal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7rem;
-  color: #4e635a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    color: #4e635a;
 }
 
 .inf {
-  font-size: 30px;
-  font-weight: 600;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .contenedor_principal .sobre {
-  font-size: 20px;
-  font-weight: 100;
+    font-size: 20px;
+    font-weight: 100;
 }
 
 .ingBot {
-  text-decoration: none;
-  background-color: #0d9256;
-  border-radius: 20px 5px 20px 5px;
-  padding: 3% 12%;
-  color: #fff;
-  font-size: xx-large;
+    text-decoration: none;
+    background-color: #1c5968;
+    border-radius: 20px 5px 20px 5px;
+    padding: 3% 12%;
+    color: #fff;
+    font-size: xx-large;
 }
+
 .ingBot:hover {
-  background-color: #00a8f7;
+    background-color: #0f4d77;
 }
+
 .ingBot:active {
-  background-color: #808280;
+    background-color: #808280;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 90%;
-  gap: 3rem;
-  text-decoration: none;
-  color: #4e635a;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    gap: 3rem;
+    text-decoration: none;
+    color: #4e635a;
 }
 
 .acercaDe {
-  font-size: 22px;
-  text-decoration: none;
-  color: #4e635a;
+    font-size: 22px;
+    text-decoration: none;
+    color: #4e635a;
 }
 
 .oscuro .contenedor_principal,
 .oscuro footer {
-  color: #f1eded;
+    color: #f1eded;
 }
 
 .oscuro {
-  background-color: #191328bd;
-  color: #f1eded;
+    background-color: #191328bd;
+    color: #f1eded;
 }
+
 .oscuro .ingBot:visited {
-  color: #fff;
+    color: #fff;
 }
+
 .oscuro a:visited {
-  color: rgb(255, 254, 176);
+    color: rgb(255, 254, 176);
 }
+
 .oscuro a.modi {
-  border: 1px solid #1f1f1f;
-  border-radius: 2rem;
-  background-color: #f1eded;
-  color: #1f1f1f;
-  width: 8rem;
-  text-align: center;
-  padding: 1%;
-  cursor: pointer;
+    border: 1px solid #1f1f1f;
+    border-radius: 2rem;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    width: 8rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
 }
+
 .oscuro a.modi:hover {
-  border: 1px solid #f1eded;
-  background-color: #1f1f1f;
-  color: #f1eded;
-  cursor: pointer;
+    border: 1px solid #f1eded;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    cursor: pointer;
 }
+
 .oscuro a.modi:active {
-  background-color: #808280;
+    background-color: #808280;
 }
