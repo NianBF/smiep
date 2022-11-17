@@ -14,7 +14,7 @@ class Product
     {
         try {
             $Product = [];
-            $sql = "SELECT * from producto WHERE id_estado = 1";
+            $sql = "SELECT * from producto";
             $query = $this->db->prepare($sql);
             $query->execute();
             $result = $query->fetchAll(PDO::FETCH_OBJ);
@@ -47,10 +47,6 @@ class Product
         $myProducto = new ProductMdl();
         $myProducto->setId_prod($result['id_prod']);
         $myProducto->setCantidadDisp($result['cantidadDisp']);
-        /*$myProducto->setImgProd($result['imgProd']);
-        $myProducto->setCodBar($results->codBar);
-        $myProducto->setNombreProd($results->nombreProd);
-        $myProducto->setPrecio($results->precio); */
         return $myProducto;
     }
     public function UpdateProd($cantDisp, $cantNew, $id_prod)
@@ -58,5 +54,13 @@ class Product
         $query = $this->db->prepare("UPDATE producto SET cantidadDisp=:CANTNEW WHERE id_prod=:IDPROD");
         $total = $cantDisp + $cantNew;
         $query->execute(array(':CANTNEW' => $total, ':IDPROD' => $id_prod));
+        return $query;
+    }
+
+    public function InstzProd($cantOld, $cantNew, $id_prod, $id_usu, $id_pedido){
+        $total = $cantOld + $cantNew;
+        $query= $this->db->prepare("INSERT INTO tzProd (cantidadDisp,cantidadNew,id_prod,id_docUsu,id_pedido,id_venta) VALUES (:CANTOLD,:CANTNEW,:IDPROD,:IDDOC,:IDPED,1)");
+        $query->execute(array(':CANTOLD'=>$cantOld,':CANTNEW'=>$total, ':IDPROD'=>$id_prod,':IDDOC'=>$id_usu,':IDPED'=>$id_pedido));
+        return $query;
     }
 }
