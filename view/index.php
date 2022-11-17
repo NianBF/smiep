@@ -38,7 +38,7 @@ error_reporting(0);
         <div class="contenedor_principal">
 
             <p class="inf">¡BIENVENIDOS!</p>
-            <p class="sobre">De clic sobre el botón que dice ingresar.</p>
+            
             <a href="view/login/login.php" class="ingBot"><strong>Ingresar</strong></a>
         </div>         
     </main>
