@@ -160,7 +160,7 @@ a {
     transition-duration: 580ms;
     -webkit-transition-duration: 580ms;
     -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
-    transform: translate3d(-90.86291px, 52.62064px, 0);
+    transform: translate3d(90.86291px, 150.62064px, 0);
  }
  
  .menu-open:checked ~ .menu-item:nth-child(8) {

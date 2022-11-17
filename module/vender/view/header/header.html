@@ -3,8 +3,8 @@
     <span class="logo">
         <?php if($_SESSION["rol"] != "Empleado"){ ?>
             <img class="logo_imagenADM" src="../../img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP">
-        <?php }else{ 
-        include_once('view/menu/menu.html'); }?>
+        <?php }else if ($_GET['action'] != "insert"){ 
+        include_once('view/menu/menu.html'); }else {include_once('../../view/menu/menu.html');}?>
     </span>
 
     <span class="contenedor">

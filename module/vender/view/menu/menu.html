@@ -15,4 +15,9 @@
     <a href="?u=r&action=s" class="menu-item lightblue">
         <ion-icon name="bar-chart"></ion-icon>
     </a>
+    <?php if($_GET['u'] == "pedido" || $_GET['u'] == "cli" || $_GET['u'] == "r") { ?>
+    <a href="?u=v&action=buy" class="menu-item green">
+        <ion-icon name="arrow-undo-sharp"></ion-icon>
+    </a>
+    <?php } ?>
 </nav>

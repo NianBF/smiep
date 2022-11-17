@@ -39,7 +39,7 @@ switch ($_GET["u"]) {
         include("view/graficas/graficas.html");
         break;
     case "cli":
-        include("");
+        include("view/cliente/ingresarCli.html");
         break;
     case "pedido":
         header("Location: ../pedido/");
