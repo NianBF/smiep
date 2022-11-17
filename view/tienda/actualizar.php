@@ -69,7 +69,7 @@ if (
 					</fieldset>
 
 					<fieldset class="contact-form">
-						<legend>Agregar Tienda</legend>
+						<legend>Actualizar Tienda</legend>
 
 						<section>
 							<div class="progress-bar">
@@ -98,7 +98,7 @@ if (
 									<label for="id_ti">ID Tienda</label>
 								</div>
 								<div class="btn">
-									<button class="firstNext next">Siguiente</button>
+									<button class="firstNext next" id="boton1">Siguiente</button>
 								</div>
 							</div>
 							<div class="page formPage">
@@ -124,8 +124,8 @@ if (
 								<input type='hidden' name='actualizar' value='actualizar'>
 
 								<div class="btn">
-									<button class="prev-1 prev">Atrás</button>
-									<button type="submit" class="submit" id="btn-enviar">Enviar</button>
+									<button class="prev-1 prev" id="boton1">Atrás</button>
+									<button type="submit" class="submit" id="btn-enviar" id="boton1">Enviar</button>
 								</div>
 							</div>
 

@@ -26,6 +26,8 @@ if ($userName = $_GET["userName"] == null or $id_doc = $_GET["id_doc"] == null o
     <link rel="stylesheet" href="../../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../../public/css/formularios.css">
     <link rel="stylesheet" href="../../../public/css/recoverypasss.css">
+    <link rel="stylesheet" href="../../public/css/btns.css">
+
     <title>SMIEP</title>
 </head>
 <body>

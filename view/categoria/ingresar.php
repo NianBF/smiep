@@ -67,7 +67,7 @@ if (
 
                         <div class="btn">
 
-                            <button type="submit" class="submit" id="btn-enviar">Enviar</button>
+                            <button type="submit" class="submit" id="btn-enviar" id="boton1">Enviar</button>
                         </div>
                         <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
                     </fieldset>

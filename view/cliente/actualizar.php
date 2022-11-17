@@ -69,7 +69,7 @@ if (
                     </fieldset>
 
                     <fieldset class="contact-form">
-                        <legend>Agregar Cliente</legend>
+                        <legend>Actualizar Cliente</legend>
 
                         <section>
                             <div class="progress-bar">
