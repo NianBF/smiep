@@ -176,29 +176,8 @@ body {
   padding: 15px;
   margin-top: 20px;
 }
-a.mod {
-  border: 1px solid #f1eded;
-  border-radius: 2rem;
-  background-color: #1f1f1f;
-  color: #f1eded;
-  width: 8rem;
-  text-align: center;
-  padding: 1%;
-  cursor: pointer;
-}
-a.mod:hover {
-  border: 1px solid #1f1f1f;
-  background-color: #f1eded;
-  color: #1f1f1f;
-  cursor: pointer;
-}
-a.mod:active {
-  background-color: #808280;
-}
-.oscuro {
-  background-color: #1f1f1f;
-  color: #f1eded;
-}
+
+
 .oscuro .ingBot:visited {
   color: #fff;
 }

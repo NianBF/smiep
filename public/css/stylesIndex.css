@@ -1,3 +1,5 @@
+@import url(../css/fonts.css);
+
 * {
     padding: 0;
     margin: 0;
@@ -9,23 +11,26 @@ body {
 }
 
 main {
-    margin: 5rem 35px 30px 35px;
+    margin-top: 20px;
+    
 }
 
 footer {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .contenedor_principal {
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     gap: 25px;
     color: #4e635a;
 }
 
 .inf {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 600;
 }
 
@@ -36,7 +41,7 @@ footer {
 
 .ingBot {
     text-decoration: none;
-    background-color: #1c5968;
+    background-color: #339999;
     border-radius: 20px 5px 20px 5px;
     padding: 3% 12%;
     color: #fff;
@@ -44,7 +49,8 @@ footer {
 }
 
 .ingBot:hover {
-    background-color: #0f4d77;
+    background-color: #607ec9;
+    ;
 }
 
 .ingBot:active {
@@ -57,26 +63,44 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     gap: 3rem;
     text-decoration: none;
-    color: #4e635a;
+    color: black;
 }
 
 .acercaDe {
     font-size: 22px;
     text-decoration: none;
-    color: #4e635a;
+    color: black;
 }
 
+@media screen and (max-width:490px){
+    .footer{
+        position: relative;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:335px){
+    .inf{
+        font-size: 30px;
+    }
+}
+
+/**
+*
+* modo oscuro
+*
+*/
 .oscuro .contenedor_principal,
-.oscuro footer {
-    color: #f1eded;
+.oscuro footer, .oscuro .acercaDe {
+    color: #fff;
 }
 
 .oscuro {
-    background-color: #191328bd;
-    color: #f1eded;
+    background-color: #343c3bd4;
+    color: #fff;
 }
 
 .oscuro .ingBot:visited {
@@ -108,3 +132,4 @@ footer {
 .oscuro a.modi:active {
     background-color: #808280;
 }
+
