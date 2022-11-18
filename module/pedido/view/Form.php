@@ -10,7 +10,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 	$Proveedor = new Proveedor();
 	$listaProveedor = $crud->mostrar();
 	require_once('model/PedidoMdl.php');
-	require_once('model/PedidoCRUD_Mdl.php');
+	require_once('model/PedidoCrud_Mdl.php');
 	$consulta = new PedidoCrud_Mdl();
 	$Compra = new PedidoMdl();
 	$listaCompra = $consulta->mostrar();
