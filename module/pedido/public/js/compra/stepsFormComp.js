@@ -44,7 +44,7 @@
  
  
  nextBtnFirst.addEventListener("click", function(event){
-   if((formulario.id_compra.value!=0) && (formulario.cantidadCP.value!=0)&& (formulario.descr.value!=0)){   
+   if((formulario.id_compra.value!=0) && (formulario.cantidadCP.value!=0)&& (formulario.creadoEn.value!=0)){   
      event.preventDefault();nextStyleProgresBar()
    }
  });

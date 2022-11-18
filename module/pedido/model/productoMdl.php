@@ -5,11 +5,8 @@ class ProductMdl
 	private $imgProd;
 	private $codBar;
 	private $nombreProd;
-	private $descripcion;
 	private $precio;
-	private $priceArrive;
 	private $cantidadDisp;
-	private $tipoPresentacion;
 	private $creadoEn;
 	private $id_docUsu;
 	private $id_cat;
@@ -66,17 +63,6 @@ class ProductMdl
 		$this->nombreProd = $nombreProd;
 	}
 
-	//descripcion
-	public function getDescripcion()
-	{
-		return $this->descripcion;
-	}
-
-	public function setDescripcion($descripcion)
-	{
-		$this->descripcion = $descripcion;
-	}
-
 	//precio
 	public function getPrecio()
 	{
@@ -97,17 +83,6 @@ class ProductMdl
 	public function setCantidadDisp($cantidadDisp)
 	{
 		$this->cantidadDisp = $cantidadDisp;
-	}
-
-	//tipoPresentacion
-	public function getTipoPresentacion()
-	{
-		return $this->tipoPresentacion;
-	}
-
-	public function setTipoPresentacion($tipoPresentacion)
-	{
-		$this->tipoPresentacion = $tipoPresentacion;
 	}
 
 	//creadoEn =fecha de creacion Base de datos = modificadoEn
@@ -161,14 +136,7 @@ class ProductMdl
 	public function setEstado($estado){
 		$this->estado=$estado;
 	}
-
-	public function getPriceArrive(){
-		return $this->priceArrive;
-	}
-
-	public function setPriceArrive($priceArray){
-		$this->priceArrive = $priceArray;
-	}
+	
 	public function getnCategoria(){
 		return $this->nCategoria;
 	}

@@ -24,11 +24,7 @@ $listaProducto = $crud->getProducts();
 <body>
     <header>
         <?php
-        if ($_SESSION['rol'] == 'Administrador') {
-            include_once("../../../view/plantillas/header.html");
-        } else if ($_SESSION['rol'] == 'Empleado') {
-            include_once("../../vender/view/header/header.html");
-        } ?>
+            include_once("../../../view/plantillas/header.html"); ?>
     </header>
     <div class="contForm">
         <section class="initForm">

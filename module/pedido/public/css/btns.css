@@ -1,0 +1,25 @@
+/****---Estilos a los botones volver---***/
+.btnMos .back {
+    text-decoration: none;
+    color: #f0f0f0;
+    background-color: var(--backBtn);
+    padding: 10px 10px 10px 0;
+    /* max-width: max-content; */
+    font-size: 18;
+    border-radius: 10px;
+}
+
+.btnMos .back:hover {
+    background-color: var(--backBtnHov);
+    -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+    -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+    box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+    transition: 0.5s;
+}
+
+.btnMos .back span {
+    background-color: var(--backBtnHovs);
+    border-radius: 3px;
+    padding: 0.6rem 0.4rem;
+    margin-right: 5px;
+}
