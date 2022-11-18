@@ -4,11 +4,6 @@ require_once("model/productoMdl.php");
 $prod = new Product();
 $getProduct = new ProductMdl();
 $Product = $prod->getProducts();
-require_once('model/clienteCrud_mdl.php');
-require_once('model/ClienteMdl.php');
-$crud = new Cliente();
-$Cliente = new ClienteM();
-$listaCliente = $crud->mostrar();
 switch ($_GET["u"]) {
     case "v":
         require_once("view/index.html");
