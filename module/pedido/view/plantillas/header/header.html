@@ -1,0 +1,15 @@
+<div class="header_superior">
+
+    <span class="logo">
+        <?php if($_SESSION["rol"] != "Empleado"){ ?>
+            <img class="logo_imagenADM" src="../../img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP">
+        <?php }else {include_once('view/plantillas/menu/menu.html');}?>
+    </span>
+
+    <span class="contenedor">
+        <section class="titulito">
+            <h1 class="title">S.M.I.E.P</h1>
+            <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
+        </section>
+    </span>
+</div>

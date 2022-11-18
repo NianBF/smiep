@@ -1,11 +1,11 @@
 <?php
-/* session_start();
+session_start();
 if (
 	$_SESSION['email'] == null or $_SESSION["userName"] == null or
 	$_SESSION["pass"] == null
 ) {
 	header("location:../../index.php");
-} else { */ 
+} else { 
 ?>
 <!DOCTYPE html>
 	<html lang="es">
@@ -29,10 +29,10 @@ if (
 	<body>
 		<?php
 
-			include_once('view/Form.php');
+			include_once('view/form.php');
 		?>
 	</body>
 
 	</html>
 
-<?php //} ?>
+<?php } ?>

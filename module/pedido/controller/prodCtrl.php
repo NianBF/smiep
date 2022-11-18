@@ -1,3 +1,9 @@
+<?php
+session_start();
+if($_SESSION['email']==null or $_SESSION['userName']==null or $_SESSION['pass']==null){
+    header('Location: ../../../view/index.php');
+}else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +12,6 @@
 </head>
 <body>
 <?php
-session_start();
 if (isset($_POST['insertar'])) {
     require_once('../model/productMdl.php');
     require_once('../model/productoMdl.php');
@@ -22,14 +27,16 @@ if (isset($_POST['insertar'])) {
     if($taProd === true and $update===true){
         echo "<script>
         Swal.fire({
+            toast: true,
             title: 'Éxito',
             text: 'Registro guardado con éxito ',
             icon: 'success',
-            showCancelButton: false,
+            showConfirmButton:true,
             confirmButtonColor: '#3085d6',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            timer:800
          }).then((result) => {
-            if (result.isConfirmed) {
+            if (result) {
                     window.location.href = '../view/insertProd.php?id_pedido=".$id_pedido."';					
                     }
                 });
@@ -45,12 +52,13 @@ if (isset($_POST['insertar'])) {
             confirmButtonText: 'Ok'
          }).then((result) => {
             if (result.isConfirmed) {
-                    window.location.href = '../';					
+                    window.location.href = '../view/insertProd.php?id_pedido=".$id_pedido."';					
                     }
                 });
          </script>";
     }
 
+}
 }
 ?>
 </body>

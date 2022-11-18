@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 	$_SESSION["pass"] == null) {
-	header("location:../../index.php");
+	header("location:../../../");
 } else if($_SESSION['rol']=='Administrador' or $_SESSION['rol']=='Empleado'){
 	require_once('../../model/proveedorCrud_Mdl.php');
 	require_once('../../model/proveedorMdl.php');
@@ -37,13 +37,22 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 	<body>
 
 		<header>
-			<?php include_once("../../view/plantillas/header.html"); ?>
+			<?php 
+			if($_SESSION['rol']=='Administrador'){
+				include_once("../../view/plantillas/header.html");
+			}else if($_SESSION['rol']=='Empleado'){
+				include_once("view/plantillas/header/header.html");
+			}?>
 		</header>
 		<section class="initForm">
 		<?php
 		if($_SESSION['rol'] == 'Administrador'){
 			echo "<div class='btnMos'>
 			<a href='../../view/inicio/menu.php' class='back'><span><i class='fa-solid fa-arrow-rotate-left'></i></span>Volver</a>
+		</div>";
+		}else{
+			echo "<div class='btnMos'>
+			<a href='../vender/?u=v&action=buy' class='back'><span><i class='fa-solid fa-arrow-rotate-left'></i></span>Volver</a>
 		</div>";
 		}			
 			?>
