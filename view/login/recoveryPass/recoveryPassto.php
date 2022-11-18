@@ -26,7 +26,7 @@ if ($userName = $_GET["userName"] == null or $id_doc = $_GET["id_doc"] == null o
     <link rel="stylesheet" href="../../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../../public/css/formularios.css">
     <link rel="stylesheet" href="../../../public/css/recoverypasss.css">
-    <link rel="stylesheet" href="../../public/css/btns.css">
+    <link rel="stylesheet" href="../../../public/css/btns.css">
 
     <title>SMIEP</title>
 </head>
@@ -94,12 +94,28 @@ if ($userName = $_GET["userName"] == null or $id_doc = $_GET["id_doc"] == null o
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#339999">
     <link rel="icon" type="image/png" href="../public/img/favicon.png" sizes="any">
+    <link rel="stylesheet" href="../../../public/css/plantillas/header1.css">
+    <link rel="stylesheet" href="../../../public/css/formularios.css">
+    <link rel="stylesheet" href="../../../public/css/recoverypasss.css">
+    <link rel="stylesheet" href="../../../public/css/btns.css">
+
     <title>SMIEP</title>
+    
 </head>
 <body>
 <section>
-        <h1>¿Perdiste tu contraseña?</h1>
-        <p>Hola <strong><?php echo $userName; ?></strong>, debes pedir autorización a un Administrador para realizar esta acción.</p>
+    <header>
+        <?php include_once("../../plantillas/header.html"); ?>
+    </header>
+
+    <main class="main">
+        <fieldset class="fieldsetAdvertencia">
+            <legend>¿Perdiste tu contraseña?</legend>
+            <p>Hola <?php echo $userName; ?>, Debes pedir autorización a un Administrador para realizar esta acción.</p>
+        </fieldset>
+        
+    </main>
+</body>
 <?php
 }
 ?>

@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="../../../public/css/plantillas/header1.css">
     <link rel="stylesheet" href="../../../public/css/plantillas/forms.css">
     <link rel="stylesheet" href="../../../public/css/fonts.css">
-    <link rel="stylesheet" href="../../public/css/btns.css">
-    <link rel="stylesheet" href="../../public/css/formularios.css">
+    <link rel="stylesheet" href="../../../public/css/btns.css">
+    <link rel="stylesheet" href="../../../public/css/formularios.css">
+
 
 </head>
 <body>
