@@ -35,12 +35,12 @@ $listaProducto = $crud->getProducts();
             <?php
             if ($_SESSION['rol'] == 'Administrador') {
                 echo "<div class='btnMos'>
-                <a href=''../../../view/inicion/menu.php' class='back'><span><i
+                <a href='../../../view/inicio/menu.php' class='back'><span><i
                             class='fa-solid fa-arrow-rotate-left'></i></span>Finalizar</a>
             </div>";
             }else if($_SESSION['rol'] == 'Empleado'){
                 echo "<div class='btnMos'>
-                <a href=''../../vender/?u=v&action=buy' class='back'><span><i
+                <a href='../../vender/?u=v&action=buy' class='back'><span><i
                             class='fa-solid fa-arrow-rotate-left'></i></span>Finalizar</a>
             </div>";
             }
@@ -66,7 +66,7 @@ $listaProducto = $crud->getProducts();
                     </div>
                 </fieldset>
                 <fieldset class="contact-form">
-                    <legend>Agregar Usuario</legend>
+                    <legend>Agregar Producto</legend>
                     <div class="userBox">
                         <input list="id_prod" name="id_prod" placeholder=" " required>
                         <label for="id_prod">Producto</label><br>

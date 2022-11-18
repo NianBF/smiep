@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
 <?php
 session_start();
 if (isset($_POST['insertar'])) {
@@ -10,27 +17,27 @@ if (isset($_POST['insertar'])) {
     $Producto = new Product();
     $obtener = new ProductMdl();
     $obtener = $Producto->obtenerProd($id_prod);
-    $update= $Producto->UpdateProd($obtener->getCantidadDisp(), $cantNew, $id_prod);
-    $taProd= $Producto->InstzProd($obtener->getCantidadDisp(), $cantNew, $id_prod, $id_usu, $id_pedido);
-    if($update===true and $taProd ===true){
-    echo "<script>
-    Swal.fire({
-        title: 'Éxito',
-        text: 'Registro guardado con éxito ',
-        icon: 'success',
-        showCancelButton: false,
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'Ok'
-     }).then((result) => {
-        if (result.isConfirmed) {
-            window.location.href = '../view/insertProd.php?id_pedido=" . $id_pedido . "';					
-        }
-            });
-     </script>";
+    $update = $Producto->UpdateProd($obtener->getCantidadDisp(), $cantNew, $id_prod);
+    $taProd = $Producto->InstzProd($obtener->getCantidadDisp(), $cantNew, $id_prod, $id_usu, $id_pedido);
+    if($taProd === true and $update===true){
+        echo "<script>
+        Swal.fire({
+            title: 'Éxito',
+            text: 'Registro guardado con éxito ',
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Ok'
+         }).then((result) => {
+            if (result.isConfirmed) {
+                    window.location.href = '../view/insertProd.php?id_pedido=".$id_pedido."';					
+                    }
+                });
+         </script>";
     }else{
         echo "<script>
         Swal.fire({
-            title: '¡Ups!',
+            title: '¡UPS!',
             text: 'No se guardó el registro ',
             icon: 'warning',
             showCancelButton: false,
@@ -43,4 +50,8 @@ if (isset($_POST['insertar'])) {
                 });
          </script>";
     }
+
 }
+?>
+</body>
+</html>

@@ -54,13 +54,21 @@ class Product
         $query = $this->db->prepare("UPDATE producto SET cantidadDisp=:CANTNEW WHERE id_prod=:IDPROD");
         $total = $cantDisp + $cantNew;
         $query->execute(array(':CANTNEW' => $total, ':IDPROD' => $id_prod));
-        return $query;
+        if($query){
+            return true;
+        }else{
+            return 0;
+        }
     }
 
     public function InstzProd($cantOld, $cantNew, $id_prod, $id_usu, $id_pedido){
         $total = $cantOld + $cantNew;
         $query= $this->db->prepare("INSERT INTO tzProd (cantidadDisp,cantidadNew,id_prod,id_docUsu,id_pedido,id_venta) VALUES (:CANTOLD,:CANTNEW,:IDPROD,:IDDOC,:IDPED,1)");
         $query->execute(array(':CANTOLD'=>$cantOld,':CANTNEW'=>$total, ':IDPROD'=>$id_prod,':IDDOC'=>$id_usu,':IDPED'=>$id_pedido));
-        return $query;
+        if($query){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
