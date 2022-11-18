@@ -158,8 +158,8 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 			<?php include_once("footer/footer.html"); ?>
 		</footer>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script src="../../public/js/compra/stepsFormComp.js"></script>
-		<script src="../../public/js/compra/validarDatosComp.js"></script>
+		<script src="public/js/compra/stepsFormComp.js"></script>
+		<script src="public/js/compra/validarDatosComp.js"></script>
 	</body>
 
 	</html>
