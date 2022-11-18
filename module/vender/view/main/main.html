@@ -29,7 +29,7 @@
                 <input name="precio" type="hidden" id="precio<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getPrecio(); ?>" />
                 <input name="titulo" type="hidden" id="titulo<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getNombreProd(); ?>" />
                 <input name="imagen" type="hidden" id="imagen<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getImgProd(); ?>" />
-                <input name="qtyOld" type="hidden" id="qtyOld<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getCantidadDisp(); ?>" />
+                <input name="qtyOld" type="hidden" id="qtyOld<?php echo $Producto->getId_Prod(); ?>" value="<?php echo $Producto->getCantidadDisp(); ?>" /><br>
                 <span class="contQty"><span>Cantidad: </span><input name="cantidad" class="qty" type="number" min="1" id="cantidad<?php echo $Producto->getId_Prod(); ?>" value="1" class="pl-2" /></span>
     </div>
 </section>
