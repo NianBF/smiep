@@ -79,7 +79,7 @@ if (
 
                                 </div>
                                 <div class="btn">
-                                    <button class="firstNext next">Siguiente</button>
+                                    <button class="firstNext next" id="boton1">Siguiente</button>
                                 </div>
                             </div>
                             <div class="page formPage">
@@ -103,8 +103,8 @@ if (
                                     <label for="apellido2">Segundo Apellido</label>
                                 </div>
                                 <div class="btn">
-                                    <button class="prev-1 prev">Atrás</button>
-                                    <button class="next-1 next">Siguiente</button>
+                                    <button class="prev-1 prev" id="boton1">Atrás</button>
+                                    <button class="next-1 next" id="boton1">Siguiente</button>
                                 </div>
                             </div>
                             <div class="page page1 formPage">
@@ -124,8 +124,8 @@ if (
                                     <label for="pass">Contraseña</label>
                                 </div>
                                 <div class="btn">
-                                    <button class="prev-2 prev">Atrás</button>
-                                    <button class="next-2 next">Siguiente</button>
+                                    <button class="prev-2 prev" id="boton1">Atrás</button>
+                                    <button class="next-2 next" id="boton1">Siguiente</button>
                                 </div>
                             </div>
                             <div class="page infTi">
@@ -195,8 +195,8 @@ if (
                                 <input type='hidden' name='actualizar' value='actualizar'>
 
                                 <div class="btn">
-                                    <button class="prev-3 prev">Atrás</button>
-                                    <button type="submit" class="submit" id="btn-enviar">Enviar</button>
+                                    <button class="prev-3 prev" id="boton1">Atrás</button>
+                                    <button type="submit" class="submit" id="btn-enviar" id="boton1">Enviar</button>
                                 </div>
                             </div>
                             <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
