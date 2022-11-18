@@ -52,6 +52,11 @@ function consultar_carrito() {
 function closeModal() {
   cart.style.display = "none";
 } //Cerrar carrito
+
+const cli = document.querySelector(".clienteForm");
+function agregarCli() {
+  cli.style.display = "block";
+} //abrir input cliente
 /**
  * Elimina todos los datos que se encuentran en el carrito
  */

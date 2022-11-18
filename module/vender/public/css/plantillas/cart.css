@@ -39,6 +39,24 @@ button .iconito {
     border-radius: 5px;
     margin-right: 10px;
 }
+.clienteForm {
+    display: none;
+}
+.person-add-outline{
+    border: solid 1px black;
+    padding: .9px;
+    border-radius: 4px;
+}
+.person-add-outline:hover {
+    border: solid 1px #339999;
+    outline: none;
+}
+.clienteForm input {
+    border: none;
+    border-bottom: solid 1px #339999;
+    padding: 10px;
+    width: 20rem;
+}
 .btnBuy {
     text-align: right;
 }

@@ -1,7 +1,7 @@
 <?php
 // incluye la clase Db
 require_once("connection.php");
-class CrudCliente
+class Cliente
 {
     private $db; //Variable para iniciar la conexión
     // constructor de la clase
@@ -27,22 +27,26 @@ class CrudCliente
 		$insert->execute();
 
 	}
-	public function obtenerCliente($id_cliDoc)
+	// método para mostrar todos los clientes
+	public function mostrar()
 	{
-		$select = $this->db->prepare('SELECT * FROM cliente WHERE id_cliDoc=:id_cliDoc');
-		$select->bindValue('id_cliDoc', $id_cliDoc);
-		$select->execute();
-		$Cliente = $select->fetch();
-		$myCliente = new Cliente();
-		$myCliente->setId_cliDoc($Cliente['id_cliDoc']);
-		$myCliente->setNombreCli1($Cliente['nombreCli1']);
-		$myCliente->setNombreCli2($Cliente['nombreCli2']);
-		$myCliente->setApellidoCli1($Cliente['apellidoCli1']);
-		$myCliente->setApellidoCli2($Cliente['apellidoCli2']);
-		$myCliente->setDireccionCli($Cliente['direccionCli']);
-		$myCliente->setTelCli($Cliente['telCli']);
-		$myCliente->setEmailCli($Cliente['emailCli']);
-		return $myCliente;
+		$listaCliente = [];
+		$select = $this->db->query('SELECT * FROM cliente');
+
+		foreach ($select->fetchAll() as $Cliente)
+		{
+			$myCliente = new ClienteM();
+			$myCliente->setId_cliDoc($Cliente['id_cliDoc']);
+			$myCliente->setNombreCli1($Cliente['nombreCli1']);
+			$myCliente->setNombreCli2($Cliente['nombreCli2']);
+			$myCliente->setApellidoCli1($Cliente['apellidoCli1']);
+			$myCliente->setApellidoCli2($Cliente['apellidoCli2']);
+			$myCliente->setDireccionCli($Cliente['direccionCli']);
+			$myCliente->setTelCli($Cliente['telCli']);
+			$myCliente->setEmailCli($Cliente['emailCli']);
+			$listaCliente[] = $myCliente;
+		}
+		return $listaCliente;
 	}
 }
 ?>

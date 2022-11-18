@@ -30,10 +30,10 @@
             <section class="sendToBuy">
                 <form action="controller/buyCtrl.php" method="post">
                     <div class="cliente">
-                        <ion-icon name="person-add-outline" size="large"></ion-icon>
-
+                        <ion-icon class="person-add-outline" name="person-add-outline" size="large" onclick="agregarCli()"></ion-icon>
                         <section class="clienteForm">
-                            <input type="text" name="cliente" id="cliente" value="">
+                            <label for="cliente">Ingrese el número de documento del cliente:</label><br>
+                            <input type="number" name="cliente" id="cliente" value="" placeholder="Número de documento">
                         </section>
                     </div>
                     <div class="btnBuy">

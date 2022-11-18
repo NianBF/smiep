@@ -1,5 +1,5 @@
 <?php
-class Cliente
+class ClienteM
 {
 	private $id_cliDoc;
 	private $nombreCli1;
