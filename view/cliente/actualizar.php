@@ -105,7 +105,7 @@ if (
                                     <label for="id_cat">ID Usuario</label>
                                 </div>
                                 <div class="btn">
-                                    <button class="firstNext next">Siguiente</button>
+                                    <button class="firstNext next" id="boton1">Siguiente</button>
                                 </div>
                             </div>
                             <div class="page formPage">
@@ -129,8 +129,8 @@ if (
                                     <label for="apellidoCli2">Segundo Apellido</label>
                                 </div>
                                 <div class="btn">
-                                    <button class="prev-1 prev">Atrás</button>
-                                    <button class="next-1 next">Siguiente</button>
+                                    <button class="prev-1 prev" id="boton1">Atrás</button>
+                                    <button class="next-1 next" id="boton1">Siguiente</button>
                                 </div>
                             </div>
                             <div class="page page1 formPage">
@@ -154,8 +154,8 @@ if (
 
                                 <input type='hidden' name='actualizar' value='actualizar'>
                                 <div class="btn">
-                                    <button class="prev-2 prev">Atrás</button>
-                                    <button type="submit" class="submit" id="btn-enviar">Enviar</button>
+                                    <button class="prev-2 prev" id="boton1">Atrás</button>
+                                    <button type="submit" class="submit" id="btn-enviar" id="boton1">Enviar</button>
                                 </div>
                             </div>
                             
