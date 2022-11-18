@@ -5,6 +5,7 @@
     padding: 2rem;
     border: solid 1px var(--colorSmiep);
     border-radius: 10px 5px;
+    margin: 2rem 0 0 0;
 }
 .contentList .pagar legend {
     font-size: 18px;
