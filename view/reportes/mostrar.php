@@ -43,7 +43,7 @@ else
                         class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
         </div>
         
-        <div class="contTarget">
+        <!-- <div class="contTarget">
             <div class="reportCont">
                 <div class="target">
                     <div class="imgReport">
@@ -56,7 +56,7 @@ else
                         <a href="mostrarGraph.php" class="goRep">Generar Gráfico</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="reportCont">
                 <div class="target">
