@@ -3,20 +3,22 @@
     <label class="menu-open-button" for="menu-open">
         <span><img class="logo_imagenm" src="../../img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP"></span>
     </label>
-    <a href="?u=exit&action=exit" class="menu-item red">
+    <?php
+    if(!isset($_POST['insert'])){
+        ?>
+    <a href="../vender/?u=pedido&action=buy" class="menu-item red">
         <ion-icon name="exit-outline"></ion-icon>
     </a>
-    <a href="?u=pedido&action=add" class="menu-item purple">
+    <a href="../vender/?u=pedido&action=add" class="menu-item purple">
         <ion-icon name="bag-add"></ion-icon>
     </a>
-    <a href="?u=cli&action=add" class="menu-item orange">
+    <a href="../vender/?u=cli&action=add" class="menu-item orange">
         <ion-icon name="person-add"></ion-icon>
     </a>
-    <a href="?u=r&action=s" class="menu-item lightblue">
+    <a href="../vender/?u=r&action=s" class="menu-item lightblue">
         <ion-icon name="bar-chart"></ion-icon>
     </a>
-    <?php if($_GET['u'] == "pedido" || $_GET['u'] == "cli" || $_GET['u'] == "r") { ?>
-    <a href="?u=v&action=buy" class="menu-item green">
+    <a href="../vender/?u=v&action=buy" class="menu-item green">
         <ion-icon name="arrow-undo-sharp"></ion-icon>
     </a>
     <?php } ?>

@@ -19,6 +19,10 @@ if (
 		<meta name="theme-color" content="#339999">
 		<title>SMIEP</title>
 		<link rel="stylesheet" href="../../public/css/formularios.css">
+		<link rel="stylesheet" href="public/css/style.css">
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">

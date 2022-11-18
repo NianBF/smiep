@@ -50,11 +50,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 			echo "<div class='btnMos'>
 			<a href='../../view/inicio/menu.php' class='back'><span><i class='fa-solid fa-arrow-rotate-left'></i></span>Volver</a>
 		</div>";
-		}else{
-			echo "<div class='btnMos'>
-			<a href='../vender/?u=v&action=buy' class='back'><span><i class='fa-solid fa-arrow-rotate-left'></i></span>Volver</a>
-		</div>";
-		}			
+		}		
 			?>
 			<div class="contForm">
 				<form action='controller/pedidoCtrl.php?action=insert' id="formulario" name="formulario" method='post'>
@@ -65,10 +61,10 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 						<legend>Advertencia</legend>
 						<div>
 							<article>
-								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligatorio para el
 									correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-								<p><strong>ID Compra:</strong> En este campo se va a ingresar el número que indica la factura mas
-                                la inicial de la empresa al principio (ej: Ramo-> R00001).</p>
+								<p><strong>ID Compra:</strong> En este campo debe ingresar el nombre de la empresa más el número que indica la factura
+								(ej: RAMO00001).</p>
 								</br>
 								<p><strong>Valor Total:</strong> Ingrese el Total de la factura.</p></br>
 								<p><strong>Fecha de Llegada:</strong> Fecha en la que se recibió el pedido.</p></br>

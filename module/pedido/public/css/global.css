@@ -1,0 +1,38 @@
+/***ESTILOS UNIVERSALES***/
+:root{
+    --softLetter: #575757;
+    --colorSmiep: #339999;
+    --hovSmiep: #306b6b;
+    --backBtn: #50505499;
+    --backBtnHov: #838391;
+    --backBtnHovs: #6f6f7d;
+    --shadowColor: #333333;
+    --shadowColorSoft: #9b9494;
+    --radiousBtn: 10px;
+}
+/***---Fuentes para textos---***/
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  } /*Fuente Montserrat regular*/
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: local("Montserrat-Bold"), local("Montserrat-Bold"),
+      url(fonts/Montserrat/static/Montserrat-Bold.ttf);
+    font-weight: bold;
+  } /*Fuente Montserrat Negrita*/
+  @font-face {
+    font-family: "Montserrat-Italic";
+    src: local("Montserrat-Italic"), local("Montserrat-Italic"),
+      url(fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+  } /*Fuente Montserrat Cursiva*/
+  @font-face {
+    font-family: "Montserrat-BoldItalic";
+    src: local("Montserrat-BoldItalic"), local("Montserrat-BoldItalic"),
+      url(fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
