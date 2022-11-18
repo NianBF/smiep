@@ -145,7 +145,6 @@ if (
 						</div>
 						<div class="page infTi">
 
-							<h4 class="titleSect">Usuario Categoria</h4>
 							<div class="userBox">
 
 								<label for="id_cat" class="lSel">Categoria</label><br>

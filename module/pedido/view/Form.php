@@ -112,7 +112,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 								</div>
 
 								<div class="btn">
-									<button class="firstNext next">Siguiente</button>
+									<button class="firstNext next" id="boton1">Siguiente</button>
 								</div>
 							</div>
 
@@ -136,7 +136,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 								<input type='hidden' name='insertar' value='insertar'>
 
 								<div class="btn">
-									<button class="prev-1 prev">Atrás</button>
+									<button class="prev-1 prev" id="boton1">Atrás</button>
 									<button type="submit" class="submit" id="btn-enviar">Enviar</button>
 								</div>
 							</div>
