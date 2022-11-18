@@ -53,7 +53,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 		}		
 			?>
 			<div class="contForm">
-				<form action='controller/pedidoCtrl.php?action=insert' id="formulario" name="formulario" method='post'>
+				<form action='controller/pedidoCtrl.php' id="formulario" name="formulario" method='post'>
 
 					<fieldset class="anuncio movAds">
 						<div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
