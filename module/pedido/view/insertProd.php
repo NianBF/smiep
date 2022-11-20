@@ -19,6 +19,7 @@ $listaProducto = $crud->getProducts();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMIEP</title>
     <link rel="stylesheet" href="../../../public/css/formularios.css">
+    <link rel="stylesheet" href="../../../public/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -84,9 +85,12 @@ $listaProducto = $crud->getProducts();
                             Cantidad
                         </label>
                     </div>
-                    <button type="submit">Agregar</button>
+                    <div class="btn">
+                    <button type="submit" class="submit" id="btn-enviar">Agregar</button>
                     <input type="hidden" name="insertar" value="1">
                     <input type="hidden" name="id_pedido" value="<?php echo $_GET['id_pedido'] ?>">
+                    </div>
+                    <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
             </form>
         </section>
         </fieldset>
