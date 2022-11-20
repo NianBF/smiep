@@ -16,6 +16,8 @@ if (
 	$consulta = new PedidoCrud_Mdl();
 	$Compra = new PedidoMdl();
 	$listaCompra = $consulta->mostrar();
+	date_default_timezone_set('America/Bogota');
+
 ?>
 
 
@@ -26,7 +28,7 @@ if (
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+	<link rel="icon" type="image/png" href="http://smiep.herokuapp.com/img/favicon.png" sizes="any">
 	<meta name="theme-color" content="#339999">
 	<title>SMIEP</title>
 	<link rel="stylesheet" href="../../public/css/formularios.css">
@@ -41,11 +43,7 @@ if (
 
 	<header>
 		<?php
-	if ($_SESSION['rol'] == 'Administrador') {
-		include_once("../../view/plantillas/header.html");
-	} else if ($_SESSION['rol'] == 'Empleado') {
-		include_once("view/plantillas/header/header.html");
-	} ?>
+		include_once("view/plantillas/header/header.html"); ?>
 	</header>
 	<section class="initForm">
 		<?php
@@ -114,7 +112,7 @@ if (
 							</div>
 
 							<div class="userBox">
-								<input type='date' id="creadoEn" name='creadoEn' placeholder=" " required>
+								<input type='date' id="creadoEn" name='creadoEn' placeholder=" " required max="<?php echo date('Y-m-d'); ?>">
 								<label for="precio">Fecha de Llegada</label>
 							</div>
 
@@ -162,7 +160,7 @@ if (
 	</section>
 	<footer>
 
-		<?php include_once("footer/footer.html"); ?>
+		<?php include_once("view/plantillas/footer/footer.html"); ?>
 	</footer>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="public/js/compra/stepsFormComp.js"></script>

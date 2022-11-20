@@ -1,14 +1,16 @@
 <?php
 session_start();
-if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
-    $_SESSION["pass"] == null) {
-    header("location:../../index.php");
+if (
+    $_SESSION['email'] == null or $_SESSION["userName"] == null or
+    $_SESSION["pass"] == null
+) {
+    header("location:../../../index.php");
 } else {
-require_once('../model/productMdl.php');
-require_once('../model/productoMdl.php');
-$crud = new Product();
-$Producto = new ProductMdl();
-$listaProducto = $crud->getProducts();
+    require_once('../model/productMdl.php');
+    require_once('../model/productoMdl.php');
+    $crud = new Product();
+    $Producto = new ProductMdl();
+    $listaProducto = $crud->getProducts();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +21,8 @@ $listaProducto = $crud->getProducts();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMIEP</title>
     <link rel="stylesheet" href="../../../public/css/formularios.css">
-    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="icon" type="image/png" href="http://smiep.herokuapp.com/img/favicon.png" sizes="any">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -29,22 +32,23 @@ $listaProducto = $crud->getProducts();
 <body>
     <header>
         <?php
-            include_once("../../../view/plantillas/header.html"); ?>
+    include_once("plantillas/header/headerAd.html");
+        ?>
     </header>
     <div class="contForm">
         <section class="initForm">
             <?php
-            if ($_SESSION['rol'] == 'Administrador') {
-                echo "<div class='btnMos'>
+    if ($_SESSION['rol'] == 'Administrador') {
+        echo "<div class='btnMos'>
                 <a href='../../../view/inicio/menu.php' class='back'><span><i
                             class='fa-solid fa-arrow-rotate-left'></i></span>Finalizar</a>
             </div>";
-            }else if($_SESSION['rol'] == 'Empleado'){
-                echo "<div class='btnMos'>
+    } else if ($_SESSION['rol'] == 'Empleado') {
+        echo "<div class='btnMos'>
                 <a href='../../vender/?u=v&action=buy' class='back'><span><i
                             class='fa-solid fa-arrow-rotate-left'></i></span>Finalizar</a>
             </div>";
-            }
+    }
             ?>
             <form action="../controller/prodCtrl.php" method="POST">
                 <fieldset class="anuncio movAds">
@@ -86,9 +90,9 @@ $listaProducto = $crud->getProducts();
                         </label>
                     </div>
                     <div class="btn">
-                    <button type="submit" class="submit" id="btn-enviar">Agregar</button>
-                    <input type="hidden" name="insertar" value="1">
-                    <input type="hidden" name="id_pedido" value="<?php echo $_GET['id_pedido'] ?>">
+                        <button type="submit" class="submit" id="btn-enviar">Agregar</button>
+                        <input type="hidden" name="insertar" value="1">
+                        <input type="hidden" name="id_pedido" value="<?php echo $_GET['id_pedido'] ?>">
                     </div>
                     <figure class="info add"><i class="fa-duotone fa-question"></i></figure>
             </form>
@@ -96,7 +100,10 @@ $listaProducto = $crud->getProducts();
         </fieldset>
 
     </div>
+    <footer>
 
+        <?php include_once("plantillas/footer/footer.html"); ?>
+    </footer>
 
 </body>
 
