@@ -34,7 +34,7 @@ class CrudCliente
 	public function mostrar()
 	{
 		$listaCliente = [];
-		$select = $this->db->query('SELECT * FROM cliente');
+		$select = $this->db->query('SELECT * FROM cliente WHERE id_cliDoc != 000000 and id_cliDoc != 1234567890');
 
 		foreach ($select->fetchAll() as $Cliente)
 		{

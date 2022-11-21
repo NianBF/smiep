@@ -1,7 +1,7 @@
 <?php
 use FTP\Connection;
 
-require_once("connection.php");
+require_once("../model/connection.php");
 class Product
 {
     private $db; //Variable para iniciar la conexión
@@ -57,14 +57,13 @@ class Product
         if($query){
             return true;
         }else{
-            return 0;
+            return false;
         }
     }
 
-    public function InstzProd($cantOld, $cantNew, $id_prod, $id_usu, $id_pedido){
-        $total = $cantOld + $cantNew;
-        $query= $this->db->prepare("INSERT INTO tzProd (cantidadDisp,cantidadNew,id_prod,id_docUsu,id_pedido,id_venta) VALUES (:CANTOLD,:CANTNEW,:IDPROD,:IDDOC,:IDPED,1)");
-        $query->execute(array(':CANTOLD'=>$cantOld,':CANTNEW'=>$total, ':IDPROD'=>$id_prod,':IDDOC'=>$id_usu,':IDPED'=>$id_pedido));
+    public function InstzProd($cantOld, $cantNew, $id_prod, $id_usu, $id_pedido,$price){
+        $query= $this->db->prepare("INSERT INTO tzProd (cantidadDisp,cantidadNew,id_prod,id_docUsu,id_pedido,id_venta,priceArrive) VALUES (:CANTOLD,:CANTNEW,:IDPROD,:IDDOC,:IDPED,:PRICE)");
+        $query->execute(array(':CANTOLD'=>$cantOld,':CANTNEW'=>$cantNew, ':IDPROD'=>$id_prod,':IDDOC'=>$id_usu,':IDPED'=>$id_pedido,':PRICE'=>$price));
         if($query){
             return true;
         }else{

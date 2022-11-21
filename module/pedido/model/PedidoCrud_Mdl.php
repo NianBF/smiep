@@ -2,7 +2,7 @@
 class PedidoCrud_Mdl{
     private $db;
     public function __construct(){
-        require_once('connection.php');
+        require_once('../connection.php');
         $this->db=Conection::getConection();
     }
     public function verificacion($id_pedido){
