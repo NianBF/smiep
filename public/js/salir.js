@@ -7,9 +7,9 @@ function msgsalir() {
     if (result.isConfirmed) {
       $.ajax({
         type: "GET",
-        url: "../../controller/salirCtrl.php",
+        url: "controller/salirCtrl.php",
         success: function (response) {
-          window.location.href = "../../controller/salirCtrl.php";
+          window.location.href = "controller/salirCtrl.php";
         },
       });
     }

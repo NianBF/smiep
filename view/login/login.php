@@ -1,6 +1,3 @@
-<?php
-$isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,10 +5,10 @@ $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="any">
     <title>SMIEP</title>
     
-    <link rel="stylesheet" type="text/css" href="public/login.css">
+    <link rel="stylesheet" type="text/css" href="public/css/login.css">
     <link rel="stylesheet" type="text/css" href="public/plantillas/btnModOsc.css">
 
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -20,7 +17,7 @@ $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
 
 <body>
     <div class="container-form sign-UP contact-form">
-        <form action="../../controller/loginCtrl.php" method="POST" id="forma" name="forma" class="formulario" autocomplete="off">
+        <form action="controller/loginCtrl.php" method="POST" id="forma" name="forma" class="formulario" autocomplete="off">
             
         <h2 class="create-account">Iniciar Sesion</h2>
 
@@ -57,7 +54,7 @@ $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
 
         <div class="welcome-back">
             <div class="message">
-                <img src="public/img/favicon.png" id="imagen" width="500rem">
+                <img src="img/favicon.png" id="imagen" width="500rem">
                 <h3 class="nameEmp">Software de Manejo de Inventarios para Empresas Pequeñas</h3>
 
             </div>
@@ -66,7 +63,7 @@ $isDarkModeOn = $_COOKIE["isDarkModeOn"] === "true";
 
     </div>
 
-    <?php include_once("../plantillas/btnModOsc.html") ?>
+    <?php include_once("view/plantillas/btnModOsc.html") ?>
     <script type="text/javascript" src="public/js/darkMode/darkMode.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/js" src="public/js/login.js"></script>

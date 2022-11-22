@@ -1,12 +1,15 @@
 a.mod {
+  /* top: 55%; */
   border: 1px solid #f1eded;
   border-radius: 2rem;
   background-color: #1f1f1f;
   color: #f1eded;
-  width: 8rem;
-  text-align: center;
+  /* width: 8rem; */
+  /* text-align: center; */
   padding: 1%;
   cursor: pointer;
+  /* position: absolute; */
+  /* right: 0; */
 }
 a.mod:hover {
   border: 1px solid #1f1f1f;

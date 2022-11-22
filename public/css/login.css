@@ -1,183 +1,218 @@
 * {
-  padding: 0;
   margin: 0;
-}
-body {
-  background: linear-gradient(#fdb842, #3f37c0);
+  padding: 0;
+  box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.headerSmiep {
-  display: inline-block;
-}
-.headerSmiep header {
-  display: inline-block;
-  width: 10rem;
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #aabbc271;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #5c676c;
 }
 
-.contenedor {
+.container-form {
   width: 90%;
-  max-width: 1000px;
-  margin: 20px auto;
-  display: grid;
-  grid-gap: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "icon icon "
-    "header header"
-    "login login";
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
 }
 
-.contenedor > div,
-.contenedor .icon,
-.contenedor .header,
-.contenedor .login {
-  padding: 20px;
-  border-radius: 4px;
-}
-
-.contenedor .icon {
-  text-align: center;
+.welcome-back {
   display: flex;
   align-items: center;
-  display: block;
-  grid-area: icon;
-}
-
-.contenedor .header {
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 100%;
-  font-family: "Roboto", sans-serif;
-  grid-area: header;
+  margin-top: -5%;
 }
 
-.contenedor .login {
-  grid-area: login;
+.message h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  color: #4e635a;
+}
+.nameEmp2 {
+  visibility: hidden;
 }
 
-/*.title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    padding: 2.3%;
-    padding-bottom: 1%;
-    font-size: 300%;
-    color: #fff;
-}*/
-.nameEmp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  padding-bottom: 2.6%;
-  color: #fff;
-}
-
-.contenedor h2 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin: 0 0 30px;
-  padding: 0;
-  font-size: 30px;
-  color: #00ffff;
-  text-align: center;
-}
-
-.contenedor .elemento label {
-  color: #fff;
-}
-
-.contenedor .elemento input {
-  width: 100%;
-  padding: 10px 0;
-  color: #fff;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #fff;
-  margin-bottom: 30px;
-}
-
-.select-css {
-  display: block;
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+#btn {
+  padding: 1rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.39);
-  line-height: 1.3;
-  padding: 10px;
-  width: 450px;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  border: 1px solid rgba(238, 227, 227, 0);
-  border-radius: 0.3em;
-  border-bottom: 1px solid #fff;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
-    linear-gradient(to bottom, #ffffff00 0%, #f7f7f700 100%);
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%;
-  letter-spacing: 3px;
-}
-
-.select-css::-ms-expand {
-  display: none;
-}
-
-.select-css:hover {
-  border-color: rgb(255, 255, 255);
-}
-.select-css:focus {
-  border-color: rgb(255, 255, 255);
-  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-  box-shadow: 0 0 0 3px -moz-mac-focusring;
-  color: #17171d;
+  background-color: #fff;
+  border-radius: 2rem;
+  border: none;
   outline: none;
-}
-.select-css option {
-  font-weight: normal;
-}
-
-.classOfElementToColor:hover {
-  background-color: red;
-  color: rgb(255, 255, 255);
-}
-
-.select-css option[selected] {
-  background-color: #0fc4d2;
-}
-.contenedor .elemento input[type="submit"] {
-  font-weight: bold;
-  background-color: #00ff8d;
-  border: none;
-  letter-spacing: 5px;
-  text-transform: uppercase;
   cursor: pointer;
-  padding: 15px;
-  margin-top: 20px;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease-in;
+  color: #000;
 }
-.contenedor .elemento input[type="submit"]:hover {
-  font-weight: bold;
-  background-color: #044226;
+
+#btn:hover {
+  background-color: #abdefa;
+}
+
+.formulario {
+  width: 400px;
+  height: 600px;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 2rem;
+  background-color: rgb(51, 51, 51, 0.602);
+  text-align: center;
+  display: block;
+}
+
+.create-account {
+  color: #fff;
+  padding: 2.7rem 0;
+  font-size: 1.7rem;
+}
+/*ESTILOS PARA LINK DE RECUPERACIÓN DE CONTRASEÑA*/
+.passR {
+  font-size: 14px;
+  margin: 0;
+  color: rgb(255, 253, 152);;
+}
+.passR a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 var(--spacing, 0px);
+  transition: margin 0.25s;
+}
+.passR a svg {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 40px) translateZ(0);
+  fill: none;
+  stroke: var(--stroke, #fff);
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: var(--offset, 69px) 278px;
+  stroke-dashoffset: 361px;
+  transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+}
+.passR a:hover {
+  --spacing: 4px;
+  --stroke: #339999bd;
+  --stroke-delay: 0.1s;
+  --offset: 180px;
+}
+
+.cuenta-gratis {
+  padding: 2rem 0;
+}
+/*ESTILOS PARA INPUT DE EMAIL, USUARIO Y CONTRASEÑA*/
+.userBox {
+  position: relative;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+.userBox label {
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 41px;
+  transform: translateY(-25%);
+  text-transform: capitalize;
+  pointer-events: none;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.userBox input {
+  padding: 18px 15px;
+  margin: 0.5rem;
+  width: 300px;
+  border: 3px solid #fff;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 10px;
+}
+.userBox input:focus + label,
+.userBox input:not(:placeholder-shown) + label {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #5c676c;
+  top: 0;
+  font-size: 16px;
+}
+
+/*.formulario input {
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: transparent;
   border: none;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+  border-bottom: white thin solid;
+  text-align: center;
+  outline: none;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  color: white;
+}*/
+
+/*.formulario input[type="button"] {
+  width: 60%;
+  margin: auto;
+  border: solid thin white;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  background-color: white;
+  font-weight: 600;
+  margin-top: 3rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  padding: 15px;
-  margin-top: 20px;
+  color: #222;
+}*/
+a.mod {
+  margin-top: 40%;
+  border: 1px solid #f1eded;
+  border-radius: 2rem;
+  background-color: #1f1f1f;
+  color: #f1eded;
+  width: 8rem;
+  text-align: center;
+  padding: 1%;
+  cursor: pointer;
 }
-
-
+a.mod:hover {
+  border: 1px solid #1f1f1f;
+  background-color: #f1eded;
+  color: #1f1f1f;
+  cursor: pointer;
+}
+a.mod:active {
+  background-color: #808280;
+}
+.oscuro {
+  background-color: #2b2b2b;
+  color: #f1eded;
+}
+.oscuro .userBox input:focus + label,
+.oscuro .userBox input:not(:placeholder-shown) + label {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #303030;
+  top: 0;
+  font-size: 16px;
+}
 .oscuro .ingBot:visited {
   color: #fff;
 }
@@ -202,4 +237,40 @@ body {
 }
 .oscuro a.modi:active {
   background-color: #808280;
+}
+@media screen and (max-width: 720px) {
+  body {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #9ab5c1;
+  }
+  .container-form {
+    width: 50%;
+    margin-top: 60%;
+  }
+  .formulario {
+    padding: 4rem;
+    margin: 3rem;
+    border-radius: 10px;
+    background-color: rgb(51, 51, 51, 0.602);
+    text-align: center;
+    display: block;
+  }
+
+  #imagen {
+    max-width: 12rem;
+    margin-top: 5%;
+  }
+  .welcome-back {
+    position: absolute;
+    top: 7px;
+    font-size: 90%;
+    text-align: center;
+    color: #4e635a;
+    visibility: visible;
+  }
+  a.mod {
+    display: none;
+  }
 }
