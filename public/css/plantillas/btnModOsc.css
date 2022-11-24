@@ -1,15 +1,18 @@
+.oscuro {
+  background-color: #343c3bd4;
+  color: #fff;
+}
+
 a.mod {
-  /* top: 55%; */
+
   border: 1px solid #f1eded;
   border-radius: 2rem;
   background-color: #1f1f1f;
   color: #f1eded;
-  /* width: 8rem; */
-  /* text-align: center; */
+
   padding: 1%;
   cursor: pointer;
-  /* position: absolute; */
-  /* right: 0; */
+
 }
 a.mod:hover {
   border: 1px solid #1f1f1f;
@@ -20,7 +23,23 @@ a.mod:hover {
 a.mod:active {
   background-color: #808280;
 }
-.oscuro {
-  background-color: #343c3bd4;
-  color: #fff;
+.oscuro a.modi {
+  border: 1px solid #1f1f1f;
+  border-radius: 2rem;
+  background-color: #f1eded;
+  color: #1f1f1f;
+  width: 8rem;
+  text-align: center;
+  padding: 1%;
+  cursor: pointer;
 }
+
+.oscuro a.modi:hover {
+  border: 1px solid #f1eded;
+  background-color: #1f1f1f;
+  color: #f1eded;
+  cursor: pointer;
+}
+
+.oscuro a.modi:active {
+  background-color: #808280;}
