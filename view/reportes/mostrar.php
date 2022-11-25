@@ -39,7 +39,7 @@ else
 
         <legend>Listado de Reportes</legend>
         <div class="btnMos">
-            <a href='../inicio/menu.php' class="back"><span><i
+            <a href='../../' class="back"><span><i
                         class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
         </div>
         

@@ -47,7 +47,7 @@ else
         <legend>Listado de Clientes</legend>
         <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
-                <a href='../inicio/menu.php' class="back"><span><i
+                <a href='../../' class="back"><span><i
                             class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
         </div>
 
