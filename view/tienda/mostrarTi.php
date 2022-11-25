@@ -142,6 +142,7 @@ else
     </footer>
 	
 	<script type="module" src="../../public/js/tienda/filtrarTienda.js"></script>
+    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
 </body>
 
 </html>

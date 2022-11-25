@@ -162,6 +162,7 @@ else
     
 
     <script type="module" src="../../public/js/producto/filtrarProducto.js"></script>
+    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
 </body>
 
 </html>

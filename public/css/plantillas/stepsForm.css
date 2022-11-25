@@ -89,3 +89,14 @@
     display: none;
   }
 }
+
+.oscuro .progress-bar .step p{
+  color: #fff;
+}
+.oscuro .progress-bar .step .bullet{
+  border: 3px solid #fff;
+}
+.oscuro .progress-bar .step .bullet:before, 
+.oscuro .progress-bar .step .bullet:after{
+  background: #fff;
+}

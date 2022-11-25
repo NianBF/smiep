@@ -4,6 +4,9 @@
 *
 */
 /***---Form---***/
+body{
+  background: #aabbc271;
+}
 /***---Estilos en inputs y labels---***/
 .userBox {
   position: relative;
@@ -130,6 +133,21 @@
 .closer {
   display: none;
 }
+.oscuro .userBox input:focus + label,
+.oscuro .userBox input:not(:placeholder-shown) + label {
+  color: #fff;
+ 
+  background-color: #5c676c;
+
+}
+.oscuro .userBox input, .oscuro .userBox label{
+  color: #fff;
+}
+.oscuro .userBox input{
+  border: 3px solid #fff;
+}
+
+
 @media screen and (max-width: 1101px) {
   .contForm fieldset.anuncio {
     display: none;
@@ -168,4 +186,11 @@
   button{
     margin: 10px;
   }
+}
+
+.oscuro .contForm fieldset{
+  background-color: rgb(51, 51, 51, 0.602);
+}
+.oscuro .contForm legend{
+  background-color: initial;
 }

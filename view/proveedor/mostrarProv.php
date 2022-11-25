@@ -143,6 +143,7 @@ else
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
 	<script type="module" src="../../public/js/proveedor/filtrarProveedor.js"></script>
+    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
 </body>
 
 </html>
