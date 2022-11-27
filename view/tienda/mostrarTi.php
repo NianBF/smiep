@@ -46,7 +46,7 @@ else
         <legend>Listado de Tiendas</legend>
         <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
-                <a href='../inicio/menu.php' class="back"><span><i
+                <a href='../../' class="back"><span><i
                             class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
         </div>
 
@@ -142,6 +142,7 @@ else
     </footer>
 	
 	<script type="module" src="../../public/js/tienda/filtrarTienda.js"></script>
+    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
 </body>
 
 </html>

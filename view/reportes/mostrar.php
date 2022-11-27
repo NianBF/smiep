@@ -20,7 +20,12 @@ else
 <!--Color para navegador móvil-->
 <meta name="theme-color" content="#339999">
 <title>SMIEP</title>
-<link rel="stylesheet" href="../../public/css/mostarAll.css">
+<!-- <link rel="stylesheet" href="../../public/css/mostarAll.css"> -->
+
+<link rel="stylesheet" href="../../public/css/reportes.css">
+<link rel="stylesheet" href="../../public/css/plantillas/header1.css">
+<link rel="stylesheet" href="../../public/css/fonts.css">
+
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 <!--Fuente de iconos-->
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -39,24 +44,11 @@ else
 
         <legend>Listado de Reportes</legend>
         <div class="btnMos">
-            <a href='../inicio/menu.php' class="back"><span><i
+            <a href='../../' class="back"><span><i
                         class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
         </div>
         
-        <!-- <div class="contTarget">
-            <div class="reportCont">
-                <div class="target">
-                    <div class="imgReport">
-                        <img src="../../img/other/grphVect.png" alt="Gráfico_icon">
-                    </div>
-                    <div class="goTo">
-                        <img src="../../img/other/grphVect.png" alt="Gráfico_icon">
-                        <h3>Reportes gráficos</h3>
-                        <p>Generar reportes con Gráficos</p>
-                        <a href="mostrarGraph.php" class="goRep">Generar Gráfico</a>
-                    </div>
-                </div>
-            </div> -->
+     
 
             <div class="reportCont">
                 <div class="target">
@@ -75,8 +67,11 @@ else
     </fieldset>
 </section>
 <footer>
-    <?php include_once("../plantillas/footer.html"); ?>
+    <?php 
+    include_once("../plantillas/btnModOsc.html");
+    include_once("../plantillas/footer.html"); ?>
 </footer>
+    <script src="../../public/js/darkMode/darkMode.js"></script>
 </body>
 
 </html>
