@@ -209,14 +209,11 @@ if (
         </section>
         <footer>
 
-            <?php 
-            include_once("../plantillas/btnModOsc.html");
-            include_once("../plantillas/footer.html"); ?>
+            <?php include_once("../plantillas/footer.html"); ?>
         </footer>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../../public/js/usuario/stepsFormusu.js"></script>
         <script type="module" src="../../public/js/usuario/validarDatosUsu.js"></script>
-        <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
     </body>
 
     </html>

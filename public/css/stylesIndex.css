@@ -5,23 +5,23 @@
     margin: 0;
     font-family: "Montserrat-Bold";
 }
-html, body{
-    height: 100%;
-    width: 100%;
-}
+
 body {
     background-color: #aabbc271;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
+main {
+    /* margin-top: 20px; */
+}
+
+
 .contenedor_principal {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
+    /* gap: 25px; */
     color: #4e635a;
     margin: 3rem 0 0 0;
 }
@@ -48,7 +48,7 @@ body {
 
 .ingBot:hover {
     background-color: #607ec9;
-    
+    ;
 }
 
 .ingBot:active {
@@ -56,49 +56,40 @@ body {
 }
 
 .footer {
-    margin-top:5%;
-    display: flex;
-    justify-content: space-around;
-    
-    bottom: 0;
-    /*     
+    margin-top: 5%;
     position: sticky;
-    text-align: center; */
+    bottom: 0;
+    text-align: center;
 }
 
-#footer_acerca{
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-}
-
-.acercaDe, #footer_acerca{
-    text-decoration: none;
-    color: #0d0d0e;
-    font-size: 20px;
-}
-
-
-@media screen and (max-width:414px){
+@media screen and (max-width:490px){
     .footer{
-        display: flex;
-        flex-wrap: wrap-reverse;
-        gap: 2rem;
+        position: relative;
+        margin-top: 20px;
     }
+}
+
+@media screen and (max-width:335px){
     .inf{
         font-size: 30px;
     }
 }
 
-/*
+/**
 *
 * modo oscuro
 *
 */
- .oscuro .contenedor_principal,
-.oscuro #footer_acerca, .oscuro .acercaDe {
+.oscuro .contenedor_principal,
+.oscuro footer, .oscuro .acercaDe {
     color: #fff;
 }
+
+.oscuro {
+    background-color: #343c3bd4;
+    color: #fff;
+}
+
 .oscuro .ingBot:visited {
     color: #fff;
 }
@@ -107,7 +98,25 @@ body {
     color: rgb(255, 254, 176);
 }
 
+.oscuro a.modi {
+    border: 1px solid #1f1f1f;
+    border-radius: 2rem;
+    background-color: #f1eded;
+    color: #1f1f1f;
+    width: 8rem;
+    text-align: center;
+    padding: 1%;
+    cursor: pointer;
+}
 
+.oscuro a.modi:hover {
+    border: 1px solid #f1eded;
+    background-color: #1f1f1f;
+    color: #f1eded;
+    cursor: pointer;
+}
 
-
+.oscuro a.modi:active {
+    background-color: #808280;
+}
 

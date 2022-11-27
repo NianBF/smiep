@@ -7,16 +7,15 @@ $_SESSION["pass"] == null)
 }
 else
 {
-	require_once('../../model/tiendaCrud_Mdl.php');
-	require_once('../../model/tiendaMdl.php');
-	$crud = new CrudTienda();
-	$Tienda = new Tienda();
-	$listaTienda = $crud->mostrar();
+	require_once('../../model/proveedorCrud_Mdl.php');
+	require_once('../../model/proveedorMdl.php');
+	$crud = new CrudProveedor();
+	$Proveedor = new Proveedor();
+	$listaProveedor = $crud->mostrar();
 ?>
 
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +25,7 @@ else
     <!--Color para navegador móvil-->
     <meta name="theme-color" content="#339999">
     <title>SMIEP</title>
-    
+   
     <link rel="stylesheet" href="../../public/css/mostarAll.css">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <!--Fuente de iconos-->
@@ -35,15 +34,15 @@ else
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-<header>
-        <?php include_once("../plantillas/header.html"); ?>
-    </header>
 
-    <section class="contentList">
+<body>
+	<header>
+		<?php include_once("../plantillas/header.html"); ?>
+	</header>
+	<section class="contentList">
         <fieldset>
 
-        <legend>Listado de Tiendas</legend>
+        <legend>Listado de Proveedores</legend>
         <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
                 <a href='../inicio/menu.php' class="back"><span><i
@@ -53,7 +52,7 @@ else
         
         <div class="searchNav">
             <div class="buscarOne">
-                <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Tienda"
+                <input type="text" name="filtrar-tabla1" class="buscar1" id="buscar1" placeholder="ID Clientes"
                     class="buscar1">
                 <button type="button" class="searchBtn">
                     <i class="ri-search-2-line"></i>
@@ -64,14 +63,14 @@ else
             </span>
 
             <div class="buscarTwo">
-                    <input type="text" name="filtrar-tabla2" class="buscar1" id="buscar2" placeholder="Nombre Tienda"
+                    <input type="text" name="filtrar-tabla2" class="buscar1" id="buscar2" placeholder="Empresa"
                         class="buscar1">
                     <button type="button" class="searchBtn">
                         <i class="ri-search-2-line"></i>
                     </button>
                 </div>
                 <span class="labelsito">
-                    <label for="filtrar-tabla2">Nombre</label>
+                    <label for="filtrar-tabla2">Empresa</label>
                 </span>
                 
             <div class="darkMode">
@@ -90,42 +89,46 @@ else
             <table>
                 <thead>
                     <tr class="titleTable">
-                        <th>ID</th>
+                        <th>ID Proveedor</th>
                         <th>Nombre</th>
-                        <th>Direccion</th>
+                        <th>Empresa</th>
+                        <th>Dirección</th>
                         <th>Telefono</th>
                         <th>Correo</th>
                         <th class="opcTitle">Opciones</th>
                     </tr>
                 </thead>
                 <tbody class="contentTable">
-                <?php foreach ($listaTienda as $Tienda) {?>
+                <?php foreach ($listaProveedor as $Proveedor) {?>
                 <tr class="row">
 
-                    <td class="idTienda id">
-						<?php echo $Tienda->getId_ti() ?>
+                    <td class="idProv id">
+						<?php echo $Proveedor->getId_DocProv() ?>
                     </td>
-                    <td class="nombTienda">
-                        <?php echo $Tienda->getNombreTienda() ?>
+                    <td class="nombreProv">
+						<?php echo $Proveedor->getNombProv1()." ".$Proveedor->getNombProv2()." ".$Proveedor->getApeProv1()." ".$Proveedor->getApeProv2() ?>
+                    </td>
+                    <td class="empresa">
+						<?php echo $Proveedor->getEmpresa() ?>
                     </td>
                     <td class="direccion">
-                        <?php echo $Tienda->getDireccionTi() ?>
+						<?php echo $Proveedor->getDireccion1()." ".$Proveedor->getDireccion2() ?>
                     </td>
-                    <td class="numTienda">
-                        <?php echo $Tienda->getTelTi() ?>
+                    <td class="numProv">
+						<?php echo $Proveedor->getNumTel1() ?>
                     </td>
-                    <td class="emailTienda">
-                        <?php echo $Tienda->getEmailTi() ?>
+                    <td class="email">
+						<?php echo $Proveedor->getEmail1() ?>
                     </td>
 
                     <td class="btnOpt">
                         <a class="delete btnOptDel" type="submit"
-                        href="../../controller/tiendaCtrl.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=e">
+                        href="../../controller/ProveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv();?>&accion=e">
                             <i class="fa-solid fa-trash-can"></i>
                         </a>
                 
                         <a class="update btnOptUpd" type="submit"
-                        href="actualizar.php?id_ti=<?php echo $Tienda->getId_ti()?>&accion=a">
+                        href="actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv()?>&accion=a">
                                 <i class="fa-solid fa-pencil"></i>
                         </a>
                     </td>
@@ -136,12 +139,10 @@ else
         </div>
         </fieldset>
     </section>
-
-    <footer>
+	<footer>
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
-	
-	<script type="module" src="../../public/js/tienda/filtrarTienda.js"></script>
+	<script type="module" src="../../public/js/proveedor/filtrarProveedor.js"></script>
 </body>
 
 </html>

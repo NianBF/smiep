@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" type="text/css" href="public/css/stylesIndex.css">
-    <link rel="stylesheet" type="text/css" href="public/css/plantillas/header1.css">
-</head>
-
 <body>
-
     <header>
         <div class="header_superior">
 
@@ -24,22 +15,18 @@
         </div>
     </header>
 
-    <main>
+    <main>  
         <div class="contenedor_principal">
 
             <p class="inf">¡BIENVENIDOS!</p>
-
+            
             <a href="?u=login" class="ingBot"><strong>Ingresar</strong></a>
-        </div>
+        </div>         
     </main>
-
+    <?php include_once("plantillas/btnModOSc.html") ?>
     <footer class="footer">
-        <?php include_once("view/plantillas/btnModOsc.html") ?>
-        <div id="footer_acerca">
-            <?php include_once("view/plantillas/footer.html") ?>
-            <a class="acercaDe" href="view/about/about.php">Acerca de S.M.I.E.P</a>
-        </div>
+        <?php include_once("view/plantillas/footer.html") ?><a class="acercaDe" href="view/about/about.php">Acerca de S.M.I.E.P</a>
     </footer>
+    <script type="text/javascript" src="public/js/darkMode/darkMode.js"></script>
 </body>
-
 </html>
