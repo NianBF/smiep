@@ -4,6 +4,7 @@
         display: block;
         margin: auto
     }
+
     div #graficaBarras {
         display: block;
         margin: auto
@@ -42,6 +43,8 @@
         font: {
             size: 16
         },
+        plot_bgcolor: 'rgba(207,217,221,1)',
+        paper_bgcolor:'rgba(0,0,0,0)',
     };
     var config = {
         responsive: true

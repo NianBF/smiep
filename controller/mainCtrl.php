@@ -11,6 +11,9 @@ if (isset($_SESSION["email"]) && isset($_SESSION["userName"]) && isset($_SESSION
         case "inicio":
             include_once("view/inicio/menu.php");
             break;
+        case "mostrar":
+            include_once("view/mostrar/index.html");
+            break;
     }
 } else {
 
