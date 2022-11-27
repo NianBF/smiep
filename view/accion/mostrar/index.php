@@ -5,6 +5,10 @@ if (
 ) {
     header("location:../../");
 } else {
+?>
+<section class="contentList">
+<fieldset>
+    <?php
     switch ($_GET['table']) {
         case "usuario":
             include_once("view/accion/mostrar/usuario.php");
@@ -16,4 +20,9 @@ if (
             include_once("view/accion/mostrar/proveedor.php");
             break;
     }
-}
+    ?>
+
+</fieldset>    
+</section>
+<?php
+} ?>

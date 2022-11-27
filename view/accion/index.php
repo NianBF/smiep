@@ -8,7 +8,6 @@ if (
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,23 +21,18 @@ if (
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
     <header>
         <?php include_once("view/plantillas/header.html"); ?>
     </header>
     <main>
-        <section class="contentList">
-            <fieldset>
-                <?php
-                switch ($_GET['action']) {
-                    case "read":
-                        include_once("view/accion/mostrar/index.php");
-                        break;
-                }
-                ?>
-            </fieldset>    
-        </section>
+        <?php
+       switch ($_GET['action']) {
+          case "read":
+             include_once("view/accion/mostrar/index.php");
+                break;
+        }
+        ?>
     </main>
     <footer>
         <?php include_once("view/plantillas/footer.html"); ?>
