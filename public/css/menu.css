@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'Montserrat';
-  src: url(https://fonts.google.com/specimen/Montserrat);
-}
-
-
-
 *{
   margin:0;
   padding:0;
@@ -13,24 +6,30 @@
   text-decoration: none; 
   
 }
-iframe {
+body, html {
   width: 100%;
   height: 100%;
 }
-/*Información OS y Browser*/
-
-body {
-  margin-left: 6rem;
+body{
+  display: flex;
 }
-article {
-  height: 50rem;
-}
-article section {
+.principal_graf{
+  width: 100%;
   height: 100%;
 }
+.contentFirst{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 body main article div.infCont{
-  display: grid;
-  place-items: end;
+  /* display: grid;
+  place-items: end; */
+  margin: 20px 0;
   font-size: 0.57rem;
   width: fit-content;
   font-family: 'Montserrat';
@@ -56,15 +55,15 @@ div.infCont h2 span{
 /*ARTICULO*/
 
 main {
-  background: #f0f0f0;
-  padding: 40px 20px;
+  background: #d9e0e3;
+  padding:20px;
 }
 
 article {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 40px;
+
+  padding: 10px;
   background: #fff;
+  height: 100%;
 }
 
 article p {
@@ -73,82 +72,9 @@ article p {
   font-weight: 300;
 }
 
-/*ELEMENTOS RESPONSIVOS*/
-
-.oscuro {
-  background-color: #1f1f1f;
-  color: #f1eded;
+.oscuro main{
+  background: #565c5c;
 }
-.oscuro .ingBot:visited {
-  color: #fff;
-}
-.oscuro header {
-  background-color: #1f1f1f;
-  color: #f1eded;
-}
-.oscuro nav li ul {
-  background-color: #1f1f1f;
-  color: #f1eded;
-}
-.oscuro nav ul li ul li a {
-  background-color: #1f1f1f;
-  color: #f1eded;
-}
-.oscuro nav ul li ul li a:hover {
-  background: #0074c7;
-  color: #fff;
-  transform: scale(1.2);
-  padding-left: 30px;
-  font-size: 14px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}
-.oscuro main article {
-  background-color: #1f1f1f;
-}
-.oscuro main {
-  background-color: #181818;
-}
-.oscuro a.modi {
-  border: 1px solid #1f1f1f;
-  border-radius: 2rem;
-  background-color: #f1eded;
-  color: #1f1f1f;
-  width: 3rem;
-  text-align: center;
-  padding: 1%;
-  cursor: pointer;
-}
-.oscuro a.modi:hover {
-  border: 1px solid #f1eded;
-  background-color: #1f1f1f;
-  color: #f1eded;
-  cursor: pointer;
-}
-.oscuro a.modi:active {
-  background-color: #808280;
-}
-
-@media screen and (max-width: 720px) {
-
-  
-  a.mod {
-    border: 1px solid #f1eded;
-    border-radius: 2rem;
-    background-color: #1f1f1f;
-    color: #f1eded;
-    width: 3.5rem;
-    text-align: center;
-    padding: 1%;
-    cursor: pointer;
-  }
-  .oscuro a.modi {
-    border: 1px solid #1f1f1f;
-    border-radius: 2rem;
-    background-color: #f1eded;
-    color: #1f1f1f;
-    width: 3.5rem;
-    text-align: center;
-    padding: 1%;
-    cursor: pointer;
-  }
+.oscuro article{
+  background: #666e71a3;
 }
