@@ -41,11 +41,12 @@ if (
         <section class="contentList">
             <fieldset>
 
-                <legend>Listado de Tiendas</legend>
-                <div class="btnMos">
-                    <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
-                    <a href='../../' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
-                </div>
+        <legend>Listado de Tiendas</legend>
+        <div class="btnMos">
+                <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
+                <a href='../../' class="back"><span><i
+                            class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+        </div>
 
 
                 <div class="searchNav">
@@ -130,13 +131,13 @@ if (
             </fieldset>
         </section>
 
-        <footer>
-            <?php include_once("../plantillas/footer.html"); ?>
-        </footer>
-
-        <script type="module" src="../../public/js/tienda/filtrarTienda.js"></script>
-        <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
-    </body>
+    <footer>
+        <?php include_once("../plantillas/footer.html"); ?>
+    </footer>
+	
+	<script type="module" src="../../public/js/tienda/filtrarTienda.js"></script>
+    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
+</body>
 
     </html>
 <?php

@@ -218,6 +218,9 @@
     z-index: 10;
     transition: all 300ms ease;
 }
+.open .list-item ul{
+    width: 200px;
+}
 
 .list-item:hover ul {
     visibility: visible;

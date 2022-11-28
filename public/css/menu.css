@@ -12,6 +12,7 @@ body, html {
 }
 body{
   display: flex;
+  flex-direction: row;
 }
 .principal_graf{
   width: 100%;
@@ -76,5 +77,5 @@ article p {
   background: #565c5c;
 }
 .oscuro article{
-  background: #666e71a3;
+  background: #404242;
 }

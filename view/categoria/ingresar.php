@@ -75,13 +75,13 @@ if (
             </div>
         </section>
         <footer>
-            <?php 
+			<?php 
             include_once("../plantillas/btnModOsc.html");
             include_once("../plantillas/footer.html"); ?>
-        </footer>
+		</footer>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="module" src="../../public/js/categoria/validarCat.js"></script>
-        <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
+        <script src="../../public/js/darkMode/darkMode.js"></script>
     </body>
 
     </html>

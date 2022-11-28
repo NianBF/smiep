@@ -74,14 +74,7 @@ else
                 </span>
                 
             <div class="darkMode">
-                <a id="mod" class="mod" onclick="cambiarModo()">
-                    <span id="id-moon" class="btn-mode moon">
-                        <i class="fas fa-sun"></i>
-                    </span>/
-                    <span id="id-sun" class="btn-mode sun active">
-                        <i class="fas fa-moon"></i>
-                    </span>
-                </a>
+                <?php include_once("../plantillas/btnModOsc.html") ?>
             </div>
         </div>
 
@@ -143,7 +136,8 @@ else
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
 	<script type="module" src="../../public/js/proveedor/filtrarProveedor.js"></script>
-    <script type="text/javascript" src="../../public/js/darkMode/darkMode.js"></script>
+	<script type="module" src="../../public/js/darkMode/darkMode.js"></script>
+
 </body>
 
 </html>
