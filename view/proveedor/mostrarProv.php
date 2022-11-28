@@ -45,7 +45,7 @@ else
         <legend>Listado de Proveedores</legend>
         <div class="btnMos">
                 <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
-                <a href='../inicio/menu.php' class="back"><span><i
+                <a href='../../' class="back"><span><i
                             class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
         </div>
 
@@ -74,14 +74,7 @@ else
                 </span>
                 
             <div class="darkMode">
-                <a id="mod" class="mod" onclick="cambiarModo()">
-                    <span id="id-moon" class="btn-mode moon">
-                        <i class="fas fa-sun"></i>
-                    </span>/
-                    <span id="id-sun" class="btn-mode sun active">
-                        <i class="fas fa-moon"></i>
-                    </span>
-                </a>
+                <?php include_once("../plantillas/btnModOsc.html") ?>
             </div>
         </div>
 
@@ -143,6 +136,8 @@ else
         <?php include_once("../plantillas/footer.html"); ?>
     </footer>
 	<script type="module" src="../../public/js/proveedor/filtrarProveedor.js"></script>
+	<script type="module" src="../../public/js/darkMode/darkMode.js"></script>
+
 </body>
 
 </html>

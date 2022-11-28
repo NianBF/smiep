@@ -9,5 +9,5 @@ if (isset($_POST["email"]) && isset($_POST["userName"]) && isset($_POST["pass"])
 }
 else
 {
-    header("location:../index.php");
+    header("location:../?u=smiep");
 }

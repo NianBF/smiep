@@ -5,28 +5,25 @@
     margin: 0;
     font-family: "Montserrat-Bold";
 }
-
+html, body{
+    height: 100%;
+    width: 100%;
+}
 body {
     background-color: #aabbc271;
-}
-
-main {
-    margin-top: 20px;
-    
-}
-
-footer {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contenedor_principal {
-    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 25px;
+
     color: #4e635a;
+    margin: 3rem 0 0 0;
 }
 
 .inf {
@@ -40,6 +37,7 @@ footer {
 }
 
 .ingBot {
+    margin: 7rem 0 0 0;
     text-decoration: none;
     background-color: #339999;
     border-radius: 20px 5px 20px 5px;
@@ -50,7 +48,7 @@ footer {
 
 .ingBot:hover {
     background-color: #607ec9;
-    ;
+    
 }
 
 .ingBot:active {
@@ -58,51 +56,49 @@ footer {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    margin-top:5%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 3rem;
-    text-decoration: none;
-    color: black;
+    justify-content: space-around;
+    
+    bottom: 0;
+    /*     
+    position: sticky;
+    text-align: center; */
 }
 
-.acercaDe {
-    font-size: 22px;
-    text-decoration: none;
-    color: black;
+#footer_acerca{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
 }
 
-@media screen and (max-width:490px){
+.acercaDe, #footer_acerca{
+    text-decoration: none;
+    color: #0d0d0e;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width:414px){
     .footer{
-        position: relative;
-        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
     }
-}
-
-@media screen and (max-width:335px){
     .inf{
         font-size: 30px;
     }
 }
 
-/**
+/*
 *
 * modo oscuro
 *
 */
-.oscuro .contenedor_principal,
-.oscuro footer, .oscuro .acercaDe {
+ .oscuro .contenedor_principal,
+.oscuro #footer_acerca, .oscuro .acercaDe {
     color: #fff;
 }
-
-.oscuro {
-    background-color: #343c3bd4;
-    color: #fff;
-}
-
 .oscuro .ingBot:visited {
     color: #fff;
 }
@@ -111,25 +107,7 @@ footer {
     color: rgb(255, 254, 176);
 }
 
-.oscuro a.modi {
-    border: 1px solid #1f1f1f;
-    border-radius: 2rem;
-    background-color: #f1eded;
-    color: #1f1f1f;
-    width: 8rem;
-    text-align: center;
-    padding: 1%;
-    cursor: pointer;
-}
 
-.oscuro a.modi:hover {
-    border: 1px solid #f1eded;
-    background-color: #1f1f1f;
-    color: #f1eded;
-    cursor: pointer;
-}
 
-.oscuro a.modi:active {
-    background-color: #808280;
-}
+
 

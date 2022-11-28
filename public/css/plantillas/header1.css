@@ -56,7 +56,10 @@ span.logo {
   text-transform: capitalize;
   font-size: 3.5rem;
 }
-
+.oscuro {
+  background-color: #343c3bd4;
+  color: #fff;
+}
 .oscuro .titulito{
   color: #fff;
 }

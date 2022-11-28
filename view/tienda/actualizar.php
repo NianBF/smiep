@@ -36,7 +36,7 @@ if (
 
 	</head>
 
-	<body>
+	<>
 		<header>
 			<?php include_once("../plantillas/header.html"); ?>
 		</header>
@@ -138,14 +138,16 @@ if (
 
 		</section>
 		<footer>
-
-			<?php include_once("../plantillas/footer.html"); ?>
+			<?php
+			include_once("../plantillas/btnModOsc.html");
+			include_once("../plantillas/footer.html"); ?>
 		</footer>
+		<script src="../../public/js/darkMode/darkMode.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="../../public/js/tienda/stepsFormTi.js"></script>
 		<script type="module" src="../../public/js/tienda/validarDatosTi.js"></script>
 
-	</body>
+		</body>
 
 	</html>
 <?php

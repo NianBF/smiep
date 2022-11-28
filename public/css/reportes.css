@@ -1,153 +1,70 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-header {
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-}
-.header__superior {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px;
-}
-.logo img {
-  width: 190px;
-  height: 150px;
-}
-.title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 3rem;
-  margin-top: 7%;
-  margin-left: 20%;
-  font-size: 180%;
-  color: #4e635a;
-}
-.nameEmp2 {
-  visibility: hidden;
-}
-.nameEmp {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  left: 92px;
-  position: relative;
-  padding: 1px;
-  font-size: 110%;
-  color: #4e635a;
-}
-table {
-  background-color: #fff;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 18px;
-  border-collapse: collapse;
-  text-align: left;
-  width: 50%;
-  top: 1%;
-}
-footer {
-  padding: 2em 0;
-  text-align: center;
-  bottom: 0;
-  font-weight: 800;
-  font-size: 1em;
-}
-th,
-td {
-  padding: 1%;
-}
-th.bot1 {
-  text-align: right;
-}
-th.opc {
-  text-align: justify;
-}
-tr:nth-child(even) {
-  background-color: rgba(229, 229, 229, 0.877);
-}
-button {
-  width: 15%;
-  height: 45px;
-  background: rgb(116, 206, 75);
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+@import url(variables.css);
+
+body, html{
+width: 100%;
+height: 100%;
 }
 
-#volver {
-  margin-right: 1.2rem;
-  width: 80px;
-  height: 42px;
-  background: #897212;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  color: #fff;
+body{
+  background: #aabbc271;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-@media screen and (max-width: 720px) {
-  th,
-  td {
-    padding: 1%;
-    width: 0%;
-  }
-  .header__superior {
-    padding: 10px;
-  }
-  .logo img {
-    width: 150px;
-    height: 100px;
-  }
-  .title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 0.5rem;
-    margin-top: 10px;
-    display: flex;
-    margin-left: 1%;
-    font-size: 180%;
-    color: #4e635a;
-  }
-  .nameEmp {
-    visibility: hidden;
-    left: -92px;
-  }
-  .nameEmp2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
-    top: 70px;
-    font-size: 90%;
-    text-align: center;
-    color: #4e635a;
-    visibility: visible;
-  }
-  table {
-    background-color: #fff;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 18px;
-    border-collapse: collapse;
-    text-align: left;
-    width: 95%;
-    top: 1%;
-  }
-  footer {
-    padding: 2em 0;
-    text-align: center;
-    bottom: 0;
-    font-weight: 800;
-    font-size: 1em;
-  }
-  button {
-    width: 20%;
-    height: 45px;
-    background: rgb(116, 206, 75);
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-  }
+
+/****---Estilos al contenedor del contenido---***/
+.contentList fieldset {
+height: 400px;
+  padding: 1.5rem;
+  border: 3px outset var(--colorSMIEP);
+  border-radius: 1rem 3rem;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/****---Estilos a título del contenedor del contenido---***/
+.contentList fieldset legend {
+  border-radius: 10px 10px;
+  font-family: "Montserrat-Bold";
+  padding: 0.3rem;
+  font-size: 24px;
+}
+
+.btnMos a {
+  text-decoration: none;
+  font-family: "Montserrat-Bold";
+  color: var(--bgColor);
+  padding: var(--paddingBtn);
+  padding-left: 0;
+  letter-spacing: 0.2rem;
+  border-radius: var(--radiousBtn);
+}
+
+/****---Estilos a los botones volver---***/
+.btnMos .back {
+  background-color: var(--backBtn);
+}
+
+.btnMos .back:hover {
+  background-color: var(--backBtnHov);
+  -webkit-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  -moz-box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  box-shadow: 6px 9px 10px 1px var(--shadowColorSoft);
+  transition: 0.5s;
+}
+
+.btnMos .back span {
+  background-color: var(--backBtnHovs);
+  border-radius: 3px;
+  padding: 0.7rem 0.4rem;
+
+}
+
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
 }

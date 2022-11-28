@@ -19,7 +19,7 @@ class Login
             // Validación de error
             if ($con == "ERROR") {
                 echo "<script>alert('Error en BD')</script>";
-                header("location:salirCtrl.php");
+                header("location: ../controller/salirCtrl.php");
             }
 
             // Consulta
@@ -61,7 +61,7 @@ class Login
             $sql = null;
             $resultado = null;
             $cantidad_resultado = null;
-            header("location:../index.php");
+            header("location:../");
 
         }
 

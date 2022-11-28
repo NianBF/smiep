@@ -22,7 +22,7 @@ class Validar
             if ($con == "ERROR")
             {
                 echo "<script>alert('Error en BD')</script>";
-                header("location:salirCtrl.php");
+                header("location:../controller/salirCtrl.php");
             }
 
             // Consulta
@@ -35,9 +35,7 @@ class Validar
 
             if ($cantidad_resultado == 1)
             {
-                if ($_SESSION["rol"] == "Administrador") {
-                    header("location:view/inicio/menu.php");
-                }elseif ($_SESSION["rol"] == "Empleado") {
+                if ($_SESSION["rol"] == "Empleado") {
                     header("location:module/vender/?u=v&action=buy");
                 }
 
