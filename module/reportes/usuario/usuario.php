@@ -4,9 +4,11 @@ if($_SESSION['email'] == null or $_SESSION["userName"]== null or
 $_SESSION["pass"] == null ){
     header("location:../../index.php");
 }else{
-	include 'plantilla.php';
-	require '../../model/conexion.php';
-	
+	include '../clases/plantilla.php';
+	require '../../../model/conexion.php';
+	class UsuarioPDF{
+
+    }
     $con = Conexion::getConection();
 	$query = "SELECT id_doc,nombre1,apellido1,userName,email,tEstado,rol FROM usuario 
     INNER JOIN estado ON usuario.id_estado=estado.id_estado AND rol='Empleado'";

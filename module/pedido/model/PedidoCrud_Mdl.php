@@ -14,7 +14,7 @@ class PedidoCrud_Mdl{
     }
 
     public function insertar($pedido){
-        $insert=$this->db->prepare('INSERT INTO pedido (id_pedido,totalPrice,id_docUsu,id_docProv,creadoEn) VALUES(:id_pedido,:totalPrice,:id_doc,:id_docProv,:creadoEn)');
+        $insert=$this->db->prepare('INSERT INTO pedido (id_pedido,totalPrice,id_docUsu,id_docProv,createIn) VALUES(:id_pedido,:totalPrice,:id_doc,:id_docProv,:creadoEn)');
         $insert->bindValue('id_pedido',$pedido->getId_pedido());
         $insert->bindValue('totalPrice',$pedido->getTotalPrice());
         $insert->bindValue('id_doc',$pedido->getId_doc());
@@ -32,8 +32,8 @@ class PedidoCrud_Mdl{
 			$thpedido->setId_doc($pedido['id_docUsu']);
 			$thpedido->setId_docProv($pedido['id_docProv']);
 			$thpedido->setTotalPrice($pedido['totalPrice']);
-			$thpedido->setCreadoEn($pedido['creadoEn']);
-			$thpedido->setModificadoEn($pedido['modificadoEn']);
+			$thpedido->setCreadoEn($pedido['createIn']);
+			$thpedido->setModificadoEn($pedido['modifyIn']);
 			$listapedido[] = $thpedido;
 		}
 		return $listapedido;

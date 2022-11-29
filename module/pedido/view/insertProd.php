@@ -5,6 +5,8 @@ if (
     $_SESSION["pass"] == null
 ) {
     header("location:../../../index.php");
+} else if ($_GET['id_pedido'] == null) {
+    header('location:../');
 } else {
     require_once('../model/productMdl.php');
     require_once('../model/productoMdl.php');
@@ -66,7 +68,10 @@ if (
                                 solicite a un Administrador que lo agregue como un nuevo producto)</p>
                             </br>
                             <p><strong>Cantidad:</strong> Debe ingresar la cantidad de unidades que llegaron en el
-                                pedido.</p>
+                                pedido.</p> </br>
+
+                            <p><strong>Precio de Llegada:</strong> Debe ingresar el valor por el cual llegó el produtco
+                            </p>
                         </article>
                     </div>
                 </fieldset>
@@ -85,8 +90,14 @@ if (
                     </div>
                     <div class="userBox">
                         <input type='number' id="cantidad" name='cantidad' placeholder=" " required>
-                        <label for="docUsu">
+                        <label for="cantidad">
                             Cantidad
+                        </label>
+                    </div>
+                    <div class="userBox">
+                        <input type='number' id="price" name='price' placeholder=" " required>
+                        <label for="price">
+                            $ Precio de Llegada
                         </label>
                     </div>
                     <div class="btn">
