@@ -7,7 +7,8 @@ if($_SESSION['email']==null or $_SESSION['userName']==null or $_SESSION['pass']=
     require_once("../model/PedidoMdl.php");
     $Compra = new PedidoMdl();
     $create = new PedidoCrud_Mdl();
-    $Compra->setId_Pedido($_POST['id_pedido']);
+    $id_pedido=$_POST['id_pedido'];
+    $Compra->setId_Pedido($id_pedido);
 ?>
 <!DOCTYPE html>
 <html lang="en">

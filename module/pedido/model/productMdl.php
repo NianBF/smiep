@@ -62,7 +62,7 @@ class Product
     }
 
     public function InstzProd($cantOld, $cantNew, $id_prod, $id_usu, $id_pedido,$price){
-        $query= $this->db->prepare("INSERT INTO tzProd (cantidadDisp,cantidadNew,id_prod,id_docUsu,id_pedido,id_venta,priceArrive) VALUES (:CANTOLD,:CANTNEW,:IDPROD,:IDDOC,:IDPED,:PRICE)");
+        $query= $this->db->prepare("INSERT INTO tzProd (cantidadDisp,cantidadNew,id_prod,id_docUsu,id_pedido,priceArrive) VALUES (:CANTOLD,:CANTNEW,:IDPROD,:IDDOC,:IDPED,:PRICE)");
         $query->execute(array(':CANTOLD'=>$cantOld,':CANTNEW'=>$cantNew, ':IDPROD'=>$id_prod,':IDDOC'=>$id_usu,':IDPED'=>$id_pedido,':PRICE'=>$price));
         if($query){
             return true;
