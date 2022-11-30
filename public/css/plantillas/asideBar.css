@@ -28,6 +28,10 @@
     padding: 0 20px;
 }
 
+.oscuro .navigation .menu-toggle {
+    /* color: #f0f0f0; */
+}
+
 .navigation .menu-toggle::before {
     content: '';
     position: absolute;
@@ -183,6 +187,10 @@
     font-size: .7rem;
 }
 
+.oscuro sub {
+    color: #f0f0f0;
+}
+
 .navigation ul li a .icon sub.ACMD {
     position: absolute;
     padding-left: .5rem;
@@ -229,6 +237,14 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
+}
+
+.oscuro .navigation ul li .text {
+    color: #f0f0f0;
+}
+
+.oscuro .navigation ul li a .text {
+    color: #f0f0f0;
 }
 
 .navigation.open ul li a .text {
