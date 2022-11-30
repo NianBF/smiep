@@ -22,7 +22,7 @@ if (
             <link rel="stylesheet" href="public/css/mostarAll.css">
             <?php
             break;
-        case "create": ?>
+        case "create" and "update": ?>
             <link rel="stylesheet" href="public/css/formularios.css">
             <?php
             break;
@@ -44,6 +44,9 @@ if (
           case "create":
              include_once("view/accion/agregar/index.php");
                 break;
+          case "update":
+             include_once("view/accion/actualizar/index.php");
+                break;
         }
         ?>
     <!-- </main> -->
@@ -52,12 +55,21 @@ if (
     </footer>
 </body>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Escript formulario por pasos -->
 <script src="public/js/usuario/stepsFormusu.js"></script>
+<script src="public/js/cliente/stepsFormCli.js"></script>
+<script src="public/js/proveedor/stepsFormProv.js"></script>
+<script src="public/js/producto/stepsFormProd.js"></script>
+<!-- Script validar campos en formularios -->
 <script type="module" src="public/js/usuario/validarDatosUsu.js"></script>
+<script type="module" src="public/js/cliente/validarDatosCli.js"></script>
+<script type="module" src="public/js/proveedor/validarDatosProv.js"></script>
+<script type="module" src="public/js/producto/validarDatosProd.js"></script>
 <!-- Filtros en tablas de datos -->
 <script type="module" src="public/js/usuario/filtrarUsuarios.js"></script>
-<script type="module" src="public/js/proveedor/filtrarCliente.js"></script>
+<script type="module" src="public/js/cliente/filtrarCliente.js"></script>
 <script type="module" src="public/js/proveedor/filtrarProveedor.js"></script>
+<script type="module" src="public/js/producto/filtrarProducto.js"></script>
 <script type="text/javascript" src="public/js/darkMode/darkMode.js"></script>
 <!-- Librerias para iconos (Ion-Icon y Kit-Fontawesome) -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -13,7 +13,7 @@ if (
 ?>
 <legend>Listado de Proveedores</legend>
 <div class="btnMos">
-    <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
+    <a href='?u=accion&action=create&table=proveedor' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
     <a href='?u=inicio' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
 </div>
 <div class="searchNav">

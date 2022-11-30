@@ -10,7 +10,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or $_SESSION["pa
 ?>
 <legend>Listado de Clientes</legend>
 <div class="btnMos">
-    <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
+    <a href='?u=accion&action=create&table=cliente' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
     <a href='?u=inicio' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
 </div>
 <div class="searchNav">
