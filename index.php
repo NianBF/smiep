@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/favicon.png" sizes="any">
     <title>SMIEP</title>
-    <link rel="stylesheet" type="text/css" href="public/css/plantillas/btnModOsc.css">
+    <!-- <link rel="stylesheet" type="text/css" href="public/css/plantillas/btnModOsc.css"> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
