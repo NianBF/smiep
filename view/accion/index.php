@@ -35,7 +35,7 @@ if (
     <header>
         <?php include_once("view/plantillas/header.html"); ?>
     </header>
-    <main>
+    <!-- <main> -->
         <?php
        switch ($_GET['action']) {
           case "read":
@@ -46,7 +46,7 @@ if (
                 break;
         }
         ?>
-    </main>
+    <!-- </main> -->
     <footer>
         <?php include_once("view/plantillas/footer.html"); ?>
     </footer>
