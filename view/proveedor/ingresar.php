@@ -33,7 +33,7 @@ if (
 		<section class="initForm">
 
 			<div class="btnMos">
-				<a href='../proveedor/mostrarProv.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+				<a href='../../?u=accion&action=read&table=proveedor' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
 			</div>
 			<div class="contForm">
 				<form action='../../controller/ProveedorCtrl.php' id="formulario" name="formulario" method='post'>

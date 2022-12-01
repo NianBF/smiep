@@ -36,7 +36,7 @@ if (
         <section class="initForm">
 
             <div class="btnMos">
-                <a href='../cliente/mostrarCli.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+                <a href='../../?u=accion&action=read&table=cliente' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
 
             <div class="contForm">
