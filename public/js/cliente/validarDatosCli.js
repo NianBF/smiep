@@ -45,9 +45,6 @@ btn_enviar.addEventListener("click", function (event) {
   else if (regExpEmail.test(formulario.email.value) == false) {
    email(event)
   }
-  else if (formulario.FecNac.value == 0) {
-    fecNac(event)
-  }
   else{
     registroOK()
   }

@@ -36,7 +36,7 @@ if (
         <section class="initForm">
 
             <div class="btnMos">
-                <a href='../cliente/mostrarCli.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+                <a href='../../?u=accion&action=read&table=cliente' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
 
             <div class="contForm">
@@ -140,11 +140,6 @@ if (
                                 <div class="userBox">
                                     <input type='email' id="email" name='emailCli' placeholder=" ">
                                     <label for="tel">Correo</label>
-                                </div>
-
-                                <div class="userBox">
-                                    <input type='date' id="FecNac" name='fechaNac' placeholder=" ">
-                                    <label for="FecNac">Fecha de Nacimiento</label>
                                 </div>
 
                                 <input type='hidden' name='insertar' value='insertar'>
