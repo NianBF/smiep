@@ -82,11 +82,11 @@ if (
                 </td>
                 <td class="btnOpt">
                     <a class="delete btnOptDel" type="submit"
-                        href="../../controller/ProveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv(); ?>&accion=e">
+                        href="controller/ProveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv(); ?>&accion=e">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <a class="update btnOptUpd" type="submit"
-                        href="actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv() ?>&accion=a">
+                        href="view/proveedor/actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv() ?>&accion=a">
                         <i class="fa-solid fa-pencil"></i>
                     </a>
                 </td>

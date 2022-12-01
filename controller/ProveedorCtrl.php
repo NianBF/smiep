@@ -38,10 +38,10 @@ $Proveedor->setCreadoEn($_POST['creadoEn']);
 if (isset($_POST['insertar'])){
 	//llama a la función insertar definida en el crud
 	$crud->insertar($Proveedor);
-	header('Location: ../view/proveedor/mostrarProv.php');
+	header('Location: ../?u=accion&action=read&table=proveedor');
 }elseif (isset($_POST['actualizar'])){
 	$crud->actualizar($Proveedor);
-	header('Location: ../view/proveedor/mostrarProv.php');
+	header('Location: ../?u=accion&action=read&table=proveedor');
 }elseif ($_GET['accion'] == 'e'){
 
 	$idDelete = $_GET['id_DocProv'];
@@ -63,7 +63,7 @@ if (isset($_POST['insertar'])){
 				 url: '../controller/ProveedorCtrl.php?id_DocProv=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../view/proveedor/mostrarProv.php';					
+					window.location.href = '../?u=accion&action=read&table=proveedor';					
 				}
 			 
 			});

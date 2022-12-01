@@ -62,12 +62,12 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or $_SESSION["pa
                 </td>
                 <td class="btnOpt">
                     <a class="delete btnOptDel" type="submit"
-                        href="../../controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc() ?>&accion=e">
+                        href="controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc() ?>&accion=e">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
 
                     <a class="update btnOptUpd" type="submit"
-                        href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc(); ?>&accion=a">
+                        href="view/cliente/actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc(); ?>&accion=a">
                         <i class="fa-solid fa-pencil"></i>
                     </a>
                 </td>
