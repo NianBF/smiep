@@ -1,8 +1,11 @@
 <div class="header_superior">
 
     <span class="logo">
+        <?php if (isset($_GET['u'])) { ?>
+            <img class="logo_imagen" src="img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP">
+            <?php }else{ ?>
         <img class="logo_imagen" src="../../img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP">
-        <!-- <img class="logo_imagen" src="img/favicon.png" alt="Logo SMIEP" title="Logo SMIEP"> -->
+        <?php } ?>
     </span>
 
     <span class="contenedor">
