@@ -1,46 +1,19 @@
 <?php
-session_start();
 if (
     $_SESSION['email'] == null or $_SESSION["userName"] == null or
     $_SESSION["pass"] == null
 ) {
-    header("location:../../index.php");
+    header("location:../../");
 } else {
 ?>
-
-    <!DOCTYPE html>
-    <html lang="es">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="../../img/favicon.png" sizes="any">
-        <!--Color para navegador móvil-->
-        <meta name="theme-color" content="#339999">
-        <title>SMIEP</title>
-        <link rel="stylesheet" href="../../public/css/formularios.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    </head>
-
-    <body>
-        <header>
-            <?php include_once("../plantillas/header.html"); ?>
-        </header>
-
-
-        <section class="initForm">
+<section class="initForm">
 
             <div class="btnMos">
-                <a href='../cliente/mostrarCli.php' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
+                <a href='?u=accion&action=read&table=cliente' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
             </div>
 
             <div class="contForm">
-                <form action='../../controller/clienteCtrl.php' name="formulario" method='post'>
+                <form action='controller/clienteCtrl.php' name="formulario" method='post'>
 
                     <fieldset class="anuncio movAds">
                         <div class="closer"><i class="fa-sharp fa-solid fa-xmark ex"></i></div>
@@ -162,18 +135,5 @@ if (
             </div>
 
         </section>
-
-        <footer>
-			<?php 
-            include_once("../plantillas/btnModOsc.html");
-            include_once("../plantillas/footer.html"); ?>
-		</footer>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="../../public/js/cliente/stepsFormCli.js"></script>
-        <script type="module" src="../../public/js/cliente/validarDatosCli.js"></script>
-        <script src="../../public/js/darkMode/darkMode.js"></script>
-    </body>
-
-    </html>
 <?php
 } ?>

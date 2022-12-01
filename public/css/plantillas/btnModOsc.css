@@ -1,9 +1,9 @@
-.oscuro {
-  background-color: #343c3bd4;
+.oscuro ion-icon {
+  /* background-color: #343c3bd4; */
   color: #fff;
 }
 
-a.mod {
+/* a.mod {
 
   border: 1px solid #f1eded;
   border-radius: 2rem;
@@ -19,15 +19,15 @@ a.mod:hover {
   background-color: #f1eded;
   color: #1f1f1f;
   cursor: pointer;
-}
+} */
 a.mod:active {
   background-color: #808280;
 }
 .oscuro a.modi {
-  border: 1px solid #1f1f1f;
+  /* border: 1px solid #1f1f1f; */
   border-radius: 2rem;
-  background-color: #f1eded;
-  color: #1f1f1f;
+  /* background-color: #f1eded; */
+  color: #f1eded;
   width: 8rem;
   text-align: center;
   padding: 1%;
@@ -36,7 +36,7 @@ a.mod:active {
 
 .oscuro a.modi:hover {
   border: 1px solid #f1eded;
-  background-color: #1f1f1f;
+  /* background-color: #1f1f1f; */
   color: #f1eded;
   cursor: pointer;
 }
