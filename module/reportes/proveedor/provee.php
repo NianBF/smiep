@@ -46,7 +46,8 @@ $_SESSION["pass"] == null ){
 		}
 
 	}
-	
+	$pd= new ProveedorPDF();
+	$pd->Prov();
 
 }
 ?>
