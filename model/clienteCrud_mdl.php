@@ -1,6 +1,6 @@
 <?php
 // incluye la clase Db
-require_once('conexion1.php');
+require_once('model/conexion1.php');
 
 class CrudCliente
 {
