@@ -33,11 +33,6 @@ class SesionPDF
             $pdf->Cell(50, 6, $row['Nombre'], 1, 0, 'C');
             $pdf->Cell(60, 6, $row['dateSess'], 1, 1, 'C');
         }
-        $pdf->Cell(60, 6, 'IP', 1, 0, 'C', 1);
-        $ip=getenv('HTTP_CLIENT_IP');
-        $ip2=getenv('REMOTE_ADDR');
-        $pdf->Cell(68, 6,$ip,1,1,'C',1);
-        $pdf->Cell(68, 6,$ip2,1,1,'C',1);
         $pdf->Output();
         $pdf->Close();
     }
@@ -105,9 +100,9 @@ class SesionPDF
         $pdf->Close();
     }
 }
-/* $pd= new SesionPDF();
+$pd= new SesionPDF();
 $fecha1= '2022-11-15 00:00:00';
-$fecha2='2022-11-24 00:00:00';
+$fecha2='2022-11-30 00:00:00';
 $pd->RepobyDate($fecha1,$fecha2);
-$pd->RepobyDaDoc(123456789,$fecha1,$fecha2); */
+//$pd->RepobyDaDoc(123456789,$fecha1,$fecha2);
 ?>

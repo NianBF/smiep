@@ -80,5 +80,7 @@ if (
 			$pdf->Close();
 		}
 	}
+	$pd= new ProductoPDF();
+	$pd->ProdComplete();
 }
 ?>
