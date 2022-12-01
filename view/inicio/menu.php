@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+session_start();
 if (
     $_SESSION['email'] == null or $_SESSION["userName"] == null or
     $_SESSION["pass"] == null
@@ -22,7 +24,7 @@ if (
         <link rel="stylesheet" type="text/css" href="public/css/plantillas/header1.css">
         <link rel="stylesheet" type="text/css" href="public/css/plantillas/footer.css">
         <!--//Estilos para plantilla navBar\\-->
-        <link rel="stylesheet" href="public/css/plantillas/asideBar.css">
+        <link rel="stylesheet" href="public/css/plantillas/aside2.css">
         <!--//Estilos únicos del menú\\-->
         <link rel="stylesheet" type="text/css" href="public/css/menu.css">
         <link rel="stylesheet" type="text/css" href="public/css/variables.css">
@@ -41,7 +43,7 @@ if (
 
         <section>
             
-                <?php  include_once("view/plantillas/asideBar.html") ?>
+                <?php  include_once("view/plantillas/asideBar2.html") ?>
             
         </section>
         

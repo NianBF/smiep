@@ -13,7 +13,7 @@ if (
 ?>
 <legend>Listado de Proveedores</legend>
 <div class="btnMos">
-    <a href='?u=accion&action=create&table=proveedor' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
+    <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
     <a href='?u=inicio' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
 </div>
 <div class="searchNav">
@@ -82,11 +82,11 @@ if (
                 </td>
                 <td class="btnOpt">
                     <a class="delete btnOptDel" type="submit"
-                        href="controller/ProveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv(); ?>&accion=e">
+                        href="../../controller/ProveedorCtrl.php?id_DocProv=<?php echo $Proveedor->getId_DocProv(); ?>&accion=e">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <a class="update btnOptUpd" type="submit"
-                        href="?u=accion&action=update&table=proveedor&id_DocProv=<?php echo $Proveedor->getId_DocProv() ?>&accion=a">
+                        href="actualizar.php?id_DocProv=<?php echo $Proveedor->getId_DocProv() ?>&accion=a">
                         <i class="fa-solid fa-pencil"></i>
                     </a>
                 </td>

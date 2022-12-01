@@ -1,8 +1,9 @@
 <?php
+session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or$_SESSION["pass"] == null) {
 	header("location: ../index.php");
 }else{ // incluye la clase Db	
-	require_once('model/conexion1.php');
+	require_once('conexion1.php');
 	class CrudProducto
 	{
 		private $db; //Variable para iniciar la conexión

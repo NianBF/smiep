@@ -10,7 +10,7 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or $_SESSION["pa
 ?>
 <legend>Listado de Clientes</legend>
 <div class="btnMos">
-    <a href='?u=accion&action=create&table=cliente' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
+    <a href='ingresar.php' class="add"><span><i class="fa-solid fa-plus"></i></span>Agregar</a>
     <a href='?u=inicio' class="back"><span><i class="fa-solid fa-arrow-rotate-left"></i></span>Volver</a>
 </div>
 <div class="searchNav">
@@ -62,12 +62,12 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or $_SESSION["pa
                 </td>
                 <td class="btnOpt">
                     <a class="delete btnOptDel" type="submit"
-                        href="controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc() ?>&accion=e">
+                        href="../../controller/clienteCtrl.php?id_cliDoc=<?php echo $Cliente->getId_CliDoc() ?>&accion=e">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
 
                     <a class="update btnOptUpd" type="submit"
-                        href="?u=accion&action=update&table=cliente&id_cliDoc=<?php echo $Cliente->getId_cliDoc(); ?>&accion=a">
+                        href="actualizar.php?id_cliDoc=<?php echo $Cliente->getId_cliDoc(); ?>&accion=a">
                         <i class="fa-solid fa-pencil"></i>
                     </a>
                 </td>

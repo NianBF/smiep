@@ -18,9 +18,6 @@ if (
         case "proveedor":
             include_once("view/accion/agregar/proveedor.php");
             break;
-        case "producto":
-            include_once("view/accion/agregar/producto.php");
-            break;
     }
     ?>  
 </section>

@@ -67,7 +67,7 @@ else
                         </div>
                         <div class="btnOpt">
                             <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/producto/product.php">
+                            <a class="eliminar" type="button" href="../../module/reportes/product.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             </div>
@@ -80,7 +80,7 @@ else
                         </div>
                         <div class="btnOpt">
                             <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/categoria/categoria.php">
+                            <a class="eliminar" type="button" href="../../module/reportes/categoria.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             </div>
@@ -93,7 +93,7 @@ else
                         </div>
                         <div class="btnOpt">
                             <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/usuario/usuario.php">
+                            <a class="eliminar" type="button" href="../../module/reportes/usuario.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             </div>
@@ -106,7 +106,7 @@ else
                         </div>
                         <div class="btnOpt">
                             <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/cliente/cliente.php">
+                            <a class="eliminar" type="button" href="../../module/reportes/cliente.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             </div>
@@ -119,7 +119,7 @@ else
                         </div>
                         <div class="btnOpt">
                             <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/proveedor/provee.php">
+                            <a class="eliminar" type="button" href="../../module/reportes/provee.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             </div>
@@ -132,32 +132,7 @@ else
                         </div>
                         <div class="btnOpt">
                             <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/venta/venta.php">
-                                <i class="fa-solid fa-eye"></i>
-                            </a>
-                            </div>
-                        </div>
-                    </div> 
-
-                    <div class="row">
-                        <div class="colName">
-                            Pedido
-                        </div>
-                        <div class="btnOpt">
-                            <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/pedido/pedido.php">
-                                <i class="fa-solid fa-eye"></i>
-                            </a>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="row">
-                        <div class="colName">
-                            Sesiones
-                        </div>
-                        <div class="btnOpt">
-                            <div class="btnagre">
-                            <a class="eliminar" type="button" href="../../module/reportes/sesion/sesion.php">
+                            <a class="eliminar" type="button" href="../../module/reportes/venta.php">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             </div>

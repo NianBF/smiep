@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 $_SESSION["pass"] == null){
-	header("location: ../");
+	header("location: ../index.php");
 }else{
 ?>
 <html>
@@ -33,12 +33,12 @@ $Cliente->setEmailCli($_POST['emailCli']);
 
 if (isset($_POST['insertar'])){ //Si se obtiene 'insertar' del $_POST llama a la función de insertar del CRUD
 	$crud->insertar($Cliente);
-	header('Location: ../?u=accion&action=read&table=cliente');
+	header('Location: ../view/cliente/mostrarCli.php');
 
 }
 elseif (isset($_POST['actualizar'])){ //Si la vista es 'actualizar' se llama a la función actualizar
 	$crud->actualizar($Cliente);
-	header('Location: ../?u=accion&action=read&table=cliente');
+	header('Location: ../view/cliente/mostrarCli.php');
 
 
 }//si la variable GET=='e' llama al crud y envía una alerta, si la respesta es afirmativa se envía a 'eliminar'
@@ -63,12 +63,12 @@ elseif ($_GET['accion'] == 'e'){
 				 url: '../controller/clienteCtrl.php?id_cliDoc=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../?u=accion&action=read&table=cliente';					
+					window.location.href = '../view/cliente/mostrarCli.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../?u=accion&action=read&table=cliente';
+			window.location.href = '../view/cliente/mostrarCli.php';
 		   }
 		 })
 		 </script>";
@@ -76,7 +76,7 @@ elseif ($_GET['accion'] == 'e'){
 }
 elseif ($_GET['accion'] == 'a')
 {
-	header('Location: ../?u=accion&action=update&table=cliente');
+	header('Location: ../view/cliente/actualizar.php');
 }
 elseif ($_GET['accion'] == 'eliminar')
 {

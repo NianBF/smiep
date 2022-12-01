@@ -89,7 +89,7 @@ if (
                     <a class="delete btnOptDel" type="button" href="controller/usuarioCtrl.php?id_doc=<?php echo $Usuario->getId_doc() ?>&accion=e">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <a class="update btnOptUpd" type="submit" href="?u=accion&action=update&table=usuario&id_doc=<?php echo $Usuario->getId_doc() ?>&accion=a">
+                    <a class="update btnOptUpd" type="submit" href="view/accion/actualizar/usuario.php?id_doc=<?php echo $Usuario->getId_doc() ?>&accion=a">
                         <i class="fa-solid fa-pencil"></i>
                     </a>
                 </td>

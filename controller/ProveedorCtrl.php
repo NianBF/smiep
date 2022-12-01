@@ -1,8 +1,9 @@
 <?php
+session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 $_SESSION["pass"] == null)
 {
-	header("location: ../");
+	header("location: ../index.php");
 }else{ ?>
 <html>
 <head>
@@ -37,10 +38,10 @@ $Proveedor->setCreadoEn($_POST['creadoEn']);
 if (isset($_POST['insertar'])){
 	//llama a la función insertar definida en el crud
 	$crud->insertar($Proveedor);
-	header('Location: ../?u=accion&action=read&table=proveedor');
+	header('Location: ../view/proveedor/mostrarProv.php');
 }elseif (isset($_POST['actualizar'])){
 	$crud->actualizar($Proveedor);
-	header('Location: ../?u=accion&action=read&table=proveedor');
+	header('Location: ../view/proveedor/mostrarProv.php');
 }elseif ($_GET['accion'] == 'e'){
 
 	$idDelete = $_GET['id_DocProv'];
@@ -62,12 +63,12 @@ if (isset($_POST['insertar'])){
 				 url: '../controller/ProveedorCtrl.php?id_DocProv=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../?u=accion&action=read&table=proveedor';					
+					window.location.href = '../view/proveedor/mostrarProv.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../?u=accion&action=read&table=proveedor';
+			window.location.href = '../view/proveedor/mostrarProv.php';
 		   }
 		 })
 		 </script>";
@@ -76,7 +77,7 @@ if (isset($_POST['insertar'])){
 }
 elseif ($_GET['accion'] == 'a')
 {
-	header('Location: ../?u=accion&action=update&table=proveedor');
+	header('Location: ../view/proveedor/actualizar.php');
 }
 elseif ($_GET['accion'] == 'eliminar')
 {

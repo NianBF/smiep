@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 $_SESSION["pass"] == null)
 {
@@ -37,14 +38,14 @@ if (isset($_POST['insertar']))
 	//llama a la función insertar definida en el crud
 	$Usuario->setRol($_POST['rol']);
 	$crud->insertar($Usuario);
-	header('Location:../?u=accion&action=read&table=usuario');
+	header('Location: ../?u=accion&action=read&table=usuario');
 
 // si el elemento de la vista con nombre actualizar no viene nulo, llama al crud y actualiza
 }
 elseif (isset($_POST['actualizar']))
 {
 	$crud->actualizar($Usuario);
-	header('Location:../?u=accion&action=read&table=usuario');
+	header('Location: ../view/usuario/mostrarUsu.php');
 
 // si la variable accion enviada por GET es == 'e' llama al crud y elimina
 }
@@ -75,7 +76,7 @@ elseif ($_GET['accion'] == 'e')
 			 
 			});
 		   } else{
-			window.location.href = '../?u=accion&action=read&table=usuario';
+			window.location.href = '../view/usuario/mostrarUsu.php';
 		   }
 		 })
 		</script>";
@@ -85,7 +86,7 @@ elseif ($_GET['accion'] == 'e')
 }
 elseif ($_GET['accion'] == 'a')
 {
-	header('Location: ../?u=accion&action=read&table=usuario');
+	header('Location: ../view/usuario/actualizar.php');
 }
 elseif ($_GET['accion'] == 'eliminar')
 {

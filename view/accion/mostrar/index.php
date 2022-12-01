@@ -19,9 +19,6 @@ if (
         case "proveedor":
             include_once("view/accion/mostrar/proveedor.php");
             break;
-        case "producto":
-            include_once("view/accion/mostrar/producto.php");
-            break;
     }
     ?>
 

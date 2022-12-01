@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 	$_SESSION["pass"] == null) {
-	header("location: ../");
+	header("location: ../index.php");
 } else { ?>
 <html>
 
@@ -35,11 +35,11 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 	if (isset($_POST['insertar'])) {
 		//llama a la función insertar definida en el crud si el POST es Insertar
 		$crud->insertar($Producto);
-		header('Location:../?u=accion&action=read&table=producto');
+		header('Location: ../view/producto/mostrarProd.php');
 
 	} elseif (isset($_POST['actualizar'])) { //llama a la función actualizar definida en el crud si el POST es Actualizar
 		$crud->actualizar($Producto);
-		header('Location:../?u=accion&action=read&table=producto');
+		header('Location: ../view/producto/mostrarProd.php');
 
 	} elseif ($_GET['accion'] == 'e') { // si la variable accion enviada por GET es == 'e' llama al crud y elimina
 		$idDelete = $_GET['id_prod'];
@@ -61,18 +61,18 @@ if ($_SESSION['email'] == null or $_SESSION["userName"] == null or
 				 url: '../controller/productoCtrl.php?id_prod=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../?u=accion&action=read&table=producto';					
+					window.location.href = '../view/producto/mostrarProd.php';					
 				}
 			 
 			});
 		   } else{
-			window.location.href = '../?u=accion&action=read&table=producto';
+			window.location.href = '../view/producto/mostrarProd.php';
 		   }
 		 })
 		 </script>";
 		// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	} elseif ($_GET['accion'] == 'a') {
-		header('Location:?u=accion&action=read&table=producto');
+		header('Location: ../view/producto/actualizar.php');
 	} elseif ($_GET['accion'] == 'eliminar') {
 		$crud->eliminar($_GET['id_prod']);
 

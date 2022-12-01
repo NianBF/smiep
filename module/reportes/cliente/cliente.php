@@ -49,7 +49,5 @@ if (
 			$pdf->Close();
 		}
 	}
-	$pd= new CategoriaPDF();
-	$pd->getCategoria();
 }
 ?>
