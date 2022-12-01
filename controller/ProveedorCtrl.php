@@ -41,7 +41,7 @@ if (isset($_POST['insertar'])){
 	header('Location: ../?u=accion&action=read&table=proveedor');
 }elseif (isset($_POST['actualizar'])){
 	$crud->actualizar($Proveedor);
-	header('Location: ../?u=accion&action=read&table=usuario');
+	header('Location: ../?u=accion&action=read&table=proveedor');
 }elseif ($_GET['accion'] == 'e'){
 
 	$idDelete = $_GET['id_DocProv'];
