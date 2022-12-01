@@ -36,6 +36,11 @@ export const fecNac = function(event){
   alertEstructura(event,mensaje)
 }
 
+export const fecha = function(event){
+  let mensaje = "completa el campo fecha"
+  alertEstructura(event,mensaje)
+}
+
 export const passW = function (event){
  let mensaje = "La contraseña debe tener entre 6 a 18 caracteres y debe contener 1 mayuscula, 1 minuscula, 2 numeros, 1 caracter especial"
  alertEstructura(event,mensaje)
