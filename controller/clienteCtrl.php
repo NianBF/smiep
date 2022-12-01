@@ -33,12 +33,12 @@ $Cliente->setEmailCli($_POST['emailCli']);
 
 if (isset($_POST['insertar'])){ //Si se obtiene 'insertar' del $_POST llama a la función de insertar del CRUD
 	$crud->insertar($Cliente);
-	header('Location: ../view/cliente/mostrarCli.php');
+	header('Location: ../?u=accion&action=read&table=usuario');
 
 }
 elseif (isset($_POST['actualizar'])){ //Si la vista es 'actualizar' se llama a la función actualizar
 	$crud->actualizar($Cliente);
-	header('Location: ../view/cliente/mostrarCli.php');
+	header('Location: ../?u=accion&action=read&table=usuario');
 
 
 }//si la variable GET=='e' llama al crud y envía una alerta, si la respesta es afirmativa se envía a 'eliminar'
@@ -63,7 +63,7 @@ elseif ($_GET['accion'] == 'e'){
 				 url: '../controller/clienteCtrl.php?id_cliDoc=" . $idDelete . "&accion=eliminar',
 				 success: function(response)
 				 {					
-					window.location.href = '../view/cliente/mostrarCli.php';					
+					window.location.href = '../?u=accion&action=read&table=cliente';					
 				}
 			 
 			});

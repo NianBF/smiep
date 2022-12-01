@@ -45,7 +45,7 @@ if (isset($_POST['insertar']))
 elseif (isset($_POST['actualizar']))
 {
 	$crud->actualizar($Usuario);
-	header('Location: ../view/usuario/mostrarUsu.php');
+	header('Location: ../?u=accion&action=read&table=usuario');
 
 // si la variable accion enviada por GET es == 'e' llama al crud y elimina
 }
