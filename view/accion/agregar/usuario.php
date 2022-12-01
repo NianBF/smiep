@@ -41,7 +41,7 @@ if (
 
                                 <div class="userBox">
                                     <input type='date' id="creadoEn" name='creadoEn' placeholder=" " >
-                                    <label for="id_doc">Fecha vinculación</label>
+                                    <label for="creadoEn">Fecha vinculación</label>
                                 </div>
 
                                 <div class="userBox">
@@ -120,8 +120,8 @@ if (
                                     <select name="id_estado" id="estado" required>
                                         <optgroup label="Estado">
                                             <option selected value="0">Elige una opción</option>
-                                            <option value="2">Disponible</option>
-                                            <option value="3">No Disponible</option>
+                                            <option value="1">Disponible</option>
+                                            <option value="2">No Disponible</option>
                                         </optgroup>
                                     </select>
                                 </div>

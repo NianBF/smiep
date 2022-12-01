@@ -53,7 +53,7 @@ if (
 		}
 		public function PedidowProd($id_pedido)
 		{
-			$query = $this->con->prepare("SELECT *,CONCAT(username,' / ',id_doc) AS usuario FROM pedido INNER JOIN tzProd ON pedido.id_pedido= tzProd.id_pedido INNER JOIN producto ON producto.id_prod=tzprod.id_prod INNER JOIN usuario ON pedido.id_docUsu=usuario.id_doc INNER JOIN proveedor ON pedido.id_docProv=proveedor.id_docProv WHERE pedido.id_pedido= :PED");
+			$query = $this->con->prepare("SELECT *,CONCAT(nombre1,' ',apellido1,' / ',id_doc) AS usuario FROM pedido INNER JOIN tzProd ON pedido.id_pedido= tzProd.id_pedido INNER JOIN producto ON producto.id_prod=tzprod.id_prod INNER JOIN usuario ON pedido.id_docUsu=usuario.id_doc INNER JOIN proveedor ON pedido.id_docProv=proveedor.id_docProv WHERE pedido.id_pedido= :PED");
 			$query->execute(array(':PED'=>$id_pedido));
 			$resultado = $query->fetchAll();
 
@@ -107,8 +107,8 @@ if (
 		}
 	}
     $pd=new PedidoPDF();
-    //$pd->Pedido();
+    $pd->Pedido();
     //$pd->PedidowProd('NESTLE2');
-    $pd->PedidowProd('NESTLE1');
+    //$pd->PedidowProd('NESTLE1');
 }
 ?>
