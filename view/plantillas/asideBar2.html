@@ -1,0 +1,128 @@
+
+<div class="navigation">
+  <div class="principal_toogle">
+    <div class="menu-toggle"></div>
+  </div>
+  <div class="list-item active" style="--color: #339999">
+    <a href="">
+      <span class="icon">
+        <ion-icon name="home-outline"></ion-icon>
+        <sub class="ACMD">Inicio</sub>
+      </span>
+      <span class="text">Inicio</span>
+    </a>
+  </div>
+
+    <div class="list-item" style="--color: #ffa117">
+      <a href="#" class="personas">
+        <span class="icon">
+          <ion-icon name="people-outline"></ion-icon>
+          <sub>Personas</sub>
+        </span>
+        <span class="text personas">Personas</span>
+      </a>
+      <ul>
+        <li class="list-subItem">
+          <a href="?u=accion&action=read&table=usuario">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+              <sub>Usuarios</sub>
+            </span>
+            <span class="text">Usuarios</span>
+          </a>
+        </li>
+        <li class="list-subItem">
+          <a href="?u=accion&action=read&table=cliente">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+              <sub>Clientes</sub>
+            </span>
+            <span class="text">Clientes</span>
+          </a>
+        </li>
+        <li class="list-subItem">
+          <a href="?u=accion&action=read&table=proveedor">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+              <sub style="font-size: 0.45rem">Proveedores</sub>
+            </span>
+            <span class="text">Proveedores</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+  <div class="list-item" style="--color: #0fc70f">
+    <a href="view/producto/mostrarProd.php">
+      <span class="icon">
+        <ion-icon name="beer-outline"></ion-icon>
+        <sub>Productos</sub>
+      </span>
+      <span class="text">Productos</span>
+    </a>
+  </div>
+  <div class="list-item" style="--color: #f44336">
+    <a href="view/categoria/mostrarCat.php">
+      <span class="icon">
+        <ion-icon name="grid-outline"></ion-icon>
+        <sub>Categoría</sub>
+      </span>
+      <span class="text">Categoría</span>
+    </a>
+  </div>
+  <div class="list-item" style="--color: #b145e9">
+    <a href="view/tienda/mostrarTi.php">
+      <span class="icon">
+        <ion-icon name="storefront-outline"></ion-icon>
+        <sub class="ACMD">Tienda</sub>
+      </span>
+      <span class="text">Tienda</span>
+    </a>
+  </div>
+  <div class="list-item" style="--color: #b145e9">
+    <a href="module/vender/?u=v&action=buy">
+      <span class="icon">
+        <ion-icon name="cash-outline"></ion-icon>
+        <sub class="ACMD">Vender</sub>
+      </span>
+      <span class="text">Vender</span>
+    </a>
+  </div>
+  <div class="list-item" style="--color: #b145e9">
+    <a href="view/reportes/mostrar.php">
+      <span class="icon">
+        <ion-icon name="document-text-outline"></ion-icon>
+        <sub>Reportes</sub>
+      </span>
+      <span class="text">Reportes</span>
+    </a>
+  </div>
+  <div class="list-item" style="--color: #b145e9">
+    <a href="module/pedido">
+      <span class="icon">
+        <ion-icon name="bag-add-outline"></ion-icon>
+        <sub class="ACMD">Pedido</sub>
+      </span>
+      <span class="text">Pedido</span>
+    </a>
+  </div>
+  <div class="list-item salir" style="--color: #ce1d1d">
+    <a href="javascript:msgsalir();">
+      <span class="icon">
+        <ion-icon name="exit-outline"></ion-icon>
+        <sub>Salir</sub>
+      </span>
+      <span class="text">Salir</span>
+    </a>
+  </div>
+  <div class="darkMode" style="z-index: 1; width: 100%;">
+    <a id="mod" class="mod" onclick="cambiarModo()">
+        <span id="id-moon" class="btn-mode moon">
+            <i class="fas fa-sun"></i>
+        </span>/
+        <span id="id-sun" class="btn-mode sun active">
+            <i class="fas fa-moon"></i>
+        </span>
+    </a>
+</div>
+</div>
