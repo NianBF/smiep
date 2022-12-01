@@ -142,11 +142,6 @@ if (
                                     <label for="tel">Correo</label>
                                 </div>
 
-                                <div class="userBox">
-                                    <input type='date' id="FecNac" name='fechaNac' placeholder=" ">
-                                    <label for="FecNac">Fecha de Nacimiento</label>
-                                </div>
-
                                 <input type='hidden' name='insertar' value='insertar'>
                                 <div class="btn">
                                     <button class="prev-2 prev" id="boton1">Atrás</button>

@@ -32,15 +32,13 @@ if (
 			} else {
 				$pdf->SetFillColor(232, 232, 232);
 				$pdf->SetFont('Arial', 'B', 12);
-				$pdf->Cell(50, 6, 'NOMBRE', 1, 0, 'C', 1);
-				$pdf->Cell(50, 6, 'APELLIDO', 1, 0, 'C', 1);
+				$pdf->Cell(70, 6, 'NOMBRE', 1, 0, 'C', 1);
 				$pdf->Cell(30, 6, 'TEL', 1, 0, 'C', 1);
 				$pdf->Cell(60, 6, 'E-MAIL', 1, 1, 'C', 1);
 				$pdf->SetFont('Arial', '', 10.5);
 
 				foreach ($resultado as $row) {
-						$pdf->Cell(50, 6, $row['nombreCli1'], 1, 0, 'C');
-						$pdf->Cell(50, 6, $row['apellidoCli1'], 1, 0, 'C');
+						$pdf->Cell(70, 6, $row['nombreCli1']." ".$row['apellidoCli1'], 1, 0, 'C');
 						$pdf->Cell(30, 6, $row['telCli'], 1, 0, 'C');
 						$pdf->Cell(60, 6, $row['emailCli'], 1, 1, 'C');
 				}
@@ -49,5 +47,7 @@ if (
 			$pdf->Close();
 		}
 	}
+	$pd= new ClientePDF();
+	$pd->getCliente();
 }
 ?>
