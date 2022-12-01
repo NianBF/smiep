@@ -12,10 +12,10 @@ var btn_enviar = document.querySelector("#btn-enviar")
 msgInf()
 firstpage.addEventListener("click", function(event){
   let regExp = /^[0-9]{3,10}$/g;
-  if (formulario.creadoEn.value == 0){
+  /* if (formulario.creadoEn.value == 0){
     fecha(event)
-  }
-  else if (regExp.test( formulario.id_Prov.value) == false) {
+  } */
+  if (regExp.test( formulario.id_Prov.value) == false) {
    documento(event)
   }  
   else{ slidePage.style.display = "none";page.style.display = "block";}
