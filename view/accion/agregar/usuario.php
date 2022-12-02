@@ -19,13 +19,26 @@ if (
                         <legend>Advertencia</legend>
                         <div>
                             <article>
-                                <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+                                <p>Debes llenar los campos del formulario, cada campo es necesario y obligatorio para el
                                     correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-                                <p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
-                                    consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+                                <p><strong>Fecha de Vinculación:</strong> Fecha en la que se agrego el Usuario.</p>
+								</br>
+								<p><strong>Documento de Identidad:</strong> En este campo se va a ingresar el número de identificación del Usuario.</p>
+								</br>
+								<p><strong>Nombres Y Apellidos:</strong> En estos cuatro campos se deben colocar los nombres y apellidos, en donde el primer nombre y primer apellido son 
+								<strong>obligatorios.</strong>
+								</br>
                                 </br>
-                                <p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
-                                    igual a las ya existentes.</p>
+                                <p><strong>Nombre de Usuario:</strong> En este campo se va ingresar el nombre del Usuario con el cual va ingresar al Sistema.</p>
+                                </br>
+                                <p><strong>Correo y Contraseña:</strong> En estos dos campos se va ingresar el Correo; <strong>(ej: ejemplo@smiep.com.co),</strong> y la contraseña <strong>(ej: Smiep123*)</strong></p>
+                                </br>
+                                <p><strong>Rol:</strong> En este campo se hará la elección de cual será el Rol del Usuario.</p>
+                                </br>
+                                <p><strong>Estado:</strong> En este campo se hará la elección de cual será el estado del Usuario.</p>
+                                </br>
+                                <p><strong>Tienda:</strong> En este campo se pondra el nombre de la Tienda.</p>
+
                             </article>
                         </div>
                     </fieldset>
@@ -101,7 +114,6 @@ if (
                                 </div>
                             </div>
                             <div class="page infTi">
-                                <h4 class="titleSect">Información de Tienda</h4>
                                 <div class="userBox">
 
                                     <label for="rol" class="lSel">Rol</label><br>

@@ -47,13 +47,12 @@ if (
                         <legend>Advertencia</legend>
                         <div>
                             <article>
-                                <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+                                <p>Debes llenar los campos del formulario, cada campo es necesario y obligatorio para el
                                     correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-                                <p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
-                                    consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+                                <p><strong>ID Tienda:</strong> En este campo se va a ingresar el ID de la tienda.</p>
                                 </br>
-                                <p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
-                                    igual a las ya existentes.</p>
+                                <p><strong>Información Tienda:</strong> En estos cuatro campos se pedira informacion del nombre de la tienda,
+                                Dirección, Telefono y Correo, todos son <strong>obligatorios.</strong>.</p>
                             </article>
                         </div>
                     </fieldset>

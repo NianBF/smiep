@@ -43,7 +43,7 @@ if (
                         <legend>Advertencia</legend>
                         <div>
                             <article>
-                                <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
+                                <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligatorio para el correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
                                 <p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p></br>
                                 <p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser igual a las ya existentes.</p>
                             </article>

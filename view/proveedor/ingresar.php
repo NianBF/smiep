@@ -44,13 +44,20 @@ if (
 						<legend>Advertencia</legend>
 						<div>
 							<article>
-								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+								<p>Debes llenar los campos del formulario, cada campo es necesario y obligaotrio para el
 									correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-								<p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
-									consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+								<p><strong>Fecha de Vinculación:</strong> Fecha en la que se agrego el Proveedor.</p>
 								</br>
-								<p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
-									igual a las ya existentes.</p>
+								<p><strong>Documento de Identidad:</strong> En este campo se va a ingresar el número de identificación del Proveedor.</p>
+								</br>
+								<p><strong>Nombres Y Apellidos:</strong> En estos cuatro campos se deben colocar los nombres y apellidos, en donde el primer nombre y primer apellido son 
+								<strong>obligatorios.</strong>
+								</br>
+								</br>
+								<p><strong>Información Empresa:</strong> En estos campos se deben colocar el Nombre de la Empresa, Imagen de la Empresa, Dirección, Telefono y Correo, todos los campos <strong>obligatarios</strong> menos los que dicen (Opcional).
+								</p>
+								
+								
 							</article>
 						</div>
 					</fieldset>
@@ -62,12 +69,12 @@ if (
 
 						<section class="formularios">
 							<div class="slide-page formPage">
-								<h4 class="titleSect">Documento de Identidad</h4>
 								
 								<div class="userBox">
 									<input type='date' name='creadoEn' id="creadoEn" placeholder=" " required>
 									<label for="id_doc">Fecha vinculación</label>
 								</div>
+								<h4 class="titleSect">Documento de Identidad</h4>
 								<div class="userBox">
 									<input type='number' name='id_DocProv' id="id_Prov" placeholder=" " required>
 									<label for="id_doc">ID Usuario</label>

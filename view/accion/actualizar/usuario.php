@@ -54,13 +54,15 @@ if (
                         <legend>Advertencia</legend>
                         <div>
                             <article>
-                                <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+                                <p>Debes actualizar correctmaente los campos del formulario, cada campo es necesario y obligatorio para el
                                     correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-                                <p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
-                                    consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+                                <p><strong>Documento de Identidad:</strong> El Documento del Usuario no puede ser modificado.</p>
                                 </br>
-                                <p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
-                                    igual a las ya existentes.</p>
+                                <p><strong>Nombres y Apellidos:</strong> En estos cuatro campos se pueden actualizar los nombres y apellidos.</p>
+                                </br>
+                                <p><strong>Información Usuario</strong> En estos campos se podra Actualizar el Nombre del Usuario, Correo y contraseña.</p>
+                                </br>
+                                <p><strong>Información Tienda</strong> En Estos campos se podra Actualizar el Rol, Estado y Tienda.</p>
                             </article>
                         </div>
                     </fieldset>

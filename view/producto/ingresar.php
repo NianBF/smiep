@@ -58,13 +58,28 @@ if (
 						<legend>Advertencia</legend>
 						<div>
 							<article>
-								<p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+								<p>Debes llenar los campos del formulario, cada campo es necesario y obligatorio para el
 									correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-								<p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
-									consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+								<p><strong>ID Producto:</strong> En este campo se va a ingresar el ID Producto que sea
+									consecutivo a las ID anteriores, debe ser diferente a los ya existentes.</p>
 								</br>
-								<p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
-									igual a las ya existentes.</p>
+								<p><strong>Nombre Producto:</strong> Se debe ingresar el nombre del producto, no debe ser
+									igual a los ya existentes.</p>
+								</br>
+								<p><strong>Imangen Producto:</strong> Se debe poner el URL de la Imagen del producto o de lo contrario
+								se pondra una imagen determinada.</p>
+								</br>
+								<strong>Precio y Cantidad Disponible:</strong> Se debe ingresar el valor de cuanto vale el producto,
+								y la Cantidad Disponible de cuantos Productos se encuentran en Stock.</p>
+								</br>
+								<p><strong>Codigo de Barras:</strong> Se debe ingresar el Codigo de barras del producto.</p>
+								</br>
+								<p><strong>Categoria:</strong> En este campo se debe colocar que tipo de Categoria es el prodcuto <strong>(ej: GRANOS).</strong>
+								</p>
+								</br>
+								<p><strong>Estado</strong> En este campo se debe colocar en que tipo se encuentra el producto <strong>(ej: DISPONIBLE).</strong>
+								</p>
+
 							</article>
 						</div>
 					</fieldset>
