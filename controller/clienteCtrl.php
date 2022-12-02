@@ -68,7 +68,7 @@ elseif ($_GET['accion'] == 'e'){
 			 
 			});
 		   } else{
-			window.location.href = '../view/cliente/mostrarCli.php';
+			window.location.href = '../?u=accion&action=read&table=cliente';
 		   }
 		 })
 		 </script>";

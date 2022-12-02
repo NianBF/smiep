@@ -68,7 +68,7 @@ if (isset($_POST['insertar'])){
 			 
 			});
 		   } else{
-			window.location.href = '../view/proveedor/mostrarProv.php';
+			window.location.href = '../?u=accion&action=read&table=proveedor';
 		   }
 		 })
 		 </script>";

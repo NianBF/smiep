@@ -77,7 +77,7 @@ elseif ($_GET['accion'] == 'e')
 			 
 			});
 		   } else{
-			window.location.href = '../view/usuario/mostrarUsu.php';
+			window.location.href = '../?u=accion&action=read&table=usuario';
 		   }
 		 })
 		</script>";
