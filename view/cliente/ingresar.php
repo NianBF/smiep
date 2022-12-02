@@ -48,13 +48,15 @@ if (
                         <legend>Advertencia</legend>
                         <div>
                             <article>
-                                <p>Debes llenar los dos campos del formulario, cada campo es necesario y obligaotrio para el
+                                <p>Debes llenar los campos del formulario, cada campo es necesario y obligaotrio para el
                                     correcto manejo de este nuevo dato a agregar en la base de datos.</p></br>
-                                <p><strong>ID Categoría:</strong> En este campo se va a ingresar un número que sea
-                                    consecutivo a las categorías anteriores, debe ser diferente a los ya existentes.</p>
+                                <p><strong>Documento de Identidad:</strong> En este campo se va a ingresar el número de identificación del clientes.</p>
                                 </br>
-                                <p><strong>Categoría:</strong> Se debe ingresar el nombre de la nueva categoría, no debe ser
-                                    igual a las ya existentes.</p>
+                                <p><strong>Nombres Y Apellidos:</strong> En estos cuatro campos se deben colocar los nombres y apellidos, en donde el primer nombre y primer apellido son obligatorios.</p>
+                                </br>
+                                <p><strong>Información de Contacto:</strong> En estos tres campos se pedirá información de contacto del cliente; dirección, número de teléfono y correo, todos son
+                                <strong>obligatorios</strong>
+                                </p>
                             </article>
                         </div>
                     </fieldset>
