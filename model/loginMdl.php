@@ -48,12 +48,6 @@ class Login
                 $consu->execute();
             } else {
                 $_SESSION["error"] = "ERROR";
-                echo "<script>Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: '¡Usuario, correo o contraseña incorrectos!'
-                  })</script>";
-                unset($_SESSION["error"]);
 
             }
 
@@ -67,7 +61,7 @@ class Login
             $sql = null;
             $resultado = null;
             $cantidad_resultado = null;
-            header("location:../?u=login");
+            header("location:../");
 
         }
 

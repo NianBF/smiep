@@ -71,17 +71,7 @@
         <?php include_once("view/plantillas/btnModOsc.html"); ?>
         <?php include_once("view/plantillas/footer.html") ?>
     </footer>
-    <?php 
-    if (isset($_SESSION["error"])) {
-                echo "<script>Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: '¡Usuario, correo o contraseña incorrectos!'
-                  })</script>";
-                unset($_SESSION["error"]);
-                break;
-        }
-    ?>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/js" src="public/js/login.js"></script>
 </body>
