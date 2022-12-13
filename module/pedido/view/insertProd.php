@@ -42,7 +42,7 @@ if (
             <?php
     if ($_SESSION['rol'] == 'Administrador') {
         echo "<div class='btnMos'>
-                <a href='../../../view/inicio/menu.php' class='back'><span><i
+                <a href='../../../?u=inicio' class='back'><span><i
                             class='fa-solid fa-arrow-rotate-left'></i></span>Finalizar</a>
             </div>";
     } else if ($_SESSION['rol'] == 'Empleado') {
