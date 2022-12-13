@@ -18,16 +18,15 @@ if (isset($_SESSION["email"]) && isset($_SESSION["userName"]) && isset($_SESSION
 } else {
 
     if (isset($_SESSION["error"])) {
-
-        echo "<script>Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: '¡Usuario, correo o contraseña incorrectos!'
-          })</script>";
-        unset($_SESSION["error"]);
         switch ($_GET["u"]) {
             case "login":
                 include_once("view/login/login.php");
+                echo "<script>Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '¡Usuario, correo o contraseña incorrectos!'
+                  })</script>";
+                unset($_SESSION["error"]);
                 break;
         }
 
