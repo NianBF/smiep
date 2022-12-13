@@ -25,6 +25,11 @@ if (isset($_SESSION["email"]) && isset($_SESSION["userName"]) && isset($_SESSION
             text: '¡Usuario, correo o contraseña incorrectos!'
           })</script>";
         unset($_SESSION["error"]);
+        switch ($_GET["u"]) {
+            case "login":
+                include_once("view/login/login.php");
+                break;
+        }
 
     }
     switch ($_GET["u"]) {

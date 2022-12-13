@@ -67,7 +67,7 @@ class Login
             $sql = null;
             $resultado = null;
             $cantidad_resultado = null;
-            header("location:../?=login");
+            header("location:../?u=login");
 
         }
 
